@@ -1,0 +1,166 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="428" height="1526" viewBox="0 0 428 1526">
+  <defs>
+    <pattern id="pattern" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 52 42">
+      <image width="52" height="42" xlink:href="data:image/png;base64,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"/>
+    </pattern>
+    <pattern id="pattern-2" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 282 112">
+      <image width="282" height="112" xlink:href="data:image/png;base64,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"/>
+    </pattern>
+    <pattern id="pattern-3" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 82 92">
+      <image width="82" height="92" xlink:href="data:image/png;base64,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"/>
+    </pattern>
+    <clipPath id="clip-Smart_House_Landing_Page_Mobile_2">
+      <rect width="428" height="1526"/>
+    </clipPath>
+  </defs>
+  <g id="Smart_House_Landing_Page_Mobile_2" data-name="Smart House Landing Page (Mobile) 2" clip-path="url(#clip-Smart_House_Landing_Page_Mobile_2)">
+    <rect width="428" height="1526" fill="#fff"/>
+    <g id="Group_404" data-name="Group 404">
+      <rect id="Rectangle_614" data-name="Rectangle 614" width="428" height="1526" fill="#3a4658"/>
+      <line id="Line_44" data-name="Line 44" x2="428" transform="translate(0 56)" fill="none" stroke="#f90" stroke-width="10"/>
+      <line id="Line_44-2" data-name="Line 44" x2="428" transform="translate(0 121)" fill="none" stroke="#f90" stroke-width="10"/>
+      <rect id="Rectangle_615" data-name="Rectangle 615" width="428" height="113" transform="translate(0 1412)" fill="#3e3e3e"/>
+      <rect id="wifi" width="43" height="35" transform="translate(322 5)" fill="url(#pattern)"/>
+      <image id="cellular" width="35" height="35" transform="translate(282 5)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKoAAACqCAYAAAA9dtSCAAAAAXNSR0IArs4c6QAAB6V0RVh0bXhmaWxlACUzQ214ZmlsZSUyMGhvc3QlM0QlMjJFbGVjdHJvbiUyMiUyMGFnZW50JTNEJTIyTW96aWxsYSUyRjUuMCUyMChXaW5kb3dzJTIwTlQlMjAxMC4wJTNCJTIwV2luNjQlM0IlMjB4NjQpJTIwQXBwbGVXZWJLaXQlMkY1MzcuMzYlMjAoS0hUTUwlMkMlMjBsaWtlJTIwR2Vja28pJTIwZHJhdy5pbyUyRjI0LjcuMTclMjBDaHJvbWUlMkYxMjguMC42NjEzLjM2JTIwRWxlY3Ryb24lMkYzMi4wLjElMjBTYWZhcmklMkY1MzcuMzYlMjIlMjB2ZXJzaW9uJTNEJTIyMjQuNy4xNyUyMiUyMHNjYWxlJTNEJTIyMSUyMiUyMGJvcmRlciUzRCUyMjAlMjIlM0UlMEElMjAlMjAlM0NkaWFncmFtJTIwbmFtZSUzRCUyMlBhZ2UtMSUyMiUyMGlkJTNEJTIyZjFiN2ZmYjctY2ExZS1hOTc3LTdjZjUtYTc1MWIzYzA2YzA1JTIyJTNFJTBBJTIwJTIwJTIwJTIwJTNDbXhHcmFwaE1vZGVsJTIwZHglM0QlMjI2OTglMjIlMjBkeSUzRCUyMjQ3MCUyMiUyMGdyaWQlM0QlMjIxJTIyJTIwZ3JpZFNpemUlM0QlMjIxMCUyMiUyMGd1aWRlcyUzRCUyMjElMjIlMjB0b29sdGlwcyUzRCUyMjElMjIlMjBjb25uZWN0JTNEJTIyMSUyMiUyMGFycm93cyUzRCUyMjElMjIlMjBmb2xkJTNEJTIyMSUyMiUyMHBhZ2UlM0QlMjIxJTIyJTIwcGFnZVNjYWxlJTNEJTIyMSUyMiUyMHBhZ2VXaWR0aCUzRCUyMjgyNiUyMiUyMHBhZ2VIZWlnaHQlM0QlMjIxMTY5JTIyJTIwYmFja2dyb3VuZCUzRCUyMm5vbmUlMjIlMjBtYXRoJTNEJTIyMCUyMiUyMHNoYWRvdyUzRCUyMjAlMjIlM0UlMEElMjAlMjAlMjAlMjAlMjAlMjAlM0Nyb290JTNFJTBBJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTNDbXhDZWxsJTIwaWQlM0QlMjIwJTIyJTIwJTJGJTNFJTBBJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTNDbXhDZWxsJTIwaWQlM0QlMjIxJTIyJTIwcGFyZW50JTNEJTIyMCUyMiUyMCUyRiUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQ214Q2VsbCUyMGlkJTNEJTIyVlVvZ08xY2NjUkExb19faGMtTDAtNjIlMjIlMjB2YWx1ZSUzRCUyMiUyMiUyMHN0eWxlJTNEJTIycG9pbnRzJTNEJTVCJTVCMCUyQzAuNTglMkMwJTVEJTJDJTVCMC4wOSUyQzAuNTglMkMwJTVEJTJDJTVCMC4zNiUyQzAuMzklMkMwJTVEJTJDJTVCMC42NCUyQzAuMTk1JTJDMCU1RCUyQyU1QjAuOTElMkMwJTJDMCU1RCUyQyU1QjElMkMwJTJDMCU1RCUyQyU1QjElMkMwLjI1JTJDMCU1RCUyQyU1QjElMkMwLjUlMkMwJTVEJTJDJTVCMSUyQzAuNzUlMkMwJTVEJTJDJTVCMSUyQzElMkMwJTVEJTJDJTVCMCUyQzElMkMwJTVEJTJDJTVCMC4wOSUyQzElMkMwJTVEJTJDJTVCMC4zNiUyQzElMkMwJTVEJTJDJTVCMC42NCUyQzElMkMwJTVEJTJDJTVCMC45MSUyQzElMkMwJTVEJTJDJTVCMCUyQzAuNzklMkMwJTVEJTVEJTNCdmVydGljYWxMYWJlbFBvc2l0aW9uJTNEYm90dG9tJTNCc2tldGNoJTNEMCUzQmh0bWwlM0QxJTNCdmVydGljYWxBbGlnbiUzRHRvcCUzQmFzcGVjdCUzRGZpeGVkJTNCYWxpZ24lM0RjZW50ZXIlM0Jwb2ludGVyRXZlbnRzJTNEMSUzQnNoYXBlJTNEbXhncmFwaC5jaXNjbzE5LndpZmlfaW5kaWNhdG9yJTNCZmlsbENvbG9yJTNEJTIzZmZmZmZmJTNCc3Ryb2tlQ29sb3IlM0Rub25lJTNCJTIyJTIwdmVydGV4JTNEJTIyMSUyMiUyMHBhcmVudCUzRCUyMjElMjIlM0UlMEElMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlM0NteEdlb21ldHJ5JTIweCUzRCUyMjI4MCUyMiUyMHklM0QlMjIxNjAlMjIlMjB3aWR0aCUzRCUyMjE3MCUyMiUyMGhlaWdodCUzRCUyMjE3MCUyMiUyMGFzJTNEJTIyZ2VvbWV0cnklMjIlMjAlMkYlM0UlMEElMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlM0MlMkZteENlbGwlM0UlMEElMjAlMjAlMjAlMjAlMjAlMjAlM0MlMkZyb290JTNFJTBBJTIwJTIwJTIwJTIwJTNDJTJGbXhHcmFwaE1vZGVsJTNFJTBBJTIwJTIwJTNDJTJGZGlhZ3JhbSUzRSUwQSUzQyUyRm14ZmlsZSUzRSUwQScSE9gAAAWkSURBVHhe7dzBkVM5GEZRv0wIZTKjJxNCmUwI5Y29ZNf/lQuXSocqdv25pasDS18PfxQYFLjv++fgx9/2o9fbPskHHVHgCfX+xEVB/UT1jX8nqBs/3klHB/Wk1974rqBu/HgnHR3Uk15747uCuvHjnXR0UE967Y3vCurGj3fS0UE96bU3viuoGz/eSUcH9aTX3viuoG78eCcdHdSTXnvju4K68eOddHRQT3rtje8K6saPd9LRQT3ptTe+K6gbP95JRwf1pNfe+K6gbvx4Jx0d1JNee+O7grrx4510dFBPeu2N7wrqxo930tFBPem1N74rqBs/3klHB/Wk1974rqBu/HgnHR3Uk15747uCuvHjnXR0UE967Y3vCurGjzc9+n3fPx6Px+vvX/9zXdd/K78U1JV6m22fj/361uavTxz7uq6l78QF9ROv9qHfCeo8/NK/rvmvs3gVAHXuANR5s+UFqPOEoM6bLS9AnScEdd5seQHqPCGo82bLC1DnCUGdN1tegDpPCOq82fIC1HlCUOfNlhegzhOCOm+2vAB1nhDUebPlBajzhKDOmy0vQJ0nBHXebHkB6jwhqPNmywtQ5wlBnTdbXoA6TwjqvNnyAtR5QlDnzZYXoM4TgjpvtrwAdZ4Q1Hmz5QWo84SgzpstL0CdJwR13mx5Aeo8IajzZssLUOcJQZ03W16AOk8I6rzZ8gLUeUJQ582WF6DOE4I6b7a8AHWeENR5s+UFqPOEoM6bLS9AnScEdd5seQHqPCGo82bLC1DnCUGdN1tegDpPCOq82fIC1HnCraHe9/17fuW3LH49vxD33/pJoM7L7Q71nl/5LYsvUN/S8dsfAuq3U/3xg6C2bnkFaksHauuWV6C2dKC2bnkFaksHauuWV6C2dKC2bnkFaksHauuWV6C2dKC2bnkFaksHauuWV6C2dKC2bnkFaksHauuWV6C2dKC2bnkFaksHauuWV6C2dKC2bnkFaksHauuWV6C2dKC2bnkFaksHauuWV6C2dKC2bnkFaksHauuWV6C2dKC2bnkFaksHauuWV6C2dKC2bnkFaksHauuWV6C2dKC2bnkFaksHauuWV6C2dKC2bnkFaksHauuWV6C2dKC2bnkFaksHauuWV6C2dKC2bnkFaksHauuWV9d93z8ej8c/+RMWhtd1/VqYP57fM+prJ4cBn1+XufSf06eav6D+fN71a3jft/z4rtFevXw/6lsIfPtDQP12qj9+ENTWLa9AbelAbd3yCtSWDtTWLa9AbelAbd3yCtSWDtTWLa9AbelAbd3yCtSWDtTWLa9AbelAbd3yCtSWDtTWLa9AbelAbd3yCtSWDtTWLa9AbelAbd3yCtSWDtTWLa9AbelAbd3yCtSWDtTWLa9AbelAbd3yCtSWDtTWLa9AbelAbd3yCtSWDtTWLa9AbelAbd3yCtSWDtTWLa9AbelAbd3yCtSWDtTWLa9AbelAbd3yCtSWDtTWLa9AbelAbd3yCtSWDtTWLa9AbelAbd3yCtSWDtTWLa9AbelAbd3yCtSWDtTWLa9AbelAbd3yCtSWDtTWLa9AbelAbd3yCtSWDtTWLa9AbelAbd3yCtSWDtTWLa9AbelAbd3yCtSWDtTWLa9AbelAbd3yCtSWDtTWLa9AbelAbd3yCtSWDtTWLa9AbelAbd3yCtSWDtTWLa9AbelAbd3yCtSWDtTWLa9AbelAbd3yCtSWDtTWLa9AbelAbd3yCtSWDtTWLa9AbelAbd3yCtSWDtTWLa9AbelAbd3yCtSWDtTWLa9AbelAbd3yCtSWDtTWLa9AbelAbd3yCtSWDtTWLa9AbelAbd3yCtSWDtTWLa9AbelAbd3yCtSWDtTWLa9AbelAbd3yCtSWDtTWLa9AbelAbd3yCtSWDtTWLa9AbelAbd3yCtSWDtTWLa/+Bzdk6OzwgnKVAAAAAElFTkSuQmCC"/>
+      <rect id="battery" width="51" height="20" transform="translate(372 13)" fill="url(#pattern-2)"/>
+      <text id="_09:45" data-name="09:45" transform="translate(8 -3)" fill="#fff" stroke="#fff" stroke-width="1" font-size="40" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-51.436" y="43">09:45</tspan></text>
+      <text id="Smart_House" data-name="Smart House" transform="translate(11.5 59.5)" fill="#f90" stroke="#f90" stroke-width="1" font-size="40" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-121.396" y="43">Smart House</tspan></text>
+      <rect id="Rectangle_616" data-name="Rectangle 616" width="24" height="20" transform="translate(372 13)" fill="#00ff3a"/>
+      <g id="Rectangle_617" data-name="Rectangle 617" transform="translate(18 1426)" fill="#707070" stroke="#707070" stroke-width="1">
+        <rect width="393" height="51" rx="10" stroke="none"/>
+        <rect x="0.5" y="0.5" width="392" height="50" rx="9.5" fill="none"/>
+      </g>
+      <line id="Line_44-3" data-name="Line 44" x2="50" transform="translate(365 72)" fill="none" stroke="#f90" stroke-width="10"/>
+      <line id="Line_44-4" data-name="Line 44" x2="50" transform="translate(365 89)" fill="none" stroke="#f90" stroke-width="10"/>
+      <line id="Line_44-5" data-name="Line 44" x2="50" transform="translate(365 106)" fill="none" stroke="#f90" stroke-width="10"/>
+      <g id="Polygon_23" data-name="Polygon 23" transform="translate(21.5 1519.5) rotate(-90)" fill="none">
+        <path d="M18.5,0,37,30H0Z" stroke="none"/>
+        <path d="M 18.5 1.905166625976562 L 1.791519165039062 29 L 35.20848083496094 29 L 18.5 1.905166625976562 M 18.5 0 L 37 30 L 0 30 L 18.5 0 Z" stroke="none" fill="#3f81f3"/>
+      </g>
+      <g id="Polygon_24" data-name="Polygon 24" transform="translate(136.5 1482.5) rotate(90)" fill="none">
+        <path d="M18.5,0,37,30H0Z" stroke="none"/>
+        <path d="M 18.5 1.905166625976562 L 1.791519165039062 29 L 35.20848083496094 29 L 18.5 1.905166625976562 M 18.5 0 L 37 30 L 0 30 L 18.5 0 Z" stroke="none" fill="#3f81f3"/>
+      </g>
+      <g id="Rectangle_618" data-name="Rectangle 618" transform="translate(200 1490)" fill="none" stroke="#3f81f3" stroke-width="1">
+        <rect width="41" height="31" stroke="none"/>
+        <rect x="0.5" y="0.5" width="40" height="30" fill="none"/>
+      </g>
+      <line id="Line_57" data-name="Line 57" y1="25" transform="translate(220.5 1480.5)" fill="none" stroke="#3f81f3" stroke-width="1"/>
+      <line id="Line_58" data-name="Line 58" y1="6" x2="6" transform="translate(214.5 1480.5)" fill="none" stroke="#3f81f3" stroke-width="1"/>
+      <line id="Line_59" data-name="Line 59" x1="6" y1="6" transform="translate(220.5 1480.5)" fill="none" stroke="#3f81f3" stroke-width="1"/>
+      <g id="Rectangle_619" data-name="Rectangle 619" transform="translate(284 1488)" fill="none" stroke="#3f81f3" stroke-width="1">
+        <rect width="41" height="31" stroke="none"/>
+        <rect x="0.5" y="0.5" width="40" height="30" fill="none"/>
+      </g>
+      <g id="Rectangle_620" data-name="Rectangle 620" transform="translate(284 1488)" fill="none" stroke="#3f81f3" stroke-width="1">
+        <rect width="21" height="31" stroke="none"/>
+        <rect x="0.5" y="0.5" width="20" height="30" fill="none"/>
+      </g>
+      <g id="Rectangle_621" data-name="Rectangle 621" transform="translate(365 1483)" fill="none" stroke="#3f81f3" stroke-width="1">
+        <rect width="27" height="24" stroke="none"/>
+        <rect x="0.5" y="0.5" width="26" height="23" fill="none"/>
+      </g>
+      <g id="Rectangle_622" data-name="Rectangle 622" transform="translate(370 1489)" fill="#3e3e3e" stroke="#3f81f3" stroke-width="1">
+        <rect width="27" height="24" stroke="none"/>
+        <rect x="0.5" y="0.5" width="26" height="23" fill="none"/>
+      </g>
+      <rect id="refresh" width="39" height="44" transform="translate(365 1429)" fill="url(#pattern-3)"/>
+      <g id="Rectangle_623" data-name="Rectangle 623" transform="translate(31 1434)" fill="none" stroke="#fff" stroke-width="1">
+        <rect width="32" height="19" stroke="none"/>
+        <rect x="0.5" y="0.5" width="31" height="18" fill="none"/>
+      </g>
+      <line id="Line_60" data-name="Line 60" x2="32" transform="translate(30.5 1456.5)" fill="none" stroke="#fff" stroke-width="1"/>
+      <line id="Line_61" data-name="Line 61" x2="17" transform="translate(30.5 1460.5)" fill="none" stroke="#fff" stroke-width="1"/>
+      <text id="https:_uossmarthome.com" data-name="https://uossmarthome.com" transform="translate(70.5 1436.5)" fill="#fff" font-size="20" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-129.131" y="22">https://uossmarthome.com</tspan></text>
+    </g>
+    <g id="Component_17_3" data-name="Component 17 – 3" transform="translate(-29 136)">
+      <g id="Rectangle_624" data-name="Rectangle 624" transform="translate(37)" fill="#3a4658" stroke="#f90" stroke-width="10">
+        <rect width="405" height="295" rx="34" stroke="none"/>
+        <rect x="5" y="5" width="395" height="285" rx="29" fill="none"/>
+      </g>
+      <text id="Outdoor_Temperature" data-name="Outdoor Temperature" transform="translate(0 8)" fill="#f90" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-179.264" y="38">Outdoor Temperature</tspan></text>
+      <g id="Component_15_1" data-name="Component 15 – 1" transform="translate(70 148)">
+        <g id="Rectangle_625" data-name="Rectangle 625" fill="#fff" stroke="#f90" stroke-width="10">
+          <rect width="226" height="64" rx="15" stroke="none"/>
+          <rect x="5" y="5" width="216" height="54" rx="10" fill="none"/>
+        </g>
+        <g id="Rectangle_626" data-name="Rectangle 626" fill="#3a4658" stroke="#f90" stroke-width="10">
+          <rect width="160" height="64" rx="15" stroke="none"/>
+          <rect x="5" y="5" width="150" height="54" rx="10" fill="none"/>
+        </g>
+        <text id="_C" data-name="°C" transform="translate(29 8)" fill="#f90" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-17.568" y="38">°C</tspan></text>
+        <text id="_F" data-name="°F" transform="translate(134 7)" fill="#3a4658" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-15.748" y="38">°F</tspan></text>
+      </g>
+      <text id="_16.8_C" data-name="16.8°C" transform="translate(44 42)" fill="#f90" font-size="80" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-120.02" y="86">16.8°C</tspan></text>
+      <g id="Component_16_1" data-name="Component 16 – 1" transform="translate(69 224)">
+        <g id="Rectangle_627" data-name="Rectangle 627" fill="#3a4658" stroke="#f90" stroke-width="10">
+          <rect width="234" height="54" rx="15" stroke="none"/>
+          <rect x="5" y="5" width="224" height="44" rx="10" fill="none"/>
+        </g>
+        <text id="Details" transform="translate(26 1)" fill="#f90" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-56.243" y="38">Details</tspan></text>
+      </g>
+      <g id="Component_14_1" data-name="Component 14 – 1" transform="translate(337 63)">
+        <g id="Ellipse_38" data-name="Ellipse 38" transform="translate(0 115)" fill="#3a4658" stroke="#f90" stroke-width="10">
+          <ellipse cx="40.5" cy="39.5" rx="40.5" ry="39.5" stroke="none"/>
+          <ellipse cx="40.5" cy="39.5" rx="35.5" ry="34.5" fill="none"/>
+        </g>
+        <g id="Ellipse_39" data-name="Ellipse 39" transform="translate(14 129)" fill="red" stroke="red" stroke-width="10">
+          <ellipse cx="26.5" cy="25" rx="26.5" ry="25" stroke="none"/>
+          <ellipse cx="26.5" cy="25" rx="21.5" ry="20" fill="none"/>
+        </g>
+        <g id="Rectangle_628" data-name="Rectangle 628" transform="translate(24)" fill="#3a4658" stroke="#f90" stroke-width="10">
+          <rect width="32" height="131" rx="15" stroke="none"/>
+          <rect x="5" y="5" width="22" height="121" rx="10" fill="none"/>
+        </g>
+        <line id="Line_62" data-name="Line 62" y1="82" transform="translate(40.5 53.5)" fill="none" stroke="red" stroke-width="8"/>
+      </g>
+    </g>
+    <g id="Component_19_2" data-name="Component 19 – 2" transform="translate(-29 444)">
+      <g id="Component_17_2" data-name="Component 17 – 2">
+        <g id="Rectangle_624-2" data-name="Rectangle 624" transform="translate(37)" fill="#3a4658" stroke="#f90" stroke-width="10">
+          <rect width="405" height="295" rx="34" stroke="none"/>
+          <rect x="5" y="5" width="395" height="285" rx="29" fill="none"/>
+        </g>
+        <text id="Outdoor_Humidity" data-name="Outdoor Humidity" transform="translate(0 8)" fill="#f90" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-151.655" y="38">Outdoor Humidity</tspan></text>
+        <text id="_62_" data-name="62%" transform="translate(55 75)" fill="#f90" font-size="100" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-100.879" y="108">62%</tspan></text>
+        <g id="Component_16_1-2" data-name="Component 16 – 1" transform="translate(72 224)">
+          <g id="Rectangle_627-2" data-name="Rectangle 627" fill="#3a4658" stroke="#f90" stroke-width="10">
+            <rect width="234" height="54" rx="15" stroke="none"/>
+            <rect x="5" y="5" width="224" height="44" rx="10" fill="none"/>
+          </g>
+          <text id="Details-2" data-name="Details" transform="translate(26 1)" fill="#f90" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-56.243" y="38">Details</tspan></text>
+        </g>
+      </g>
+      <g id="Component_18_2" data-name="Component 18 – 2" transform="translate(327 77)">
+        <g id="Ellipse_3" data-name="Ellipse 3" transform="translate(0 95)" fill="#00e6ff" stroke="#00e6ff" stroke-width="1">
+          <ellipse cx="40.5" cy="42.5" rx="40.5" ry="42.5" stroke="none"/>
+          <ellipse cx="40.5" cy="42.5" rx="40" ry="42" fill="none"/>
+        </g>
+        <g id="Polygon_3" data-name="Polygon 3" transform="translate(10)" fill="#00e6ff">
+          <path d="M 59.19301223754883 111.2371597290039 L 30.1430835723877 102.5609130859375 L 29.99999809265137 102.5181732177734 L 29.85691261291504 102.5609130859375 L 0.8069851398468018 111.2371597290039 L 19.07028388977051 60.64978408813477 L 19.08391189575195 60.61204147338867 L 19.09134101867676 60.57261276245117 L 29.99999809265137 2.699317455291748 L 40.90865707397461 60.57261276245117 L 40.91608428955078 60.61204147338867 L 40.92971420288086 60.64978408813477 L 59.19301223754883 111.2371597290039 Z" stroke="none"/>
+          <path d="M 29.99999809265137 5.398674011230469 L 19.56782913208008 60.74409103393555 L 19.54058456420898 60.8195686340332 L 1.613990783691406 110.4742965698242 L 29.99999809265137 101.996337890625 L 58.38600540161133 110.4742965698242 L 40.43216705322266 60.74409103393555 L 29.99999809265137 5.398674011230469 M 29.99999809265137 0 L 41.39999771118164 60.47999954223633 L 60 112 L 29.99999809265137 103.0399856567383 L -3.814697265625e-06 112 L 18.59999847412109 60.47999954223633 L 29.99999809265137 0 Z" stroke="none" fill="#00e6ff"/>
+        </g>
+      </g>
+    </g>
+    <g id="Rectangle_629" data-name="Rectangle 629" transform="translate(6 754)" fill="#3a4658" stroke="#f90" stroke-width="10">
+      <rect width="413" height="651" rx="34" stroke="none"/>
+      <rect x="5" y="5" width="403" height="641" rx="29" fill="none"/>
+    </g>
+    <line id="Line_63" data-name="Line 63" x2="403.5" transform="translate(11 821.5)" fill="none" stroke="#f90" stroke-width="10"/>
+    <text id="Energy_Consumption" data-name="Energy Consumption" transform="translate(-29 763)" fill="#f90" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-171.787" y="38">Energy Consumption</tspan></text>
+    <text id="Energy_Used_Today" data-name="Energy Used 
+Today" transform="translate(-43 846)" fill="#f90" font-size="37" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-107.829" y="40">Energy Used </tspan><tspan x="-51.851" y="89">Today</tspan></text>
+    <g id="Rectangle_630" data-name="Rectangle 630" transform="translate(81 1320)" fill="#3a4658" stroke="#f90" stroke-width="10">
+      <rect width="267" height="66" rx="15" stroke="none"/>
+      <rect x="5" y="5" width="257" height="56" rx="10" fill="none"/>
+    </g>
+    <text id="Details-3" data-name="Details" transform="translate(114 1323)" fill="#f90" font-size="40" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-64.277" y="43">Details</tspan></text>
+    <text id="Current_Energy_Usage" data-name="Current Energy
+Usage" transform="translate(-58 1080)" fill="#f90" font-size="37" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-130.638" y="40">Current Energy</tspan><tspan x="-52.935" y="89">Usage</tspan></text>
+    <text id="_20_kWh" data-name="20 kWh" transform="translate(-43 933)" fill="#f90" font-size="70" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-125.73" y="76">20 kWh</tspan></text>
+    <text id="_2.2_kW" data-name="2.2 kW" transform="translate(-67 1190)" fill="#f90" font-size="70" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-114.143" y="76">2.2 kW</tspan></text>
+    <path id="Path_446" data-name="Path 446" d="M1780,2308.631h-27.131l-36.383,194.91,24.6-30.844-24.6,135.847,24.6-35.11-24.6,133.55L1780,2525.527l-27.131,19.36L1780,2418.227l-27.131,19.688Z" transform="translate(-1390 -1433.851)" fill="#ffed00" stroke="#ffed00" stroke-width="1"/>
+    <line id="Line_66" data-name="Line 66" x2="403.5" transform="translate(11 508.5)" fill="none" stroke="#f90" stroke-width="10"/>
+    <line id="Line_67" data-name="Line 67" x2="403.5" transform="translate(11 191.5)" fill="none" stroke="#f90" stroke-width="10"/>
+  </g>
+</svg>

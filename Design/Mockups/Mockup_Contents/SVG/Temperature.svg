@@ -1,0 +1,650 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="428" height="2948" viewBox="0 0 428 2948">
+  <defs>
+    <pattern id="pattern" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 52 42">
+      <image width="52" height="42" xlink:href="data:image/png;base64,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"/>
+    </pattern>
+    <pattern id="pattern-2" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 282 112">
+      <image width="282" height="112" xlink:href="data:image/png;base64,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"/>
+    </pattern>
+    <pattern id="pattern-3" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 82 92">
+      <image width="82" height="92" xlink:href="data:image/png;base64,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"/>
+    </pattern>
+    <filter id="Shape" x="-6" y="1721" width="429.5" height="470.233" filterUnits="userSpaceOnUse">
+      <feOffset dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feFlood flood-color="#152232" flood-opacity="0.078"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-path">
+      <rect x="-27" y="-169" width="374.167" height="409.767" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect x="1" y="-228.598" width="4" height="374.598" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-3">
+      <rect x="1" y="-290.374" width="5" height="345.374" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-4">
+      <rect x="1" y="-115.409" width="5" height="306.409" fill="none"/>
+    </clipPath>
+    <filter id="Bg" x="8" y="2167" width="412" height="271" filterUnits="userSpaceOnUse">
+      <feOffset dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2" result="blur-2"/>
+      <feFlood flood-color="#152232" flood-opacity="0.078"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Line" x="40.291" y="2519.653" width="361.993" height="207.188" filterUnits="userSpaceOnUse">
+      <feOffset dy="10" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur-3"/>
+      <feFlood flood-opacity="0.2"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-Temperature">
+      <rect width="428" height="2948"/>
+    </clipPath>
+  </defs>
+  <g id="Temperature" clip-path="url(#clip-Temperature)">
+    <rect width="428" height="2948" fill="#fff"/>
+    <g id="Group_404" data-name="Group 404">
+      <rect id="Rectangle_614" data-name="Rectangle 614" width="428" height="2948" fill="#3a4658"/>
+      <line id="Line_44" data-name="Line 44" x2="428" transform="translate(0 56)" fill="none" stroke="#f90" stroke-width="10"/>
+      <line id="Line_44-2" data-name="Line 44" x2="428" transform="translate(0 121)" fill="none" stroke="#f90" stroke-width="10"/>
+      <rect id="Rectangle_615" data-name="Rectangle 615" width="428" height="113" transform="translate(0 2834)" fill="#3e3e3e"/>
+      <rect id="wifi" width="43" height="35" transform="translate(322 5)" fill="url(#pattern)"/>
+      <image id="cellular" width="35" height="35" transform="translate(282 5)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKoAAACqCAYAAAA9dtSCAAAAAXNSR0IArs4c6QAAB6V0RVh0bXhmaWxlACUzQ214ZmlsZSUyMGhvc3QlM0QlMjJFbGVjdHJvbiUyMiUyMGFnZW50JTNEJTIyTW96aWxsYSUyRjUuMCUyMChXaW5kb3dzJTIwTlQlMjAxMC4wJTNCJTIwV2luNjQlM0IlMjB4NjQpJTIwQXBwbGVXZWJLaXQlMkY1MzcuMzYlMjAoS0hUTUwlMkMlMjBsaWtlJTIwR2Vja28pJTIwZHJhdy5pbyUyRjI0LjcuMTclMjBDaHJvbWUlMkYxMjguMC42NjEzLjM2JTIwRWxlY3Ryb24lMkYzMi4wLjElMjBTYWZhcmklMkY1MzcuMzYlMjIlMjB2ZXJzaW9uJTNEJTIyMjQuNy4xNyUyMiUyMHNjYWxlJTNEJTIyMSUyMiUyMGJvcmRlciUzRCUyMjAlMjIlM0UlMEElMjAlMjAlM0NkaWFncmFtJTIwbmFtZSUzRCUyMlBhZ2UtMSUyMiUyMGlkJTNEJTIyZjFiN2ZmYjctY2ExZS1hOTc3LTdjZjUtYTc1MWIzYzA2YzA1JTIyJTNFJTBBJTIwJTIwJTIwJTIwJTNDbXhHcmFwaE1vZGVsJTIwZHglM0QlMjI2OTglMjIlMjBkeSUzRCUyMjQ3MCUyMiUyMGdyaWQlM0QlMjIxJTIyJTIwZ3JpZFNpemUlM0QlMjIxMCUyMiUyMGd1aWRlcyUzRCUyMjElMjIlMjB0b29sdGlwcyUzRCUyMjElMjIlMjBjb25uZWN0JTNEJTIyMSUyMiUyMGFycm93cyUzRCUyMjElMjIlMjBmb2xkJTNEJTIyMSUyMiUyMHBhZ2UlM0QlMjIxJTIyJTIwcGFnZVNjYWxlJTNEJTIyMSUyMiUyMHBhZ2VXaWR0aCUzRCUyMjgyNiUyMiUyMHBhZ2VIZWlnaHQlM0QlMjIxMTY5JTIyJTIwYmFja2dyb3VuZCUzRCUyMm5vbmUlMjIlMjBtYXRoJTNEJTIyMCUyMiUyMHNoYWRvdyUzRCUyMjAlMjIlM0UlMEElMjAlMjAlMjAlMjAlMjAlMjAlM0Nyb290JTNFJTBBJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTNDbXhDZWxsJTIwaWQlM0QlMjIwJTIyJTIwJTJGJTNFJTBBJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTNDbXhDZWxsJTIwaWQlM0QlMjIxJTIyJTIwcGFyZW50JTNEJTIyMCUyMiUyMCUyRiUzRSUwQSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUzQ214Q2VsbCUyMGlkJTNEJTIyVlVvZ08xY2NjUkExb19faGMtTDAtNjIlMjIlMjB2YWx1ZSUzRCUyMiUyMiUyMHN0eWxlJTNEJTIycG9pbnRzJTNEJTVCJTVCMCUyQzAuNTglMkMwJTVEJTJDJTVCMC4wOSUyQzAuNTglMkMwJTVEJTJDJTVCMC4zNiUyQzAuMzklMkMwJTVEJTJDJTVCMC42NCUyQzAuMTk1JTJDMCU1RCUyQyU1QjAuOTElMkMwJTJDMCU1RCUyQyU1QjElMkMwJTJDMCU1RCUyQyU1QjElMkMwLjI1JTJDMCU1RCUyQyU1QjElMkMwLjUlMkMwJTVEJTJDJTVCMSUyQzAuNzUlMkMwJTVEJTJDJTVCMSUyQzElMkMwJTVEJTJDJTVCMCUyQzElMkMwJTVEJTJDJTVCMC4wOSUyQzElMkMwJTVEJTJDJTVCMC4zNiUyQzElMkMwJTVEJTJDJTVCMC42NCUyQzElMkMwJTVEJTJDJTVCMC45MSUyQzElMkMwJTVEJTJDJTVCMCUyQzAuNzklMkMwJTVEJTVEJTNCdmVydGljYWxMYWJlbFBvc2l0aW9uJTNEYm90dG9tJTNCc2tldGNoJTNEMCUzQmh0bWwlM0QxJTNCdmVydGljYWxBbGlnbiUzRHRvcCUzQmFzcGVjdCUzRGZpeGVkJTNCYWxpZ24lM0RjZW50ZXIlM0Jwb2ludGVyRXZlbnRzJTNEMSUzQnNoYXBlJTNEbXhncmFwaC5jaXNjbzE5LndpZmlfaW5kaWNhdG9yJTNCZmlsbENvbG9yJTNEJTIzZmZmZmZmJTNCc3Ryb2tlQ29sb3IlM0Rub25lJTNCJTIyJTIwdmVydGV4JTNEJTIyMSUyMiUyMHBhcmVudCUzRCUyMjElMjIlM0UlMEElMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlM0NteEdlb21ldHJ5JTIweCUzRCUyMjI4MCUyMiUyMHklM0QlMjIxNjAlMjIlMjB3aWR0aCUzRCUyMjE3MCUy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"/>
+      <rect id="battery" width="51" height="20" transform="translate(372 13)" fill="url(#pattern-2)"/>
+      <text id="_09:45" data-name="09:45" transform="translate(8 -3)" fill="#fff" stroke="#fff" stroke-width="1" font-size="40" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-51.436" y="43">09:45</tspan></text>
+      <text id="Temperature-2" data-name="Temperature" transform="translate(11.5 59.5)" fill="#f90" stroke="#f90" stroke-width="1" font-size="40" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-119.59" y="43">Temperature</tspan></text>
+      <rect id="Rectangle_616" data-name="Rectangle 616" width="24" height="20" transform="translate(372 13)" fill="#00ff3a"/>
+      <g id="Rectangle_617" data-name="Rectangle 617" transform="translate(18 2848)" fill="#707070" stroke="#707070" stroke-width="1">
+        <rect width="393" height="51" rx="10" stroke="none"/>
+        <rect x="0.5" y="0.5" width="392" height="50" rx="9.5" fill="none"/>
+      </g>
+      <line id="Line_44-3" data-name="Line 44" x2="50" transform="translate(365 72)" fill="none" stroke="#f90" stroke-width="10"/>
+      <line id="Line_44-4" data-name="Line 44" x2="50" transform="translate(365 89)" fill="none" stroke="#f90" stroke-width="10"/>
+      <line id="Line_44-5" data-name="Line 44" x2="50" transform="translate(365 106)" fill="none" stroke="#f90" stroke-width="10"/>
+      <g id="Polygon_23" data-name="Polygon 23" transform="translate(21.5 2941.409) rotate(-90)" fill="none">
+        <path d="M18.5,0,37,30H0Z" stroke="none"/>
+        <path d="M 18.5 1.905166625976562 L 1.791519165039062 29 L 35.20848083496094 29 L 18.5 1.905166625976562 M 18.5 0 L 37 30 L 0 30 L 18.5 0 Z" stroke="none" fill="#3f81f3"/>
+      </g>
+      <g id="Polygon_24" data-name="Polygon 24" transform="translate(136.5 2904.409) rotate(90)" fill="none">
+        <path d="M18.5,0,37,30H0Z" stroke="none"/>
+        <path d="M 18.5 1.905166625976562 L 1.791519165039062 29 L 35.20848083496094 29 L 18.5 1.905166625976562 M 18.5 0 L 37 30 L 0 30 L 18.5 0 Z" stroke="none" fill="#3f81f3"/>
+      </g>
+      <g id="Rectangle_618" data-name="Rectangle 618" transform="translate(200 2912)" fill="none" stroke="#3f81f3" stroke-width="1">
+        <rect width="41" height="31" stroke="none"/>
+        <rect x="0.5" y="0.5" width="40" height="30" fill="none"/>
+      </g>
+      <line id="Line_57" data-name="Line 57" y1="25" transform="translate(220.5 2902.409)" fill="none" stroke="#3f81f3" stroke-width="1"/>
+      <line id="Line_58" data-name="Line 58" y1="6" x2="6" transform="translate(214.5 2902.409)" fill="none" stroke="#3f81f3" stroke-width="1"/>
+      <line id="Line_59" data-name="Line 59" x1="6" y1="6" transform="translate(220.5 2902.409)" fill="none" stroke="#3f81f3" stroke-width="1"/>
+      <g id="Rectangle_619" data-name="Rectangle 619" transform="translate(284 2910)" fill="none" stroke="#3f81f3" stroke-width="1">
+        <rect width="41" height="31" stroke="none"/>
+        <rect x="0.5" y="0.5" width="40" height="30" fill="none"/>
+      </g>
+      <g id="Rectangle_620" data-name="Rectangle 620" transform="translate(284 2910)" fill="none" stroke="#3f81f3" stroke-width="1">
+        <rect width="21" height="31" stroke="none"/>
+        <rect x="0.5" y="0.5" width="20" height="30" fill="none"/>
+      </g>
+      <g id="Rectangle_621" data-name="Rectangle 621" transform="translate(365 2905)" fill="none" stroke="#3f81f3" stroke-width="1">
+        <rect width="27" height="24" stroke="none"/>
+        <rect x="0.5" y="0.5" width="26" height="23" fill="none"/>
+      </g>
+      <g id="Rectangle_622" data-name="Rectangle 622" transform="translate(370 2911)" fill="#3e3e3e" stroke="#3f81f3" stroke-width="1">
+        <rect width="27" height="24" stroke="none"/>
+        <rect x="0.5" y="0.5" width="26" height="23" fill="none"/>
+      </g>
+      <rect id="refresh" width="39" height="44" transform="translate(365 2851)" fill="url(#pattern-3)"/>
+      <g id="Rectangle_623" data-name="Rectangle 623" transform="translate(31 2856)" fill="none" stroke="#fff" stroke-width="1">
+        <rect width="32" height="19" stroke="none"/>
+        <rect x="0.5" y="0.5" width="31" height="18" fill="none"/>
+      </g>
+      <line id="Line_60" data-name="Line 60" x2="32" transform="translate(30.5 2878.409)" fill="none" stroke="#fff" stroke-width="1"/>
+      <line id="Line_61" data-name="Line 61" x2="17" transform="translate(30.5 2882.409)" fill="none" stroke="#fff" stroke-width="1"/>
+      <text id="https:_uossmarthome.com" data-name="https://uossmarthome.com" transform="translate(70.5 2858.409)" fill="#fff" font-size="20" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-129.131" y="22">https://uossmarthome.com</tspan></text>
+    </g>
+    <g id="Component_17_4" data-name="Component 17 – 4" transform="translate(-32 136)">
+      <g id="Rectangle_624" data-name="Rectangle 624" transform="translate(40)" fill="#3a4658" stroke="#f90" stroke-width="10">
+        <rect width="405" height="295" rx="34" stroke="none"/>
+        <rect x="5" y="5" width="395" height="285" rx="29" fill="none"/>
+      </g>
+      <text id="Average_Outdoor_Temperature" data-name="Average Outdoor Temperature" transform="translate(0 11)" fill="#f90" font-size="26" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-186.812" y="28">Average Outdoor Temperature</tspan></text>
+      <g id="Component_15_1" data-name="Component 15 – 1" transform="translate(73 184)">
+        <g id="Rectangle_625" data-name="Rectangle 625" fill="#fff" stroke="#f90" stroke-width="10">
+          <rect width="226" height="64" rx="15" stroke="none"/>
+          <rect x="5" y="5" width="216" height="54" rx="10" fill="none"/>
+        </g>
+        <g id="Rectangle_626" data-name="Rectangle 626" fill="#3a4658" stroke="#f90" stroke-width="10">
+          <rect width="160" height="64" rx="15" stroke="none"/>
+          <rect x="5" y="5" width="150" height="54" rx="10" fill="none"/>
+        </g>
+        <text id="_C" data-name="°C" transform="translate(29 8)" fill="#f90" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-17.568" y="38">°C</tspan></text>
+        <text id="_F" data-name="°F" transform="translate(134 7)" fill="#3a4658" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-15.748" y="38">°F</tspan></text>
+      </g>
+      <text id="_16.8_C" data-name="16.8°C" transform="translate(47 42)" fill="#f90" font-size="90" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="11.478" y="97">16.8°C</tspan></text>
+      <g id="Component_14_1" data-name="Component 14 – 1" transform="translate(340 63)">
+        <g id="Ellipse_38" data-name="Ellipse 38" transform="translate(0 115)" fill="#3a4658" stroke="#f90" stroke-width="10">
+          <ellipse cx="40.5" cy="39.5" rx="40.5" ry="39.5" stroke="none"/>
+          <ellipse cx="40.5" cy="39.5" rx="35.5" ry="34.5" fill="none"/>
+        </g>
+        <g id="Ellipse_39" data-name="Ellipse 39" transform="translate(14 129)" fill="red" stroke="red" stroke-width="10">
+          <ellipse cx="26.5" cy="25" rx="26.5" ry="25" stroke="none"/>
+          <ellipse cx="26.5" cy="25" rx="21.5" ry="20" fill="none"/>
+        </g>
+        <g id="Rectangle_628" data-name="Rectangle 628" transform="translate(24)" fill="#3a4658" stroke="#f90" stroke-width="10">
+          <rect width="32" height="131" rx="15" stroke="none"/>
+          <rect x="5" y="5" width="22" height="121" rx="10" fill="none"/>
+        </g>
+        <line id="Line_62" data-name="Line 62" y1="82" transform="translate(40.5 53.5)" fill="none" stroke="red" stroke-width="8"/>
+      </g>
+    </g>
+    <g id="Component_17_5" data-name="Component 17 – 5" transform="translate(-29 444)">
+      <g id="Rectangle_624-2" data-name="Rectangle 624" transform="translate(37)" fill="#3a4658" stroke="#f90" stroke-width="10">
+        <rect width="405" height="295" rx="34" stroke="none"/>
+        <rect x="5" y="5" width="395" height="285" rx="29" fill="none"/>
+      </g>
+      <text id="Temperature_Sensor_1" data-name="Temperature Sensor 1" transform="translate(0 8)" fill="#f90" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-179.589" y="38">Temperature Sensor 1</tspan></text>
+      <g id="Component_15_1-2" data-name="Component 15 – 1" transform="translate(70 184)">
+        <g id="Rectangle_625-2" data-name="Rectangle 625" fill="#fff" stroke="#f90" stroke-width="10">
+          <rect width="226" height="64" rx="15" stroke="none"/>
+          <rect x="5" y="5" width="216" height="54" rx="10" fill="none"/>
+        </g>
+        <g id="Rectangle_626-2" data-name="Rectangle 626" fill="#3a4658" stroke="#f90" stroke-width="10">
+          <rect width="160" height="64" rx="15" stroke="none"/>
+          <rect x="5" y="5" width="150" height="54" rx="10" fill="none"/>
+        </g>
+        <text id="_C-2" data-name="°C" transform="translate(29 8)" fill="#f90" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-17.568" y="38">°C</tspan></text>
+        <text id="_F-2" data-name="°F" transform="translate(134 7)" fill="#3a4658" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-15.748" y="38">°F</tspan></text>
+      </g>
+      <text id="_15.2_C" data-name="15.2°C" transform="translate(44 42)" fill="#f90" font-size="90" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="11.478" y="97">15.2°C</tspan></text>
+      <g id="Component_14_1-2" data-name="Component 14 – 1" transform="translate(337 63)">
+        <g id="Ellipse_38-2" data-name="Ellipse 38" transform="translate(0 115)" fill="#3a4658" stroke="#f90" stroke-width="10">
+          <ellipse cx="40.5" cy="39.5" rx="40.5" ry="39.5" stroke="none"/>
+          <ellipse cx="40.5" cy="39.5" rx="35.5" ry="34.5" fill="none"/>
+        </g>
+        <g id="Ellipse_39-2" data-name="Ellipse 39" transform="translate(14 129)" fill="red" stroke="red" stroke-width="10">
+          <ellipse cx="26.5" cy="25" rx="26.5" ry="25" stroke="none"/>
+          <ellipse cx="26.5" cy="25" rx="21.5" ry="20" fill="none"/>
+        </g>
+        <g id="Rectangle_628-2" data-name="Rectangle 628" transform="translate(24)" fill="#3a4658" stroke="#f90" stroke-width="10">
+          <rect width="32" height="131" rx="15" stroke="none"/>
+          <rect x="5" y="5" width="22" height="121" rx="10" fill="none"/>
+        </g>
+        <line id="Line_62-2" data-name="Line 62" y1="82" transform="translate(40.5 53.5)" fill="none" stroke="red" stroke-width="8"/>
+      </g>
+    </g>
+    <g id="Component_17_6" data-name="Component 17 – 6" transform="translate(-29 754)">
+      <g id="Rectangle_624-3" data-name="Rectangle 624" transform="translate(37)" fill="#3a4658" stroke="#f90" stroke-width="10">
+        <rect width="405" height="295" rx="34" stroke="none"/>
+        <rect x="5" y="5" width="395" height="285" rx="29" fill="none"/>
+      </g>
+      <text id="Temperature_Sensor_2" data-name="Temperature Sensor 2" transform="translate(0 8)" fill="#f90" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-179.589" y="38">Temperature Sensor 2</tspan></text>
+      <g id="Component_15_1-3" data-name="Component 15 – 1" transform="translate(70 184)">
+        <g id="Rectangle_625-3" data-name="Rectangle 625" fill="#fff" stroke="#f90" stroke-width="10">
+          <rect width="226" height="64" rx="15" stroke="none"/>
+          <rect x="5" y="5" width="216" height="54" rx="10" fill="none"/>
+        </g>
+        <g id="Rectangle_626-3" data-name="Rectangle 626" fill="#3a4658" stroke="#f90" stroke-width="10">
+          <rect width="160" height="64" rx="15" stroke="none"/>
+          <rect x="5" y="5" width="150" height="54" rx="10" fill="none"/>
+        </g>
+        <text id="_C-3" data-name="°C" transform="translate(29 8)" fill="#f90" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-17.568" y="38">°C</tspan></text>
+        <text id="_F-3" data-name="°F" transform="translate(134 7)" fill="#3a4658" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-15.748" y="38">°F</tspan></text>
+      </g>
+      <text id="_16.8_C-2" data-name="16.8°C" transform="translate(44 42)" fill="#f90" font-size="90" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="11.478" y="97">16.8°C</tspan></text>
+      <g id="Component_14_1-3" data-name="Component 14 – 1" transform="translate(337 63)">
+        <g id="Ellipse_38-3" data-name="Ellipse 38" transform="translate(0 115)" fill="#3a4658" stroke="#f90" stroke-width="10">
+          <ellipse cx="40.5" cy="39.5" rx="40.5" ry="39.5" stroke="none"/>
+          <ellipse cx="40.5" cy="39.5" rx="35.5" ry="34.5" fill="none"/>
+        </g>
+        <g id="Ellipse_39-3" data-name="Ellipse 39" transform="translate(14 129)" fill="red" stroke="red" stroke-width="10">
+          <ellipse cx="26.5" cy="25" rx="26.5" ry="25" stroke="none"/>
+          <ellipse cx="26.5" cy="25" rx="21.5" ry="20" fill="none"/>
+        </g>
+        <g id="Rectangle_628-3" data-name="Rectangle 628" transform="translate(24)" fill="#3a4658" stroke="#f90" stroke-width="10">
+          <rect width="32" height="131" rx="15" stroke="none"/>
+          <rect x="5" y="5" width="22" height="121" rx="10" fill="none"/>
+        </g>
+        <line id="Line_62-3" data-name="Line 62" y1="82" transform="translate(40.5 53.5)" fill="none" stroke="red" stroke-width="8"/>
+      </g>
+    </g>
+    <g id="Component_17_7" data-name="Component 17 – 7" transform="translate(-29 1065)">
+      <g id="Rectangle_624-4" data-name="Rectangle 624" transform="translate(37)" fill="#3a4658" stroke="#f90" stroke-width="10">
+        <rect width="405" height="295" rx="34" stroke="none"/>
+        <rect x="5" y="5" width="395" height="285" rx="29" fill="none"/>
+      </g>
+      <text id="Temperature_Sensor_3" data-name="Temperature Sensor 3" transform="translate(0 8)" fill="#f90" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-179.589" y="38">Temperature Sensor 3</tspan></text>
+      <g id="Component_15_1-4" data-name="Component 15 – 1" transform="translate(70 184)">
+        <g id="Rectangle_625-4" data-name="Rectangle 625" fill="#fff" stroke="#f90" stroke-width="10">
+          <rect width="226" height="64" rx="15" stroke="none"/>
+          <rect x="5" y="5" width="216" height="54" rx="10" fill="none"/>
+        </g>
+        <g id="Rectangle_626-4" data-name="Rectangle 626" fill="#3a4658" stroke="#f90" stroke-width="10">
+          <rect width="160" height="64" rx="15" stroke="none"/>
+          <rect x="5" y="5" width="150" height="54" rx="10" fill="none"/>
+        </g>
+        <text id="_C-4" data-name="°C" transform="translate(29 8)" fill="#f90" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-17.568" y="38">°C</tspan></text>
+        <text id="_F-4" data-name="°F" transform="translate(134 7)" fill="#3a4658" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-15.748" y="38">°F</tspan></text>
+      </g>
+      <text id="_19.5_C" data-name="19.5°C" transform="translate(44 42)" fill="#f90" font-size="90" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="11.478" y="97">19.5°C</tspan></text>
+      <g id="Component_14_1-4" data-name="Component 14 – 1" transform="translate(337 63)">
+        <g id="Ellipse_38-4" data-name="Ellipse 38" transform="translate(0 115)" fill="#3a4658" stroke="#f90" stroke-width="10">
+          <ellipse cx="40.5" cy="39.5" rx="40.5" ry="39.5" stroke="none"/>
+          <ellipse cx="40.5" cy="39.5" rx="35.5" ry="34.5" fill="none"/>
+        </g>
+        <g id="Ellipse_39-4" data-name="Ellipse 39" transform="translate(14 129)" fill="red" stroke="red" stroke-width="10">
+          <ellipse cx="26.5" cy="25" rx="26.5" ry="25" stroke="none"/>
+          <ellipse cx="26.5" cy="25" rx="21.5" ry="20" fill="none"/>
+        </g>
+        <g id="Rectangle_628-4" data-name="Rectangle 628" transform="translate(24)" fill="#3a4658" stroke="#f90" stroke-width="10">
+          <rect width="32" height="131" rx="15" stroke="none"/>
+          <rect x="5" y="5" width="22" height="121" rx="10" fill="none"/>
+        </g>
+        <line id="Line_62-4" data-name="Line 62" y1="82" transform="translate(40.5 53.5)" fill="none" stroke="red" stroke-width="8"/>
+      </g>
+    </g>
+    <g id="Component_37_2" data-name="Component 37 – 2" transform="translate(8 1294)">
+      <g id="Rectangle_100" data-name="Rectangle 100" transform="translate(0 79)" fill="#3a4658" stroke="#f90" stroke-width="10">
+        <rect width="405" height="317" rx="34" stroke="none"/>
+        <rect x="5" y="5" width="395" height="307" rx="29" fill="none"/>
+      </g>
+      <text id="_" data-name="+" transform="translate(112)" fill="#f90" font-size="300" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-15.055" y="324">+</tspan></text>
+    </g>
+    <g id="Component_39_1" data-name="Component 39 – 1" transform="translate(0 1699)">
+      <text id="Sales_Report" data-name="Sales Report" transform="translate(6.5 20)" fill="#f90" font-size="19" font-family="Poppins-Bold, Poppins" font-weight="700" letter-spacing="0.006em"><tspan x="0" y="0">Hourly Temperature Graph (Last 24 Hours)</tspan></text>
+      <g transform="matrix(1, 0, 0, 1, 0, -1699)" filter="url(#Shape)">
+        <rect id="Shape-2" data-name="Shape" width="417.5" height="458.233" rx="6" transform="translate(0 1726)" fill="#3a4658"/>
+      </g>
+      <g id="Value" transform="translate(7.096 128.233)">
+        <rect id="Shape-3" data-name="Shape" width="377.525" height="1.344" transform="translate(30.792 308)" fill="#f90"/>
+        <text id="_1k" data-name="$1k" transform="translate(29 309)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-21.938" y="0">-40°C</tspan></text>
+        <rect id="Shape-4" data-name="Shape" width="377.525" height="1.344" transform="translate(30.792 288.503)" fill="#f90"/>
+        <text id="_1k-2" data-name="$1k" transform="translate(29 290.784)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-21.42" y="0">-35°C</tspan></text>
+        <rect id="Shape-5" data-name="Shape" width="377.525" height="1.344" transform="translate(30.792 268.7)" fill="#f90"/>
+        <text id="_1k-3" data-name="$1k" transform="translate(29 272.569)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-21.434" y="0">-30°C</tspan></text>
+        <rect id="Shape-6" data-name="Shape" width="377.525" height="1.344" transform="translate(30.792 248.899)" fill="#f90"/>
+        <text id="_1k-4" data-name="$1k" transform="translate(29 254.354)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-21.182" y="0">-25°C</tspan></text>
+        <rect id="Shape-7" data-name="Shape" width="377.525" height="1.344" transform="translate(30.792 230.138)" fill="#f90"/>
+        <text id="_1k-5" data-name="$1k" transform="translate(29 235.138)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-21.196" y="0">-20°C</tspan></text>
+        <rect id="Shape-8" data-name="Shape" width="377.525" height="1.344" transform="translate(30.792 211)" fill="#f90"/>
+        <text id="_1k-6" data-name="$1k" transform="translate(29 212)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-21.938" y="0">-40°C</tspan></text>
+        <rect id="Shape-9" data-name="Shape" width="377.525" height="1.344" transform="translate(30.792 191.503)" fill="#f90"/>
+        <text id="_1k-7" data-name="$1k" transform="translate(29 193.784)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-21.42" y="0">-35°C</tspan></text>
+        <rect id="Shape-10" data-name="Shape" width="377.525" height="1.344" transform="translate(30.792 171.7)" fill="#f90"/>
+        <text id="_1k-8" data-name="$1k" transform="translate(29 175.569)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-21.434" y="0">-30°C</tspan></text>
+        <rect id="Shape-11" data-name="Shape" width="377.525" height="1.344" transform="translate(30.792 151.899)" fill="#f90"/>
+        <text id="_1k-9" data-name="$1k" transform="translate(29 157.354)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-21.182" y="0">-25°C</tspan></text>
+        <rect id="Shape-12" data-name="Shape" width="377.525" height="1.344" transform="translate(30.792 133.138)" fill="#f90"/>
+        <text id="_1k-10" data-name="$1k" transform="translate(29 138.138)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-21.196" y="0">-20°C</tspan></text>
+        <rect id="Shape-13" data-name="Shape" width="377.525" height="1.344" transform="translate(30.792 114)" fill="#f90"/>
+        <text id="_1k-11" data-name="$1k" transform="translate(29 115)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-21.938" y="0">-40°C</tspan></text>
+        <rect id="Shape-14" data-name="Shape" width="377.525" height="1.344" transform="translate(30.792 94.503)" fill="#f90"/>
+        <text id="_1k-12" data-name="$1k" transform="translate(29 96.784)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-21.42" y="0">-35°C</tspan></text>
+        <rect id="Shape-15" data-name="Shape" width="377.525" height="1.344" transform="translate(30.792 74.7)" fill="#f90"/>
+        <text id="_1k-13" data-name="$1k" transform="translate(29 78.569)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-21.434" y="0">-30°C</tspan></text>
+        <rect id="Shape-16" data-name="Shape" width="377.525" height="1.344" transform="translate(30.792 54.899)" fill="#f90"/>
+        <text id="_1k-14" data-name="$1k" transform="translate(29 60.354)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-21.182" y="0">-25°C</tspan></text>
+        <rect id="Shape-17" data-name="Shape" width="377.525" height="1.344" transform="translate(30.792 36.138)" fill="#f90"/>
+        <text id="_1k-15" data-name="$1k" transform="translate(29 41.138)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-21.196" y="0">-20°C</tspan></text>
+        <rect id="Shape-18" data-name="Shape" width="377.525" height="1.344" transform="translate(30.792 18)" fill="#f90"/>
+        <text id="_1k-16" data-name="$1k" transform="translate(29 19)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-21.938" y="0">-40°C</tspan></text>
+        <rect id="Shape-19" data-name="Shape" width="377.525" height="1.344" transform="translate(30.792 -1.497)" fill="#f90"/>
+        <text id="_1k-17" data-name="$1k" transform="translate(29 0.784)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-21.42" y="0">-35°C</tspan></text>
+        <rect id="Shape-20" data-name="Shape" width="377.525" height="1.344" transform="translate(30.792 -21.3)" fill="#f90"/>
+        <text id="_1k-18" data-name="$1k" transform="translate(29 -17.431)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-21.434" y="0">-30°C</tspan></text>
+        <rect id="Shape-21" data-name="Shape" width="377.525" height="1.344" transform="translate(30.792 -41.102)" fill="#f90"/>
+        <text id="_1k-19" data-name="$1k" transform="translate(29 -35.646)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-21.182" y="0">-25°C</tspan></text>
+        <rect id="Shape-22" data-name="Shape" width="377.525" height="1.344" transform="translate(30.792 -59.862)" fill="#f90"/>
+        <text id="_1k-20" data-name="$1k" transform="translate(29 -54.862)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-21.196" y="0">-20°C</tspan></text>
+        <rect id="Shape-23" data-name="Shape" width="377.525" height="1.344" transform="translate(30.792 -79.862)" fill="#f90"/>
+        <text id="_1k-21" data-name="$1k" transform="translate(29 -74.862)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-21.196" y="0">-20°C</tspan></text>
+      </g>
+      <g id="Scroll_Group" data-name="Scroll Group" transform="translate(69 209.233)" clip-path="url(#clip-path)" style="isolation: isolate">
+        <text id="Month" transform="translate(-23 238.26)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-3.598" y="0">01</tspan></text>
+        <g id="Scroll_Group_1" data-name="Scroll Group 1" transform="translate(-26 82)" clip-path="url(#clip-path-2)" style="isolation: isolate">
+          <g id="Bars" transform="translate(-2 -301.598)">
+            <path id="Green_Bar" data-name="Green Bar" d="M2.5,0h0A2.5,2.5,0,0,1,5,2.5V374.6a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V2.5A2.5,2.5,0,0,1,2.5,0Z" transform="translate(2 73)" fill="#29cb97"/>
+          </g>
+        </g>
+        <text id="Month-2" data-name="Month" transform="translate(-6.994 238.26)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-4.281" y="0">02</tspan></text>
+        <g id="Scroll_Group_2" data-name="Scroll Group 2" transform="translate(-10.464 173)" clip-path="url(#clip-path-3)" style="isolation: isolate">
+          <g id="Bars-2" data-name="Bars" transform="translate(-2 -454.374)">
+            <path id="Green_Bar-2" data-name="Green Bar" d="M2.5,0h0A2.5,2.5,0,0,1,5,2.5V345.374a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V2.5A2.5,2.5,0,0,1,2.5,0Z" transform="translate(2 164)" fill="#29cb97"/>
+          </g>
+        </g>
+        <text id="Month-3" data-name="Month" transform="translate(8.27 238.26)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-4.399" y="0">03</tspan></text>
+        <g id="Scroll_Group_3" data-name="Scroll Group 3" transform="translate(5.258 37)" clip-path="url(#clip-path-4)" style="isolation: isolate">
+          <g id="Bars-3" data-name="Bars" transform="translate(-2 -143.409)">
+            <path id="Green_Bar-3" data-name="Green Bar" d="M2.5,0h0A2.5,2.5,0,0,1,5,2.5V306.409a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V2.5A2.5,2.5,0,0,1,2.5,0Z" transform="translate(2 28)" fill="#29cb97"/>
+          </g>
+        </g>
+        <text id="Month-4" data-name="Month" transform="translate(24.167 238.26)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-4.652" y="0">04</tspan></text>
+        <g id="Bars-4" data-name="Bars" transform="translate(19.44 -49.185)">
+          <path id="Green_Bar-4" data-name="Green Bar" d="M2.5,0C3.881,0,5,2.015,5,4.5V277.185H0V4.5C0,2.015,1.119,0,2.5,0Z" transform="translate(2)" fill="#29cb97"/>
+        </g>
+        <text id="Month-5" data-name="Month" transform="translate(39.058 238.26)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-4.557" y="0">05</tspan></text>
+        <g id="Bars-5" data-name="Bars" transform="translate(34.558 -14)">
+          <path id="Green_Bar-5" data-name="Green Bar" d="M2.5,0C3.881,0,5,2.015,5,4.5V243H0V4.5C0,2.015,1.119,0,2.5,0Z" transform="translate(2 -1)" fill="#29cb97"/>
+        </g>
+        <text id="Month-6" data-name="Month" transform="translate(-23 238.26)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-3.598" y="0">01</tspan></text>
+        <g id="Scroll_Group_4" data-name="Scroll Group 4" transform="translate(-26 82)" clip-path="url(#clip-path-2)" style="isolation: isolate">
+          <g id="Bars-6" data-name="Bars" transform="translate(-2 -301.598)">
+            <path id="Green_Bar-6" data-name="Green Bar" d="M2.5,0h0A2.5,2.5,0,0,1,5,2.5V374.6a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V2.5A2.5,2.5,0,0,1,2.5,0Z" transform="translate(2 73)" fill="#29cb97"/>
+          </g>
+        </g>
+        <text id="Month-7" data-name="Month" transform="translate(-6.994 238.26)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-4.281" y="0">02</tspan></text>
+        <g id="Scroll_Group_5" data-name="Scroll Group 5" transform="translate(-10.464 173)" clip-path="url(#clip-path-3)" style="isolation: isolate">
+          <g id="Bars-7" data-name="Bars" transform="translate(-2 -454.374)">
+            <path id="Green_Bar-7" data-name="Green Bar" d="M2.5,0h0A2.5,2.5,0,0,1,5,2.5V345.374a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V2.5A2.5,2.5,0,0,1,2.5,0Z" transform="translate(2 164)" fill="#29cb97"/>
+          </g>
+        </g>
+        <text id="Month-8" data-name="Month" transform="translate(8.271 238.26)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-4.399" y="0">03</tspan></text>
+        <g id="Scroll_Group_6" data-name="Scroll Group 6" transform="translate(5.258 37)" clip-path="url(#clip-path-4)" style="isolation: isolate">
+          <g id="Bars-8" data-name="Bars" transform="translate(-2 -143.409)">
+            <path id="Green_Bar-8" data-name="Green Bar" d="M2.5,0h0A2.5,2.5,0,0,1,5,2.5V306.409a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V2.5A2.5,2.5,0,0,1,2.5,0Z" transform="translate(2 28)" fill="#29cb97"/>
+          </g>
+        </g>
+        <text id="Month-9" data-name="Month" transform="translate(24.167 238.26)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-4.652" y="0">04</tspan></text>
+        <g id="Bars-9" data-name="Bars" transform="translate(19.44 -49.185)">
+          <path id="Green_Bar-9" data-name="Green Bar" d="M2.5,0C3.881,0,5,2.015,5,4.5V277.185H0V4.5C0,2.015,1.119,0,2.5,0Z" transform="translate(2)" fill="#29cb97"/>
+        </g>
+        <text id="Month-10" data-name="Month" transform="translate(39.058 238.26)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-4.557" y="0">05</tspan></text>
+        <g id="Bars-10" data-name="Bars" transform="translate(34.558 -14)">
+          <path id="Green_Bar-10" data-name="Green Bar" d="M2.5,0C3.881,0,5,2.015,5,4.5V243H0V4.5C0,2.015,1.119,0,2.5,0Z" transform="translate(2 -1)" fill="#29cb97"/>
+        </g>
+        <text id="Month-11" data-name="Month" transform="translate(56 238.26)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-4.512" y="0">06</tspan></text>
+        <g id="Scroll_Group_7" data-name="Scroll Group 7" transform="translate(53 82)" clip-path="url(#clip-path-2)" style="isolation: isolate">
+          <g id="Bars-11" data-name="Bars" transform="translate(-2 -301.598)">
+            <path id="Green_Bar-11" data-name="Green Bar" d="M2.5,0h0A2.5,2.5,0,0,1,5,2.5V374.6a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V2.5A2.5,2.5,0,0,1,2.5,0Z" transform="translate(2 73)" fill="#29cb97"/>
+          </g>
+        </g>
+        <text id="Month-12" data-name="Month" transform="translate(72.006 238.26)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-4.155" y="0">07</tspan></text>
+        <g id="Scroll_Group_8" data-name="Scroll Group 8" transform="translate(68.536 173)" clip-path="url(#clip-path-3)" style="isolation: isolate">
+          <g id="Bars-12" data-name="Bars" transform="translate(-2 -454.374)">
+            <path id="Green_Bar-12" data-name="Green Bar" d="M2.5,0h0A2.5,2.5,0,0,1,5,2.5V345.374a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V2.5A2.5,2.5,0,0,1,2.5,0Z" transform="translate(2 164)" fill="#29cb97"/>
+          </g>
+        </g>
+        <text id="Month-13" data-name="Month" transform="translate(87.271 238.26)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-4.55" y="0">08</tspan></text>
+        <g id="Scroll_Group_9" data-name="Scroll Group 9" transform="translate(84.258 37)" clip-path="url(#clip-path-4)" style="isolation: isolate">
+          <g id="Bars-13" data-name="Bars" transform="translate(-2 -143.409)">
+            <path id="Green_Bar-13" data-name="Green Bar" d="M2.5,0h0A2.5,2.5,0,0,1,5,2.5V306.409a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V2.5A2.5,2.5,0,0,1,2.5,0Z" transform="translate(2 28)" fill="#29cb97"/>
+          </g>
+        </g>
+        <text id="Month-14" data-name="Month" transform="translate(103.167 238.26)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-4.435" y="0">09</tspan></text>
+        <g id="Bars-14" data-name="Bars" transform="translate(98.44 -49.185)">
+          <path id="Green_Bar-14" data-name="Green Bar" d="M2.5,0C3.881,0,5,2.015,5,4.5V277.185H0V4.5C0,2.015,1.119,0,2.5,0Z" transform="translate(2)" fill="#29cb97"/>
+        </g>
+        <text id="Month-15" data-name="Month" transform="translate(118.058 238.26)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-3.598" y="0">10</tspan></text>
+        <g id="Bars-15" data-name="Bars" transform="translate(113.558 -14)">
+          <path id="Green_Bar-15" data-name="Green Bar" d="M2.5,0C3.881,0,5,2.015,5,4.5V243H0V4.5C0,2.015,1.119,0,2.5,0Z" transform="translate(2 -1)" fill="#29cb97"/>
+        </g>
+        <text id="Month-16" data-name="Month" transform="translate(135 238.26)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-2.632" y="0">11</tspan></text>
+        <g id="Scroll_Group_10" data-name="Scroll Group 10" transform="translate(132 82)" clip-path="url(#clip-path-2)" style="isolation: isolate">
+          <g id="Bars-16" data-name="Bars" transform="translate(-2 -301.598)">
+            <path id="Green_Bar-16" data-name="Green Bar" d="M2.5,0h0A2.5,2.5,0,0,1,5,2.5V374.6a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V2.5A2.5,2.5,0,0,1,2.5,0Z" transform="translate(2 73)" fill="#29cb97"/>
+          </g>
+        </g>
+        <text id="Month-17" data-name="Month" transform="translate(151.006 238.26)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-3.315" y="0">12</tspan></text>
+        <g id="Scroll_Group_11" data-name="Scroll Group 11" transform="translate(147.536 173)" clip-path="url(#clip-path-3)" style="isolation: isolate">
+          <g id="Bars-17" data-name="Bars" transform="translate(-2 -454.374)">
+            <path id="Green_Bar-17" data-name="Green Bar" d="M2.5,0h0A2.5,2.5,0,0,1,5,2.5V345.374a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V2.5A2.5,2.5,0,0,1,2.5,0Z" transform="translate(2 164)" fill="#29cb97"/>
+          </g>
+        </g>
+        <text id="Month-18" data-name="Month" transform="translate(166.271 238.26)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-3.434" y="0">13</tspan></text>
+        <g id="Scroll_Group_12" data-name="Scroll Group 12" transform="translate(163.258 37)" clip-path="url(#clip-path-4)" style="isolation: isolate">
+          <g id="Bars-18" data-name="Bars" transform="translate(-2 -143.409)">
+            <path id="Green_Bar-18" data-name="Green Bar" d="M2.5,0h0A2.5,2.5,0,0,1,5,2.5V306.409a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V2.5A2.5,2.5,0,0,1,2.5,0Z" transform="translate(2 28)" fill="#29cb97"/>
+          </g>
+        </g>
+        <text id="Month-19" data-name="Month" transform="translate(182.167 238.26)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-3.686" y="0">14</tspan></text>
+        <g id="Bars-19" data-name="Bars" transform="translate(177.44 -49.185)">
+          <path id="Green_Bar-19" data-name="Green Bar" d="M2.5,0C3.881,0,5,2.015,5,4.5V277.185H0V4.5C0,2.015,1.119,0,2.5,0Z" transform="translate(2)" fill="#29cb97"/>
+        </g>
+        <text id="Month-20" data-name="Month" transform="translate(197.058 238.26)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-3.591" y="0">15</tspan></text>
+        <g id="Bars-20" data-name="Bars" transform="translate(192.558 -14)">
+          <path id="Green_Bar-20" data-name="Green Bar" d="M2.5,0C3.881,0,5,2.015,5,4.5V243H0V4.5C0,2.015,1.119,0,2.5,0Z" transform="translate(2 -1)" fill="#29cb97"/>
+        </g>
+        <text id="Month-21" data-name="Month" transform="translate(212 238.26)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-3.546" y="0">16</tspan></text>
+        <g id="Scroll_Group_13" data-name="Scroll Group 13" transform="translate(209 82)" clip-path="url(#clip-path-2)" style="isolation: isolate">
+          <g id="Bars-21" data-name="Bars" transform="translate(-2 -301.598)">
+            <path id="Green_Bar-21" data-name="Green Bar" d="M2.5,0h0A2.5,2.5,0,0,1,5,2.5V374.6a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V2.5A2.5,2.5,0,0,1,2.5,0Z" transform="translate(2 73)" fill="#29cb97"/>
+          </g>
+        </g>
+        <text id="Month-22" data-name="Month" transform="translate(228.006 238.26)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-3.188" y="0">17</tspan></text>
+        <g id="Scroll_Group_14" data-name="Scroll Group 14" transform="translate(224.536 173)" clip-path="url(#clip-path-3)" style="isolation: isolate">
+          <g id="Bars-22" data-name="Bars" transform="translate(-2 -454.374)">
+            <path id="Green_Bar-22" data-name="Green Bar" d="M2.5,0h0A2.5,2.5,0,0,1,5,2.5V345.374a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V2.5A2.5,2.5,0,0,1,2.5,0Z" transform="translate(2 164)" fill="#29cb97"/>
+          </g>
+        </g>
+        <text id="Month-23" data-name="Month" transform="translate(243.271 238.26)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-3.584" y="0">18</tspan></text>
+        <g id="Scroll_Group_15" data-name="Scroll Group 15" transform="translate(240.258 37)" clip-path="url(#clip-path-4)" style="isolation: isolate">
+          <g id="Bars-23" data-name="Bars" transform="translate(-2 -143.409)">
+            <path id="Green_Bar-23" data-name="Green Bar" d="M2.5,0h0A2.5,2.5,0,0,1,5,2.5V306.409a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V2.5A2.5,2.5,0,0,1,2.5,0Z" transform="translate(2 28)" fill="#29cb97"/>
+          </g>
+        </g>
+        <text id="Month-24" data-name="Month" transform="translate(259.167 238.26)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-3.469" y="0">19</tspan></text>
+        <g id="Bars-24" data-name="Bars" transform="translate(254.44 -49.185)">
+          <path id="Green_Bar-24" data-name="Green Bar" d="M2.5,0C3.881,0,5,2.015,5,4.5V277.185H0V4.5C0,2.015,1.119,0,2.5,0Z" transform="translate(2)" fill="#29cb97"/>
+        </g>
+        <text id="Month-25" data-name="Month" transform="translate(274.058 238.26)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-4.281" y="0">20</tspan></text>
+        <g id="Bars-25" data-name="Bars" transform="translate(269.558 -14)">
+          <path id="Green_Bar-25" data-name="Green Bar" d="M2.5,0C3.881,0,5,2.015,5,4.5V243H0V4.5C0,2.015,1.119,0,2.5,0Z" transform="translate(2 -1)" fill="#29cb97"/>
+        </g>
+        <text id="Month-26" data-name="Month" transform="translate(292 238.26)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-3.315" y="0">21</tspan></text>
+        <g id="Scroll_Group_16" data-name="Scroll Group 16" transform="translate(289 82)" clip-path="url(#clip-path-2)" style="isolation: isolate">
+          <g id="Bars-26" data-name="Bars" transform="translate(-2 -301.598)">
+            <path id="Green_Bar-26" data-name="Green Bar" d="M2.5,0h0A2.5,2.5,0,0,1,5,2.5V374.6a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V2.5A2.5,2.5,0,0,1,2.5,0Z" transform="translate(2 73)" fill="#29cb97"/>
+          </g>
+        </g>
+        <text id="Month-27" data-name="Month" transform="translate(308.006 238.26)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-3.997" y="0">22</tspan></text>
+        <g id="Scroll_Group_17" data-name="Scroll Group 17" transform="translate(304.536 173)" clip-path="url(#clip-path-3)" style="isolation: isolate">
+          <g id="Bars-27" data-name="Bars" transform="translate(-2 -454.374)">
+            <path id="Green_Bar-27" data-name="Green Bar" d="M2.5,0h0A2.5,2.5,0,0,1,5,2.5V345.374a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V2.5A2.5,2.5,0,0,1,2.5,0Z" transform="translate(2 164)" fill="#29cb97"/>
+          </g>
+        </g>
+        <text id="Month-28" data-name="Month" transform="translate(323.271 238.26)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-4.116" y="0">23</tspan></text>
+        <g id="Scroll_Group_18" data-name="Scroll Group 18" transform="translate(320.258 37)" clip-path="url(#clip-path-4)" style="isolation: isolate">
+          <g id="Bars-28" data-name="Bars" transform="translate(-2 -143.409)">
+            <path id="Green_Bar-28" data-name="Green Bar" d="M2.5,0h0A2.5,2.5,0,0,1,5,2.5V306.409a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V2.5A2.5,2.5,0,0,1,2.5,0Z" transform="translate(2 28)" fill="#29cb97"/>
+          </g>
+        </g>
+        <text id="Month-29" data-name="Month" transform="translate(339.167 238.26)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-7.892" y="0">Now</tspan></text>
+        <g id="Bars-29" data-name="Bars" transform="translate(334.44 -49.185)">
+          <path id="Green_Bar-29" data-name="Green Bar" d="M2.5,0C3.881,0,5,2.015,5,4.5V277.185H0V4.5C0,2.015,1.119,0,2.5,0Z" transform="translate(2)" fill="#29cb97"/>
+        </g>
+      </g>
+    </g>
+    <text id="Sales_Report-2" data-name="Sales Report" transform="translate(16 2171)" fill="#f90" font-size="19" font-family="Poppins-Bold, Poppins" font-weight="700" letter-spacing="0.006em"><tspan x="0" y="0">Daily Temperature Graph (Last 30 Days)</tspan></text>
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Bg)">
+      <rect id="Bg-2" data-name="Bg" width="400" height="259" rx="6" transform="translate(14 2172)" fill="#3a4658"/>
+    </g>
+    <g id="Value-2" data-name="Value" transform="translate(10 2529.137)">
+      <g id="_0" data-name="0" transform="translate(10 -123.137)">
+        <text id="_0-2" data-name="0" transform="translate(22 7)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700" letter-spacing="0.007em"><tspan x="-22.138" y="0">-40°C</tspan></text>
+      </g>
+      <g id="_200" data-name="200" transform="translate(10 -146.137)">
+        <text id="_200-2" data-name="200" transform="translate(22 7)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700" letter-spacing="0.007em"><tspan x="-21.634" y="0">-30°C</tspan></text>
+      </g>
+      <g id="_400" data-name="400" transform="translate(11 -166.788)">
+        <text id="_400-2" data-name="400" transform="translate(21 6.651)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700" letter-spacing="0.007em"><tspan x="-21.396" y="0">-20°C</tspan></text>
+      </g>
+      <g id="_600" data-name="600" transform="translate(12 -188.614)">
+        <text id="_600-2" data-name="600" transform="translate(20 7.477)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700" letter-spacing="0.007em"><tspan x="-20.031" y="0">-10°C</tspan></text>
+      </g>
+      <g id="_800" data-name="800" transform="translate(19 -212.163)">
+        <text id="_800-2" data-name="800" transform="translate(13 7.025)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700" letter-spacing="0.007em"><tspan x="-13.239" y="0">0°C</tspan></text>
+      </g>
+      <g id="_1k-22" data-name="1k" transform="translate(15 -234.563)">
+        <text id="_1k-23" data-name="1k" transform="translate(16 7.426)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700" letter-spacing="0.007em"><tspan x="-15.921" y="0">10°C</tspan></text>
+      </g>
+      <g id="_1k-24" data-name="1k" transform="translate(14 -255.24)">
+        <text id="_1k-25" data-name="1k" transform="translate(17 7.103)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700" letter-spacing="0.007em"><tspan x="-17.286" y="0">20°C</tspan></text>
+      </g>
+      <g id="_1k-26" data-name="1k" transform="translate(13 -278.214)">
+        <text id="_1k-27" data-name="1k" transform="translate(18 7.077)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700" letter-spacing="0.007em"><tspan x="-17.524" y="0">30°C</tspan></text>
+      </g>
+      <g id="_1k-28" data-name="1k" transform="translate(13 -300.04)">
+        <text id="_1k-29" data-name="1k" transform="translate(18 6.902)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700" letter-spacing="0.007em"><tspan x="-18.028" y="0">40°C</tspan></text>
+      </g>
+      <g id="_1k-30" data-name="1k" transform="translate(13 -323.137)">
+        <text id="_1k-31" data-name="1k" transform="translate(18 7)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700" letter-spacing="0.007em"><tspan x="-17.839" y="0">50°C</tspan></text>
+      </g>
+      <g id="_1k-32" data-name="1k" transform="translate(13 -347.137)">
+        <text id="_1k-33" data-name="1k" transform="translate(18 7)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700" letter-spacing="0.007em"><tspan x="-17.748" y="0">60°C</tspan></text>
+      </g>
+    </g>
+    <text id="Jan" transform="translate(88 2424)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-4.557" y="0">05</tspan></text>
+    <path id="Shape-24" data-name="Shape" d="M.011,234.375V0H.989V234.375Z" transform="translate(88.5 2182)" fill="#f90"/>
+    <text id="Jan-2" data-name="Jan" transform="translate(76 2424)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-4.652" y="0">04</tspan></text>
+    <path id="Shape-25" data-name="Shape" d="M.011,234.375V0H.989V234.375Z" transform="translate(76.5 2182)" fill="#f90"/>
+    <text id="Jan-3" data-name="Jan" transform="translate(65 2424)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-4.399" y="0">03</tspan></text>
+    <path id="Shape-26" data-name="Shape" d="M.011,234.375V0H.989V234.375Z" transform="translate(65.5 2182)" fill="#f90"/>
+    <text id="Jan-4" data-name="Jan" transform="translate(54 2424)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-4.281" y="0">02</tspan></text>
+    <path id="Shape-27" data-name="Shape" d="M.011,234.375V0H.989V234.375Z" transform="translate(54.5 2182)" fill="#f90"/>
+    <text id="Jan-5" data-name="Jan" transform="translate(44 2424)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-3.598" y="0">01</tspan></text>
+    <path id="Shape-28" data-name="Shape" d="M.011,234.375V0H.989V234.375Z" transform="translate(44.5 2182)" fill="#f90"/>
+    <path id="Line-2" data-name="Line" d="M0,118.947c1.73,3.586,14.923,8.8,22.493-3.912s14.275-5.868,22.061-3.26S54.936,83.739,63.587,79.827s19.465-24.811,32.442-29.7,12.112,24.159,29.2,28.4,21.844-25.428,29.631-33.9S166.1-2.482,179.081.126s19.465,28.74,30.279,32S222.338,57.007,232.5,72.981s19.465,17.93,32.226,14.67S280.95,51.43,287.006,50.126s11.463,14.414,16.654,18,6.7,19.525,17.735,19.525,9.733,6.194,15.789,5.216,10.382-10.106,12.328-14.344" transform="translate(45.489 2245)" fill="none" stroke="#21d59b" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+    <text id="Jan-6" data-name="Jan" transform="translate(154 2424)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-3.598" y="0">10</tspan></text>
+    <path id="Shape-29" data-name="Shape" d="M.011,234.375V0H.989V234.375Z" transform="translate(154.5 2182)" fill="#f90"/>
+    <text id="Jan-7" data-name="Jan" transform="translate(140 2424)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-4.435" y="0">09</tspan></text>
+    <path id="Shape-30" data-name="Shape" d="M.011,234.375V0H.989V234.375Z" transform="translate(140.5 2182)" fill="#f90"/>
+    <text id="Jan-8" data-name="Jan" transform="translate(128 2424)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-4.55" y="0">08</tspan></text>
+    <path id="Shape-31" data-name="Shape" d="M.011,234.375V0H.989V234.375Z" transform="translate(128.5 2182)" fill="#f90"/>
+    <text id="Jan-9" data-name="Jan" transform="translate(113 2424)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-4.155" y="0">07</tspan></text>
+    <path id="Shape-32" data-name="Shape" d="M.011,234.375V0H.989V234.375Z" transform="translate(113.5 2182)" fill="#f90"/>
+    <text id="Jan-10" data-name="Jan" transform="translate(101 2424)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-4.512" y="0">06</tspan></text>
+    <path id="Shape-33" data-name="Shape" d="M.011,234.375V0H.989V234.375Z" transform="translate(101.5 2182)" fill="#f90"/>
+    <text id="Jan-11" data-name="Jan" transform="translate(215 2424)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-3.591" y="0">15</tspan></text>
+    <path id="Shape-34" data-name="Shape" d="M.011,234.375V0H.989V234.375Z" transform="translate(215.5 2182)" fill="#f90"/>
+    <text id="Jan-12" data-name="Jan" transform="translate(201 2424)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-3.686" y="0">14</tspan></text>
+    <path id="Shape-35" data-name="Shape" d="M.011,234.375V0H.989V234.375Z" transform="translate(201.5 2182)" fill="#f90"/>
+    <text id="Jan-13" data-name="Jan" transform="translate(189 2424)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-3.434" y="0">13</tspan></text>
+    <path id="Shape-36" data-name="Shape" d="M.011,234.375V0H.989V234.375Z" transform="translate(189.5 2182)" fill="#f90"/>
+    <text id="Jan-14" data-name="Jan" transform="translate(177 2424)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-3.315" y="0">12</tspan></text>
+    <path id="Shape-37" data-name="Shape" d="M.011,234.375V0H.989V234.375Z" transform="translate(177.5 2182)" fill="#f90"/>
+    <text id="Jan-15" data-name="Jan" transform="translate(166 2424)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-2.632" y="0">11</tspan></text>
+    <path id="Shape-38" data-name="Shape" d="M.011,234.375V0H.989V234.375Z" transform="translate(166.5 2182)" fill="#f90"/>
+    <text id="Jan-16" data-name="Jan" transform="translate(276 2424)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-4.281" y="0">20</tspan></text>
+    <path id="Shape-39" data-name="Shape" d="M.011,234.375V0H.989V234.375Z" transform="translate(276.5 2182)" fill="#f90"/>
+    <text id="Jan-17" data-name="Jan" transform="translate(262 2424)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-3.469" y="0">19</tspan></text>
+    <path id="Shape-40" data-name="Shape" d="M.011,234.375V0H.989V234.375Z" transform="translate(262.5 2182)" fill="#f90"/>
+    <text id="Jan-18" data-name="Jan" transform="translate(250 2424)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-3.584" y="0">18</tspan></text>
+    <path id="Shape-41" data-name="Shape" d="M.011,234.375V0H.989V234.375Z" transform="translate(250.5 2182)" fill="#f90"/>
+    <text id="Jan-19" data-name="Jan" transform="translate(238 2424)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-3.188" y="0">17</tspan></text>
+    <path id="Shape-42" data-name="Shape" d="M.011,234.375V0H.989V234.375Z" transform="translate(238.5 2182)" fill="#f90"/>
+    <text id="Jan-20" data-name="Jan" transform="translate(227 2424)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-3.546" y="0">16</tspan></text>
+    <path id="Shape-43" data-name="Shape" d="M.011,234.375V0H.989V234.375Z" transform="translate(227.5 2182)" fill="#f90"/>
+    <text id="Jan-21" data-name="Jan" transform="translate(341 2424)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-4.274" y="0">25</tspan></text>
+    <path id="Shape-44" data-name="Shape" d="M.011,234.375V0H.989V234.375Z" transform="translate(341.5 2182)" fill="#f90"/>
+    <text id="Jan-22" data-name="Jan" transform="translate(327 2424)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-4.368" y="0">24</tspan></text>
+    <path id="Shape-45" data-name="Shape" d="M.011,234.375V0H.989V234.375Z" transform="translate(327.5 2182)" fill="#f90"/>
+    <text id="Jan-23" data-name="Jan" transform="translate(312 2424)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-4.116" y="0">23</tspan></text>
+    <path id="Shape-46" data-name="Shape" d="M.011,234.375V0H.989V234.375Z" transform="translate(312.5 2182)" fill="#f90"/>
+    <text id="Jan-24" data-name="Jan" transform="translate(300 2424)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-3.997" y="0">22</tspan></text>
+    <path id="Shape-47" data-name="Shape" d="M.011,234.375V0H.989V234.375Z" transform="translate(300.5 2182)" fill="#f90"/>
+    <text id="Jan-25" data-name="Jan" transform="translate(289 2424)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-3.315" y="0">21</tspan></text>
+    <path id="Shape-48" data-name="Shape" d="M.011,234.375V0H.989V234.375Z" transform="translate(289.5 2182)" fill="#f90"/>
+    <text id="Jan-26" data-name="Jan" transform="translate(400 2424)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-7.892" y="0">Now</tspan></text>
+    <path id="Shape-49" data-name="Shape" d="M.011,234.375V0H.989V234.375Z" transform="translate(400.5 2182)" fill="#f90"/>
+    <text id="Jan-27" data-name="Jan" transform="translate(388 2424)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-4.151" y="0">29</tspan></text>
+    <path id="Shape-50" data-name="Shape" d="M.011,234.375V0H.989V234.375Z" transform="translate(388.5 2182)" fill="#f90"/>
+    <text id="Jan-28" data-name="Jan" transform="translate(377 2424)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-4.267" y="0">28</tspan></text>
+    <path id="Shape-51" data-name="Shape" d="M.011,234.375V0H.989V234.375Z" transform="translate(377.5 2182)" fill="#f90"/>
+    <text id="Jan-29" data-name="Jan" transform="translate(366 2424)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-3.871" y="0">27</tspan></text>
+    <path id="Shape-52" data-name="Shape" d="M.011,234.375V0H.989V234.375Z" transform="translate(366.5 2182)" fill="#f90"/>
+    <text id="Jan-30" data-name="Jan" transform="translate(356 2424)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-4.228" y="0">26</tspan></text>
+    <path id="Shape-53" data-name="Shape" d="M.011,234.375V0H.989V234.375Z" transform="translate(356.5 2182)" fill="#f90"/>
+    <text id="Sales_Report-3" data-name="Sales Report" transform="translate(3 2458)" fill="#f90" font-size="18" font-family="Poppins-Bold, Poppins" font-weight="700" letter-spacing="0.006em"><tspan x="0" y="0">Monthly Temperature Graph (Last 12 Months)</tspan></text>
+    <g id="Component_42_1" data-name="Component 42 – 1" transform="translate(27 2475)">
+      <g id="Value-3" data-name="Value" transform="translate(-10 335)">
+        <g id="_0-3" data-name="0" transform="translate(10 -91.313)">
+          <text id="_0-4" data-name="0" transform="translate(22 7.313)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700" letter-spacing="0.007em"><tspan x="-22.138" y="0">-40°C</tspan></text>
+        </g>
+        <g id="_200-3" data-name="200" transform="translate(10 -116.313)">
+          <text id="_200-4" data-name="200" transform="translate(22 7.313)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700" letter-spacing="0.007em"><tspan x="-21.634" y="0">-30°C</tspan></text>
+        </g>
+        <g id="_400-3" data-name="400" transform="translate(11 -140.879)">
+          <text id="_400-4" data-name="400" transform="translate(21 6.879)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700" letter-spacing="0.007em"><tspan x="-21.396" y="0">-20°C</tspan></text>
+        </g>
+        <g id="_600-3" data-name="600" transform="translate(12 -167.041)">
+          <text id="_600-4" data-name="600" transform="translate(20 7.041)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700" letter-spacing="0.007em"><tspan x="-20.031" y="0">-10°C</tspan></text>
+        </g>
+        <g id="_800-3" data-name="800" transform="translate(19 -186.204)">
+          <text id="_800-4" data-name="800" transform="translate(13 2.204)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700" letter-spacing="0.007em"><tspan x="-13.239" y="0">0°C</tspan></text>
+        </g>
+        <g id="_1k-34" data-name="1k" transform="translate(15 -209.366)">
+          <text id="_1k-35" data-name="1k" transform="translate(16 0.366)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700" letter-spacing="0.007em"><tspan x="-15.921" y="0">10°C</tspan></text>
+        </g>
+        <g id="_1k-36" data-name="1k" transform="translate(14 -236.023)">
+          <text id="_1k-37" data-name="1k" transform="translate(17 2.022)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700" letter-spacing="0.007em"><tspan x="-17.286" y="0">20°C</tspan></text>
+        </g>
+        <g id="_1k-38" data-name="1k" transform="translate(13 -264.932)">
+          <text id="_1k-39" data-name="1k" transform="translate(18 6.932)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700" letter-spacing="0.007em"><tspan x="-17.524" y="0">30°C</tspan></text>
+        </g>
+        <g id="_1k-40" data-name="1k" transform="translate(13 -288.083)">
+          <text id="_1k-41" data-name="1k" transform="translate(18 7.083)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700" letter-spacing="0.007em"><tspan x="-18.028" y="0">40°C</tspan></text>
+        </g>
+        <g id="_1k-42" data-name="1k" transform="translate(6 -315)">
+          <text id="_1k-43" data-name="1k" transform="translate(25 11)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700" letter-spacing="0.007em"><tspan x="-17.839" y="0">50°C</tspan></text>
+        </g>
+        <g id="_1k-44" data-name="1k" transform="translate(6 -339)">
+          <text id="_1k-45" data-name="1k" transform="translate(25 11)" fill="#f90" font-size="7" font-family="Poppins-Bold, Poppins" font-weight="700" letter-spacing="0.007em"><tspan x="-17.748" y="0">60°C</tspan></text>
+        </g>
+      </g>
+      <g id="Widgets__Elements_Chart_Graph_-_Line_Bar" data-name="Widgets / _Elements / Chart / Graph - Line Bar" transform="translate(76)">
+        <text id="Jan-31" data-name="Jan" transform="translate(10 279)" fill="#f90" font-size="10" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-10.125" y="0">Mar</tspan></text>
+        <path id="Shape-54" data-name="Shape" d="M.011,252.123V0H.989V252.123Z" transform="translate(10.5)" fill="#f90"/>
+      </g>
+      <g id="Widgets__Elements_Chart_Graph_-_Line_Bar-2" data-name="Widgets / _Elements / Chart / Graph - Line Bar" transform="translate(46)">
+        <text id="Jan-32" data-name="Jan" transform="translate(9 279)" fill="#f90" font-size="10" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-9.21" y="0">Feb</tspan></text>
+        <path id="Shape-55" data-name="Shape" d="M.011,252.123V0H.989V252.123Z" transform="translate(9.5)" fill="#f90"/>
+      </g>
+      <g id="Widgets__Elements_Chart_Graph_-_Line_Bar-3" data-name="Widgets / _Elements / Chart / Graph - Line Bar" transform="translate(20)">
+        <text id="Jan-33" data-name="Jan" transform="translate(10 279)" fill="#f90" font-size="10" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-9.655" y="0">Jan</tspan></text>
+        <path id="Shape-56" data-name="Shape" d="M.011,252.123V0H.989V252.123Z" transform="translate(10.5)" fill="#f90"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -27, -2475)" filter="url(#Line)">
+        <path id="Line-3" data-name="Line" d="M-3.008,21.326c2.779,4.32,23.378,33.015,28.174,37.7,9.1,8.89,25.226,31.362,33.2,36.941s19.686,20.2,29.489,28.692c8.807,7.452,19.925,35.068,33.234,32.677,8.21,3.985,11.955-4.782,28.932-12.234,11.158-1.833,16.219-8.488,26.58-15.94s13.31-7.373,26.58-15.9,20.041-9.44,32.12-17.295,26.427-24.236,32.159-27.377c.413-.226,25.488-60.667,30.05-63.6,4.916-3.166,23.278-8.242,25.12-18.453" transform="translate(380.82 2685.47) rotate(180)" fill="none" stroke="#0058ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+      </g>
+      <g id="Widgets__Elements_Chart_Graph_-_Line_Bar-4" data-name="Widgets / _Elements / Chart / Graph - Line Bar" transform="translate(110)">
+        <text id="Jan-34" data-name="Jan" transform="translate(9 279)" fill="#f90" font-size="10" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-9.22" y="0">Apr</tspan></text>
+        <path id="Shape-57" data-name="Shape" d="M.011,252.123V0H.989V252.123Z" transform="translate(9.5)" fill="#f90"/>
+      </g>
+      <g id="Widgets__Elements_Chart_Graph_-_Line_Bar-5" data-name="Widgets / _Elements / Chart / Graph - Line Bar" transform="translate(138)">
+        <text id="Jan-35" data-name="Jan" transform="translate(11 279)" fill="#f90" font-size="10" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-11.145" y="0">May</tspan></text>
+        <path id="Shape-58" data-name="Shape" d="M.011,252.123V0H.989V252.123Z" transform="translate(11.5)" fill="#f90"/>
+      </g>
+      <g id="Widgets__Elements_Chart_Graph_-_Line_Bar-6" data-name="Widgets / _Elements / Chart / Graph - Line Bar" transform="translate(222)">
+        <text id="Jan-36" data-name="Jan" transform="translate(10 279)" fill="#f90" font-size="10" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-10.45" y="0">Aug</tspan></text>
+        <path id="Shape-59" data-name="Shape" d="M.011,252.123V0H.989V252.123Z" transform="translate(10.5)" fill="#f90"/>
+      </g>
+      <g id="Widgets__Elements_Chart_Graph_-_Line_Bar-7" data-name="Widgets / _Elements / Chart / Graph - Line Bar" transform="translate(195)">
+        <text id="Jan-37" data-name="Jan" transform="translate(8 279)" fill="#f90" font-size="10" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-7.735" y="0">Jul</tspan></text>
+        <path id="Shape-60" data-name="Shape" d="M.011,252.123V0H.989V252.123Z" transform="translate(8.5)" fill="#f90"/>
+      </g>
+      <g id="Widgets__Elements_Chart_Graph_-_Line_Bar-8" data-name="Widgets / _Elements / Chart / Graph - Line Bar" transform="translate(166)">
+        <text id="Jan-38" data-name="Jan" transform="translate(10 279)" fill="#f90" font-size="10" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-9.63" y="0">Jun</tspan></text>
+        <path id="Shape-61" data-name="Shape" d="M.011,252.123V0H.989V252.123Z" transform="translate(10.5)" fill="#f90"/>
+      </g>
+      <g id="Widgets__Elements_Chart_Graph_-_Line_Bar-9" data-name="Widgets / _Elements / Chart / Graph - Line Bar" transform="translate(255)">
+        <text id="Jan-39" data-name="Jan" transform="translate(10 279)" fill="#f90" font-size="10" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-9.55" y="0">Sep</tspan></text>
+        <path id="Shape-62" data-name="Shape" d="M.011,252.123V0H.989V252.123Z" transform="translate(10.5)" fill="#f90"/>
+      </g>
+      <g id="Widgets__Elements_Chart_Graph_-_Line_Bar-10" data-name="Widgets / _Elements / Chart / Graph - Line Bar" transform="translate(286)">
+        <text id="Jan-40" data-name="Jan" transform="translate(9 279)" fill="#f90" font-size="10" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-8.985" y="0">Oct</tspan></text>
+        <path id="Shape-63" data-name="Shape" d="M.011,252.123V0H.989V252.123Z" transform="translate(9.5)" fill="#f90"/>
+      </g>
+      <g id="Widgets__Elements_Chart_Graph_-_Line_Bar-11" data-name="Widgets / _Elements / Chart / Graph - Line Bar" transform="translate(318)">
+        <text id="Jan-41" data-name="Jan" transform="translate(10 279)" fill="#f90" font-size="10" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-10.075" y="0">Nov</tspan></text>
+        <path id="Shape-64" data-name="Shape" d="M.011,252.123V0H.989V252.123Z" transform="translate(10.5)" fill="#f90"/>
+      </g>
+      <g id="Widgets__Elements_Chart_Graph_-_Line_Bar-12" data-name="Widgets / _Elements / Chart / Graph - Line Bar" transform="translate(346)">
+        <text id="Jan-42" data-name="Jan" transform="translate(10 279)" fill="#f90" font-size="10" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="-9.74" y="0">Dec</tspan></text>
+        <path id="Shape-65" data-name="Shape" d="M.011,252.123V0H.989V252.123Z" transform="translate(10.5)" fill="#f90"/>
+      </g>
+    </g>
+  </g>
+</svg>

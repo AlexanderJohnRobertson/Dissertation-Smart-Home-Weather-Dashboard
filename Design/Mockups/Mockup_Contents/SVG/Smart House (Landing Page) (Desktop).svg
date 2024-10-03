@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <clipPath id="clip-Smart_House_Landing_Page_Desktop_">
+      <rect width="1920" height="1080"/>
+    </clipPath>
+  </defs>
+  <g id="Smart_House_Landing_Page_Desktop_" data-name="Smart House (Landing Page) (Desktop)" clip-path="url(#clip-Smart_House_Landing_Page_Desktop_)">
+    <rect width="1920" height="1080" fill="#fff"/>
+    <g id="Group_1" data-name="Group 1">
+      <g id="Rectangle_1" data-name="Rectangle 1" fill="#3688be" stroke="#707070" stroke-width="1">
+        <rect width="1896" height="101" stroke="none"/>
+        <rect x="0.5" y="0.5" width="1895" height="100" fill="none"/>
+      </g>
+      <g id="Rectangle_2" data-name="Rectangle 2" transform="translate(1896)" fill="#fff" stroke="#707070" stroke-width="1">
+        <rect width="24" height="1080" stroke="none"/>
+        <rect x="0.5" y="0.5" width="23" height="1079" fill="none"/>
+      </g>
+      <g id="Rectangle_3" data-name="Rectangle 3" transform="translate(1896)" fill="#fff" stroke="#707070" stroke-width="1">
+        <rect width="24" height="27" stroke="none"/>
+        <rect x="0.5" y="0.5" width="23" height="26" fill="none"/>
+      </g>
+      <g id="Rectangle_4" data-name="Rectangle 4" transform="translate(1896 1053)" fill="#fff" stroke="#707070" stroke-width="1">
+        <rect width="24" height="27" stroke="none"/>
+        <rect x="0.5" y="0.5" width="23" height="26" fill="none"/>
+      </g>
+      <g id="Rectangle_5" data-name="Rectangle 5" transform="translate(1896 101)" fill="#00c5ff" stroke="#707070" stroke-width="1">
+        <rect width="24" height="194" stroke="none"/>
+        <rect x="0.5" y="0.5" width="23" height="193" fill="none"/>
+      </g>
+      <g id="Polygon_1" data-name="Polygon 1" transform="translate(1898 1)" fill="#00c5ff">
+        <path d="M 20.22210311889648 22.5 L 0.7778975963592529 22.5 L 10.5 1.20396614074707 L 20.22210311889648 22.5 Z" stroke="none"/>
+        <path d="M 10.5 2.407943725585938 L 1.555801391601562 22 L 19.44419860839844 22 L 10.5 2.407943725585938 M 10.5 0 L 21 23 L 0 23 L 10.5 0 Z" stroke="none" fill="#707070"/>
+      </g>
+      <g id="Polygon_2" data-name="Polygon 2" transform="translate(1918 1078) rotate(-180)" fill="#00c5ff">
+        <path d="M 20.22210311889648 22.5 L 0.7778975963592529 22.5 L 10.5 1.20396614074707 L 20.22210311889648 22.5 Z" stroke="none"/>
+        <path d="M 10.5 2.407943725585938 L 1.555801391601562 22 L 19.44419860839844 22 L 10.5 2.407943725585938 M 10.5 0 L 21 23 L 0 23 L 10.5 0 Z" stroke="none" fill="#707070"/>
+      </g>
+      <g id="Rectangle_6" data-name="Rectangle 6" transform="translate(601 33)" fill="#3a4658" stroke="#f90" stroke-linejoin="round" stroke-width="10">
+        <rect width="332" height="77" rx="16" stroke="none"/>
+        <rect x="5" y="5" width="322" height="67" rx="11" fill="none"/>
+      </g>
+      <g id="Rectangle_7" data-name="Rectangle 7" transform="translate(980 31)" fill="#52b6f8" stroke="#f90" stroke-width="10">
+        <rect width="332" height="77" rx="15" stroke="none"/>
+        <rect x="5" y="5" width="322" height="67" rx="10" fill="none"/>
+      </g>
+      <text id="Smart_Home" data-name="Smart Home" transform="translate(620 35)" fill="#f90" font-size="45" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-133.671" y="49">Smart Home</tspan></text>
+      <text id="Weather" transform="translate(1013 38)" fill="#f90" font-size="45" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-89.714" y="49">Weather</tspan></text>
+      <g id="Rectangle_8" data-name="Rectangle 8" transform="translate(0 101)" fill="#3a4658" stroke="#707070" stroke-width="1">
+        <rect width="1896" height="979" stroke="none"/>
+        <rect x="0.5" y="0.5" width="1895" height="978" fill="none"/>
+      </g>
+      <line id="Line_1" data-name="Line 1" x2="1896" transform="translate(0.5 101.5)" fill="none" stroke="#f90" stroke-width="10"/>
+      <line id="Line_2" data-name="Line 2" x2="312" transform="translate(611.5 101.5)" fill="none" stroke="#3a4658" stroke-width="11"/>
+    </g>
+    <g id="Rectangle_9" data-name="Rectangle 9" transform="translate(72 218)" fill="#3a4658" stroke="#f90" stroke-width="10">
+      <rect width="486" height="378" rx="34" stroke="none"/>
+      <rect x="5" y="5" width="476" height="368" rx="29" fill="none"/>
+    </g>
+    <g id="Rectangle_10" data-name="Rectangle 10" transform="translate(593 218)" fill="#3a4658" stroke="#f90" stroke-width="10">
+      <rect width="489" height="378" rx="34" stroke="none"/>
+      <rect x="5" y="5" width="479" height="368" rx="29" fill="none"/>
+    </g>
+    <g id="Rectangle_11" data-name="Rectangle 11" transform="translate(1106 218)" fill="#3a4658" stroke="#f90" stroke-width="10">
+      <rect width="740" height="378" rx="34" stroke="none"/>
+      <rect x="5" y="5" width="730" height="368" rx="29" fill="none"/>
+    </g>
+    <text id="Smart_House" data-name="Smart House" transform="translate(669 113)" fill="#f90" font-size="70" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-212.444" y="76">Smart House</tspan></text>
+    <line id="Line_3" data-name="Line 3" x2="485" transform="translate(72.5 274.5)" fill="none" stroke="#f90" stroke-width="10"/>
+    <text id="Outdoor_Temperature" data-name="Outdoor Temperature" transform="translate(48 220)" fill="#f90" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-179.264" y="38">Outdoor Temperature</tspan></text>
+    <line id="Line_4" data-name="Line 4" x2="487" transform="translate(595.5 274.5)" fill="none" stroke="#f90" stroke-width="10"/>
+    <line id="Line_5" data-name="Line 5" x2="729" transform="translate(1116.5 274.5)" fill="none" stroke="#f90" stroke-width="10"/>
+    <text id="Outdoor_Humidity" data-name="Outdoor Humidity" transform="translate(544 220)" fill="#f90" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-151.655" y="38">Outdoor Humidity</tspan></text>
+    <text id="Energy_Consumption" data-name="Energy Consumption" transform="translate(1073 220)" fill="#f90" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-171.787" y="38">Energy Consumption</tspan></text>
+    <g id="Rectangle_12" data-name="Rectangle 12" transform="translate(121 418)" fill="#fff" stroke="#f90" stroke-width="10">
+      <rect width="236" height="66" rx="15" stroke="none"/>
+      <rect x="5" y="5" width="226" height="56" rx="10" fill="none"/>
+    </g>
+    <g id="Rectangle_13" data-name="Rectangle 13" transform="translate(121 418)" fill="#3a4658" stroke="#f90" stroke-width="10">
+      <rect width="170" height="66" rx="15" stroke="none"/>
+      <rect x="5" y="5" width="160" height="56" rx="10" fill="none"/>
+    </g>
+    <text id="_C" data-name="°C" transform="translate(150 426)" fill="#f90" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-17.568" y="38">°C</tspan></text>
+    <text id="_F" data-name="°F" transform="translate(265 425)" fill="#3a4658" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-15.748" y="38">°F</tspan></text>
+    <text id="_16.8_C" data-name="16.8°C" transform="translate(108 301)" fill="#f90" font-size="80" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-120.02" y="86">16.8°C</tspan></text>
+    <g id="Rectangle_14" data-name="Rectangle 14" transform="translate(182 507)" fill="#3a4658" stroke="#f90" stroke-width="10">
+      <rect width="267" height="66" rx="15" stroke="none"/>
+      <rect x="5" y="5" width="257" height="56" rx="10" fill="none"/>
+    </g>
+    <text id="Details" transform="translate(212 514)" fill="#f90" font-size="40" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-64.277" y="43">Details</tspan></text>
+    <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(420 416)" fill="#3a4658" stroke="#f90" stroke-width="10">
+      <ellipse cx="40.5" cy="39.5" rx="40.5" ry="39.5" stroke="none"/>
+      <ellipse cx="40.5" cy="39.5" rx="35.5" ry="34.5" fill="none"/>
+    </g>
+    <g id="Ellipse_2" data-name="Ellipse 2" transform="translate(434 430)" fill="red" stroke="red" stroke-width="10">
+      <ellipse cx="26.5" cy="25" rx="26.5" ry="25" stroke="none"/>
+      <ellipse cx="26.5" cy="25" rx="21.5" ry="20" fill="none"/>
+    </g>
+    <g id="Rectangle_15" data-name="Rectangle 15" transform="translate(444 301)" fill="#3a4658" stroke="#f90" stroke-width="10">
+      <rect width="32" height="131" rx="15" stroke="none"/>
+      <rect x="5" y="5" width="22" height="121" rx="10" fill="none"/>
+    </g>
+    <line id="Line_6" data-name="Line 6" y1="82" transform="translate(460.5 354.5)" fill="none" stroke="red" stroke-width="8"/>
+    <text id="_62_" data-name="62%" transform="translate(623 301)" fill="#f90" font-size="90" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-90.791" y="97">62%</tspan></text>
+    <g id="Rectangle_16" data-name="Rectangle 16" transform="translate(704 501)" fill="#3a4658" stroke="#f90" stroke-width="10">
+      <rect width="267" height="66" rx="15" stroke="none"/>
+      <rect x="5" y="5" width="257" height="56" rx="10" fill="none"/>
+    </g>
+    <text id="Details-2" data-name="Details" transform="translate(734 507)" fill="#f90" font-size="40" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-64.277" y="43">Details</tspan></text>
+    <g id="Component_18_1" data-name="Component 18 – 1" transform="translate(944 292)">
+      <g id="Ellipse_3" data-name="Ellipse 3" transform="translate(0 95)" fill="#00e6ff" stroke="#00e6ff" stroke-width="1">
+        <ellipse cx="40.5" cy="42.5" rx="40.5" ry="42.5" stroke="none"/>
+        <ellipse cx="40.5" cy="42.5" rx="40" ry="42" fill="none"/>
+      </g>
+      <g id="Polygon_3" data-name="Polygon 3" transform="translate(10)" fill="#00e6ff">
+        <path d="M 59.19301223754883 111.2371597290039 L 30.1430835723877 102.5609130859375 L 29.99999809265137 102.5181732177734 L 29.85691261291504 102.5609130859375 L 0.8069851398468018 111.2371597290039 L 19.07028388977051 60.64978408813477 L 19.08391189575195 60.61204147338867 L 19.09134101867676 60.57261276245117 L 29.99999809265137 2.699317455291748 L 40.90865707397461 60.57261276245117 L 40.91608428955078 60.61204147338867 L 40.92971420288086 60.64978408813477 L 59.19301223754883 111.2371597290039 Z" stroke="none"/>
+        <path d="M 29.99999809265137 5.398674011230469 L 19.56782913208008 60.74409103393555 L 19.54058456420898 60.8195686340332 L 1.613990783691406 110.4742965698242 L 29.99999809265137 101.996337890625 L 58.38600540161133 110.4742965698242 L 40.43216705322266 60.74409103393555 L 29.99999809265137 5.398674011230469 M 29.99999809265137 0 L 41.39999771118164 60.47999954223633 L 60 112 L 29.99999809265137 103.0399856567383 L -3.814697265625e-06 112 L 18.59999847412109 60.47999954223633 L 29.99999809265137 0 Z" stroke="none" fill="#00e6ff"/>
+      </g>
+    </g>
+    <text id="Energy_Used_Today" data-name="Energy Used 
+Today" transform="translate(1014 288)" fill="#f90" font-size="37" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-107.829" y="40">Energy Used </tspan><tspan x="-51.851" y="89">Today</tspan></text>
+    <g id="Rectangle_17" data-name="Rectangle 17" transform="translate(1343 511)" fill="#3a4658" stroke="#f90" stroke-width="10">
+      <rect width="267" height="66" rx="15" stroke="none"/>
+      <rect x="5" y="5" width="257" height="56" rx="10" fill="none"/>
+    </g>
+    <text id="Details-3" data-name="Details" transform="translate(1378 514)" fill="#f90" font-size="40" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-64.277" y="43">Details</tspan></text>
+    <text id="Current_Energy_Usage" data-name="Current Energy
+Usage" transform="translate(1294 288)" fill="#f90" font-size="37" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-130.638" y="40">Current Energy</tspan><tspan x="-52.935" y="89">Usage</tspan></text>
+    <text id="_20_kWh" data-name="20 kWh" transform="translate(1014 394)" fill="#f90" font-size="70" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-125.73" y="76">20 kWh</tspan></text>
+    <text id="_2.2_kW" data-name="2.2 kW" transform="translate(1294 394)" fill="#f90" font-size="70" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-114.143" y="76">2.2 kW</tspan></text>
+    <path id="Path_1" data-name="Path 1" d="M1780,2308.631h-27.131l-36.383,87.5,24.6-13.846-24.6,60.982,24.6-15.761-24.6,59.951L1780,2406l-27.131,8.691L1780,2357.829l-27.131,8.838Z" transform="translate(0 -2000)" fill="#ffed00" stroke="#ffed00" stroke-width="1"/>
+  </g>
+</svg>
