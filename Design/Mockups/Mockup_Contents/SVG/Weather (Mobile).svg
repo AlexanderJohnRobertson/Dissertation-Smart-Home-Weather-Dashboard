@@ -130,34 +130,29 @@
         <rect x="5" y="5" width="353" height="253" rx="17" fill="none"/>
       </g>
       <text id="Temperature" transform="translate(12 9)" font-size="40" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-119.59" y="43">Temperature</tspan></text>
-      <text id="_21.8_C" data-name="21.8°C" transform="translate(37 55)" font-size="55" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-82.513" y="59">21.8°C</tspan></text>
-      <g id="Rectangle_632" data-name="Rectangle 632" transform="translate(48 136)" fill="#fff" stroke="#000" stroke-width="10">
+      <text id="_21.8_C" data-name="21.8°C" transform="translate(24 82)" font-size="65" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-97.516" y="70">21.8°C</tspan></text>
+      <g id="Rectangle_632" data-name="Rectangle 632" transform="translate(48 188)" fill="#fff" stroke="#000" stroke-width="10">
         <rect width="157" height="47" rx="15" stroke="none"/>
         <rect x="5" y="5" width="147" height="37" rx="10" fill="none"/>
       </g>
-      <g id="Rectangle_633" data-name="Rectangle 633" transform="translate(48 136)" fill="#52b6f8" stroke="#000" stroke-width="10">
+      <g id="Rectangle_633" data-name="Rectangle 633" transform="translate(48 188)" fill="#52b6f8" stroke="#000" stroke-width="10">
         <rect width="105" height="47" rx="15" stroke="none"/>
         <rect x="5" y="5" width="95" height="37" rx="10" fill="none"/>
       </g>
-      <text id="_C" data-name="°C" transform="translate(48 140)" font-size="25" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="37.951" y="27">°C</tspan></text>
-      <text id="_F" data-name="°F" transform="translate(116 143)" font-size="25" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="39.251" y="27">°F</tspan></text>
-      <g id="Rectangle_634" data-name="Rectangle 634" transform="translate(47 191)" fill="#cfcfcf" stroke="#000" stroke-width="10">
-        <rect width="270" height="52" rx="15" stroke="none"/>
-        <rect x="5" y="5" width="260" height="42" rx="10" fill="none"/>
+      <text id="_C" data-name="°C" transform="translate(48 192)" font-size="25" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="37.951" y="27">°C</tspan></text>
+      <text id="_F" data-name="°F" transform="translate(116 195)" font-size="25" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="39.251" y="27">°F</tspan></text>
+      <g id="Rectangle_635" data-name="Rectangle 635" transform="translate(290 62)" fill="#52b6f8" stroke="#000" stroke-width="8">
+        <rect width="27" height="109" rx="13.5" stroke="none"/>
+        <rect x="4" y="4" width="19" height="101" rx="9.5" fill="none"/>
       </g>
-      <text id="Details" transform="translate(40 197)" font-size="30" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-48.208" y="32">Details</tspan></text>
-      <g id="Rectangle_635" data-name="Rectangle 635" transform="translate(299 57)" fill="#52b6f8" stroke="#000" stroke-width="8">
-        <rect width="25" height="91" rx="12.5" stroke="none"/>
-        <rect x="4" y="4" width="17" height="83" rx="8.5" fill="none"/>
+      <line id="Line_64" data-name="Line 64" y1="51.5" x2="0.044" transform="translate(303.5 112.5)" fill="none" stroke="red" stroke-width="8"/>
+      <g id="Ellipse_40" data-name="Ellipse 40" transform="translate(269 161)" fill="#52b6f8" stroke="#000" stroke-width="8">
+        <circle cx="35" cy="35" r="35" stroke="none"/>
+        <circle cx="35" cy="35" r="31" fill="none"/>
       </g>
-      <line id="Line_64" data-name="Line 64" y1="51.5" x2="0.044" transform="translate(311.455 88.5)" fill="none" stroke="red" stroke-width="8"/>
-      <g id="Ellipse_40" data-name="Ellipse 40" transform="translate(285 132)" fill="#52b6f8" stroke="#000" stroke-width="8">
-        <ellipse cx="26.5" cy="27.5" rx="26.5" ry="27.5" stroke="none"/>
-        <ellipse cx="26.5" cy="27.5" rx="22.5" ry="23.5" fill="none"/>
-      </g>
-      <g id="Ellipse_41" data-name="Ellipse 41" transform="translate(296 145)" fill="red" stroke="red" stroke-width="10">
-        <ellipse cx="15.5" cy="15" rx="15.5" ry="15" stroke="none"/>
-        <ellipse cx="15.5" cy="15" rx="10.5" ry="10" fill="none"/>
+      <g id="Ellipse_41" data-name="Ellipse 41" transform="translate(282 173)" fill="red" stroke="red" stroke-width="10">
+        <circle cx="22.5" cy="22.5" r="22.5" stroke="none"/>
+        <circle cx="22.5" cy="22.5" r="17.5" fill="none"/>
       </g>
     </g>
     <g id="Group_406" data-name="Group 406" transform="translate(-319 230)">
@@ -362,14 +357,11 @@ Cloudy" transform="translate(521 325)" font-size="50" font-family="SegoeUI-Bold,
         <rect x="5" y="5" width="280" height="44" rx="8" fill="none"/>
       </g>
     </g>
-    <g id="Component_30_2" data-name="Component 30 – 2" transform="translate(37 2987)">
-      <g id="Rectangle_46" data-name="Rectangle 46" fill="#52b6f8" stroke="#000" stroke-width="10">
-        <rect width="359" height="262" rx="20" stroke="none"/>
-        <rect x="5" y="5" width="349" height="252" rx="15" fill="none"/>
-      </g>
-      <rect id="map" width="324" height="185" transform="translate(20 12)" fill="url(#pattern-4)"/>
-      <text id="View_Full_Weather_Map" data-name="View Full Weather Map" transform="translate(27 209)" font-size="25" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-136.414" y="27">View Full Weather Map</tspan></text>
+    <g id="Rectangle_46" data-name="Rectangle 46" transform="translate(37 2987)" fill="#52b6f8" stroke="#000" stroke-width="10">
+      <rect width="359" height="262" rx="20" stroke="none"/>
+      <rect x="5" y="5" width="349" height="252" rx="15" fill="none"/>
     </g>
+    <rect id="map" width="324" height="185" transform="translate(57 2999)" fill="url(#pattern-4)"/>
     <g id="Rectangle_637" data-name="Rectangle 637" transform="translate(12 3284)" fill="#52b6f8" stroke="#000" stroke-width="10">
       <rect width="408" height="282" rx="18" stroke="none"/>
       <rect x="5" y="5" width="398" height="272" rx="13" fill="none"/>
@@ -842,5 +834,12 @@ Chance" transform="translate(193 2)" font-size="10" font-family="SegoeUI-Bold, S
     </g>
     <path id="shape-14" data-name="shape" d="M61.006,24.79a12.464,12.464,0,0,1,4.408,5.08,17.135,17.135,0,0,1,1.622,7.521,17.135,17.135,0,0,1-1.622,7.521A12.462,12.462,0,0,1,61,50a11.9,11.9,0,0,1-6.531,1.868h-41.9A11.9,11.9,0,0,1,6.038,50a12.463,12.463,0,0,1-4.416-5.085A17.135,17.135,0,0,1,0,37.391,17.135,17.135,0,0,1,1.622,29.87a12.463,12.463,0,0,1,4.416-5.085A11.448,11.448,0,0,1,7.9,23.812a16.768,16.768,0,0,1-.131-2.1c0-7.994,5.627-14.474,12.569-14.474a11.833,11.833,0,0,1,9.152,4.553C32.035,4.862,37.992,0,44.935,0c9.256,0,16.759,8.64,16.759,19.3a22.032,22.032,0,0,1-.688,5.492Z" transform="translate(142.388 4242.135)" fill="url(#linear-gradient-27)"/>
     <path id="shape-15" data-name="shape" d="M61,24.189a12.257,12.257,0,0,1,4.407,4.957,16.382,16.382,0,0,1,1.622,7.339,16.382,16.382,0,0,1-1.622,7.339,12.255,12.255,0,0,1-4.415,4.961,12.121,12.121,0,0,1-6.531,1.823H12.568a12.121,12.121,0,0,1-6.531-1.823,12.255,12.255,0,0,1-4.415-4.961A16.382,16.382,0,0,1,0,36.485a16.382,16.382,0,0,1,1.622-7.339,12.255,12.255,0,0,1,4.415-4.961,11.55,11.55,0,0,1,1.863-.95,15.972,15.972,0,0,1-.131-2.05c0-7.8,5.627-14.123,12.568-14.123A11.936,11.936,0,0,1,29.489,11.5C32.032,4.744,37.989,0,44.931,0c9.255,0,16.758,8.431,16.758,18.831A21.007,21.007,0,0,1,61,24.189Z" transform="translate(145.569 4363)" fill="url(#linear-gradient-28)"/>
+    <g id="Component_55_2" data-name="Component 55 – 2" transform="translate(54 3188)">
+      <g id="Rectangle_645" data-name="Rectangle 645" fill="#b7b7b7" stroke="#000" stroke-width="10">
+        <rect width="328" height="47" rx="15" stroke="none"/>
+        <rect x="5" y="5" width="318" height="37" rx="10" fill="none"/>
+      </g>
+    </g>
+    <text id="View_Full_Weather_Map" data-name="View Full Weather Map" transform="translate(61 3191)" font-size="25" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-136.414" y="27">View Full Weather Map</tspan></text>
   </g>
 </svg>

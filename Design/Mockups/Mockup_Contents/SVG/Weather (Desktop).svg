@@ -120,34 +120,29 @@
       <rect x="5" y="5" width="276" height="253" rx="17" fill="none"/>
     </g>
     <text id="Temperature" transform="translate(80 261)" font-size="40" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-119.59" y="43">Temperature</tspan></text>
-    <text id="_21.8_C" data-name="21.8°C" transform="translate(67 311)" font-size="55" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-82.513" y="59">21.8°C</tspan></text>
-    <g id="Rectangle_52" data-name="Rectangle 52" transform="translate(79 388)" fill="#fff" stroke="#000" stroke-width="10">
+    <text id="_21.8_C" data-name="21.8°C" transform="translate(70 323)" font-size="65" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-97.516" y="70">21.8°C</tspan></text>
+    <g id="Rectangle_52" data-name="Rectangle 52" transform="translate(79 435)" fill="#fff" stroke="#000" stroke-width="10">
       <rect width="157" height="47" rx="15" stroke="none"/>
       <rect x="5" y="5" width="147" height="37" rx="10" fill="none"/>
     </g>
-    <g id="Rectangle_53" data-name="Rectangle 53" transform="translate(79 388)" fill="#52b6f8" stroke="#000" stroke-width="10">
+    <g id="Rectangle_53" data-name="Rectangle 53" transform="translate(79 435)" fill="#52b6f8" stroke="#000" stroke-width="10">
       <rect width="105" height="47" rx="15" stroke="none"/>
       <rect x="5" y="5" width="95" height="37" rx="10" fill="none"/>
     </g>
-    <text id="_C" data-name="°C" transform="translate(79 392)" font-size="25" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="37.951" y="27">°C</tspan></text>
-    <text id="_F" data-name="°F" transform="translate(152 395)" font-size="25" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="39.251" y="27">°F</tspan></text>
-    <g id="Rectangle_54" data-name="Rectangle 54" transform="translate(106 443)" fill="#cfcfcf" stroke="#000" stroke-width="10">
-      <rect width="193" height="52" rx="15" stroke="none"/>
-      <rect x="5" y="5" width="183" height="42" rx="10" fill="none"/>
+    <text id="_C" data-name="°C" transform="translate(79 439)" font-size="25" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="37.951" y="27">°C</tspan></text>
+    <text id="_F" data-name="°F" transform="translate(152 442)" font-size="25" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="39.251" y="27">°F</tspan></text>
+    <g id="Rectangle_55" data-name="Rectangle 55" transform="translate(280 309)" fill="#52b6f8" stroke="#000" stroke-width="8">
+      <rect width="27" height="112" rx="13.5" stroke="none"/>
+      <rect x="4" y="4" width="19" height="104" rx="9.5" fill="none"/>
     </g>
-    <text id="Details" transform="translate(99 449)" font-size="30" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-48.208" y="32">Details</tspan></text>
-    <g id="Rectangle_55" data-name="Rectangle 55" transform="translate(281 309)" fill="#52b6f8" stroke="#000" stroke-width="8">
-      <rect width="25" height="91" rx="12.5" stroke="none"/>
-      <rect x="4" y="4" width="17" height="83" rx="8.5" fill="none"/>
+    <line id="Line_9" data-name="Line 9" y1="71" transform="translate(293.5 340.5)" fill="none" stroke="red" stroke-width="8"/>
+    <g id="Ellipse_4" data-name="Ellipse 4" transform="translate(260 408)" fill="#52b6f8" stroke="#000" stroke-width="8">
+      <circle cx="35" cy="35" r="35" stroke="none"/>
+      <circle cx="35" cy="35" r="31" fill="none"/>
     </g>
-    <line id="Line_9" data-name="Line 9" y1="51.5" x2="0.044" transform="translate(293.456 340.5)" fill="none" stroke="red" stroke-width="8"/>
-    <g id="Ellipse_4" data-name="Ellipse 4" transform="translate(267 384)" fill="#52b6f8" stroke="#000" stroke-width="8">
-      <ellipse cx="26.5" cy="27.5" rx="26.5" ry="27.5" stroke="none"/>
-      <ellipse cx="26.5" cy="27.5" rx="22.5" ry="23.5" fill="none"/>
-    </g>
-    <g id="Ellipse_5" data-name="Ellipse 5" transform="translate(278 397)" fill="red" stroke="red" stroke-width="10">
-      <ellipse cx="15.5" cy="15" rx="15.5" ry="15" stroke="none"/>
-      <ellipse cx="15.5" cy="15" rx="10.5" ry="10" fill="none"/>
+    <g id="Ellipse_5" data-name="Ellipse 5" transform="translate(272 421)" fill="red" stroke="red" stroke-width="10">
+      <circle cx="22.5" cy="22.5" r="22.5" stroke="none"/>
+      <circle cx="22.5" cy="22.5" r="17.5" fill="none"/>
     </g>
     <g id="Group_405" data-name="Group 405">
       <g id="Rectangle_36" data-name="Rectangle 36" transform="translate(354 250)" fill="#52b6f8" stroke="#000" stroke-width="10">
@@ -359,14 +354,11 @@ Cloudy" transform="translate(521 325)" font-size="50" font-family="SegoeUI-Bold,
       <rect width="324" height="52" rx="15" stroke="none"/>
       <rect x="2.5" y="2.5" width="319" height="47" rx="12.5" fill="none"/>
     </g>
-    <g id="Component_30_1" data-name="Component 30 – 1" transform="translate(1094 794)">
-      <g id="Rectangle_46" data-name="Rectangle 46" fill="#52b6f8" stroke="#000" stroke-width="10">
-        <rect width="359" height="262" rx="20" stroke="none"/>
-        <rect x="5" y="5" width="349" height="252" rx="15" fill="none"/>
-      </g>
-      <rect id="map" width="324" height="185" transform="translate(20 12)" fill="url(#pattern)"/>
-      <text id="View_Full_Weather_Map" data-name="View Full Weather Map" transform="translate(27 209)" font-size="25" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-136.414" y="27">View Full Weather Map</tspan></text>
+    <g id="Rectangle_46" data-name="Rectangle 46" transform="translate(1094 794)" fill="#52b6f8" stroke="#000" stroke-width="10">
+      <rect width="359" height="262" rx="20" stroke="none"/>
+      <rect x="5" y="5" width="349" height="252" rx="15" fill="none"/>
     </g>
+    <rect id="map" width="324" height="185" transform="translate(1114 806)" fill="url(#pattern)"/>
     <text id="Date:" transform="translate(1481 237)" font-size="45" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="19.865" y="49">Date:</tspan></text>
     <text id="_28_September_2024" data-name="28 September 2024" transform="translate(1491 282)" font-size="45" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-147.36" y="49">28 September </tspan><tspan x="-51.768" y="109">2024</tspan></text>
     <rect id="calender" width="379" height="299" transform="translate(1491 410)" fill="url(#pattern-2)"/>
@@ -1622,19 +1614,17 @@ Cloudy" transform="translate(521 325)" font-size="50" font-family="SegoeUI-Bold,
     <text id="_69_" data-name="69%" transform="translate(1534 2320)" font-size="100" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="108">69%</tspan></text>
     <text id="_81_" data-name="81%" transform="translate(1534 2483)" font-size="100" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="108">81%</tspan></text>
     <image id="vertical-scroll-bar" width="21" height="1219" transform="translate(1858 1409)" xlink:href="data:image/png;base64,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"/>
-    <g id="Component_23_2" data-name="Component 23 – 2" transform="translate(722 251)">
-      <g id="Rectangle_45" data-name="Rectangle 45" fill="#52b6f8" stroke="#000" stroke-width="10">
-        <rect width="359" height="262" rx="20" stroke="none"/>
-        <rect x="5" y="5" width="349" height="252" rx="15" fill="none"/>
-      </g>
-      <text id="Weather_Warnings" data-name="Weather Warnings" transform="translate(14 11)" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-152.604" y="38">Weather Warnings</tspan></text>
-      <g id="Path_2" data-name="Path 2" transform="translate(26 80)" fill="url(#linear-gradient-47)">
-        <path d="M 172.0586395263672 127.5 L 0.9413624405860901 127.5 L 86.49997711181641 0.892998993396759 L 172.0586395263672 127.5 Z" stroke="none"/>
-        <path d="M 86.49997711181641 1.785964965820312 L 1.882705688476562 127 L 171.1172943115234 127 L 86.49997711181641 1.785964965820312 M 86.49997711181641 0 L 173 128 L 0 128 L 86.49997711181641 0 Z" stroke="none" fill="red"/>
-      </g>
-      <text id="_2" data-name="!" transform="translate(79 101)" font-size="80" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="20.914" y="86">!</tspan></text>
-      <text id="High_Wind" data-name="High Wind" transform="translate(187 80)" font-size="50" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-56.787" y="54">High </tspan><tspan x="-62.83" y="121">Wind</tspan></text>
+    <g id="Rectangle_45" data-name="Rectangle 45" transform="translate(722 251)" fill="#52b6f8" stroke="#000" stroke-width="10">
+      <rect width="359" height="262" rx="20" stroke="none"/>
+      <rect x="5" y="5" width="349" height="252" rx="15" fill="none"/>
     </g>
+    <text id="Weather_Warnings" data-name="Weather Warnings" transform="translate(736 262)" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-152.604" y="38">Weather Warnings</tspan></text>
+    <g id="Path_2" data-name="Path 2" transform="translate(748 331)" fill="url(#linear-gradient-47)">
+      <path d="M 172.0586395263672 127.5 L 0.9413624405860901 127.5 L 86.49997711181641 0.892998993396759 L 172.0586395263672 127.5 Z" stroke="none"/>
+      <path d="M 86.49997711181641 1.785964965820312 L 1.882705688476562 127 L 171.1172943115234 127 L 86.49997711181641 1.785964965820312 M 86.49997711181641 0 L 173 128 L 0 128 L 86.49997711181641 0 Z" stroke="none" fill="red"/>
+    </g>
+    <text id="_2" data-name="!" transform="translate(801 352)" font-size="80" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="20.914" y="86">!</tspan></text>
+    <text id="High_Wind" data-name="High Wind" transform="translate(909 331)" font-size="50" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-56.787" y="54">High </tspan><tspan x="-62.83" y="121">Wind</tspan></text>
     <path id="Path_3" data-name="Path 3" d="M3072.3,2741.233s38.745,48.013,90.47,0" transform="translate(-2201.269 -1999.733)" fill="none" stroke="#fff" stroke-width="6"/>
     <text id="_2000" data-name="2000" transform="translate(912 728)" font-size="20" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-23.008" y="22">2000</tspan></text>
     <text id="_0" data-name="0" transform="translate(871 728)" font-size="20" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-5.752" y="22">0</tspan></text>
@@ -1684,6 +1674,13 @@ Cloudy" transform="translate(521 325)" font-size="50" font-family="SegoeUI-Bold,
         <path d="M 13.27489757537842 19.62578582763672 L 7.193864345550537 18.22834396362305 L 7.081884384155273 18.20261383056641 L 6.96990442276001 18.22834396362305 L 0.8888710141181946 19.62578582763672 L 4.843414306640625 11.19765281677246 L 4.864564418792725 11.15258312225342 L 4.876404285430908 11.10423278808594 L 7.081884384155273 2.101375102996826 L 9.28736400604248 11.10423278808594 L 9.29920482635498 11.15258312225342 L 9.320354461669922 11.19765281677246 L 13.27489757537842 19.62578582763672 Z" stroke="none"/>
         <path d="M 7.081884384155273 4.202747344970703 L 5.338354110717773 11.31990337371826 L 1.77773380279541 18.90848541259766 L 7.081884384155273 17.68957328796387 L 12.38603496551514 18.90848541259766 L 8.825414657592773 11.31990337371826 L 7.081884384155273 4.202747344970703 M 7.081884384155273 3.814697265625e-06 L 9.773004531860352 10.98526287078857 L 14.16376399993896 20.34308242797852 L 7.081884384155273 18.71564292907715 L 4.76837158203125e-06 20.34308242797852 L 4.390764236450195 10.98526287078857 L 7.081884384155273 3.814697265625e-06 Z" stroke="none" fill="#00e6ff"/>
       </g>
+    </g>
+    <g id="Component_55_1" data-name="Component 55 – 1" transform="translate(1109 995)">
+      <g id="Rectangle_645" data-name="Rectangle 645" fill="#b7b7b7" stroke="#000" stroke-width="10">
+        <rect width="328" height="47" rx="15" stroke="none"/>
+        <rect x="5" y="5" width="318" height="37" rx="10" fill="none"/>
+      </g>
+      <text id="View_Full_Weather_Map" data-name="View Full Weather Map" transform="translate(12 3)" font-size="25" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-136.414" y="27">View Full Weather Map</tspan></text>
     </g>
   </g>
 </svg>
