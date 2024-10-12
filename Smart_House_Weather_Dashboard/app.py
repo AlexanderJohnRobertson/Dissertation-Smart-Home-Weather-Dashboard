@@ -6,8 +6,24 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def hello_world():  # put application's code here
+def index():  # put application's code here
     return render_template('index.html')
+
+@app.route('/weather')
+def weather():
+    return render_template('weather.html')
+
+@app.route('/temperature')
+def temperature():
+    return render_template('temperature.html')
+
+@app.route('/humidity')
+def humidity():
+    return render_template('humidity.html')
+
+@app.route('/weathermaps')
+def weathermaps():
+    return render_template('weathermaps.html')
 
 
 if __name__ == '__main__':
