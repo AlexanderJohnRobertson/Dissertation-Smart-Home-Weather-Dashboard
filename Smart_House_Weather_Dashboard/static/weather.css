@@ -147,22 +147,22 @@ body {
   padding: 0px 0 0px;
 }
 
-.event-card {
+.dashboard-card {
   display: grid;
   grid-auto-flow: dense;
   grid-template-rows: 2fr 0.8fr 0.5fr;
   padding: 8px;
 }
 
-/* Event Header */
+/* Dashboard Header */
 
-.event-header {
+.dashboard-header {
   position: relative;
   height: 180px;
   margin-bottom: 8px;
 }
 
-.event-header img {
+.dashboard-header img {
   position: relative;
   inset: 0;
   width: 100%;
@@ -172,7 +172,7 @@ body {
   object-fit: cover;
 }
 
-.event-header p {
+.dashboard-header p {
   position: absolute;
   right: 4px;
   bottom: 4px;
@@ -212,16 +212,16 @@ body {
   }
 }
 
-/* Event Content */
+/* Dashboard Content */
 
-.event-content {
+.dashboard-content {
   /*display: grid;*/
   grid-auto-flow: dense;
   grid-template-rows: 2fr 1fr;
   padding: 6px 6px 12px;
 }
 
-.event-content h2 {
+.dashboard-content h2 {
   margin-bottom: 6px;
   line-height: 1.3;
   white-space: nowrap;
@@ -238,21 +238,21 @@ body {
   }
 }
 
-.event-content p {
+.dashboard-content p {
   font-size: clamp(0.8rem, 4vw, 0.9rem);
   opacity: 0.8;
 }
 
-/* Event Footer */
+/* Dashboard Footer */
 
-.event-footer {
+.dashboard-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 4px;
 }
 
-.event-footer p {
+.dashboard-footer p {
   color: rgb(253, 152, 0);
   font-size: clamp(1rem, 5vw, 0.8rem);
   font-weight: 600;
@@ -271,7 +271,22 @@ body {
   display: inline-flex;
 }
 
-.event-footer button {
+.button{
+  color: rgb(0, 0, 0);
+  font-size: clamp(1rem, 5vw, 0.8rem);
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 10px 50px;
+  border-radius: 13px;
+  position: relative;
+  left: 232px;
+  top: 39px;
+  background-color: rgb(182, 182, 182);
+  border: #000000 solid 5px;
+  font-family: "Segoe UI";
+}
+
+.dashboard-footer button {
   background-color: rgb(51, 108, 215);
   color: rgb(240, 248, 255);
   padding: 5px 10px;
@@ -285,7 +300,7 @@ body {
   cursor: pointer;
 }
 
-.event-footer button:hover {
+.dashboard-footer button:hover {
   background-color: rgb(90, 139, 231);
   border: 2px solid rgb(151, 177, 226);
 }
@@ -407,34 +422,6 @@ body {
   margin-bottom: 24px;
 }
 
-/* Total Events */
-
-.total-events {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-}
-
-.event-number {
-  position: relative;
-  display: grid;
-  grid-auto-flow: dense;
-  grid-template-rows: 1fr 0.5fr;
-  width: 100%;
-  padding: 10px;
-}
-
-.event-number p {
-  font-size: clamp(1.5rem, 4vw, 2rem);
-  color: var(--accent-color);
-}
-
-.event-number i {
-  position: absolute;
-  right: 8px;
-  bottom: 6px;
-  font-size: 2.5rem;
-}
 
 /* Chart */
 
@@ -648,14 +635,14 @@ body::-webkit-scrollbar-thumb {
   padding: 14px 0 20px;
   }
 
-  .event-footer {
+  .dashboard-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 4px;
 }
 
-.event-footer p {
+.dashboard-footer p {
   color: rgb(253, 152, 0);
   font-size: clamp(1rem, 5vw, 0.8rem);
   font-weight: 600;
@@ -678,7 +665,10 @@ body::-webkit-scrollbar-thumb {
     width: 80%;
   }
 
-
+ .button{
+    position: relative;
+    left: 29px;
+  }
 
   .interactions {
     gap: 10px;
@@ -691,6 +681,14 @@ body::-webkit-scrollbar-thumb {
   .mode-icon i {
     font-size: 1.4rem;
   }
+}
+
+
+
+@media (max-width:480px){
+    h1{
+        font-size: 1.5rem;
+    }
 }
 
 @media (max-width: 450px) {

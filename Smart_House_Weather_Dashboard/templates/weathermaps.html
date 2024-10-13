@@ -1,10 +1,68 @@
+<!-- Landing page of Smart Home Weather Dashboard. Author: S275931 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Weather Maps</title>
+    <link rel="stylesheet" href="/static/weathermaps.css">
+    <link rel="stylesheet" href="/static/toggleswitch.css">
+    <script src="/static/dashboard.js"></script>
+
 </head>
+
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 <body>
-<h1>Weather Maps</h1>
-</body>
+{% extends 'base.html' %} <!-- Extend from base4.html which is the HTML file for the responsive navbar once logged in -->
+
+{% block content %} <!-- Content block for the form -->
+
+    <section class="content">
+      <div class="left-content">
+
+
+
+        <div class="title">
+          <div class="btn-group2">
+            <button class="button2" onclick="window.location.href='/weather';">◄ Back</button>
+            <h1 align="center">Weather Maps</h1>
+            </div>
+          <div class="dashboard-container">
+            <div class="card dashboard-card">
+              <div class="dashboard-content">
+                <h2>Outdoor Temperature</h2>
+                <h3>22ºC <img src="/static/images/temperature.png" alt="Temperature" style="width:70px;height:150px;" align="right"></h3>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+              </div>
+              <div class="dashboard-footer">
+                <p>Details</p>
+
+              </div>
+            </div>
+
+            <div class="card dashboard-card">
+
+              <div class="dashboard-content">
+                <h2>Outdoor Humidity</h2>
+                <h3>62% <img src="/static/images/humidity.png" alt="Humidity" style="width:70px;height:150px;" align="right"></h3>
+
+              </div>
+              <div class="dashboard-footer">
+                <p>Details</p>
+
+              </div>
+            </div>
+
+      </div>
+
+        </div>
+        </div>
+    </section>
+{% endblock %} <!-- End of content block -->
+  </body>
+
 </html>
