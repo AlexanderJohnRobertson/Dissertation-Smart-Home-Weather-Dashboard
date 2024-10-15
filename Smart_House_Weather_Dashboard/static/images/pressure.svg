@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 481.61 487.8">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        fill: none;
+      }
+
+      .cls-1, .cls-5 {
+        stroke: #000;
+      }
+
+      .cls-6 {
+        letter-spacing: 0em;
+      }
+
+      .cls-7, .cls-5 {
+        fill: #fff;
+      }
+
+      .cls-8, .cls-9 {
+        isolation: isolate;
+      }
+
+      .cls-10 {
+        letter-spacing: 0em;
+      }
+
+      .cls-5 {
+        stroke-width: 5px;
+      }
+
+      .cls-3 {
+        stroke: #fff;
+        stroke-width: 34px;
+      }
+
+      .cls-9 {
+        font-family: SegoeUI-Bold, 'Segoe UI';
+        font-size: 73.35px;
+        font-weight: 700;
+      }
+
+      .cls-4 {
+        stroke: #3b54a5;
+        stroke-width: 4px;
+      }
+    </style>
+  </defs>
+  <g id="Ellipse_9" data-name="Ellipse 9">
+    <ellipse class="cls-7" cx="240.81" cy="243.9" rx="240.81" ry="243.9"/>
+    <ellipse class="cls-5" cx="240.81" cy="243.9" rx="231.75" ry="234.73"/>
+  </g>
+  <g id="Ellipse_10" data-name="Ellipse 10">
+    <ellipse cx="242.62" cy="238.4" rx="21.73" ry="22.01"/>
+    <ellipse class="cls-1" cx="242.62" cy="238.4" rx="19.92" ry="20.17"/>
+  </g>
+  <g id="Polygon_5" data-name="Polygon 5">
+    <path d="M238.27,218.86l-13.68,26.05-120.19-81.43,133.86,55.38Z"/>
+    <path d="M120.27,172.03l103.66,70.24,11.8-22.47-115.46-47.76M88.53,154.93l152.27,63-15.56,29.64-136.71-92.63Z"/>
+  </g>
+  <g id="Ellipse_11" data-name="Ellipse 11">
+    <ellipse class="cls-2" cx="240.81" cy="243.9" rx="219.08" ry="221.89"/>
+    <ellipse class="cls-4" cx="240.81" cy="243.9" rx="211.84" ry="214.56"/>
+  </g>
+  <g id="Pressure" class="cls-8">
+    <text class="cls-9" transform="translate(98.05 147.6) scale(.99 1)"><tspan x="0" y="0">P</tspan><tspan class="cls-10" x="45.06" y="0">r</tspan><tspan x="73.96" y="0">essu</tspan><tspan class="cls-10" x="222.57" y="0">r</tspan><tspan class="cls-6" x="251.47" y="0">e</tspan></text>
+  </g>
+  <path id="Path_3" data-name="Path 3" class="cls-3" d="M79.78,367.6s140.3,176.09,327.6,0"/>
+  <g id="_2000" data-name=" 2000" class="cls-8">
+    <text class="cls-9" transform="translate(227.32 407.63) scale(.99 1)"><tspan x="0" y="0">2000</tspan></text>
+  </g>
+  <g id="_0" data-name=" 0" class="cls-8">
+    <text class="cls-9" transform="translate(88.53 401.97) scale(.99 1)"><tspan x="0" y="0">0</tspan></text>
+  </g>
+</svg>
