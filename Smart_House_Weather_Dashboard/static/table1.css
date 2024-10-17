@@ -1,0 +1,140 @@
+table {
+  border-spacing: 6px;
+  border-collapse: collapse;
+  background: #0c9fff;
+  border-radius: 6px;
+  overflow: hidden;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  border-color: #000000;
+  border-width: 50px;
+
+}
+
+th, td {
+    color: #000000;
+}
+table * {
+  position: relative;
+}
+table td, table th {
+  padding-left: 8px;
+}
+table thead tr {
+  height: 60px;
+  background: #008CE7;
+  font-size: 16px;
+}
+table tbody tr {
+  height: 48px;
+  border-bottom: 1px solid #E3F1D5;
+}
+table tbody tr:last-child {
+  border: 0;
+}
+table td, table th {
+  text-align: left;
+}
+table td.l, table th.l {
+  text-align: right;
+}
+table td.c, table th.c {
+  text-align: center;
+}
+table td.r, table th.r {
+  text-align: center;
+}
+
+
+
+::-webkit-scrollbar {
+  width: 1px;
+  height: 1px;
+}
+
+::-webkit-scrollbar-button {
+  width: 1px;
+  height: 1px;
+}
+
+div.scrollmenu {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+  width: 1414px;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+div.scrollmenu a:hover {
+  background-color: #777;
+}
+
+
+@media (max-width: 1550px) {
+  table{
+    position: relative;
+    top: 567px;
+  }
+  table {
+    position: relative;
+    top: -1px;
+  }
+}
+
+@media (max-width: 1550px) {
+    div.scrollmenu{
+        position: relative;
+        top: 567px;
+        width: 1108px;
+    }
+}
+
+@media (max-width: 1180px) {
+    div.scrollmenu{
+        position: relative;
+        top: 567px;
+        width: 1079px;
+    }
+}
+
+@media (max-width: 1136px) {
+    div.scrollmenu{
+        position: relative;
+        top: -12px;
+        width: 1057px;
+    }
+}
+
+@media (max-width: 1120px) {
+    div.scrollmenu{
+        position: relative;
+        top: -12px;
+        width: 703px;
+    }
+}
+
+@media (max-width: 832px) {
+    div.scrollmenu{
+        position: relative;
+        top: -12px;
+        width: 585px;
+    }
+}
+@media (max-width: 590px) {
+    div.scrollmenu{
+        position: relative;
+        top: -12px;
+        width: 294px;
+        left: 31px;
+    }
+}
+

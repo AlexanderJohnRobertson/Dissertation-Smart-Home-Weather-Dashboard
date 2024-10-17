@@ -33,6 +33,10 @@ def clocktest():
 def calendartest():
     return render_template('calendartest.html')
 
+@app.route('/tabletest1')
+def tabletest():
+    return render_template('tabletest1.html')
+
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))  # port number
