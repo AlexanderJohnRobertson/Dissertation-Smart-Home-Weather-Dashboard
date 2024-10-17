@@ -25,6 +25,14 @@ def humidity():
 def weathermaps():
     return render_template('weathermaps.html')
 
+@app.route('/clocktest')
+def clocktest():
+    return render_template('clocktest.html')
+
+@app.route('/calendartest')
+def calendartest():
+    return render_template('calendartest.html')
+
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))  # port number
