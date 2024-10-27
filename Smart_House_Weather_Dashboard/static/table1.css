@@ -10,7 +10,20 @@ table {
   position: relative;
   border-color: #000000;
   border-width: 50px;
+}
 
+.table2 {
+  border-spacing: 6px;
+  border-collapse: collapse;
+  background: #0c9fff;
+  border-radius: 6px;
+  overflow: hidden;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  border-color: #000000;
+  border-width: 50px;
 }
 
 th, td {
@@ -88,6 +101,10 @@ div.scrollmenu a:hover {
     position: relative;
     top: -1px;
   }
+  .table2{
+    position: relative;
+    top: 567px;
+  }
 }
 
 @media (max-width: 1550px) {
@@ -98,11 +115,43 @@ div.scrollmenu a:hover {
     }
 }
 
+@media (max-width: 1488px){
+    h5{
+        font-size: clamp(4.1rem, 4vw, 1.2rem);
+    }
+}
+
+@media (max-width: 1358px){
+    h5{
+        font-size: clamp(3.3rem, 4vw, 1.2rem);
+    }
+}
+
+@media (max-width: 1169px){
+    h5{
+        font-size: clamp(3.2rem, 4vw, 1.2rem);
+    }
+}
+
+@media (max-width: 1136px) {
+    .table2{
+        position: relative;
+        top: -10px;
+    }
+      h5 {
+    font-size: clamp(1rem, 4vw, 1.2rem);
+  }
+      h4 {
+    font-size: clamp(1rem, 4vw, 1.2rem);
+      }
+}
+
 @media (max-width: 1180px) {
     div.scrollmenu{
         position: relative;
         top: 567px;
         width: 1079px;
+
     }
 }
 
@@ -122,6 +171,16 @@ div.scrollmenu a:hover {
     }
 }
 
+@media (max-width: 887px) {
+    h5 {
+    font-size: clamp(1rem, 4vw, 1.2rem);
+  }
+      h4 {
+    font-size: clamp(1rem, 4vw, 1.2rem);
+      }
+
+}
+
 @media (max-width: 832px) {
     div.scrollmenu{
         position: relative;
@@ -138,3 +197,117 @@ div.scrollmenu a:hover {
     }
 }
 
+@media screen and (max-width: 883px) {
+  .table2 {
+    display: block;
+  }
+  .table2 > *, .table2 tr, .table2 td, .table2 th {
+    display: block;
+  }
+  .table2 thead {
+    display: none;
+  }
+  .table2 tbody tr {
+    height: auto;
+    padding: 8px 0;
+  }
+  .table2 tbody tr td {
+    padding-left: 45%;
+    margin-bottom: 12px;
+  }
+  .table2 tbody tr td:last-child {
+    margin-bottom: 0;
+  }
+  .table2 tbody tr td:before {
+    position: absolute;
+    font-weight: 700;
+    width: 40%;
+    left: 10px;
+    top: 0;
+  }
+  .table2 tbody tr td:nth-child(1):before {
+    content: "Daily Weather Forecast";
+  }
+  .table2 tbody tr td:nth-child(2):before {
+    content: "Temperature";
+  }
+  .table2 tbody tr td:nth-child(3):before {
+    content: "Weather";
+  }
+  .table2 tbody tr td:nth-child(4):before {
+    content: "Precipitation Chance";
+  }
+  .table2 tbody tr td:nth-child(5):before {
+    content: "Wind Speed";
+  }
+  .table2 tbody tr td:nth-child(6):before {
+    content: "Wind Direction";
+  }
+  .table2 tbody tr td:nth-child(7):before {
+    content: "Humidity";
+  }
+}
+
+@media screen and (max-width: 554px) {
+    h5 {
+    font-size: clamp(0.1rem, 4vw, 1rem);
+    }
+}
+
+@media screen and (max-width: 554px) {
+  .table2 {
+    display: block;
+  }
+  .table2 > *, .table2 tr, .table2 td, .table2 th {
+    display: block;
+  }
+  .table2 thead {
+    display: none;
+  }
+  .table2 tbody tr {
+    height: auto;
+    padding: 8px 0;
+  }
+  .table2 tbody tr td {
+    padding-left: 45%;
+    margin-bottom: 12px;
+  }
+  .table2 tbody tr td:last-child {
+    margin-bottom: 0;
+  }
+  .table2 tbody tr td:before {
+    position: absolute;
+    font-weight: 700;
+    width: 40%;
+    left: 10px;
+    top: 0;
+  }
+  .table2 tbody tr td:nth-child(1):before {
+    content: "Daily Weather Forecast";
+      font-size: 0.7rem;
+  }
+  .table2 tbody tr td:nth-child(2):before {
+    content: "Temperature";
+      font-size: 0.8rem;
+  }
+  .table2 tbody tr td:nth-child(3):before {
+    content: "Weather";
+      font-size: 0.8rem;
+  }
+  .table2 tbody tr td:nth-child(4):before {
+    content: "Precipitation Chance";
+      font-size: 0.8rem;
+  }
+  .table2 tbody tr td:nth-child(5):before {
+    content: "Wind Speed";
+      font-size: 0.8rem;
+  }
+  .table2 tbody tr td:nth-child(6):before {
+    content: "Wind Direction";
+      font-size: 0.8rem;
+  }
+  .table2 tbody tr td:nth-child(7):before {
+    content: "Humidity";
+      font-size: 0.8rem;
+  }
+}

@@ -85,6 +85,23 @@ h3-2 {
     left: 73px;
 }
 
+h4 {
+  font-size: clamp(1.7rem, 5vw, 1rem);
+  color: #000000;
+  font-family: "Segoe UI";
+}
+
+h5 {
+  font-size: clamp(4.65rem, 4vw, 1.2rem);
+  color: #000000;
+  font-family: "Segoe UI";
+}
+
+h6 {
+  font-size: clamp(1.2rem, 4vw, 1rem);
+  color: #000000;
+}
+
 body {
   position: relative;
   background: var(--bg-body);
@@ -599,7 +616,7 @@ body::-webkit-scrollbar-thumb {
     }
   }
 
-@media (max-width: 834px) {
+@media (max-width: 883px) {
   .dashboard-card-clock{
     display: none;
   }

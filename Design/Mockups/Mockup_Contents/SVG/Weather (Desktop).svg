@@ -1502,39 +1502,41 @@ Cloudy" transform="translate(521 325)" font-size="50" font-family="SegoeUI-Bold,
       </g>
     </g>
     <text id="Rain-2" data-name="Rain" transform="translate(641 1904)" font-size="30" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-31.201" y="32">Rain</tspan></text>
-    <path id="shape-31" data-name="shape" d="M22.018,25.5h9.216L4.769,59.5,9.216,34H0L26.466,0,22.018,25.5Z" transform="translate(756.653 2033.5)" fill="#ffb100"/>
-    <path id="shape-32" data-name="shape" d="M78.322,94.069l4.146-25.326-18.5,25.326H25.771A26.794,26.794,0,0,1,12.38,90.681a23.7,23.7,0,0,1-9.053-9.222A28.106,28.106,0,0,1,0,67.817,28.106,28.106,0,0,1,3.326,54.176a23.7,23.7,0,0,1,9.053-9.222A24.691,24.691,0,0,1,16.2,43.188a26.955,26.955,0,0,1-.27-3.811A26.015,26.015,0,0,1,41.7,13.126a25.482,25.482,0,0,1,18.765,8.259A34.369,34.369,0,0,1,92.132,0c18.977,0,34.361,15.671,34.361,35a35.617,35.617,0,0,1-1.411,9.96,23.7,23.7,0,0,1,9.038,9.213,28.106,28.106,0,0,1,3.326,13.641,28.106,28.106,0,0,1-3.326,13.641,23.7,23.7,0,0,1-9.053,9.222,26.794,26.794,0,0,1-13.391,3.388Z" transform="translate(701.668 1958.993)" fill="url(#linear-gradient-44)"/>
-    <g id="Ellipse_24" data-name="Ellipse 24" transform="matrix(0.891, 0.454, -0.454, 0.891, 718.676, 2066.732)" fill="#00e6ff" stroke="#00e6ff" stroke-width="1">
-      <ellipse cx="8.277" cy="8" rx="8.277" ry="8" stroke="none"/>
-      <ellipse cx="8.277" cy="8" rx="7.777" ry="7.5" fill="none"/>
-    </g>
-    <g id="Polygon_18" data-name="Polygon 18" transform="matrix(0.891, 0.454, -0.454, 0.891, 727.041, 2053.062)" fill="#00e6ff">
-      <path d="M 13.27489757537842 19.62578582763672 L 7.193864345550537 18.22834396362305 L 7.081884384155273 18.20261383056641 L 6.96990442276001 18.22834396362305 L 0.8888710141181946 19.62578582763672 L 4.843414306640625 11.19765281677246 L 4.864564418792725 11.15258312225342 L 4.876404285430908 11.10423278808594 L 7.081884384155273 2.101375102996826 L 9.28736400604248 11.10423278808594 L 9.29920482635498 11.15258312225342 L 9.320354461669922 11.19765281677246 L 13.27489757537842 19.62578582763672 Z" stroke="none"/>
-      <path d="M 7.081884384155273 4.202747344970703 L 5.338354110717773 11.31990337371826 L 1.77773380279541 18.90848541259766 L 7.081884384155273 17.68957328796387 L 12.38603496551514 18.90848541259766 L 8.825414657592773 11.31990337371826 L 7.081884384155273 4.202747344970703 M 7.081884384155273 3.814697265625e-06 L 9.773004531860352 10.98526287078857 L 14.16376399993896 20.34308242797852 L 7.081884384155273 18.71564292907715 L 4.76837158203125e-06 20.34308242797852 L 4.390764236450195 10.98526287078857 L 7.081884384155273 3.814697265625e-06 Z" stroke="none" fill="#00e6ff"/>
-    </g>
-    <g id="Ellipse_25" data-name="Ellipse 25" transform="matrix(0.891, 0.454, -0.454, 0.891, 740.531, 2066.732)" fill="#00e6ff" stroke="#00e6ff" stroke-width="1">
-      <ellipse cx="8.277" cy="8" rx="8.277" ry="8" stroke="none"/>
-      <ellipse cx="8.277" cy="8" rx="7.777" ry="7.5" fill="none"/>
-    </g>
-    <g id="Polygon_19" data-name="Polygon 19" transform="matrix(0.891, 0.454, -0.454, 0.891, 748.897, 2053.062)" fill="#00e6ff">
-      <path d="M 13.27489757537842 19.62578582763672 L 7.193864345550537 18.22834396362305 L 7.081884384155273 18.20261383056641 L 6.96990442276001 18.22834396362305 L 0.8888710141181946 19.62578582763672 L 4.843414306640625 11.19765281677246 L 4.864564418792725 11.15258312225342 L 4.876404285430908 11.10423278808594 L 7.081884384155273 2.101375102996826 L 9.28736400604248 11.10423278808594 L 9.29920482635498 11.15258312225342 L 9.320354461669922 11.19765281677246 L 13.27489757537842 19.62578582763672 Z" stroke="none"/>
-      <path d="M 7.081884384155273 4.202747344970703 L 5.338354110717773 11.31990337371826 L 1.77773380279541 18.90848541259766 L 7.081884384155273 17.68957328796387 L 12.38603496551514 18.90848541259766 L 8.825414657592773 11.31990337371826 L 7.081884384155273 4.202747344970703 M 7.081884384155273 3.814697265625e-06 L 9.773004531860352 10.98526287078857 L 14.16376399993896 20.34308242797852 L 7.081884384155273 18.71564292907715 L 4.76837158203125e-06 20.34308242797852 L 4.390764236450195 10.98526287078857 L 7.081884384155273 3.814697265625e-06 Z" stroke="none" fill="#00e6ff"/>
-    </g>
-    <g id="Ellipse_26" data-name="Ellipse 26" transform="matrix(0.891, 0.454, -0.454, 0.891, 787.759, 2066.732)" fill="#00e6ff" stroke="#00e6ff" stroke-width="1">
-      <ellipse cx="8.277" cy="8" rx="8.277" ry="8" stroke="none"/>
-      <ellipse cx="8.277" cy="8" rx="7.777" ry="7.5" fill="none"/>
-    </g>
-    <g id="Polygon_20" data-name="Polygon 20" transform="matrix(0.891, 0.454, -0.454, 0.891, 796.125, 2053.062)" fill="#00e6ff">
-      <path d="M 13.27489757537842 19.62578582763672 L 7.193864345550537 18.22834396362305 L 7.081884384155273 18.20261383056641 L 6.96990442276001 18.22834396362305 L 0.8888710141181946 19.62578582763672 L 4.843414306640625 11.19765281677246 L 4.864564418792725 11.15258312225342 L 4.876404285430908 11.10423278808594 L 7.081884384155273 2.101375102996826 L 9.28736400604248 11.10423278808594 L 9.29920482635498 11.15258312225342 L 9.320354461669922 11.19765281677246 L 13.27489757537842 19.62578582763672 Z" stroke="none"/>
-      <path d="M 7.081884384155273 4.202747344970703 L 5.338354110717773 11.31990337371826 L 1.77773380279541 18.90848541259766 L 7.081884384155273 17.68957328796387 L 12.38603496551514 18.90848541259766 L 8.825414657592773 11.31990337371826 L 7.081884384155273 4.202747344970703 M 7.081884384155273 3.814697265625e-06 L 9.773004531860352 10.98526287078857 L 14.16376399993896 20.34308242797852 L 7.081884384155273 18.71564292907715 L 4.76837158203125e-06 20.34308242797852 L 4.390764236450195 10.98526287078857 L 7.081884384155273 3.814697265625e-06 Z" stroke="none" fill="#00e6ff"/>
-    </g>
-    <g id="Ellipse_27" data-name="Ellipse 27" transform="matrix(0.891, 0.454, -0.454, 0.891, 809.773, 2066.732)" fill="#00e6ff" stroke="#00e6ff" stroke-width="1">
-      <ellipse cx="8.277" cy="8" rx="8.277" ry="8" stroke="none"/>
-      <ellipse cx="8.277" cy="8" rx="7.777" ry="7.5" fill="none"/>
-    </g>
-    <g id="Polygon_21" data-name="Polygon 21" transform="matrix(0.891, 0.454, -0.454, 0.891, 818.139, 2053.062)" fill="#00e6ff">
-      <path d="M 13.27489757537842 19.62578582763672 L 7.193864345550537 18.22834396362305 L 7.081884384155273 18.20261383056641 L 6.96990442276001 18.22834396362305 L 0.8888710141181946 19.62578582763672 L 4.843414306640625 11.19765281677246 L 4.864564418792725 11.15258312225342 L 4.876404285430908 11.10423278808594 L 7.081884384155273 2.101375102996826 L 9.28736400604248 11.10423278808594 L 9.29920482635498 11.15258312225342 L 9.320354461669922 11.19765281677246 L 13.27489757537842 19.62578582763672 Z" stroke="none"/>
-      <path d="M 7.081884384155273 4.202747344970703 L 5.338354110717773 11.31990337371826 L 1.77773380279541 18.90848541259766 L 7.081884384155273 17.68957328796387 L 12.38603496551514 18.90848541259766 L 8.825414657592773 11.31990337371826 L 7.081884384155273 4.202747344970703 M 7.081884384155273 3.814697265625e-06 L 9.773004531860352 10.98526287078857 L 14.16376399993896 20.34308242797852 L 7.081884384155273 18.71564292907715 L 4.76837158203125e-06 20.34308242797852 L 4.390764236450195 10.98526287078857 L 7.081884384155273 3.814697265625e-06 Z" stroke="none" fill="#00e6ff"/>
+    <g id="Component_58_1" data-name="Component 58 – 1" transform="translate(701.668 1958.993)">
+      <path id="shape-31" data-name="shape" d="M22.018,25.5h9.216L4.769,59.5,9.216,34H0L26.466,0,22.018,25.5Z" transform="translate(54.985 74.507)" fill="#ffb100"/>
+      <path id="shape-32" data-name="shape" d="M78.322,94.069l4.146-25.326-18.5,25.326H25.771A26.794,26.794,0,0,1,12.38,90.681a23.7,23.7,0,0,1-9.053-9.222A28.106,28.106,0,0,1,0,67.817,28.106,28.106,0,0,1,3.326,54.176a23.7,23.7,0,0,1,9.053-9.222A24.691,24.691,0,0,1,16.2,43.188a26.955,26.955,0,0,1-.27-3.811A26.015,26.015,0,0,1,41.7,13.126a25.482,25.482,0,0,1,18.765,8.259A34.369,34.369,0,0,1,92.132,0c18.977,0,34.361,15.671,34.361,35a35.617,35.617,0,0,1-1.411,9.96,23.7,23.7,0,0,1,9.038,9.213,28.106,28.106,0,0,1,3.326,13.641,28.106,28.106,0,0,1-3.326,13.641,23.7,23.7,0,0,1-9.053,9.222,26.794,26.794,0,0,1-13.391,3.388Z" fill="url(#linear-gradient-44)"/>
+      <g id="Ellipse_24" data-name="Ellipse 24" transform="matrix(0.891, 0.454, -0.454, 0.891, 17.008, 107.74)" fill="#00e6ff" stroke="#00e6ff" stroke-width="1">
+        <ellipse cx="8.277" cy="8" rx="8.277" ry="8" stroke="none"/>
+        <ellipse cx="8.277" cy="8" rx="7.777" ry="7.5" fill="none"/>
+      </g>
+      <g id="Polygon_18" data-name="Polygon 18" transform="matrix(0.891, 0.454, -0.454, 0.891, 25.374, 94.069)" fill="#00e6ff">
+        <path d="M 13.27489757537842 19.62578582763672 L 7.193864345550537 18.22834396362305 L 7.081884384155273 18.20261383056641 L 6.96990442276001 18.22834396362305 L 0.8888710141181946 19.62578582763672 L 4.843414306640625 11.19765281677246 L 4.864564418792725 11.15258312225342 L 4.876404285430908 11.10423278808594 L 7.081884384155273 2.101375102996826 L 9.28736400604248 11.10423278808594 L 9.29920482635498 11.15258312225342 L 9.320354461669922 11.19765281677246 L 13.27489757537842 19.62578582763672 Z" stroke="none"/>
+        <path d="M 7.081884384155273 4.202747344970703 L 5.338354110717773 11.31990337371826 L 1.77773380279541 18.90848541259766 L 7.081884384155273 17.68957328796387 L 12.38603496551514 18.90848541259766 L 8.825414657592773 11.31990337371826 L 7.081884384155273 4.202747344970703 M 7.081884384155273 3.814697265625e-06 L 9.773004531860352 10.98526287078857 L 14.16376399993896 20.34308242797852 L 7.081884384155273 18.71564292907715 L 4.76837158203125e-06 20.34308242797852 L 4.390764236450195 10.98526287078857 L 7.081884384155273 3.814697265625e-06 Z" stroke="none" fill="#00e6ff"/>
+      </g>
+      <g id="Ellipse_25" data-name="Ellipse 25" transform="matrix(0.891, 0.454, -0.454, 0.891, 38.864, 107.74)" fill="#00e6ff" stroke="#00e6ff" stroke-width="1">
+        <ellipse cx="8.277" cy="8" rx="8.277" ry="8" stroke="none"/>
+        <ellipse cx="8.277" cy="8" rx="7.777" ry="7.5" fill="none"/>
+      </g>
+      <g id="Polygon_19" data-name="Polygon 19" transform="matrix(0.891, 0.454, -0.454, 0.891, 47.229, 94.069)" fill="#00e6ff">
+        <path d="M 13.27489757537842 19.62578582763672 L 7.193864345550537 18.22834396362305 L 7.081884384155273 18.20261383056641 L 6.96990442276001 18.22834396362305 L 0.8888710141181946 19.62578582763672 L 4.843414306640625 11.19765281677246 L 4.864564418792725 11.15258312225342 L 4.876404285430908 11.10423278808594 L 7.081884384155273 2.101375102996826 L 9.28736400604248 11.10423278808594 L 9.29920482635498 11.15258312225342 L 9.320354461669922 11.19765281677246 L 13.27489757537842 19.62578582763672 Z" stroke="none"/>
+        <path d="M 7.081884384155273 4.202747344970703 L 5.338354110717773 11.31990337371826 L 1.77773380279541 18.90848541259766 L 7.081884384155273 17.68957328796387 L 12.38603496551514 18.90848541259766 L 8.825414657592773 11.31990337371826 L 7.081884384155273 4.202747344970703 M 7.081884384155273 3.814697265625e-06 L 9.773004531860352 10.98526287078857 L 14.16376399993896 20.34308242797852 L 7.081884384155273 18.71564292907715 L 4.76837158203125e-06 20.34308242797852 L 4.390764236450195 10.98526287078857 L 7.081884384155273 3.814697265625e-06 Z" stroke="none" fill="#00e6ff"/>
+      </g>
+      <g id="Ellipse_26" data-name="Ellipse 26" transform="matrix(0.891, 0.454, -0.454, 0.891, 86.091, 107.74)" fill="#00e6ff" stroke="#00e6ff" stroke-width="1">
+        <ellipse cx="8.277" cy="8" rx="8.277" ry="8" stroke="none"/>
+        <ellipse cx="8.277" cy="8" rx="7.777" ry="7.5" fill="none"/>
+      </g>
+      <g id="Polygon_20" data-name="Polygon 20" transform="matrix(0.891, 0.454, -0.454, 0.891, 94.457, 94.069)" fill="#00e6ff">
+        <path d="M 13.27489757537842 19.62578582763672 L 7.193864345550537 18.22834396362305 L 7.081884384155273 18.20261383056641 L 6.96990442276001 18.22834396362305 L 0.8888710141181946 19.62578582763672 L 4.843414306640625 11.19765281677246 L 4.864564418792725 11.15258312225342 L 4.876404285430908 11.10423278808594 L 7.081884384155273 2.101375102996826 L 9.28736400604248 11.10423278808594 L 9.29920482635498 11.15258312225342 L 9.320354461669922 11.19765281677246 L 13.27489757537842 19.62578582763672 Z" stroke="none"/>
+        <path d="M 7.081884384155273 4.202747344970703 L 5.338354110717773 11.31990337371826 L 1.77773380279541 18.90848541259766 L 7.081884384155273 17.68957328796387 L 12.38603496551514 18.90848541259766 L 8.825414657592773 11.31990337371826 L 7.081884384155273 4.202747344970703 M 7.081884384155273 3.814697265625e-06 L 9.773004531860352 10.98526287078857 L 14.16376399993896 20.34308242797852 L 7.081884384155273 18.71564292907715 L 4.76837158203125e-06 20.34308242797852 L 4.390764236450195 10.98526287078857 L 7.081884384155273 3.814697265625e-06 Z" stroke="none" fill="#00e6ff"/>
+      </g>
+      <g id="Ellipse_27" data-name="Ellipse 27" transform="matrix(0.891, 0.454, -0.454, 0.891, 108.105, 107.74)" fill="#00e6ff" stroke="#00e6ff" stroke-width="1">
+        <ellipse cx="8.277" cy="8" rx="8.277" ry="8" stroke="none"/>
+        <ellipse cx="8.277" cy="8" rx="7.777" ry="7.5" fill="none"/>
+      </g>
+      <g id="Polygon_21" data-name="Polygon 21" transform="matrix(0.891, 0.454, -0.454, 0.891, 116.471, 94.069)" fill="#00e6ff">
+        <path d="M 13.27489757537842 19.62578582763672 L 7.193864345550537 18.22834396362305 L 7.081884384155273 18.20261383056641 L 6.96990442276001 18.22834396362305 L 0.8888710141181946 19.62578582763672 L 4.843414306640625 11.19765281677246 L 4.864564418792725 11.15258312225342 L 4.876404285430908 11.10423278808594 L 7.081884384155273 2.101375102996826 L 9.28736400604248 11.10423278808594 L 9.29920482635498 11.15258312225342 L 9.320354461669922 11.19765281677246 L 13.27489757537842 19.62578582763672 Z" stroke="none"/>
+        <path d="M 7.081884384155273 4.202747344970703 L 5.338354110717773 11.31990337371826 L 1.77773380279541 18.90848541259766 L 7.081884384155273 17.68957328796387 L 12.38603496551514 18.90848541259766 L 8.825414657592773 11.31990337371826 L 7.081884384155273 4.202747344970703 M 7.081884384155273 3.814697265625e-06 L 9.773004531860352 10.98526287078857 L 14.16376399993896 20.34308242797852 L 7.081884384155273 18.71564292907715 L 4.76837158203125e-06 20.34308242797852 L 4.390764236450195 10.98526287078857 L 7.081884384155273 3.814697265625e-06 Z" stroke="none" fill="#00e6ff"/>
+      </g>
     </g>
     <text id="Thunderstorms" transform="translate(641 2084)" font-size="30" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-107.329" y="32">Thunderstorms</tspan></text>
     <g id="Component_36_1" data-name="Component 36 – 1" transform="translate(690.727 2146.056)">
@@ -1543,38 +1545,42 @@ Cloudy" transform="translate(521 325)" font-size="50" font-family="SegoeUI-Bold,
       <path id="Path_7" data-name="Path 7" d="M2890.727,4177.107h106.2s36.762-25.963,0-33.661-16.083,19.07-16.083,19.07" transform="translate(-2890.727 -4142.056)" fill="none" stroke="#9d9d9d" stroke-width="10"/>
     </g>
     <text id="Wind-2" data-name="Wind" transform="translate(641 2253)" font-size="30" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-37.698" y="32">Wind</tspan></text>
-    <path id="shape-33" data-name="shape" d="M125.488,44.748a23.678,23.678,0,0,1,9.067,9.169,27.792,27.792,0,0,1,3.337,13.576,27.793,27.793,0,0,1-3.337,13.576,23.678,23.678,0,0,1-9.083,9.178,27.052,27.052,0,0,1-13.435,3.372H25.855A27.052,27.052,0,0,1,12.42,90.247a23.679,23.679,0,0,1-9.083-9.178A27.793,27.793,0,0,1,0,67.493,27.793,27.793,0,0,1,3.337,53.917a23.679,23.679,0,0,1,9.083-9.178,24.867,24.867,0,0,1,3.833-1.757,26.615,26.615,0,0,1-.27-3.792A25.992,25.992,0,0,1,41.838,13.063a25.658,25.658,0,0,1,18.826,8.219A34.425,34.425,0,0,1,126.9,34.835a35.183,35.183,0,0,1-1.416,9.913Z" transform="translate(699.554 2313.443)" fill="url(#linear-gradient-45)"/>
-    <g id="Ellipse_28" data-name="Ellipse 28" transform="matrix(0.891, 0.454, -0.454, 0.891, 737.901, 2407.063)" fill="#c0f9ff" stroke="#c0f9ff" stroke-width="1">
-      <ellipse cx="8.277" cy="8" rx="8.277" ry="8" stroke="none"/>
-      <ellipse cx="8.277" cy="8" rx="7.777" ry="7.5" fill="none"/>
-    </g>
-    <g id="Ellipse_29" data-name="Ellipse 29" transform="matrix(0.891, 0.454, -0.454, 0.891, 770.237, 2407.063)" fill="#c0f9ff" stroke="#c0f9ff" stroke-width="1">
-      <ellipse cx="8.277" cy="8" rx="8.277" ry="8" stroke="none"/>
-      <ellipse cx="8.277" cy="8" rx="7.777" ry="7.5" fill="none"/>
-    </g>
-    <g id="Ellipse_30" data-name="Ellipse 30" transform="matrix(0.891, 0.454, -0.454, 0.891, 789.832, 2418.063)" fill="#c0f9ff" stroke="#c0f9ff" stroke-width="1">
-      <ellipse cx="8.277" cy="8" rx="8.277" ry="8" stroke="none"/>
-      <ellipse cx="8.277" cy="8" rx="7.777" ry="7.5" fill="none"/>
-    </g>
-    <g id="Ellipse_31" data-name="Ellipse 31" transform="matrix(0.891, 0.454, -0.454, 0.891, 813.553, 2409.063)" fill="#c0f9ff" stroke="#c0f9ff" stroke-width="1">
-      <ellipse cx="8.277" cy="8" rx="8.277" ry="8" stroke="none"/>
-      <ellipse cx="8.277" cy="8" rx="7.777" ry="7.5" fill="none"/>
-    </g>
-    <g id="Ellipse_32" data-name="Ellipse 32" transform="matrix(0.891, 0.454, -0.454, 0.891, 757.197, 2418.063)" fill="#c0f9ff" stroke="#c0f9ff" stroke-width="1">
-      <ellipse cx="8.277" cy="8" rx="8.277" ry="8" stroke="none"/>
-      <ellipse cx="8.277" cy="8" rx="7.777" ry="7.5" fill="none"/>
-    </g>
-    <g id="Ellipse_33" data-name="Ellipse 33" transform="matrix(0.891, 0.454, -0.454, 0.891, 725.107, 2418.063)" fill="#c0f9ff" stroke="#c0f9ff" stroke-width="1">
-      <ellipse cx="8.277" cy="8" rx="8.277" ry="8" stroke="none"/>
-      <ellipse cx="8.277" cy="8" rx="7.777" ry="7.5" fill="none"/>
-    </g>
-    <g id="Ellipse_34" data-name="Ellipse 34" transform="matrix(0.891, 0.454, -0.454, 0.891, 707.668, 2407.063)" fill="#c0f9ff" stroke="#c0f9ff" stroke-width="1">
-      <ellipse cx="8.277" cy="8" rx="8.277" ry="8" stroke="none"/>
-      <ellipse cx="8.277" cy="8" rx="7.777" ry="7.5" fill="none"/>
+    <g id="Component_56_1" data-name="Component 56 – 1" transform="translate(699.554 2313.443)">
+      <path id="shape-33" data-name="shape" d="M125.488,44.748a23.678,23.678,0,0,1,9.067,9.169,27.792,27.792,0,0,1,3.337,13.576,27.793,27.793,0,0,1-3.337,13.576,23.678,23.678,0,0,1-9.083,9.178,27.052,27.052,0,0,1-13.435,3.372H25.855A27.052,27.052,0,0,1,12.42,90.247a23.679,23.679,0,0,1-9.083-9.178A27.793,27.793,0,0,1,0,67.493,27.793,27.793,0,0,1,3.337,53.917a23.679,23.679,0,0,1,9.083-9.178,24.867,24.867,0,0,1,3.833-1.757,26.615,26.615,0,0,1-.27-3.792A25.992,25.992,0,0,1,41.838,13.063a25.658,25.658,0,0,1,18.826,8.219A34.425,34.425,0,0,1,126.9,34.835a35.183,35.183,0,0,1-1.416,9.913Z" fill="url(#linear-gradient-45)"/>
+      <g id="Ellipse_28" data-name="Ellipse 28" transform="matrix(0.891, 0.454, -0.454, 0.891, 38.347, 93.619)" fill="#c0f9ff" stroke="#c0f9ff" stroke-width="1">
+        <ellipse cx="8.277" cy="8" rx="8.277" ry="8" stroke="none"/>
+        <ellipse cx="8.277" cy="8" rx="7.777" ry="7.5" fill="none"/>
+      </g>
+      <g id="Ellipse_29" data-name="Ellipse 29" transform="matrix(0.891, 0.454, -0.454, 0.891, 70.683, 93.619)" fill="#c0f9ff" stroke="#c0f9ff" stroke-width="1">
+        <ellipse cx="8.277" cy="8" rx="8.277" ry="8" stroke="none"/>
+        <ellipse cx="8.277" cy="8" rx="7.777" ry="7.5" fill="none"/>
+      </g>
+      <g id="Ellipse_30" data-name="Ellipse 30" transform="matrix(0.891, 0.454, -0.454, 0.891, 90.277, 104.619)" fill="#c0f9ff" stroke="#c0f9ff" stroke-width="1">
+        <ellipse cx="8.277" cy="8" rx="8.277" ry="8" stroke="none"/>
+        <ellipse cx="8.277" cy="8" rx="7.777" ry="7.5" fill="none"/>
+      </g>
+      <g id="Ellipse_31" data-name="Ellipse 31" transform="matrix(0.891, 0.454, -0.454, 0.891, 113.999, 95.619)" fill="#c0f9ff" stroke="#c0f9ff" stroke-width="1">
+        <ellipse cx="8.277" cy="8" rx="8.277" ry="8" stroke="none"/>
+        <ellipse cx="8.277" cy="8" rx="7.777" ry="7.5" fill="none"/>
+      </g>
+      <g id="Ellipse_32" data-name="Ellipse 32" transform="matrix(0.891, 0.454, -0.454, 0.891, 57.643, 104.619)" fill="#c0f9ff" stroke="#c0f9ff" stroke-width="1">
+        <ellipse cx="8.277" cy="8" rx="8.277" ry="8" stroke="none"/>
+        <ellipse cx="8.277" cy="8" rx="7.777" ry="7.5" fill="none"/>
+      </g>
+      <g id="Ellipse_33" data-name="Ellipse 33" transform="matrix(0.891, 0.454, -0.454, 0.891, 25.552, 104.619)" fill="#c0f9ff" stroke="#c0f9ff" stroke-width="1">
+        <ellipse cx="8.277" cy="8" rx="8.277" ry="8" stroke="none"/>
+        <ellipse cx="8.277" cy="8" rx="7.777" ry="7.5" fill="none"/>
+      </g>
+      <g id="Ellipse_34" data-name="Ellipse 34" transform="matrix(0.891, 0.454, -0.454, 0.891, 8.114, 93.619)" fill="#c0f9ff" stroke="#c0f9ff" stroke-width="1">
+        <ellipse cx="8.277" cy="8" rx="8.277" ry="8" stroke="none"/>
+        <ellipse cx="8.277" cy="8" rx="7.777" ry="7.5" fill="none"/>
+      </g>
     </g>
     <text id="Hailstones" transform="translate(641 2436)" font-size="30" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-73.425" y="32">Hailstones</tspan></text>
-    <path id="shape-34" data-name="shape" d="M125.488,44.748a23.678,23.678,0,0,1,9.067,9.169,27.792,27.792,0,0,1,3.337,13.576,27.793,27.793,0,0,1-3.337,13.576,23.678,23.678,0,0,1-9.083,9.178,27.052,27.052,0,0,1-13.435,3.372H25.855A27.052,27.052,0,0,1,12.42,90.247a23.679,23.679,0,0,1-9.083-9.178A27.793,27.793,0,0,1,0,67.493,27.793,27.793,0,0,1,3.337,53.917a23.679,23.679,0,0,1,9.083-9.178,24.867,24.867,0,0,1,3.833-1.757,26.615,26.615,0,0,1-.27-3.792A25.992,25.992,0,0,1,41.838,13.063a25.658,25.658,0,0,1,18.826,8.219A34.425,34.425,0,0,1,126.9,34.835a35.183,35.183,0,0,1-1.416,9.913Z" transform="translate(699.554 2482.443)" fill="url(#linear-gradient-46)"/>
-    <text id="_" data-name="*******" transform="translate(702 2564)" fill="#fff" font-size="40" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-63.711" y="43">*******</tspan></text>
+    <g id="Component_62_1" data-name="Component 62 – 1" transform="translate(699.554 2482.443)">
+      <path id="shape-34" data-name="shape" d="M125.488,44.748a23.678,23.678,0,0,1,9.067,9.169,27.792,27.792,0,0,1,3.337,13.576,27.793,27.793,0,0,1-3.337,13.576,23.678,23.678,0,0,1-9.083,9.178,27.052,27.052,0,0,1-13.435,3.372H25.855A27.052,27.052,0,0,1,12.42,90.247a23.679,23.679,0,0,1-9.083-9.178A27.793,27.793,0,0,1,0,67.493,27.793,27.793,0,0,1,3.337,53.917a23.679,23.679,0,0,1,9.083-9.178,24.867,24.867,0,0,1,3.833-1.757,26.615,26.615,0,0,1-.27-3.792A25.992,25.992,0,0,1,41.838,13.063a25.658,25.658,0,0,1,18.826,8.219A34.425,34.425,0,0,1,126.9,34.835a35.183,35.183,0,0,1-1.416,9.913Z" fill="url(#linear-gradient-46)"/>
+      <text id="_" data-name="*******" transform="translate(2.446 85.557)" fill="#fff" font-size="40" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-63.711" y="43">*******</tspan></text>
+    </g>
     <text id="Snow" transform="translate(641 2588)" font-size="30" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-38.613" y="32">Snow</tspan></text>
     <text id="Precipitation_Chance" data-name="Precipitation Chance" transform="translate(872 1432)" font-size="30" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-145.51" y="32">Precipitation Chance</tspan></text>
     <text id="_40_" data-name="40%" transform="translate(906 1452)" font-size="100" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="108">40%</tspan></text>
@@ -1586,25 +1592,25 @@ Cloudy" transform="translate(521 325)" font-size="50" font-family="SegoeUI-Bold,
     <text id="_78_" data-name="78%" transform="translate(906 2475)" font-size="100" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="108">78%</tspan></text>
     <text id="Wind-3" data-name="Wind" transform="translate(1290 1432)" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-43.981" y="38">Wind</tspan></text>
     <text id="_21mph" data-name="21mph" transform="translate(1201 1460)" font-size="70" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="76">21mph</tspan></text>
-    <text id="Northeast-2" data-name="Northeast" transform="translate(1272 1538)" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="38">Northeast</tspan></text>
+    <text id="Southeast" transform="translate(1272 1538)" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="38">Southeast</tspan></text>
     <text id="Wind-4" data-name="Wind" transform="translate(1290 1610)" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-43.981" y="38">Wind</tspan></text>
     <text id="_1mph" data-name="1mph" transform="translate(1201 1638)" font-size="70" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="76">1mph</tspan></text>
-    <text id="Northeast-3" data-name="Northeast" transform="translate(1272 1716)" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="38">Northeast</tspan></text>
+    <text id="Southwest" transform="translate(1272 1716)" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="38">Southwest</tspan></text>
     <text id="Wind-5" data-name="Wind" transform="translate(1290 1783)" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-43.981" y="38">Wind</tspan></text>
     <text id="_8mph" data-name="8mph" transform="translate(1201 1811)" font-size="70" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="76">8mph</tspan></text>
-    <text id="Northeast-4" data-name="Northeast" transform="translate(1272 1889)" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="38">Northeast</tspan></text>
+    <text id="North" transform="translate(1272 1889)" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="38">North</tspan></text>
     <text id="Wind-6" data-name="Wind" transform="translate(1290 1958)" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-43.981" y="38">Wind</tspan></text>
     <text id="_40mph" data-name="40mph" transform="translate(1201 1986)" font-size="70" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="76">40mph</tspan></text>
-    <text id="Northeast-5" data-name="Northeast" transform="translate(1272 2064)" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="38">Northeast</tspan></text>
+    <text id="South" transform="translate(1272 2064)" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="38">South</tspan></text>
     <text id="Wind-7" data-name="Wind" transform="translate(1290 2136)" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-43.981" y="38">Wind</tspan></text>
     <text id="_200mph" data-name="200mph" transform="translate(1201 2164)" font-size="70" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="76">200mph</tspan></text>
-    <text id="Northeast-6" data-name="Northeast" transform="translate(1272 2242)" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="38">Northeast</tspan></text>
+    <text id="West" transform="translate(1272 2242)" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="38">West</tspan></text>
     <text id="Wind-8" data-name="Wind" transform="translate(1290 2309)" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-43.981" y="38">Wind</tspan></text>
     <text id="_27mph" data-name="27mph" transform="translate(1201 2337)" font-size="70" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="76">27mph</tspan></text>
-    <text id="Northeast-7" data-name="Northeast" transform="translate(1272 2415)" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="38">Northeast</tspan></text>
+    <text id="Northwest" transform="translate(1272 2415)" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="38">Northwest</tspan></text>
     <text id="Wind-9" data-name="Wind" transform="translate(1290 2472)" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-43.981" y="38">Wind</tspan></text>
     <text id="_31mph" data-name="31mph" transform="translate(1201 2500)" font-size="70" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="76">31mph</tspan></text>
-    <text id="Northeast-8" data-name="Northeast" transform="translate(1272 2578)" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="38">Northeast</tspan></text>
+    <text id="Northeast-2" data-name="Northeast" transform="translate(1272 2578)" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="38">Northeast</tspan></text>
     <text id="Humidity-2" data-name="Humidity" transform="translate(1579 1432)" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-77.032" y="38">Humidity</tspan></text>
     <text id="_73_" data-name="73%" transform="translate(1534 1452)" font-size="100" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="108">73%</tspan></text>
     <text id="_39_" data-name="39%" transform="translate(1534 1619)" font-size="100" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="108">39%</tspan></text>

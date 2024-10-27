@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17">
   <diagram name="Page-1" id="e7e014a7-5840-1c2e-5031-d8a46d1fe8dd">
-    <mxGraphModel dx="2442" dy="2472" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="826" background="none" math="0" shadow="0">
+    <mxGraphModel dx="1221" dy="1649" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="826" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -11,124 +11,97 @@
         <mxCell id="mRwUUr-LX-8AUqYh1TQ9-42" value="&lt;font style=&quot;font-size: 30px;&quot;&gt;Smart House and Weather Monitoring Dashboard (System Boundary)&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="340" y="-40" width="930" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="MRZyphD4ttPfT7IoNjkH-1" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Smart House&lt;/font&gt;&lt;div style=&quot;font-size: 15px;&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Dashboard User&lt;/font&gt;&lt;/div&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;strokeWidth=5;" vertex="1" parent="1">
+        <mxCell id="MRZyphD4ttPfT7IoNjkH-1" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Smart House&lt;/font&gt;&lt;div style=&quot;font-size: 15px;&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Dashboard User&lt;/font&gt;&lt;/div&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;strokeWidth=5;" parent="1" vertex="1">
           <mxGeometry x="60" y="340" width="30" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="MRZyphD4ttPfT7IoNjkH-4" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;View Smart House Dashboard&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=5;" vertex="1" parent="1">
+        <mxCell id="MRZyphD4ttPfT7IoNjkH-4" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;View Smart House Dashboard&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=5;" parent="1" vertex="1">
           <mxGeometry x="520" y="50" width="250" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="MRZyphD4ttPfT7IoNjkH-5" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;View Weather Dashboard&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=5;" vertex="1" parent="1">
+        <mxCell id="MRZyphD4ttPfT7IoNjkH-5" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;View Weather Dashboard&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=5;" parent="1" vertex="1">
           <mxGeometry x="390" y="440" width="250" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="MRZyphD4ttPfT7IoNjkH-6" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;View Weather Maps&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=5;" vertex="1" parent="1">
+        <mxCell id="MRZyphD4ttPfT7IoNjkH-6" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;View Weather Maps&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=5;" parent="1" vertex="1">
           <mxGeometry x="420" y="630" width="250" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="MRZyphD4ttPfT7IoNjkH-7" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;View Temperature Details&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=5;" vertex="1" parent="1">
+        <mxCell id="MRZyphD4ttPfT7IoNjkH-7" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;View Temperature Details&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=5;" parent="1" vertex="1">
           <mxGeometry x="350" y="200" width="250" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="MRZyphD4ttPfT7IoNjkH-8" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;View Humidity Details&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=5;" vertex="1" parent="1">
+        <mxCell id="MRZyphD4ttPfT7IoNjkH-8" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;View Humidity Details&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=5;" parent="1" vertex="1">
           <mxGeometry x="530" y="325" width="250" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="MRZyphD4ttPfT7IoNjkH-9" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;View Energy Consumption Details&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=5;" vertex="1" parent="1">
-          <mxGeometry x="720" y="190" width="250" height="90" as="geometry" />
-        </mxCell>
-        <mxCell id="MRZyphD4ttPfT7IoNjkH-10" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=5;" edge="1" parent="1" target="MRZyphD4ttPfT7IoNjkH-4">
+        <mxCell id="MRZyphD4ttPfT7IoNjkH-10" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=5;" parent="1" target="MRZyphD4ttPfT7IoNjkH-4" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="100" y="370" as="sourcePoint" />
             <mxPoint x="500" y="280" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="MRZyphD4ttPfT7IoNjkH-11" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=5;" edge="1" parent="1" target="MRZyphD4ttPfT7IoNjkH-5">
+        <mxCell id="MRZyphD4ttPfT7IoNjkH-11" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=5;" parent="1" target="MRZyphD4ttPfT7IoNjkH-5" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="100" y="370" as="sourcePoint" />
             <mxPoint x="530" y="105" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="MRZyphD4ttPfT7IoNjkH-12" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Extends&lt;/font&gt;" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;strokeWidth=5;" edge="1" parent="1" target="MRZyphD4ttPfT7IoNjkH-6">
+        <mxCell id="MRZyphD4ttPfT7IoNjkH-12" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Extends&lt;/font&gt;" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;strokeWidth=5;" parent="1" target="MRZyphD4ttPfT7IoNjkH-6" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="530" y="530" as="sourcePoint" />
             <mxPoint x="690" y="530" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="MRZyphD4ttPfT7IoNjkH-13" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Extends&lt;/font&gt;" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=5;" edge="1" parent="1" source="MRZyphD4ttPfT7IoNjkH-4" target="MRZyphD4ttPfT7IoNjkH-7">
+        <mxCell id="MRZyphD4ttPfT7IoNjkH-13" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Extends&lt;/font&gt;" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=5;" parent="1" source="MRZyphD4ttPfT7IoNjkH-4" target="MRZyphD4ttPfT7IoNjkH-7" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="540" y="540" as="sourcePoint" />
             <mxPoint x="550" y="640" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="MRZyphD4ttPfT7IoNjkH-14" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Extends&lt;/font&gt;" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0.526;exitY=1.024;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitPerimeter=0;strokeWidth=5;" edge="1" parent="1" source="MRZyphD4ttPfT7IoNjkH-4" target="MRZyphD4ttPfT7IoNjkH-8">
+        <mxCell id="MRZyphD4ttPfT7IoNjkH-14" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Extends&lt;/font&gt;" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0.526;exitY=1.024;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitPerimeter=0;strokeWidth=5;" parent="1" source="MRZyphD4ttPfT7IoNjkH-4" target="MRZyphD4ttPfT7IoNjkH-8" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="655" y="150" as="sourcePoint" />
             <mxPoint x="485" y="190" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="MRZyphD4ttPfT7IoNjkH-15" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Extends&lt;/font&gt;" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0.537;exitY=1.024;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitPerimeter=0;strokeWidth=5;" edge="1" parent="1" source="MRZyphD4ttPfT7IoNjkH-4" target="MRZyphD4ttPfT7IoNjkH-9">
-          <mxGeometry width="160" relative="1" as="geometry">
-            <mxPoint x="662" y="152" as="sourcePoint" />
-            <mxPoint x="655" y="310" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="MRZyphD4ttPfT7IoNjkH-16" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Temperature&amp;nbsp;&lt;/font&gt;&lt;div style=&quot;font-size: 15px;&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Sensor(s)&lt;/font&gt;&lt;/div&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeWidth=5;" vertex="1" parent="1">
+        <mxCell id="MRZyphD4ttPfT7IoNjkH-16" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Temperature&amp;nbsp;&lt;/font&gt;&lt;div style=&quot;font-size: 15px;&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Sensor(s)&lt;/font&gt;&lt;/div&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeWidth=5;" parent="1" vertex="1">
           <mxGeometry x="1579" y="430" width="30" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="MRZyphD4ttPfT7IoNjkH-17" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Humidity&amp;nbsp;&lt;/font&gt;&lt;div style=&quot;font-size: 15px;&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Sensor(s)&lt;/font&gt;&lt;/div&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeWidth=5;" vertex="1" parent="1">
+        <mxCell id="MRZyphD4ttPfT7IoNjkH-17" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Humidity&amp;nbsp;&lt;/font&gt;&lt;div style=&quot;font-size: 15px;&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Sensor(s)&lt;/font&gt;&lt;/div&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeWidth=5;" parent="1" vertex="1">
           <mxGeometry x="1579" y="240" width="30" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="MRZyphD4ttPfT7IoNjkH-18" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Smart Meters&amp;nbsp;&lt;/font&gt;&lt;div style=&quot;font-size: 15px;&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;(Electricity and Gas)&amp;nbsp;&lt;/font&gt;&lt;/div&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeWidth=5;" vertex="1" parent="1">
-          <mxGeometry x="1579" y="50" width="30" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="MRZyphD4ttPfT7IoNjkH-19" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Weather Forecast&lt;/font&gt;&lt;div style=&quot;font-size: 15px;&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Service&lt;/font&gt;&lt;/div&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeWidth=5;" vertex="1" parent="1">
+        <mxCell id="MRZyphD4ttPfT7IoNjkH-19" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Weather Forecast&lt;/font&gt;&lt;div style=&quot;font-size: 15px;&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Service&lt;/font&gt;&lt;/div&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeWidth=5;" parent="1" vertex="1">
           <mxGeometry x="1579" y="640" width="30" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="MRZyphD4ttPfT7IoNjkH-25" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;Update Temperature Status&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=5;" vertex="1" parent="1">
+        <mxCell id="MRZyphD4ttPfT7IoNjkH-25" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;Update Temperature Status&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=5;" parent="1" vertex="1">
           <mxGeometry x="990" y="430" width="250" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="MRZyphD4ttPfT7IoNjkH-26" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;Update Humidity Status&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=5;" vertex="1" parent="1">
+        <mxCell id="MRZyphD4ttPfT7IoNjkH-26" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;Update Humidity Status&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=5;" parent="1" vertex="1">
           <mxGeometry x="990" y="280" width="250" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="MRZyphD4ttPfT7IoNjkH-27" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;Update Energy Consumption&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=5;" vertex="1" parent="1">
-          <mxGeometry x="990" y="60" width="250" height="90" as="geometry" />
-        </mxCell>
-        <mxCell id="MRZyphD4ttPfT7IoNjkH-28" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;Update Weather Forecast and Dashboard&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=5;" vertex="1" parent="1">
+        <mxCell id="MRZyphD4ttPfT7IoNjkH-28" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;Update Weather Forecast and Dashboard&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=5;" parent="1" vertex="1">
           <mxGeometry x="980" y="625" width="250" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="MRZyphD4ttPfT7IoNjkH-29" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="MRZyphD4ttPfT7IoNjkH-27" target="MRZyphD4ttPfT7IoNjkH-18">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="1100" y="497.5" as="sourcePoint" />
-            <mxPoint x="1520" y="222.5" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="MRZyphD4ttPfT7IoNjkH-30" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="MRZyphD4ttPfT7IoNjkH-26" target="MRZyphD4ttPfT7IoNjkH-17">
+        <mxCell id="MRZyphD4ttPfT7IoNjkH-30" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="MRZyphD4ttPfT7IoNjkH-26" target="MRZyphD4ttPfT7IoNjkH-17" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="1250" y="195" as="sourcePoint" />
             <mxPoint x="1589" y="94" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="MRZyphD4ttPfT7IoNjkH-31" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="MRZyphD4ttPfT7IoNjkH-25" target="MRZyphD4ttPfT7IoNjkH-16">
+        <mxCell id="MRZyphD4ttPfT7IoNjkH-31" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="MRZyphD4ttPfT7IoNjkH-25" target="MRZyphD4ttPfT7IoNjkH-16" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="1320" y="420" as="sourcePoint" />
             <mxPoint x="1589" y="282" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="MRZyphD4ttPfT7IoNjkH-32" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="MRZyphD4ttPfT7IoNjkH-28" target="MRZyphD4ttPfT7IoNjkH-19">
+        <mxCell id="MRZyphD4ttPfT7IoNjkH-32" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="MRZyphD4ttPfT7IoNjkH-28" target="MRZyphD4ttPfT7IoNjkH-19" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="1250" y="485" as="sourcePoint" />
             <mxPoint x="1589" y="471" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="MRZyphD4ttPfT7IoNjkH-33" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Extends&lt;/font&gt;" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;entryX=0.653;entryY=0.017;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=5;" edge="1" parent="1" source="MRZyphD4ttPfT7IoNjkH-27" target="MRZyphD4ttPfT7IoNjkH-9">
-          <mxGeometry width="160" relative="1" as="geometry">
-            <mxPoint x="664" y="152" as="sourcePoint" />
-            <mxPoint x="855" y="200" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="MRZyphD4ttPfT7IoNjkH-34" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Extends&lt;/font&gt;" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;strokeWidth=5;" edge="1" parent="1" source="MRZyphD4ttPfT7IoNjkH-26" target="MRZyphD4ttPfT7IoNjkH-8">
+        <mxCell id="MRZyphD4ttPfT7IoNjkH-34" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Extends&lt;/font&gt;" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;strokeWidth=5;" parent="1" source="MRZyphD4ttPfT7IoNjkH-26" target="MRZyphD4ttPfT7IoNjkH-8" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="1038" y="147" as="sourcePoint" />
             <mxPoint x="893" y="202" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="MRZyphD4ttPfT7IoNjkH-35" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Extends&lt;/font&gt;" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;strokeWidth=5;" edge="1" parent="1" source="MRZyphD4ttPfT7IoNjkH-25" target="MRZyphD4ttPfT7IoNjkH-7">
+        <mxCell id="MRZyphD4ttPfT7IoNjkH-35" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Extends&lt;/font&gt;" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;strokeWidth=5;" parent="1" source="MRZyphD4ttPfT7IoNjkH-25" target="MRZyphD4ttPfT7IoNjkH-7" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="1000" y="335" as="sourcePoint" />
             <mxPoint x="790" y="380" as="targetPoint" />
@@ -137,19 +110,19 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="MRZyphD4ttPfT7IoNjkH-36" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Extends&lt;/font&gt;" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;strokeWidth=5;" edge="1" parent="1" source="MRZyphD4ttPfT7IoNjkH-28" target="MRZyphD4ttPfT7IoNjkH-5">
+        <mxCell id="MRZyphD4ttPfT7IoNjkH-36" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Extends&lt;/font&gt;" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;strokeWidth=5;" parent="1" source="MRZyphD4ttPfT7IoNjkH-28" target="MRZyphD4ttPfT7IoNjkH-5" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="1000" y="335" as="sourcePoint" />
             <mxPoint x="790" y="380" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="MRZyphD4ttPfT7IoNjkH-37" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Extends&lt;/font&gt;" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;strokeWidth=5;" edge="1" parent="1" source="MRZyphD4ttPfT7IoNjkH-28" target="MRZyphD4ttPfT7IoNjkH-6">
+        <mxCell id="MRZyphD4ttPfT7IoNjkH-37" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Extends&lt;/font&gt;" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;strokeWidth=5;" parent="1" source="MRZyphD4ttPfT7IoNjkH-28" target="MRZyphD4ttPfT7IoNjkH-6" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="990" y="680" as="sourcePoint" />
             <mxPoint x="650" y="495" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="MRZyphD4ttPfT7IoNjkH-38" value="&lt;font style=&quot;font-size: 37px;&quot;&gt;&lt;u&gt;Smart House and Weather Monitoring Dashboard Use Case Diagram S275931&lt;/u&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="MRZyphD4ttPfT7IoNjkH-38" value="&lt;font style=&quot;font-size: 37px;&quot;&gt;&lt;u&gt;Smart House and Weather Monitoring Dashboard Use Case Diagram S275931&lt;/u&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="330" y="-210" width="930" height="110" as="geometry" />
         </mxCell>
       </root>
