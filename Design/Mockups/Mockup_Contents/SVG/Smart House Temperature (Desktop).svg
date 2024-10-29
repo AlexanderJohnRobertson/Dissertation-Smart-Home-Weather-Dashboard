@@ -130,11 +130,6 @@
       <text id="_C" data-name="°C" transform="translate(174 452)" fill="#f90" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-17.568" y="38">°C</tspan></text>
       <text id="_F" data-name="°F" transform="translate(289 451)" fill="#3a4658" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-15.748" y="38">°F</tspan></text>
       <text id="_16.8_C" data-name="16.8°C" transform="translate(132 327)" fill="#f90" font-size="80" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-120.02" y="86">16.8°C</tspan></text>
-      <g id="Rectangle_103" data-name="Rectangle 103" transform="translate(206 533)" fill="#3a4658" stroke="#f90" stroke-width="10">
-        <rect width="267" height="66" rx="15" stroke="none"/>
-        <rect x="5" y="5" width="257" height="56" rx="10" fill="none"/>
-      </g>
-      <text id="Details" transform="translate(236 540)" fill="#f90" font-size="40" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-64.277" y="43">Details</tspan></text>
       <g id="Ellipse_35" data-name="Ellipse 35" transform="translate(444 442)" fill="#3a4658" stroke="#f90" stroke-width="10">
         <ellipse cx="40.5" cy="39.5" rx="40.5" ry="39.5" stroke="none"/>
         <ellipse cx="40.5" cy="39.5" rx="35.5" ry="34.5" fill="none"/>
@@ -166,11 +161,6 @@
       <text id="_C-2" data-name="°C" transform="translate(174 452)" fill="#f90" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-17.568" y="38">°C</tspan></text>
       <text id="_F-2" data-name="°F" transform="translate(289 451)" fill="#3a4658" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-15.748" y="38">°F</tspan></text>
       <text id="_16.8_C-2" data-name="16.8°C" transform="translate(132 327)" fill="#f90" font-size="80" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-120.02" y="86">16.8°C</tspan></text>
-      <g id="Rectangle_103-2" data-name="Rectangle 103" transform="translate(206 533)" fill="#3a4658" stroke="#f90" stroke-width="10">
-        <rect width="267" height="66" rx="15" stroke="none"/>
-        <rect x="5" y="5" width="257" height="56" rx="10" fill="none"/>
-      </g>
-      <text id="Details-2" data-name="Details" transform="translate(236 540)" fill="#f90" font-size="40" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-64.277" y="43">Details</tspan></text>
       <g id="Ellipse_35-2" data-name="Ellipse 35" transform="translate(444 442)" fill="#3a4658" stroke="#f90" stroke-width="10">
         <ellipse cx="40.5" cy="39.5" rx="40.5" ry="39.5" stroke="none"/>
         <ellipse cx="40.5" cy="39.5" rx="35.5" ry="34.5" fill="none"/>
@@ -202,11 +192,6 @@
       <text id="_C-3" data-name="°C" transform="translate(174 452)" fill="#f90" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-17.568" y="38">°C</tspan></text>
       <text id="_F-3" data-name="°F" transform="translate(289 451)" fill="#3a4658" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-15.748" y="38">°F</tspan></text>
       <text id="_16.8_C-3" data-name="16.8°C" transform="translate(132 327)" fill="#f90" font-size="80" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-120.02" y="86">16.8°C</tspan></text>
-      <g id="Rectangle_103-3" data-name="Rectangle 103" transform="translate(206 533)" fill="#3a4658" stroke="#f90" stroke-width="10">
-        <rect width="267" height="66" rx="15" stroke="none"/>
-        <rect x="5" y="5" width="257" height="56" rx="10" fill="none"/>
-      </g>
-      <text id="Details-3" data-name="Details" transform="translate(236 540)" fill="#f90" font-size="40" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-64.277" y="43">Details</tspan></text>
       <g id="Ellipse_35-3" data-name="Ellipse 35" transform="translate(444 442)" fill="#3a4658" stroke="#f90" stroke-width="10">
         <ellipse cx="40.5" cy="39.5" rx="40.5" ry="39.5" stroke="none"/>
         <ellipse cx="40.5" cy="39.5" rx="35.5" ry="34.5" fill="none"/>
@@ -238,11 +223,6 @@
       <text id="_C-4" data-name="°C" transform="translate(174 452)" fill="#f90" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-17.568" y="38">°C</tspan></text>
       <text id="_F-4" data-name="°F" transform="translate(289 451)" fill="#3a4658" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-15.748" y="38">°F</tspan></text>
       <text id="_16.8_C-4" data-name="16.8°C" transform="translate(132 327)" fill="#f90" font-size="80" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-120.02" y="86">16.8°C</tspan></text>
-      <g id="Rectangle_103-4" data-name="Rectangle 103" transform="translate(206 533)" fill="#3a4658" stroke="#f90" stroke-width="10">
-        <rect width="267" height="66" rx="15" stroke="none"/>
-        <rect x="5" y="5" width="257" height="56" rx="10" fill="none"/>
-      </g>
-      <text id="Details-4" data-name="Details" transform="translate(236 540)" fill="#f90" font-size="40" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-64.277" y="43">Details</tspan></text>
       <g id="Ellipse_35-4" data-name="Ellipse 35" transform="translate(444 442)" fill="#3a4658" stroke="#f90" stroke-width="10">
         <ellipse cx="40.5" cy="39.5" rx="40.5" ry="39.5" stroke="none"/>
         <ellipse cx="40.5" cy="39.5" rx="35.5" ry="34.5" fill="none"/>

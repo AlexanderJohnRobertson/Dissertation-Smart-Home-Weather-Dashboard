@@ -37,6 +37,10 @@ def calendartest():
 def tabletest():
     return render_template('tabletest1.html')
 
+@app.route('/graphtest1')
+def graphtest():
+    return render_template('graphtest1.html')
+
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))  # port number

@@ -999,10 +999,6 @@
       </g>
       <text id="Humidity_Sensor_3" data-name="Humidity Sensor 3" transform="translate(1188 680)" fill="#f90" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-151.98" y="38">Humidity Sensor 3</tspan></text>
       <text id="_43_" data-name="43%" transform="translate(1267 756)" fill="#f90" font-size="90" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-90.791" y="97">43%</tspan></text>
-      <g id="Rectangle_606" data-name="Rectangle 606" transform="translate(1348 956)" fill="#3a4658" stroke="#f90" stroke-width="10">
-        <rect width="267" height="66" rx="15" stroke="none"/>
-        <rect x="5" y="5" width="257" height="56" rx="10" fill="none"/>
-      </g>
       <g id="Ellipse_37" data-name="Ellipse 37" transform="translate(1588 842)" fill="#00e6ff" stroke="#00e6ff" stroke-width="1">
         <ellipse cx="40.5" cy="42.5" rx="40.5" ry="42.5" stroke="none"/>
         <ellipse cx="40.5" cy="42.5" rx="40" ry="42" fill="none"/>
@@ -1011,7 +1007,6 @@
         <path d="M 59.19301223754883 111.2371597290039 L 30.1430835723877 102.5609130859375 L 29.99999809265137 102.5181732177734 L 29.85691261291504 102.5609130859375 L 0.8069851398468018 111.2371597290039 L 19.07028388977051 60.64978408813477 L 19.08391189575195 60.61204147338867 L 19.09134101867676 60.57261276245117 L 29.99999809265137 2.699317455291748 L 40.90865707397461 60.57261276245117 L 40.91608428955078 60.61204147338867 L 40.92971420288086 60.64978408813477 L 59.19301223754883 111.2371597290039 Z" stroke="none"/>
         <path d="M 29.99999809265137 5.398674011230469 L 19.56782913208008 60.74409103393555 L 19.54058456420898 60.8195686340332 L 1.613990783691406 110.4742965698242 L 29.99999809265137 101.996337890625 L 58.38600540161133 110.4742965698242 L 40.43216705322266 60.74409103393555 L 29.99999809265137 5.398674011230469 M 29.99999809265137 0 L 41.39999771118164 60.47999954223633 L 60 112 L 29.99999809265137 103.0399856567383 L -3.814697265625e-06 112 L 18.59999847412109 60.47999954223633 L 29.99999809265137 0 Z" stroke="none" fill="#00e6ff"/>
       </g>
-      <text id="Details" transform="translate(1378 962)" fill="#f90" font-size="40" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-64.277" y="43">Details</tspan></text>
     </g>
     <g id="Group_395" data-name="Group 395" transform="translate(-515 -435)">
       <g id="Rectangle_605-2" data-name="Rectangle 605" transform="translate(1237 673)" fill="#3a4658" stroke="#f90" stroke-width="10">
@@ -1020,10 +1015,6 @@
       </g>
       <text id="Humidity_Sensor_1" data-name="Humidity Sensor 1" transform="translate(1188 683)" fill="#f90" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-151.98" y="38">Humidity Sensor 1</tspan></text>
       <text id="_100_" data-name="100%" transform="translate(1267 756)" fill="#f90" font-size="90" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-116.675" y="97">100%</tspan></text>
-      <g id="Rectangle_606-2" data-name="Rectangle 606" transform="translate(1348 956)" fill="#3a4658" stroke="#f90" stroke-width="10">
-        <rect width="267" height="66" rx="15" stroke="none"/>
-        <rect x="5" y="5" width="257" height="56" rx="10" fill="none"/>
-      </g>
       <g id="Ellipse_37-2" data-name="Ellipse 37" transform="translate(1588 842)" fill="#00e6ff" stroke="#00e6ff" stroke-width="1">
         <ellipse cx="40.5" cy="42.5" rx="40.5" ry="42.5" stroke="none"/>
         <ellipse cx="40.5" cy="42.5" rx="40" ry="42" fill="none"/>
@@ -1032,7 +1023,6 @@
         <path d="M 59.19301223754883 111.2371597290039 L 30.1430835723877 102.5609130859375 L 29.99999809265137 102.5181732177734 L 29.85691261291504 102.5609130859375 L 0.8069851398468018 111.2371597290039 L 19.07028388977051 60.64978408813477 L 19.08391189575195 60.61204147338867 L 19.09134101867676 60.57261276245117 L 29.99999809265137 2.699317455291748 L 40.90865707397461 60.57261276245117 L 40.91608428955078 60.61204147338867 L 40.92971420288086 60.64978408813477 L 59.19301223754883 111.2371597290039 Z" stroke="none"/>
         <path d="M 29.99999809265137 5.398674011230469 L 19.56782913208008 60.74409103393555 L 19.54058456420898 60.8195686340332 L 1.613990783691406 110.4742965698242 L 29.99999809265137 101.996337890625 L 58.38600540161133 110.4742965698242 L 40.43216705322266 60.74409103393555 L 29.99999809265137 5.398674011230469 M 29.99999809265137 0 L 41.39999771118164 60.47999954223633 L 60 112 L 29.99999809265137 103.0399856567383 L -3.814697265625e-06 112 L 18.59999847412109 60.47999954223633 L 29.99999809265137 0 Z" stroke="none" fill="#00e6ff"/>
       </g>
-      <text id="Details-2" data-name="Details" transform="translate(1378 962)" fill="#f90" font-size="40" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-64.277" y="43">Details</tspan></text>
     </g>
     <g id="Group_396" data-name="Group 396" transform="translate(-1034 -435)">
       <g id="Rectangle_605-3" data-name="Rectangle 605" transform="translate(1237 673)" fill="#3a4658" stroke="#f90" stroke-width="10">
@@ -1041,10 +1031,6 @@
       </g>
       <text id="Average_Outdoor_Humidity" data-name="Average Outdoor Humidity" transform="translate(1240 682)" fill="#f90" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-223.868" y="38">Average Outdoor Humidity</tspan></text>
       <text id="_83_" data-name="83%" transform="translate(1267 756)" fill="#f90" font-size="90" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-90.791" y="97">83%</tspan></text>
-      <g id="Rectangle_606-3" data-name="Rectangle 606" transform="translate(1348 956)" fill="#3a4658" stroke="#f90" stroke-width="10">
-        <rect width="267" height="66" rx="15" stroke="none"/>
-        <rect x="5" y="5" width="257" height="56" rx="10" fill="none"/>
-      </g>
       <g id="Ellipse_37-3" data-name="Ellipse 37" transform="translate(1588 842)" fill="#00e6ff" stroke="#00e6ff" stroke-width="1">
         <ellipse cx="40.5" cy="42.5" rx="40.5" ry="42.5" stroke="none"/>
         <ellipse cx="40.5" cy="42.5" rx="40" ry="42" fill="none"/>
@@ -1053,7 +1039,6 @@
         <path d="M 59.19301223754883 111.2371597290039 L 30.1430835723877 102.5609130859375 L 29.99999809265137 102.5181732177734 L 29.85691261291504 102.5609130859375 L 0.8069851398468018 111.2371597290039 L 19.07028388977051 60.64978408813477 L 19.08391189575195 60.61204147338867 L 19.09134101867676 60.57261276245117 L 29.99999809265137 2.699317455291748 L 40.90865707397461 60.57261276245117 L 40.91608428955078 60.61204147338867 L 40.92971420288086 60.64978408813477 L 59.19301223754883 111.2371597290039 Z" stroke="none"/>
         <path d="M 29.99999809265137 5.398674011230469 L 19.56782913208008 60.74409103393555 L 19.54058456420898 60.8195686340332 L 1.613990783691406 110.4742965698242 L 29.99999809265137 101.996337890625 L 58.38600540161133 110.4742965698242 L 40.43216705322266 60.74409103393555 L 29.99999809265137 5.398674011230469 M 29.99999809265137 0 L 41.39999771118164 60.47999954223633 L 60 112 L 29.99999809265137 103.0399856567383 L -3.814697265625e-06 112 L 18.59999847412109 60.47999954223633 L 29.99999809265137 0 Z" stroke="none" fill="#00e6ff"/>
       </g>
-      <text id="Details-3" data-name="Details" transform="translate(1378 962)" fill="#f90" font-size="40" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-64.277" y="43">Details</tspan></text>
     </g>
     <g id="Group_397" data-name="Group 397" transform="translate(6 -435)">
       <g id="Rectangle_605-4" data-name="Rectangle 605" transform="translate(1237 673)" fill="#3a4658" stroke="#f90" stroke-width="10">
@@ -1062,10 +1047,6 @@
       </g>
       <text id="Humidity_Sensor_2" data-name="Humidity Sensor 2" transform="translate(1188 682)" fill="#f90" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-151.98" y="38">Humidity Sensor 2</tspan></text>
       <text id="_73_" data-name="73%" transform="translate(1267 756)" fill="#f90" font-size="90" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-90.791" y="97">73%</tspan></text>
-      <g id="Rectangle_606-4" data-name="Rectangle 606" transform="translate(1348 956)" fill="#3a4658" stroke="#f90" stroke-width="10">
-        <rect width="267" height="66" rx="15" stroke="none"/>
-        <rect x="5" y="5" width="257" height="56" rx="10" fill="none"/>
-      </g>
       <g id="Ellipse_37-4" data-name="Ellipse 37" transform="translate(1588 842)" fill="#00e6ff" stroke="#00e6ff" stroke-width="1">
         <ellipse cx="40.5" cy="42.5" rx="40.5" ry="42.5" stroke="none"/>
         <ellipse cx="40.5" cy="42.5" rx="40" ry="42" fill="none"/>
@@ -1074,7 +1055,6 @@
         <path d="M 59.19301223754883 111.2371597290039 L 30.1430835723877 102.5609130859375 L 29.99999809265137 102.5181732177734 L 29.85691261291504 102.5609130859375 L 0.8069851398468018 111.2371597290039 L 19.07028388977051 60.64978408813477 L 19.08391189575195 60.61204147338867 L 19.09134101867676 60.57261276245117 L 29.99999809265137 2.699317455291748 L 40.90865707397461 60.57261276245117 L 40.91608428955078 60.61204147338867 L 40.92971420288086 60.64978408813477 L 59.19301223754883 111.2371597290039 Z" stroke="none"/>
         <path d="M 29.99999809265137 5.398674011230469 L 19.56782913208008 60.74409103393555 L 19.54058456420898 60.8195686340332 L 1.613990783691406 110.4742965698242 L 29.99999809265137 101.996337890625 L 58.38600540161133 110.4742965698242 L 40.43216705322266 60.74409103393555 L 29.99999809265137 5.398674011230469 M 29.99999809265137 0 L 41.39999771118164 60.47999954223633 L 60 112 L 29.99999809265137 103.0399856567383 L -3.814697265625e-06 112 L 18.59999847412109 60.47999954223633 L 29.99999809265137 0 Z" stroke="none" fill="#00e6ff"/>
       </g>
-      <text id="Details-4" data-name="Details" transform="translate(1378 962)" fill="#f90" font-size="40" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-64.277" y="43">Details</tspan></text>
     </g>
     <line id="Line_46" data-name="Line 46" x2="478" transform="translate(209 304.5)" fill="none" stroke="#f90" stroke-width="10"/>
     <line id="Line_47" data-name="Line 47" x2="478" transform="translate(725 304.5)" fill="none" stroke="#f90" stroke-width="10"/>

@@ -6,7 +6,11 @@
     <title>Humidity Details</title>
     <link rel="stylesheet" href="/static/humidity.css">
     <link rel="stylesheet" href="/static/toggleswitch.css">
+    <link rel="stylesheet" href="/static/barChart.css">
     <script src="/static/dashboard.js"></script>
+
+
+
 
 </head>
 
@@ -21,43 +25,71 @@
     <section class="content">
       <div class="left-content">
 
-
-
         <div class="title">
             <div class="btn-group2">
 <button class="button2" onclick="window.location.href='/';">◄ Back</button>
             <h1 align="center">Humidity</h1>
             </div>
-          <div class="dashboard-container">
+
+         <div class="dashboard-container">
             <div class="card dashboard-card">
               <div class="dashboard-content">
-                <h2>Outdoor Temperature</h2>
-                <h3>22ºC <img src="/static/images/temperature.png" alt="Temperature" style="width:70px;height:150px;" align="right"></h3>
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider"></span>
-                </label>
-              </div>
-              <div class="dashboard-footer">
-                <p>Details</p>
+                <h2>Average Outdoor Humidity</h2>
+                <h3>83% <img src="/static/images/humidity.svg" alt="Humidity" style="width:70px;height:150px;" align="right"></h3>
 
               </div>
+
             </div>
 
             <div class="card dashboard-card">
-
               <div class="dashboard-content">
-                <h2>Outdoor Humidity</h2>
-                <h3>62% <img src="/static/images/humidity.png" alt="Humidity" style="width:70px;height:150px;" align="right"></h3>
+                <h2>Humidity Sensor 1</h2>
+                <h3>100% <img src="/static/images/humidity.svg" alt="Humidity" style="width:70px;height:150px;" align="right"></h3>
 
               </div>
-              <div class="dashboard-footer">
-                <p>Details</p>
+
+            </div>
+
+            <div class="card dashboard-card">
+              <div class="dashboard-content">
+                <h2>Humidity Sensor 2</h2>
+                <h3>73% <img src="/static/images/humidity.svg" alt="Humidity" style="width:70px;height:150px;" align="right"></h3>
 
               </div>
+
+            </div>
+
+            <div class="card dashboard-card">
+              <div class="dashboard-content">
+                <h2>Humidity Sensor 3</h2>
+                <h3>43% <img src="/static/images/humidity.svg" alt="Humidity" style="width:70px;height:150px;" align="right"></h3>
+
+              </div>
+
+            </div>
+
+            <div class="card dashboard-card">
+              <div class="dashboard-content">
+                <h2>Add new humidity sensor</h2>
+                <h3 style="text-align: center">+</h3>
+
+              </div>
+
             </div>
 
       </div>
+<h1 style="font-size: 50px; text-align: center">Hourly Humidity Graph (Last 24 Hours)</h1>
+<script src="https://www.amcharts.com/lib/4/core.js"></script>
+    <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+            <script src="/static/humidityBarChart.js"></script>
+<div id="chartdiv"></div>
+        <div id="dailyHumidityGraph" style="width: 100%; height: 370px;"></div>
+<script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+            <script src="/static/humiditygraphs.js"></script>
+
+            <div id="monthlyHumidityGraph" style="width: 100%; height: 370px;"></div>
+<script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+            <script src="/static/humiditygraphs.js"></script>
 
         </div>
         </div>
