@@ -515,6 +515,97 @@ body::-webkit-scrollbar-thumb {
 
 /* MEDIA QUERIES */
 
+@media (max-width: 4200px) {
+  .dashboard-card{
+    width: 3630px;
+    height: 2000px;
+  }
+}
+
+@media (max-width: 4000px) {
+  .dashboard-card{
+    width: 3430px;
+    height: 1890px;
+  }
+}
+
+@media (max-width: 3800px) {
+  .dashboard-card{
+    width: 3230px;
+    height: 1780px;
+  }
+}
+
+@media (max-width: 3600px) {
+  .dashboard-card{
+    width: 3030px;
+    height: 1670px;
+  }
+}
+
+@media (max-width: 3400px) {
+  .dashboard-card{
+    width: 2830px;
+    height: 1560px;
+  }
+}
+
+@media (max-width: 3200px) {
+  .dashboard-card{
+    width: 2630px;
+    height: 1450px;
+  }
+}
+
+@media (max-width: 3000px) {
+  .dashboard-card{
+    width: 2430px;
+    height: 1340px;
+  }
+}
+
+@media (max-width: 2800px) {
+  .dashboard-card{
+    width: 2230px;
+    height: 1230px;
+  }
+}
+
+@media (max-width: 2600px) {
+  .dashboard-card{
+    width: 2050px;
+    height: 1140px;
+  }
+}
+
+@media (max-width: 2400px) {
+  .dashboard-card{
+    width: 1950px;
+    height: 1060px;
+  }
+}
+
+@media (max-width: 2200px) {
+  .dashboard-card{
+    width: 1750px;
+    height: 960px;
+  }
+}
+
+@media (max-width: 2000px) {
+  .dashboard-card{
+    width: 1650px;
+    height: 910px;
+  }
+
+}
+
+@media (max-width: 1800px) {
+  .dashboard-card{
+    width: 1551px;
+  }
+}
+
 @media (max-width: 1695px) {
 
 
