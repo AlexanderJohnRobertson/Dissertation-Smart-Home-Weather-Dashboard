@@ -3,6 +3,13 @@
     width:1500px;
   }
 
+  @media only screen and (max-width: 4200px) {
+  #chartdiv{
+    height:450px;
+    width:100%;
+  }
+}
+
 @media only screen and (max-width: 1600px) {
   #chartdiv{
     height:450px;
