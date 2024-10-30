@@ -79,7 +79,7 @@ section {
 } /* Image */
 
 .container {
-  max-width: 107rem;
+  max-width: 256rem;
   margin: 0 auto;
   display: flex;
   position: relative;
