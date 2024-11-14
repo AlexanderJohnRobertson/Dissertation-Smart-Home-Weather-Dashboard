@@ -41,6 +41,10 @@ def tabletest():
 def graphtest():
     return render_template('graphtest1.html')
 
+@app.route('/weatherdatatest')
+def weatherdatatest():
+    return render_template('weatherdatatest.html')
+
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))  # port number

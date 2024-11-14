@@ -310,4 +310,78 @@ div.scrollmenu a:hover {
     content: "Humidity";
       font-size: 0.8rem;
   }
+
+}
+
+@media screen and (max-width: 453px) {
+    .table2 {
+    display: block;
+  }
+  .table2 > *, .table2 tr, .table2 td, .table2 th {
+    display: block;
+  }
+  .table2 thead {
+    display: none;
+  }
+  .table2 tbody tr {
+    height: auto;
+    padding: 8px 0;
+  }
+  .table2 tbody tr td {
+    padding-left: 45%;
+    margin-bottom: 12px;
+  }
+  .table2 tbody tr td:last-child {
+    margin-bottom: 0;
+  }
+  .table2 tbody tr td:before {
+    position: absolute;
+    font-weight: 700;
+    width: 40%;
+    left: 10px;
+    top: 0;
+  }
+  .table2 tbody tr td:nth-child(1):before {
+    content: "Daily Weather Forecast";
+      font-size: 0.6rem;
+  }
+  .table2 tbody tr td:nth-child(2):before {
+    content: "Temperature";
+      font-size: 0.6rem;
+  }
+  .table2 tbody tr td:nth-child(3):before {
+    content: "Weather";
+      font-size: 0.6rem;
+  }
+  .table2 tbody tr td:nth-child(4):before {
+    content: "Precipitation Chance";
+      font-size: 0.6rem;
+  }
+  .table2 tbody tr td:nth-child(5):before {
+    content: "Wind Speed";
+      font-size: 0.6rem;
+  }
+  .table2 tbody tr td:nth-child(6):before {
+    content: "Wind Direction";
+      font-size: 0.6rem;
+  }
+  .table2 tbody tr td:nth-child(7):before {
+    content: "Humidity";
+      font-size: 0.6rem;
+  }
+
+  h5{
+      font-size: clamp(0.5rem, 4vw, 0.7rem);
+  }
+  h4 {
+      font-size: clamp(0.05rem, 4vw, 0.7rem);
+  }
+
+}
+
+@media screen and (max-width: 400px) {
+    .table2
+    {
+        width: 200%;
+    }
 }

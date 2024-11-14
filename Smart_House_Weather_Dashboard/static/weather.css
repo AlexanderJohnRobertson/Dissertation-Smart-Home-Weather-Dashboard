@@ -1239,12 +1239,15 @@ body::-webkit-scrollbar-thumb {
 
 
   .content {
-    left: 60px;
+    left: 0px;
   }
-
-
 
   .chart {
     width: 100%;
   }
+
+  .dashboard-container
+    {
+        right:40px;
+    }
 }
