@@ -316,6 +316,7 @@ div.scrollmenu a:hover {
 @media screen and (max-width: 453px) {
     .table2 {
     display: block;
+        width: 150%;
   }
   .table2 > *, .table2 tr, .table2 td, .table2 th {
     display: block;
