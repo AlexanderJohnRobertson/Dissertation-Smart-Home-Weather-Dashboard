@@ -263,7 +263,7 @@ def weatherdatatest():
     current_weather = response.json()
     print(current_weather)
 
-    return render_template('weatherdatatest.html', data=current_weather)
+    return jsonify(current_weather)
 
 
 if __name__ == '__main__':
