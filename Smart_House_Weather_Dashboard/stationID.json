@@ -1,0 +1,31 @@
+{
+    "stations": [
+        {
+            "station_id": 142820,
+            "station_id_uuid": "1343c758-944b-4c95-8027-37544be8a527",
+            "station_name": "DigiTech Smart House",
+            "gateway_id": 7436656,
+            "gateway_id_hex": "001D0A717970",
+            "product_number": "6100UK",
+            "username": "HannahSteventon",
+            "user_email": "h.steventon@uos.ac.uk",
+            "company_name": "",
+            "active": true,
+            "private": false,
+            "recording_interval": 5,
+            "firmware_version": null,
+            "registered_date": 1661265840,
+            "time_zone": "Europe/London",
+            "city": "Ipswich",
+            "region": "England",
+            "country": "UK",
+            "latitude": 52.05896,
+            "longitude": 1.28477,
+            "elevation": 82.02,
+            "gateway_type": "WeatherLink Live",
+            "relationship_type": "Shared",
+            "subscription_type": "Pro"
+        }
+    ],
+    "generated_at": 1731679615
+}
