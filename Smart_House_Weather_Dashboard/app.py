@@ -94,9 +94,145 @@ def index():  # put application's code here
     print("Data", data)
     return render_template('index.html', data=data)
 
-@app.route('/weather')
+@app.route('/weather', methods=['GET', 'POST'])
 def weather():
-    return render_template('weather.html')
+    api_key = 'e9acjapvjih3rpbcnjnj8c8kfsnyivkb'
+    api_secret = 'p9ltsbyvv137bkskvuerqfs7s8qbe8gy'
+    station_id = 142820
+
+    # current time
+    local_time = int(time.time())
+
+    # api signature
+    data_to_sign = f"api-key{api_key}station-id{station_id}t{local_time}"
+    signature = hmac.new(
+        api_secret.encode('utf-8'),
+        data_to_sign.encode('utf-8'),
+        hashlib.sha256
+    ).hexdigest()
+
+    url = f"https://api.weatherlink.com/v2/current/{station_id}"
+    params = {
+        "api-key": api_key,
+        "t": local_time,
+        "api-signature": signature
+    }
+
+    response = requests.get(url, params=params)
+    current_weather = response.json()
+    sensors = current_weather['sensors']
+    sensors = sensors[2]
+    sensorData = sensors['data']
+    sensorData = sensorData[0]
+    temperatureFarenheit = sensorData['temp']
+    print("Temperature Farenheit", temperatureFarenheit)
+    temperatureCelsius = (temperatureFarenheit - 32) * 5.0 / 9.0
+    temperatureCelsius1 = round(temperatureCelsius, 1)  # round to 1 decimal place
+    print("Temperature Celsius", temperatureCelsius1)
+    strTemperatureCelsius1 = str(temperatureCelsius1) + "°C"
+    print("Temperature Celsius String", strTemperatureCelsius1)
+    strTemperatureFarenheit = str(temperatureFarenheit) + "°F"
+    print("Temperature Farenheit String", strTemperatureFarenheit)
+
+    sensors = current_weather['sensors']
+    sensors = sensors[2]
+    sensorData = sensors['data']
+    sensorData = sensorData[0]
+    humidity = sensorData['hum']
+    humidity = int(humidity)
+    print("Humidity ", humidity)
+    strHumidity = str(humidity) + "%"
+    print("Humidity String", strHumidity)
+
+    sensors = current_weather['sensors']
+    sensors = sensors[4]
+    sensorData = sensors['data']
+    sensorData = sensorData[0]
+    aqi = sensorData['aqi_val']
+    print("AQI ", aqi)
+    aqi_description = sensorData['aqi_desc']
+    print("AQI Description", aqi_description)
+
+    sensors = current_weather['sensors']
+    sensors = sensors[2]
+    sensorData = sensors['data']
+    sensorData = sensorData[0]
+    windSpeed = sensorData['wind_speed_last']
+    print("Wind Speed ", windSpeed)
+    strWindSpeed = str(windSpeed) + " mph"
+
+    sensors = current_weather['sensors']
+    sensors = sensors[2]
+    sensorData = sensors['data']
+    sensorData = sensorData[0]
+    windDirection = sensorData['wind_dir_last']
+    print("Wind Direction ", windDirection)
+    if windDirection >=0 and windDirection < 22.5 or windDirection >= 337.5 and windDirection <= 360:
+        windDirectionDescription = "North"
+    elif windDirection >= 22.5 and windDirection < 67.5:
+        windDirectionDescription = "North East"
+    elif windDirection >= 67.5 and windDirection < 112.5:
+        windDirectionDescription = "East"
+    elif windDirection >= 112.5 and windDirection < 157.5:
+        windDirectionDescription = "South East"
+    elif windDirection >= 157.5 and windDirection < 202.5:
+        windDirectionDescription = "South"
+    elif windDirection >= 202.5 and windDirection < 247.5:
+        windDirectionDescription = "South West"
+    elif windDirection >= 247.5 and windDirection < 292.5:
+        windDirectionDescription = "West"
+    elif windDirection >= 292.5 and windDirection < 337.5:
+        windDirectionDescription = "North West"
+
+    print("Wind Direction Description", windDirectionDescription)
+
+    sensors = current_weather['sensors']
+    sensors = sensors[2]
+    sensorData = sensors['data']
+    sensorData = sensorData[0]
+    UV_index= sensorData['uv_index']
+    print("UV Index", UV_index)
+    if UV_index <= 2:
+        UV_index_description = " Low"
+    elif UV_index >= 3 and UV_index <= 5:
+        UV_index_description = " Moderate"
+    elif UV_index >= 6 and UV_index <= 7:
+        UV_index_description = " High"
+    elif UV_index >= 8 and UV_index <= 10:
+        UV_index_description = " Very High"
+
+    if UV_index == 0:
+        UV_index_percentage ="5"
+    elif UV_index == 1:
+        UV_index_percentage = "10"
+    elif UV_index == 2:
+        UV_index_percentage = "20"
+    elif UV_index == 3:
+        UV_index_percentage = "30"
+    elif UV_index == 4:
+        UV_index_percentage = "40"
+    elif UV_index == 5:
+        UV_index_percentage = "50"
+    elif UV_index == 6:
+        UV_index_percentage = "60"
+    elif UV_index == 7:
+        UV_index_percentage = "70"
+    elif UV_index == 8:
+        UV_index_percentage = "80"
+    elif UV_index == 9:
+        UV_index_percentage = "90"
+    elif UV_index == 10:
+        UV_index_percentage = "100"
+
+
+    print("UV Index Description", UV_index_description)
+    print("UV Index", UV_index)
+    print("UV Index Percentage", UV_index_percentage)
+
+
+    data = strTemperatureCelsius1, strHumidity, aqi, aqi_description, strWindSpeed, windDirectionDescription, UV_index, UV_index_description, UV_index_percentage
+    print("Data", data)
+    return render_template('weather.html', data=data)
 
 @app.route('/temperature', methods=['GET', 'POST'])
 def temperature():
@@ -192,7 +328,7 @@ def humidity():
     sensorData = sensors['data']
     sensorData = sensorData[0]
     humidity1 = sensorData['hum']
-    print("Temperature Farenheit", humidity1)
+    print("Humidity ", humidity1)
     strHumidity1 = str(humidity1) + "%"
     print("Humidity String", strHumidity1)
     current_weather = response.json()
