@@ -153,6 +153,41 @@ def weather():
     aqi_description = sensorData['aqi_desc']
     print("AQI Description", aqi_description)
 
+    if aqi == 0:
+        aqi_percentage ="0%"
+        aqi_colour = "#00FF00"
+    elif aqi== 1:
+        aqi_percentage = "10%"
+        aqi_colour = "#7aff00"
+    elif aqi == 2:
+        aqi_percentage = "20%"
+        aqi_colour = "#a1ff00"
+    elif aqi == 3:
+        aqi_percentage = "30%"
+        aqi_colour = "#c7ff00"
+    elif aqi == 4:
+        aqi_percentage = "40%"
+        aqi_colour = "#faff00"
+    elif aqi == 5:
+        aqi_percentage = "50%"
+        aqi_colour = "#ffea00"
+    elif aqi == 6:
+        aqi_percentage = "60%"
+        aqi_colour = "#ffc400"
+    elif aqi == 7:
+        aqi_percentage = "70%"
+        aqi_colour = "#ff9100"
+    elif aqi == 8:
+        aqi_percentage = "80%"
+        aqi_colour = "#ff5e00"
+    elif aqi == 9:
+        aqi_percentage = "90%"
+        aqi_colour = "#ff3700"
+    elif aqi == 10:
+        aqi_percentage = "100%"
+        aqi_colour = "#ff0000"
+
+
     sensors = current_weather['sensors']
     sensors = sensors[2]
     sensorData = sensors['data']
@@ -201,36 +236,49 @@ def weather():
     elif UV_index >= 8 and UV_index <= 10:
         UV_index_description = " Very High"
 
+
     if UV_index == 0:
-        UV_index_percentage ="5"
+        UV_index_percentage ="0%"
+        UV_index_colour = "#00FF00"
     elif UV_index == 1:
-        UV_index_percentage = "10"
+        UV_index_percentage = "10%"
+        UV_index_colour = "#7aff00"
     elif UV_index == 2:
-        UV_index_percentage = "20"
+        UV_index_percentage = "20%"
+        UV_index_colour = "#a1ff00"
     elif UV_index == 3:
-        UV_index_percentage = "30"
+        UV_index_percentage = "30%"
+        UV_index_colour = "#c7ff00"
     elif UV_index == 4:
-        UV_index_percentage = "40"
+        UV_index_percentage = "40%"
+        UV_index_colour = "#faff00"
     elif UV_index == 5:
-        UV_index_percentage = "50"
+        UV_index_percentage = "50%"
+        UV_index_colour = "#ffea00"
     elif UV_index == 6:
-        UV_index_percentage = "60"
+        UV_index_percentage = "60%"
+        UV_index_colour = "#ffc400"
     elif UV_index == 7:
-        UV_index_percentage = "70"
+        UV_index_percentage = "70%"
+        UV_index_colour = "#ff9100"
     elif UV_index == 8:
-        UV_index_percentage = "80"
+        UV_index_percentage = "80%"
+        UV_index_colour = "#ff5e00"
     elif UV_index == 9:
-        UV_index_percentage = "90"
+        UV_index_percentage = "90%"
+        UV_index_colour = "#ff3700"
     elif UV_index == 10:
-        UV_index_percentage = "100"
+        UV_index_percentage = "100%"
+        UV_index_colour = "#ff0000"
 
 
     print("UV Index Description", UV_index_description)
     print("UV Index", UV_index)
     print("UV Index Percentage", UV_index_percentage)
+    print("UV Index Colour", UV_index_colour)
 
 
-    data = strTemperatureCelsius1, strHumidity, aqi, aqi_description, strWindSpeed, windDirectionDescription, UV_index, UV_index_description, UV_index_percentage
+    data = strTemperatureCelsius1, strHumidity, aqi, aqi_description, strWindSpeed, windDirectionDescription, UV_index, UV_index_description, UV_index_percentage, UV_index_colour, aqi_percentage, aqi_colour
     print("Data", data)
     return render_template('weather.html', data=data)
 
