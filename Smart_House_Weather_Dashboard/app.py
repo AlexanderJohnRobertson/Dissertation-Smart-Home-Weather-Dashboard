@@ -152,6 +152,7 @@ def weather():
     print("AQI ", aqi)
     aqi_description = sensorData['aqi_desc']
     print("AQI Description", aqi_description)
+    aqi = int(aqi)
 
     if aqi == 0:
         aqi_percentage ="0%"
@@ -244,6 +245,7 @@ def weather():
     elif UV_index >= 8 and UV_index <= 10:
         UV_index_description = " Very High"
 
+    UV_index = int(UV_index)
 
     if UV_index == 0:
         UV_index_percentage ="0%"
@@ -284,6 +286,7 @@ def weather():
     print("UV Index", UV_index)
     print("UV Index Percentage", UV_index_percentage)
     print("UV Index Colour", UV_index_colour)
+    print("AQI Percentage", aqi_percentage)
 
 
     data = strTemperatureCelsius1, strHumidity, aqi, aqi_description, strWindSpeed, windDirectionDescription, UV_index, UV_index_description, UV_index_percentage, UV_index_colour, aqi_percentage, aqi_colour, compass
