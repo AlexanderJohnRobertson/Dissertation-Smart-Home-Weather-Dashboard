@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1db2f1c2-a298-4643-969f-c3b80d70a65a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/static/w3schools.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/weather.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/weather.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/humidity.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/humidity.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/temperature.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/temperature.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/weather.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/weather.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -151,6 +146,9 @@
       <workItem from="1731701359208" duration="39000" />
       <workItem from="1731793889803" duration="7303000" />
       <workItem from="1731965255717" duration="5124000" />
+      <workItem from="1731970927654" duration="328000" />
+      <workItem from="1732059933694" duration="33000" />
+      <workItem from="1732059975343" duration="1289000" />
     </task>
     <servers />
   </component>
@@ -158,6 +156,6 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Smart_House_Weather_Dashboard$Smart_House_Weather_Dashboard.coverage" NAME="Smart_House_Weather_Dashboard Coverage Results" MODIFIED="1731969555176" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Smart_House_Weather_Dashboard$Smart_House_Weather_Dashboard.coverage" NAME="Smart_House_Weather_Dashboard Coverage Results" MODIFIED="1732061133835" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

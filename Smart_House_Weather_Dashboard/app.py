@@ -204,20 +204,28 @@ def weather():
     print("Wind Direction ", windDirection)
     if windDirection >=0 and windDirection < 22.5 or windDirection >= 337.5 and windDirection <= 360:
         windDirectionDescription = "North"
+        compass = "/static/images/compassNorth.svg"
     elif windDirection >= 22.5 and windDirection < 67.5:
         windDirectionDescription = "North East"
+        compass = "/static/images/compassNorthEast.svg"
     elif windDirection >= 67.5 and windDirection < 112.5:
         windDirectionDescription = "East"
+        compass = "/static/images/compassEast.svg"
     elif windDirection >= 112.5 and windDirection < 157.5:
         windDirectionDescription = "South East"
+        compass = "/static/images/compassSouthEast.svg"
     elif windDirection >= 157.5 and windDirection < 202.5:
         windDirectionDescription = "South"
+        compass = "/static/images/compassSouth.svg"
     elif windDirection >= 202.5 and windDirection < 247.5:
         windDirectionDescription = "South West"
+        compass = "/static/images/compassSouthWest.svg"
     elif windDirection >= 247.5 and windDirection < 292.5:
         windDirectionDescription = "West"
+        compass = "/static/images/compassWest.svg"
     elif windDirection >= 292.5 and windDirection < 337.5:
         windDirectionDescription = "North West"
+        compass = "/static/images/compassNorthWest.svg"
 
     print("Wind Direction Description", windDirectionDescription)
 
@@ -278,7 +286,7 @@ def weather():
     print("UV Index Colour", UV_index_colour)
 
 
-    data = strTemperatureCelsius1, strHumidity, aqi, aqi_description, strWindSpeed, windDirectionDescription, UV_index, UV_index_description, UV_index_percentage, UV_index_colour, aqi_percentage, aqi_colour
+    data = strTemperatureCelsius1, strHumidity, aqi, aqi_description, strWindSpeed, windDirectionDescription, UV_index, UV_index_description, UV_index_percentage, UV_index_colour, aqi_percentage, aqi_colour, compass
     print("Data", data)
     return render_template('weather.html', data=data)
 
