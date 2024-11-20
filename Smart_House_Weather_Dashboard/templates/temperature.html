@@ -6,9 +6,8 @@
     <meta http-equiv="refresh" content="60; url=/temperature">
     <title>Temperature Details</title>
     <link rel="stylesheet" href="/static/temperature.css">
-    <link rel="stylesheet" href="/static/toggleswitch.css">
-    <link rel="stylesheet" href="/static/barChart.css"> 
-    <script src="/static/dashboard.js"></script>
+    <link rel="stylesheet" href="/static/toggleswitch4.css">
+    <link rel="stylesheet" href="/static/barChart.css">
 
 
 
@@ -35,11 +34,29 @@
             <div class="card dashboard-card">
               <div class="dashboard-content">
                 <h2>Outdoor Temperature</h2>
-                <h3>{{ data[0] }} <img src="/static/images/temperature.png" alt="Temperature" style="width:70px;height:150px;" align="right"></h3>
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider"></span>
-                </label>
+                <h3 class="text" style=" color: #e28d2c">{{ data[0] }} </h3>
+                  <img src="/static/images/temperature.png" alt="Temperature" style="width:70px;height:150px;position: relative; top: -10px;" align="right">
+                  <div class="togglecontainer">
+          <div class="toggle" style="position: relative; top: -30px; left:-40px; background: #ffffff">
+            <div class="toggle-button" onclick="animatedToggle()"></div>
+          </div>
+          <div class="unit" style="color: #e08c2c;position: relative; top: -30px; left:-40px; font-size: 40px">°C</div>
+        </div>
+
+        <script>let toggle = document.querySelector(".toggle");
+let text = document.querySelector(".text");
+let unit = document.querySelector(".unit");
+
+function animatedToggle() {
+  toggle.classList.toggle("active");
+  if (toggle.classList.contains("active")) {
+        text.innerHTML = "{{ data[2] }}";
+    unit.innerHTML = "°F";
+  } else {
+      text.innerHTML = "{{ data[0] }}";
+        unit.innerHTML = "°C";
+  }
+}</script>
               </div>
 
             </div>
@@ -47,11 +64,29 @@
             <div class="card dashboard-card">
               <div class="dashboard-content">
                 <h2>Indoor Temperature</h2>
-                <h3>{{data[1]}} <img src="/static/images/temperature.png" alt="Temperature" style="width:70px;height:150px;" align="right"></h3>
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider"></span>
-                </label>
+                <h3 class="text3" style=" color: #e28d2c">{{ data[1] }} </h3>
+                  <img src="/static/images/temperature.png" alt="Temperature" style="width:70px;height:150px;position: relative; top: -10px;" align="right">
+                  <div class="togglecontainer3">
+          <div class="toggle3" style="position: relative; top: -30px; left:-40px; background: #ffffff">
+            <div class="toggle-button3" onclick="animatedToggle3()"></div>
+          </div>
+          <div class="unit3" style="color: #e08c2c;position: relative; top: -30px; left:-40px; font-size: 40px">°C</div>
+        </div>
+
+        <script>let toggle3 = document.querySelector(".toggle3");
+let text3 = document.querySelector(".text3");
+let unit3 = document.querySelector(".unit3");
+
+function animatedToggle3() {
+  toggle3.classList.toggle("active");
+  if (toggle3.classList.contains("active")) {
+        text3.innerHTML = "{{ data[3] }}";
+    unit3.innerHTML = "°F";
+  } else {
+      text3.innerHTML = "{{ data[1] }}";
+        unit3.innerHTML = "°C";
+  }
+}</script>
               </div>
 
             </div>

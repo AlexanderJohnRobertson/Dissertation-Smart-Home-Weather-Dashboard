@@ -151,6 +151,7 @@ body {
   grid-auto-flow: dense;
   grid-template-rows: 2fr 0.8fr 0.5fr;
   padding: 8px;
+  height: 25rem;
 }
 
 /* Dashboard Header */
@@ -510,6 +511,38 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* MEDIA QUERIES */
+
+@media (max-width: 4200px) {
+
+
+  .text {
+    font-size: 7rem;
+  }
+  .text2 {
+    font-size: 7rem;
+  }
+  .text3 {
+    font-size: 7rem;
+  }
+}
+
+@media (max-width: 2000px) {
+
+
+  .content {
+    left: -6px;
+    grid-template-columns: 98% 50%;
+  }
+}
+
+@media (max-width: 1700px) {
+
+
+  .content {
+    left: -6px;
+    grid-template-columns: 98% 50%;
+  }
+}
 
 @media (max-width: 1500px) {
 

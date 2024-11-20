@@ -1,0 +1,151 @@
+
+.togglecontainer {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.togglecontainer .toggle {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 90px;
+  height: 50px;
+  background: rgb(58, 67, 85);
+  border-radius: 30px;
+}
+
+.togglecontainer .toggle.active {
+  background: rgb(58, 67, 85);
+}
+
+.togglecontainer .toggle .toggle-button {
+  position: relative;
+  top: 5px;
+  left: 5px;
+  width: 40px;
+  height: 40px;
+  background: rgba(231, 108, 69, 1);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.togglecontainer .toggle.active .toggle-button {
+  background: rgb(229, 107, 68);
+  left: 45px;
+}
+
+.togglecontainer .text .unit {
+  position: relative;
+  left: 95px;
+  font-size: 25px;
+  margin-left: 10px;
+}
+
+/* zz */
+
+.togglecontainer2 {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.togglecontainer2 .toggle2 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 45px;
+  height: 25px;
+  background: rgb(58, 67, 85);
+  border-radius: 30px;
+}
+
+.togglecontainer2 .toggle2.active {
+  background: rgb(58, 67, 85);
+}
+
+.togglecontainer2 .toggle2 .toggle-button2 {
+  position: relative;
+  top: 5px;
+  left: 5px;
+  width: 20px;
+  height: 20px;
+  background: rgba(231, 108, 69, 1);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.togglecontainer2 .toggle2.active .toggle-button2 {
+  background: rgb(229, 107, 68);
+  left: 22px;
+}
+
+.togglecontainer2 .text2 .unit2 {
+  position: relative;
+  left: 95px;
+  font-size: 25px;
+  margin-left: 10px;
+}
+
+/* zz */
+
+.togglecontainer3 {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.togglecontainer3 .toggle3 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 90px;
+  height: 50px;
+  background: rgb(58, 67, 85);
+  border-radius: 30px;
+}
+
+.togglecontainer3 .toggle3.active {
+  background: rgb(58, 67, 85);
+}
+
+.togglecontainer3 .toggle3 .toggle-button3 {
+  position: relative;
+  top: 5px;
+  left: 5px;
+  width: 40px;
+  height: 40px;
+  background: rgba(231, 108, 69, 1);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.togglecontainer3 .toggle3.active .toggle-button3 {
+  background: rgb(229, 107, 68);
+  left: 45px;
+}
+
+.togglecontainer3 .text3 .unit3 {
+  position: relative;
+  left: 95px;
+  font-size: 25px;
+  margin-left: 10px;
+}

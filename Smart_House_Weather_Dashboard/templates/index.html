@@ -6,8 +6,7 @@
     <meta http-equiv="refresh" content="60; url=/">
     <title>Smart House Dashboard</title>
     <link rel="stylesheet" href="/static/dashboard.css">
-    <link rel="stylesheet" href="/static/toggleswitch.css">
-    <script src="/static/dashboard.js"></script>
+    <link rel="stylesheet" href="/static/toggleswitch4.css">
 
 </head>
 
@@ -30,11 +29,29 @@
             <div class="card dashboard-card">
               <div class="dashboard-content">
                 <h2>Outdoor Temperature</h2>
-                <h3>{{ data[0] }} <img src="/static/images/temperature.png" alt="Temperature" align="right" class="icon"></h3>
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider"></span>
-                </label>
+                <h3 class="text" style=" color: #e28d2c">{{ data[0] }} </h3>
+                  <img src="/static/images/temperature.png" alt="Temperature" class="icon" align="right">
+                  <div class="togglecontainer">
+          <div class="toggle" style="position: relative; top: -30px; left:-40px; background: #ffffff">
+            <div class="toggle-button" onclick="animatedToggle()"></div>
+          </div>
+          <div class="unit" style="color: #e08c2c;position: relative; top: -30px; left:-40px; font-size: 40px">°C</div>
+        </div>
+
+        <script>let toggle = document.querySelector(".toggle");
+let text = document.querySelector(".text");
+let unit = document.querySelector(".unit");
+
+function animatedToggle() {
+  toggle.classList.toggle("active");
+  if (toggle.classList.contains("active")) {
+        text.innerHTML = "{{ data[2] }}";
+    unit.innerHTML = "°F";
+  } else {
+      text.innerHTML = "{{ data[0] }}";
+        unit.innerHTML = "°C";
+  }
+}</script>
               </div>
 
               <div class="btn-group">
@@ -46,7 +63,8 @@
 
               <div class="dashboard-content">
                 <h2>Outdoor Humidity</h2>
-                <h3>{{ data[1] }} <img src="/static/images/humidity.png" alt="Humidity" align="right" class="icon"></h3>
+                <h3>{{ data[1] }} </h3>
+                  <img src="/static/images/humidity.png" alt="Humidity" align="right" class="icon">
 
               </div>
               <div class="btn-group">

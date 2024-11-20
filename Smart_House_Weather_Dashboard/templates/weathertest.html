@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/static/toggleswitch4.css">
     <link rel="stylesheet" href="/static/w3schools.css">
     <link rel="stylesheet" href="/static/table1.css">
+
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet"
@@ -49,29 +50,15 @@
                   <div class="card dashboard-card2">
               <div class="dashboard-content">
                 <h2 style="font-size: 2rem">Temperature:</h2>
-                <h3 class="text" style="font-size: 3.6rem; color: #000000">{{ data[0] }} </h3>
-                  <img src="/static/images/temperature.png" alt="Temperature" style="width:70px;height:150px;position: relative; top: -10px;" align="right">
+                <h3 class="text" style="font-size: 3.6rem">FF <img src="/static/images/temperature.png" alt="Temperature" style="width:70px;height:150px;" align="right"></h3>
                   <div class="togglecontainer">
-          <div class="toggle" style="position: relative; top: -30px; left:-40px;">
+          <div class="toggle">
             <div class="toggle-button" onclick="animatedToggle()"></div>
           </div>
-          <div class="unit" style="color: #000000;position: relative; top: -30px; left:-40px; font-size: 40px">°C</div>
+          <div class="text">OFF</div>
         </div>
 
-        <script>let toggle = document.querySelector(".toggle");
-let text = document.querySelector(".text");
-let unit = document.querySelector(".unit");
-
-function animatedToggle() {
-  toggle.classList.toggle("active");
-  if (toggle.classList.contains("active")) {
-        text.innerHTML = "{{ data[13] }}";
-    unit.innerHTML = "°F";
-  } else {
-      text.innerHTML = "{{ data[0] }}";
-        unit.innerHTML = "°C";
-  }
-}</script>
+        <script src="/static/toggleswitch.js"></script>
               </div>
 
             </div>
@@ -123,29 +110,11 @@ function animatedToggle() {
               <div class="dashboard-content">
                 <h2 style="font-size: 2rem">Wind:</h2>
                 <h3 style="font-size: 1.3rem"><span>Speed</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>Direction</span> </h3>
-                  <h3 style="font-size: 1.2rem" class="text2">{{ data[4] }}</h3>
-                  <h3 style="font-size: 1.2rem; position: relative; left: 105px; top: -23px">{{ data[5] }} </h3>
-                  <div class="togglecontainer2">
-          <div class="toggle2" style="position: relative; top: -30px; left:-70px;">
-            <div class="toggle-button2" onclick="animatedToggle2()"></div>
-          </div>
-          <div class="unit2" style="color: #000000;position: relative; top: -30px; left:-70px; font-size: 20px">mph</div>
-        </div>
-
-        <script>let toggle2 = document.querySelector(".toggle2");
-let text2 = document.querySelector(".text2");
-let unit2 = document.querySelector(".unit2");
-
-function animatedToggle2() {
-  toggle2.classList.toggle("active");
-  if (toggle2.classList.contains("active")) {
-        text2.innerHTML = "{{ data[14] }}";
-    unit2.innerHTML = "km/h";
-  } else {
-      text2.innerHTML = "{{ data[4] }}";
-        unit2.innerHTML = "mph";
-  }
-}</script>
+                  <h3 style="font-size: 1.2rem"><span>{{ data[4] }}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>{{ data[5] }}</span> </h3>
+                  <label class="switch2" style="top: 7px">
+                    <input type="checkbox">
+                    <span class="slider2"></span>
+                </label>
                   <img src={{ data[12] }} alt="Compass" style="width:105px;height:105px; position:relative; left:100px" align="left">
 
               </div>

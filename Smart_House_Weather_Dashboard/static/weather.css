@@ -108,6 +108,11 @@ body {
   overflow: hidden;
 }
 
+/* TEXT */
+.text {
+    font-size: 23px;
+    color: #494949;
+}
 
 /* CONTENT */
 

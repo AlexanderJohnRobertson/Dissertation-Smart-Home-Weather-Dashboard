@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/static/weather.css">
+    <link rel="stylesheet" href="/static/toggleswitch.css">
+    <link rel="stylesheet" href="/static/toggleswitch2.css">
+    <link rel="stylesheet" href="/static/toggleswitch3.css">
+    <link rel="stylesheet" href="/static/toggleswitch4.css">
+    <link rel="stylesheet" href="/static/w3schools.css">
+    <link rel="stylesheet" href="/static/table1.css">
+  <title>Toggle Switch</title>
+</head>
+
+<body>
+{% extends 'base.html' %} <!-- Extend from base4.html which is the HTML file for the responsive navbar once logged in -->
+
+{% block content %}
+        <div class="togglecontainer">
+          <div class="toggle">
+            <div class="toggle-button" onclick="animatedToggle()"></div>
+          </div>
+          <div class="text">OFF</div>
+        </div>
+
+        <script src="/static/toggleswitch.js"></script>
+{% endblock %} <!-- End of content block -->
+</body>
+
+</html>
