@@ -41,30 +41,14 @@ def index():  # put application's code here
     temperatureFarenheit = sensorData['temp']
     print("Temperature Farenheit", temperatureFarenheit)
     temperatureCelsius = (temperatureFarenheit - 32) * 5.0 / 9.0
-    temperatureCelsius1 = round(temperatureCelsius, 1)  # round to 1 decimal place
-    print("Temperature Celsius", temperatureCelsius1)
-    strTemperatureCelsius1 = str(temperatureCelsius1) + "°C"
-    print("Temperature Celsius String", strTemperatureCelsius1)
-    strTemperatureFarenheit = str(temperatureFarenheit) + "°F"
-    print("Temperature Farenheit String", strTemperatureFarenheit)
-    current_weather = response.json()
-    sensors = current_weather['sensors']
-    sensors = sensors[4]
-    sensorData = sensors['data']
-    sensorData = sensorData[0]
-    temperatureFarenheit = sensorData['temp']
-    print("Temperature Farenheit", temperatureFarenheit)
-    temperatureCelsius = (temperatureFarenheit - 32) * 5.0 / 9.0
-    temperatureCelsius2 = round(temperatureCelsius, 1)  # round to 1 decimal place
-    print("Temperature Celsius", temperatureCelsius2)
-    strTemperatureCelsius2 = str(temperatureCelsius2) + "°C"
-    print("Temperature Celsius String", strTemperatureCelsius2)
+    temperatureCelsius = round(temperatureCelsius, 1)  # round to 1 decimal place
+    print("Temperature Celsius", temperatureCelsius)
+    strTemperatureCelsius = str(temperatureCelsius) + "°C"
+    print("Temperature Celsius String", strTemperatureCelsius)
     strTemperatureFarenheit = str(temperatureFarenheit) + "°F"
     print("Temperature Farenheit String", strTemperatureFarenheit)
 
-    averageTemperature = (temperatureCelsius1 + temperatureCelsius2) / 2
-    averageTemperature = round(averageTemperature, 1)
-    strAverageTemperature = str(averageTemperature) + "°C"
+
 
     response = requests.get(url, params=params)
     current_weather = response.json()
@@ -72,25 +56,13 @@ def index():  # put application's code here
     sensors = sensors[2]
     sensorData = sensors['data']
     sensorData = sensorData[0]
-    humidity1 = sensorData['hum']
-    print("Temperature Farenheit", humidity1)
-    strHumidity1 = str(humidity1) + "%"
-    print("Humidity String", strHumidity1)
-    current_weather = response.json()
-    sensors = current_weather['sensors']
-    sensors = sensors[4]
-    sensorData = sensors['data']
-    sensorData = sensorData[0]
-    humidity2 = sensorData['hum']
-    print("Humidity", humidity2)
-    strHumidity2 = str(humidity2) + "%"
-    print("Humidity String", strHumidity2)
+    humidity = sensorData['hum']
+    print("Temperature Farenheit", humidity)
+    strHumidity = str(humidity) + "%"
+    print("Humidity String", strHumidity)
 
-    averageHumidity = (humidity1 + humidity2) / 2
-    averageHumidity = round(averageHumidity, 1)
-    strAverageHumidity = str(averageHumidity) + "%"
 
-    data = strAverageTemperature, strAverageHumidity
+    data = strTemperatureCelsius, strHumidity
     print("Data", data)
     return render_template('index.html', data=data)
 
