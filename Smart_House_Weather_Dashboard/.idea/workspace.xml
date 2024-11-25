@@ -5,18 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1db2f1c2-a298-4643-969f-c3b80d70a65a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/static/toggleswichtest.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/toggleswitch.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/toggleswitch4.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/weathertest.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/dashboard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/temperature.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/temperature.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/weather.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/weather.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/temperature.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/temperature.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/weather.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/weather.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,24 +46,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Flask server.Smart_House_Weather_Dashboard.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/rober/OneDrive/Documents/Advanced_Computing_Suffolk/Dissertation/Weather_Monitoring_Dashboard_Application/Smart_House_Weather_Dashboard/templates",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.intellij.pycharm.community.ide.impl.configuration.PythonContentEntriesConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Flask server.Smart_House_Weather_Dashboard.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/rober/OneDrive/Documents/Advanced_Computing_Suffolk/Dissertation/Weather_Monitoring_Dashboard_Application/Smart_House_Weather_Dashboard/templates&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.intellij.pycharm.community.ide.impl.configuration.PythonContentEntriesConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\rober\OneDrive\Documents\Advanced_Computing_Suffolk\Dissertation\Weather_Monitoring_Dashboard_Application\Smart_House_Weather_Dashboard\templates" />
@@ -171,6 +160,8 @@
       <workItem from="1732112520576" duration="27000" />
       <workItem from="1732113407814" duration="518000" />
       <workItem from="1732125579740" duration="18505000" />
+      <workItem from="1732567367676" duration="21000" />
+      <workItem from="1732567494591" duration="790000" />
     </task>
     <servers />
   </component>
@@ -178,6 +169,6 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Smart_House_Weather_Dashboard$Smart_House_Weather_Dashboard.coverage" NAME="Smart_House_Weather_Dashboard Coverage Results" MODIFIED="1732144076229" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Smart_House_Weather_Dashboard$Smart_House_Weather_Dashboard.coverage" NAME="Smart_House_Weather_Dashboard Coverage Results" MODIFIED="1732567541464" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
