@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1db2f1c2-a298-4643-969f-c3b80d70a65a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/static/guagetest.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/pressuregauge.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/weather.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/weather.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/test.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/weather.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/weather.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/weatherBackup.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/weatherBackup.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +23,8 @@
       <list>
         <option value="Flask Main" />
         <option value="HTML File" />
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -170,6 +173,8 @@
       <workItem from="1732660794742" duration="16176000" />
       <workItem from="1732678593808" duration="225000" />
       <workItem from="1732735312487" duration="19962000" />
+      <workItem from="1732760345371" duration="220000" />
+      <workItem from="1732829231358" duration="5591000" />
     </task>
     <servers />
   </component>
@@ -177,6 +182,6 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Smart_House_Weather_Dashboard$Smart_House_Weather_Dashboard.coverage" NAME="Smart_House_Weather_Dashboard Coverage Results" MODIFIED="1732759846262" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Smart_House_Weather_Dashboard$Smart_House_Weather_Dashboard.coverage" NAME="Smart_House_Weather_Dashboard Coverage Results" MODIFIED="1732836741927" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

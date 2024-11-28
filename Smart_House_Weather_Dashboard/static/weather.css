@@ -133,6 +133,10 @@ body {
 
 }
 
+#chart-container{
+ height: 500px;
+}
+
 /* LEFT CONTENT */
 
 .left-content {

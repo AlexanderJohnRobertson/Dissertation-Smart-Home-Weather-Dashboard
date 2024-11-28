@@ -309,6 +309,94 @@ def weather():
     temperatureforecastToday = int(temperatureforecastToday)
     temperatureforecastToday = str(temperatureforecastToday) + "°C"
 
+    pressure = openWeatherDataToday['main']
+    pressure = pressure['pressure']
+    pressure = round(pressure, 0)
+    pressure = int(pressure)
+    strPressure = str(pressure) + " hPa/mbar"
+    if pressure >= 700 and pressure <= 710:
+        angle= 4.5
+    elif pressure >= 711 and pressure <= 720:
+        angle = 9
+    elif pressure >= 721 and pressure <= 730:
+        angle = 13.5
+    elif pressure >= 731 and pressure <= 740:
+        angle = 18
+    elif pressure >= 741 and pressure <= 750:
+        angle = 22.5
+    elif pressure >= 751 and pressure <= 760:
+        angle = 27
+    elif pressure >= 761 and pressure <= 770:
+        angle = 31.5
+    elif pressure >= 771 and pressure <= 780:
+        angle = 36
+    elif pressure >= 781 and pressure <= 790:
+        angle = 40.5
+    elif pressure >= 791 and pressure <= 800:
+        angle = 45
+    elif pressure >= 801 and pressure <= 810:
+        angle = 49.5
+    elif pressure >= 811 and pressure <= 820:
+        angle = 54
+    elif pressure >= 821 and pressure <= 830:
+        angle = 58.5
+    elif pressure >= 831 and pressure <= 840:
+        angle = 63
+    elif pressure >= 841 and pressure <= 850:
+        angle = 67.5
+    elif pressure >= 851 and pressure <= 860:
+        angle = 72
+    elif pressure >= 861 and pressure <= 870:
+        angle = 76.5
+    elif pressure >= 871 and pressure <= 880:
+        angle = 81
+    elif pressure >= 881 and pressure <= 890:
+        angle = 85.5
+    elif pressure >= 891 and pressure <= 900:
+        angle = 90
+    elif pressure >= 901 and pressure <= 910:
+        angle = 94.5
+    elif pressure >= 911 and pressure <= 920:
+        angle = 99
+    elif pressure >= 921 and pressure <= 930:
+        angle = 103.5
+    elif pressure >= 931 and pressure <= 940:
+        angle = 108
+    elif pressure >= 941 and pressure <= 950:
+        angle = 112.5
+    elif pressure >= 951 and pressure <= 960:
+        angle = 117
+    elif pressure >= 961 and pressure <= 970:
+        angle = 121.5
+    elif pressure >= 971 and pressure <= 980:
+        angle = 126
+    elif pressure >= 981 and pressure <= 990:
+        angle = 130.5
+    elif pressure >= 991 and pressure <= 1000:
+        angle = 135
+    elif pressure >= 1001 and pressure <= 1010:
+        angle = 139.5
+    elif pressure >= 1011 and pressure <= 1020:
+        angle = 144
+    elif pressure >= 1021 and pressure <= 1030:
+        angle = 148.5
+    elif pressure >= 1031 and pressure <= 1040:
+        angle = 153
+    elif pressure >= 1041 and pressure <= 1050:
+        angle = 157.5
+    elif pressure >= 1051 and pressure <= 1060:
+        angle = 162
+    elif pressure >= 1061 and pressure <= 1070:
+        angle = 166.5
+    elif pressure >= 1071 and pressure <= 1080:
+        angle = 171
+    elif pressure >= 1081 and pressure <= 1090:
+        angle = 175.5
+    elif pressure >= 1091 and pressure <= 1100:
+        angle = 180
+
+
+
     openWeatherDataTomorrow = openWeatherData[8]
     print(openWeatherDataTomorrow)
     OpenWeatherDataTomorrowWeather = openWeatherDataTomorrow['weather']
@@ -2262,7 +2350,7 @@ def weather():
         print("Regex: Mist")
 
 
-    data = strTemperatureCelsius1, strHumidity, aqi, aqi_description, strWindSpeed, windDirectionDescription, UV_index, UV_index_description, UV_index_percentage, UV_index_colour, aqi_percentage, aqi_colour, compass, strTemperatureFarenheit, strWindSpeedKMH, openWeatherDataToday, temperatureforecastToday, weatherConditionsTodayIcon, tomorrowDate, weatherConditionsTomorrowIcon, temperatureforecastTomorrow, tomorrowWindSpeed, tomorrowWindDirectionDescription, tomorrowHumidity, ThreeDayDate, weatherConditionsThreeDayIcon, temperatureforecastThreeDay, ThreeDayWindSpeed, ThreeDayWindDirectionDescription, ThreeDayHumidity, FourDayDate, weatherConditionsFourDayIcon, temperatureforecastFourDay, FourDayWindSpeed, FourDayWindDirectionDescription, FourDayHumidity, FiveDayDate, weatherConditionsFiveDayIcon, temperatureforecastFiveDay, FiveDayWindSpeed, FiveDayWindDirectionDescription, FiveDayHumidity, SixDayDate, weatherConditionsSixDayIcon, temperatureforecastSixDay, SixDayWindSpeed, SixDayWindDirectionDescription, SixDayHumidity, weatherAPIDataCurrentTemperature, weatherAPIDataCurrentConditionIcon, weatherAPI01HourDataConditionTime, weatherAPI01HourDataTemperature, weatherAPI01HourDataConditionIcon, weatherAPI02HourDataConditionTime, weatherAPI02HourDataTemperature, weatherAPI02HourDataConditionIcon, weatherAPI03HourDataConditionTime, weatherAPI03HourDataTemperature, weatherAPI03HourDataConditionIcon, weatherAPI04HourDataConditionTime, weatherAPI04HourDataTemperature, weatherAPI04HourDataConditionIcon, weatherAPI05HourDataConditionTime, weatherAPI05HourDataTemperature, weatherAPI05HourDataConditionIcon, weatherAPI06HourDataConditionTime, weatherAPI06HourDataTemperature, weatherAPI06HourDataConditionIcon, weatherAPI07HourDataConditionTime, weatherAPI07HourDataTemperature, weatherAPI07HourDataConditionIcon, weatherAPI08HourDataConditionTime, weatherAPI08HourDataTemperature, weatherAPI08HourDataConditionIcon, weatherAPI09HourDataConditionTime, weatherAPI09HourDataTemperature, weatherAPI09HourDataConditionIcon, weatherAPI10HourDataConditionTime, weatherAPI10HourDataTemperature, weatherAPI10HourDataConditionIcon, weatherAPI11HourDataConditionTime, weatherAPI11HourDataTemperature, weatherAPI11HourDataConditionIcon, weatherAPI12HourDataConditionTime, weatherAPI12HourDataTemperature, weatherAPI12HourDataConditionIcon, weatherAPI13HourDataConditionTime, weatherAPI13HourDataTemperature, weatherAPI13HourDataConditionIcon, weatherAPI14HourDataConditionTime, weatherAPI14HourDataTemperature, weatherAPI14HourDataConditionIcon, weatherAPI15HourDataConditionTime, weatherAPI15HourDataTemperature, weatherAPI15HourDataConditionIcon, weatherAPI16HourDataConditionTime, weatherAPI16HourDataTemperature, weatherAPI16HourDataConditionIcon, weatherAPI17HourDataConditionTime, weatherAPI17HourDataTemperature, weatherAPI17HourDataConditionIcon, weatherAPI18HourDataConditionTime, weatherAPI18HourDataTemperature, weatherAPI18HourDataConditionIcon, weatherAPI19HourDataConditionTime, weatherAPI19HourDataTemperature, weatherAPI19HourDataConditionIcon, weatherAPI20HourDataConditionTime, weatherAPI20HourDataTemperature, weatherAPI20HourDataConditionIcon, weatherAPI21HourDataConditionTime, weatherAPI21HourDataTemperature, weatherAPI21HourDataConditionIcon, weatherAPI22HourDataConditionTime, weatherAPI22HourDataTemperature, weatherAPI22HourDataConditionIcon, weatherAPI23HourDataConditionTime, weatherAPI23HourDataTemperature, weatherAPI23HourDataConditionIcon
+    data = strTemperatureCelsius1, strHumidity, aqi, aqi_description, strWindSpeed, windDirectionDescription, UV_index, UV_index_description, UV_index_percentage, UV_index_colour, aqi_percentage, aqi_colour, compass, strTemperatureFarenheit, strWindSpeedKMH, openWeatherDataToday, temperatureforecastToday, weatherConditionsTodayIcon, tomorrowDate, weatherConditionsTomorrowIcon, temperatureforecastTomorrow, tomorrowWindSpeed, tomorrowWindDirectionDescription, tomorrowHumidity, ThreeDayDate, weatherConditionsThreeDayIcon, temperatureforecastThreeDay, ThreeDayWindSpeed, ThreeDayWindDirectionDescription, ThreeDayHumidity, FourDayDate, weatherConditionsFourDayIcon, temperatureforecastFourDay, FourDayWindSpeed, FourDayWindDirectionDescription, FourDayHumidity, FiveDayDate, weatherConditionsFiveDayIcon, temperatureforecastFiveDay, FiveDayWindSpeed, FiveDayWindDirectionDescription, FiveDayHumidity, SixDayDate, weatherConditionsSixDayIcon, temperatureforecastSixDay, SixDayWindSpeed, SixDayWindDirectionDescription, SixDayHumidity, weatherAPIDataCurrentTemperature, weatherAPIDataCurrentConditionIcon, weatherAPI01HourDataConditionTime, weatherAPI01HourDataTemperature, weatherAPI01HourDataConditionIcon, weatherAPI02HourDataConditionTime, weatherAPI02HourDataTemperature, weatherAPI02HourDataConditionIcon, weatherAPI03HourDataConditionTime, weatherAPI03HourDataTemperature, weatherAPI03HourDataConditionIcon, weatherAPI04HourDataConditionTime, weatherAPI04HourDataTemperature, weatherAPI04HourDataConditionIcon, weatherAPI05HourDataConditionTime, weatherAPI05HourDataTemperature, weatherAPI05HourDataConditionIcon, weatherAPI06HourDataConditionTime, weatherAPI06HourDataTemperature, weatherAPI06HourDataConditionIcon, weatherAPI07HourDataConditionTime, weatherAPI07HourDataTemperature, weatherAPI07HourDataConditionIcon, weatherAPI08HourDataConditionTime, weatherAPI08HourDataTemperature, weatherAPI08HourDataConditionIcon, weatherAPI09HourDataConditionTime, weatherAPI09HourDataTemperature, weatherAPI09HourDataConditionIcon, weatherAPI10HourDataConditionTime, weatherAPI10HourDataTemperature, weatherAPI10HourDataConditionIcon, weatherAPI11HourDataConditionTime, weatherAPI11HourDataTemperature, weatherAPI11HourDataConditionIcon, weatherAPI12HourDataConditionTime, weatherAPI12HourDataTemperature, weatherAPI12HourDataConditionIcon, weatherAPI13HourDataConditionTime, weatherAPI13HourDataTemperature, weatherAPI13HourDataConditionIcon, weatherAPI14HourDataConditionTime, weatherAPI14HourDataTemperature, weatherAPI14HourDataConditionIcon, weatherAPI15HourDataConditionTime, weatherAPI15HourDataTemperature, weatherAPI15HourDataConditionIcon, weatherAPI16HourDataConditionTime, weatherAPI16HourDataTemperature, weatherAPI16HourDataConditionIcon, weatherAPI17HourDataConditionTime, weatherAPI17HourDataTemperature, weatherAPI17HourDataConditionIcon, weatherAPI18HourDataConditionTime, weatherAPI18HourDataTemperature, weatherAPI18HourDataConditionIcon, weatherAPI19HourDataConditionTime, weatherAPI19HourDataTemperature, weatherAPI19HourDataConditionIcon, weatherAPI20HourDataConditionTime, weatherAPI20HourDataTemperature, weatherAPI20HourDataConditionIcon, weatherAPI21HourDataConditionTime, weatherAPI21HourDataTemperature, weatherAPI21HourDataConditionIcon, weatherAPI22HourDataConditionTime, weatherAPI22HourDataTemperature, weatherAPI22HourDataConditionIcon, weatherAPI23HourDataConditionTime, weatherAPI23HourDataTemperature, weatherAPI23HourDataConditionIcon, strPressure, angle
     print("Data", data)
 
 
