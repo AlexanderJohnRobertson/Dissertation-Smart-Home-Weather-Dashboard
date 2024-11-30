@@ -504,6 +504,14 @@ def weather():
     tomorrowHumidity = str(tomorrowHumidity) + "%"
     print("Tomorrow Humidity", tomorrowHumidity)
 
+    precipitationProbabilityTomorrow = openWeatherDataTomorrow['pop']
+    precipitationProbabilityTomorrow = precipitationProbabilityTomorrow * 100
+    precipitationProbabilityTomorrow = round(precipitationProbabilityTomorrow, 0)
+    precipitationProbabilityTomorrow = int(precipitationProbabilityTomorrow)
+    strPrecipitationProbabilityTomorrow = str(precipitationProbabilityTomorrow) + "%"
+    print("Precipitation Probability Tomorrow", strPrecipitationProbabilityTomorrow)
+
+
     #3Day
     openWeatherDataThreeDay = openWeatherData[16]
     print(openWeatherDataThreeDay)
@@ -580,6 +588,14 @@ def weather():
     ThreeDayHumidity = str(ThreeDayHumidity) + "%"
     print("ThreeDay Humidity", ThreeDayHumidity)
 
+    precipitationProbabilityThreeDay = openWeatherDataThreeDay['pop']
+    precipitationProbabilityThreeDay = precipitationProbabilityThreeDay * 100
+    precipitationProbabilityThreeDay = round(precipitationProbabilityThreeDay, 0)
+    precipitationProbabilityThreeDay = int(precipitationProbabilityThreeDay)
+    strPrecipitationProbabilityThreeDay = str(precipitationProbabilityThreeDay) + "%"
+    print("Precipitation Probability Three Day", strPrecipitationProbabilityThreeDay)
+
+
     #4 Day
     openWeatherDataFourDay = openWeatherData[24]
     print(openWeatherDataFourDay)
@@ -652,6 +668,13 @@ def weather():
     FourDayHumidity = FourDayHumidity['humidity']
     FourDayHumidity = str(FourDayHumidity) + "%"
     print("FourDay Humidity", FourDayHumidity)
+
+    precipitationProbabilityFourDay = openWeatherDataFourDay['pop']
+    precipitationProbabilityFourDay = precipitationProbabilityFourDay * 100
+    precipitationProbabilityFourDay = round(precipitationProbabilityFourDay, 0)
+    precipitationProbabilityFourDay = int(precipitationProbabilityFourDay)
+    strPrecipitationProbabilityFourDay = str(precipitationProbabilityFourDay) + "%"
+    print("Precipitation Probability Four Day", strPrecipitationProbabilityFourDay)
 
     #5 Day
     openWeatherDataFiveDay = openWeatherData[32]
@@ -727,6 +750,14 @@ def weather():
     FiveDayHumidity = str(FiveDayHumidity) + "%"
     print("FiveDay Humidity", FiveDayHumidity)
 
+    precipitationProbabilityFiveDay = openWeatherDataFiveDay['pop']
+    precipitationProbabilityFiveDay = precipitationProbabilityFiveDay * 100
+    precipitationProbabilityFiveDay = round(precipitationProbabilityFiveDay, 0)
+    precipitationProbabilityFiveDay = int(precipitationProbabilityFiveDay)
+    strPrecipitationProbabilityFiveDay = str(precipitationProbabilityFiveDay) + "%"
+    print("Precipitation Probability Five Day", strPrecipitationProbabilityFiveDay)
+
+
     #6 Day
     openWeatherDataSixDay = openWeatherData[39]
     print(openWeatherDataSixDay)
@@ -799,6 +830,14 @@ def weather():
     SixDayHumidity = SixDayHumidity['humidity']
     SixDayHumidity = str(SixDayHumidity) + "%"
     print("SixDay Humidity", SixDayHumidity)
+
+    precipitationProbabilitySixDay = openWeatherDataSixDay['pop']
+    precipitationProbabilitySixDay = precipitationProbabilitySixDay * 100
+    precipitationProbabilitySixDay = round(precipitationProbabilitySixDay, 0)
+    precipitationProbabilitySixDay = int(precipitationProbabilitySixDay)
+    strPrecipitationProbabilitySixDay = str(precipitationProbabilitySixDay) + "%"
+    print("Precipitation Probability Six Day", strPrecipitationProbabilitySixDay)
+
 
     #Weather API Hourly Forecast
     # Current Weather
@@ -3127,7 +3166,7 @@ def weather():
 
 
 
-    data = strTemperatureCelsius1, strHumidity, aqi, aqi_description, strWindSpeed, windDirectionDescription, UV_index, UV_index_description, UV_index_percentage, UV_index_colour, aqi_percentage, aqi_colour, compass, strTemperatureFarenheit, strWindSpeedKMH, openWeatherDataToday, temperatureforecastToday, weatherConditionsTodayIcon, tomorrowDate, weatherConditionsTomorrowIcon, temperatureforecastTomorrow, tomorrowWindSpeed, tomorrowWindDirectionDescription, tomorrowHumidity, ThreeDayDate, weatherConditionsThreeDayIcon, temperatureforecastThreeDay, ThreeDayWindSpeed, ThreeDayWindDirectionDescription, ThreeDayHumidity, FourDayDate, weatherConditionsFourDayIcon, temperatureforecastFourDay, FourDayWindSpeed, FourDayWindDirectionDescription, FourDayHumidity, FiveDayDate, weatherConditionsFiveDayIcon, temperatureforecastFiveDay, FiveDayWindSpeed, FiveDayWindDirectionDescription, FiveDayHumidity, SixDayDate, weatherConditionsSixDayIcon, temperatureforecastSixDay, SixDayWindSpeed, SixDayWindDirectionDescription, SixDayHumidity, weatherAPIDataCurrentTemperature, weatherAPIDataCurrentConditionIcon, weatherAPI01HourDataConditionTime, weatherAPI01HourDataTemperature, weatherAPI01HourDataConditionIcon, weatherAPI02HourDataConditionTime, weatherAPI02HourDataTemperature, weatherAPI02HourDataConditionIcon, weatherAPI03HourDataConditionTime, weatherAPI03HourDataTemperature, weatherAPI03HourDataConditionIcon, weatherAPI04HourDataConditionTime, weatherAPI04HourDataTemperature, weatherAPI04HourDataConditionIcon, weatherAPI05HourDataConditionTime, weatherAPI05HourDataTemperature, weatherAPI05HourDataConditionIcon, weatherAPI06HourDataConditionTime, weatherAPI06HourDataTemperature, weatherAPI06HourDataConditionIcon, weatherAPI07HourDataConditionTime, weatherAPI07HourDataTemperature, weatherAPI07HourDataConditionIcon, weatherAPI08HourDataConditionTime, weatherAPI08HourDataTemperature, weatherAPI08HourDataConditionIcon, weatherAPI09HourDataConditionTime, weatherAPI09HourDataTemperature, weatherAPI09HourDataConditionIcon, weatherAPI10HourDataConditionTime, weatherAPI10HourDataTemperature, weatherAPI10HourDataConditionIcon, weatherAPI11HourDataConditionTime, weatherAPI11HourDataTemperature, weatherAPI11HourDataConditionIcon, weatherAPI12HourDataConditionTime, weatherAPI12HourDataTemperature, weatherAPI12HourDataConditionIcon, weatherAPI13HourDataConditionTime, weatherAPI13HourDataTemperature, weatherAPI13HourDataConditionIcon, weatherAPI14HourDataConditionTime, weatherAPI14HourDataTemperature, weatherAPI14HourDataConditionIcon, weatherAPI15HourDataConditionTime, weatherAPI15HourDataTemperature, weatherAPI15HourDataConditionIcon, weatherAPI16HourDataConditionTime, weatherAPI16HourDataTemperature, weatherAPI16HourDataConditionIcon, weatherAPI17HourDataConditionTime, weatherAPI17HourDataTemperature, weatherAPI17HourDataConditionIcon, weatherAPI18HourDataConditionTime, weatherAPI18HourDataTemperature, weatherAPI18HourDataConditionIcon, weatherAPI19HourDataConditionTime, weatherAPI19HourDataTemperature, weatherAPI19HourDataConditionIcon, weatherAPI20HourDataConditionTime, weatherAPI20HourDataTemperature, weatherAPI20HourDataConditionIcon, weatherAPI21HourDataConditionTime, weatherAPI21HourDataTemperature, weatherAPI21HourDataConditionIcon, weatherAPI22HourDataConditionTime, weatherAPI22HourDataTemperature, weatherAPI22HourDataConditionIcon, weatherAPI23HourDataConditionTime, weatherAPI23HourDataTemperature, weatherAPI23HourDataConditionIcon, strPressure, angle, weatherConditionsToday, strPrecipitationProbability, strVisibilityKM, strVisibilityMiles, visibilityDescription, pollenRiskLevelGrass, pollenCountGrass, pollenCountGrassPercentage, pollenCountColourGrass, pollenRiskLevelTree, pollenCountTree, pollenCountTreePercentage, pollenCountColourTree, pollenRiskLevelWeed, pollenCountWeed, pollenCountWeedPercentage, pollenCountColourWeed
+    data = strTemperatureCelsius1, strHumidity, aqi, aqi_description, strWindSpeed, windDirectionDescription, UV_index, UV_index_description, UV_index_percentage, UV_index_colour, aqi_percentage, aqi_colour, compass, strTemperatureFarenheit, strWindSpeedKMH, openWeatherDataToday, temperatureforecastToday, weatherConditionsTodayIcon, tomorrowDate, weatherConditionsTomorrowIcon, temperatureforecastTomorrow, tomorrowWindSpeed, tomorrowWindDirectionDescription, tomorrowHumidity, ThreeDayDate, weatherConditionsThreeDayIcon, temperatureforecastThreeDay, ThreeDayWindSpeed, ThreeDayWindDirectionDescription, ThreeDayHumidity, FourDayDate, weatherConditionsFourDayIcon, temperatureforecastFourDay, FourDayWindSpeed, FourDayWindDirectionDescription, FourDayHumidity, FiveDayDate, weatherConditionsFiveDayIcon, temperatureforecastFiveDay, FiveDayWindSpeed, FiveDayWindDirectionDescription, FiveDayHumidity, SixDayDate, weatherConditionsSixDayIcon, temperatureforecastSixDay, SixDayWindSpeed, SixDayWindDirectionDescription, SixDayHumidity, weatherAPIDataCurrentTemperature, weatherAPIDataCurrentConditionIcon, weatherAPI01HourDataConditionTime, weatherAPI01HourDataTemperature, weatherAPI01HourDataConditionIcon, weatherAPI02HourDataConditionTime, weatherAPI02HourDataTemperature, weatherAPI02HourDataConditionIcon, weatherAPI03HourDataConditionTime, weatherAPI03HourDataTemperature, weatherAPI03HourDataConditionIcon, weatherAPI04HourDataConditionTime, weatherAPI04HourDataTemperature, weatherAPI04HourDataConditionIcon, weatherAPI05HourDataConditionTime, weatherAPI05HourDataTemperature, weatherAPI05HourDataConditionIcon, weatherAPI06HourDataConditionTime, weatherAPI06HourDataTemperature, weatherAPI06HourDataConditionIcon, weatherAPI07HourDataConditionTime, weatherAPI07HourDataTemperature, weatherAPI07HourDataConditionIcon, weatherAPI08HourDataConditionTime, weatherAPI08HourDataTemperature, weatherAPI08HourDataConditionIcon, weatherAPI09HourDataConditionTime, weatherAPI09HourDataTemperature, weatherAPI09HourDataConditionIcon, weatherAPI10HourDataConditionTime, weatherAPI10HourDataTemperature, weatherAPI10HourDataConditionIcon, weatherAPI11HourDataConditionTime, weatherAPI11HourDataTemperature, weatherAPI11HourDataConditionIcon, weatherAPI12HourDataConditionTime, weatherAPI12HourDataTemperature, weatherAPI12HourDataConditionIcon, weatherAPI13HourDataConditionTime, weatherAPI13HourDataTemperature, weatherAPI13HourDataConditionIcon, weatherAPI14HourDataConditionTime, weatherAPI14HourDataTemperature, weatherAPI14HourDataConditionIcon, weatherAPI15HourDataConditionTime, weatherAPI15HourDataTemperature, weatherAPI15HourDataConditionIcon, weatherAPI16HourDataConditionTime, weatherAPI16HourDataTemperature, weatherAPI16HourDataConditionIcon, weatherAPI17HourDataConditionTime, weatherAPI17HourDataTemperature, weatherAPI17HourDataConditionIcon, weatherAPI18HourDataConditionTime, weatherAPI18HourDataTemperature, weatherAPI18HourDataConditionIcon, weatherAPI19HourDataConditionTime, weatherAPI19HourDataTemperature, weatherAPI19HourDataConditionIcon, weatherAPI20HourDataConditionTime, weatherAPI20HourDataTemperature, weatherAPI20HourDataConditionIcon, weatherAPI21HourDataConditionTime, weatherAPI21HourDataTemperature, weatherAPI21HourDataConditionIcon, weatherAPI22HourDataConditionTime, weatherAPI22HourDataTemperature, weatherAPI22HourDataConditionIcon, weatherAPI23HourDataConditionTime, weatherAPI23HourDataTemperature, weatherAPI23HourDataConditionIcon, strPressure, angle, weatherConditionsToday, strPrecipitationProbability, strVisibilityKM, strVisibilityMiles, visibilityDescription, pollenRiskLevelGrass, pollenCountGrass, pollenCountGrassPercentage, pollenCountColourGrass, pollenRiskLevelTree, pollenCountTree, pollenCountTreePercentage, pollenCountColourTree, pollenRiskLevelWeed, pollenCountWeed, pollenCountWeedPercentage, pollenCountColourWeed, strPrecipitationProbabilityTomorrow, strPrecipitationProbabilityThreeDay, strPrecipitationProbabilityFourDay, strPrecipitationProbabilityFiveDay, strPrecipitationProbabilitySixDay
     print("Data", data)
 
 
