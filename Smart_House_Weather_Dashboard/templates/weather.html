@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="60; url=/weather">
+    <meta http-equiv="refresh" content="900; url=/weather">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Weather</title>
     <link rel="stylesheet" href="/static/weather.css">
@@ -80,8 +80,8 @@ function animatedToggle() {
                   <div class="card dashboard-card2">
               <div class="dashboard-content">
                 <h2 style="font-size: 1.3rem">Weather Conditions:</h2>
-                <h3 style="font-size: 2rem">Partly Cloudy </h3>
-                  <img src="/static/images/partlycloudy.svg" alt="Partly Cloudy" style="width:200px;height:180px;" align="left">
+                <h3 style="font-size: 2rem">{{ data[121] }} </h3>
+                  <img src={{ data[17] }} alt="Weather-Conditions" style="width:190px;height:170px;" align="left">
 
               </div>
 
@@ -185,8 +185,8 @@ function animatedToggle2() {
                   <div class="card dashboard-card2">
               <div class="dashboard-content">
                 <h2 style="font-size: 2rem">Precipitation Probability:</h2>
-                <h3 style="font-size: 3.6rem">68%</h3>
-                  <h3 style="font-size: 3.6rem">Rain <img src="/static/images/rain.svg" alt="Humidity" style="width:70px;height:150px; position:relative; top:-20px;" align="right"></h3>
+                <h3 style="font-size: 3.6rem">{{ data[122] }}</h3>
+                  <h3 style="font-size: 2.5rem">{{ data[121] }} <img src={{ data[17] }} alt="Humidity" style="width:70px;height:150px; position:relative; top:-20px;" align="right"></h3>
               </div>
 
             </div>
@@ -194,9 +194,22 @@ function animatedToggle2() {
                   <div class="card dashboard-card2">
               <div class="dashboard-content" style="position:relative; left: -0.5rem;">
                 <h2 style="font-size: 1.3rem">Pollen Count:</h2>
-                <h2 style="font-size: 2rem">Pollen Index:</h2>
-                <h3 style="font-size: 2rem">10: Very High <img src="/static/images/uvindex.svg" alt="Pollen Count" style="width:230px;height:70px;" align="left"></h3>
-
+                <h2 style="font-size: 1.5rem">Pollen Index:</h2>
+                  <h4 style="font-size: 0.8rem">Grass:</h4> </h3>
+                <h3 style="font-size: 1.1rem">{{ data[127] }}: {{ data[126] }} </h3>
+                  <div class="w3-border">
+  <div class="w3-grey" style="height:24px;width: {{ data[128] }}; background-color: {{ data[129] }}!important;"></div>
+</div>
+<h4 style="font-size: 0.8rem">Tree:</h4> </h3>
+                <h3 style="font-size: 1.1rem">{{ data[131] }}: {{ data[130] }} </h3>
+                  <div class="w3-border">
+  <div class="w3-grey" style="height:24px;width: {{ data[132] }}; background-color: {{ data[133] }}!important;"></div>
+</div>
+                  <h4 style="font-size: 0.8rem">Weed:</h4> </h3>
+                <h3 style="font-size: 1.1rem">{{ data[135] }}: {{ data[134] }} </h3>
+                  <div class="w3-border">
+  <div class="w3-grey" style="height:24px;width: {{ data[136] }}; background-color: {{ data[137] }}!important;"></div>
+</div>
               </div>
 
             </div>
@@ -204,12 +217,29 @@ function animatedToggle2() {
               <div class="card dashboard-card2">
               <div class="dashboard-content">
                 <h2 style="font-size: 1.3rem">Visibility:</h2>
-                <h3 style="font-size: 2rem">20 Miles </h3>
-                  <h3 style="font-size: 2rem">Very Clear </h3>
-                 <label class="switch" style="top: 7px">
-                    <input type="checkbox">
-                    <span class="slider3"></span>
-                </label>
+                <h3 style="font-size: 2rem" class="text4">{{ data[124] }} </h3>
+                  <h3 style="font-size: 2rem">{{ data[125] }} </h3>
+                  <div class="togglecontainer4">
+          <div class="toggle4" style="position: relative; top: -30px; left:-10px;">
+            <div class="toggle-button4" onclick="animatedToggle4()"></div>
+          </div>
+          <div class="unit4" style="color: #000000;position: relative; top: -30px; left:-10px; font-size: 20px">Miles</div>
+        </div>
+
+        <script>let toggle4 = document.querySelector(".toggle4");
+let text4 = document.querySelector(".text4");
+let unit4 = document.querySelector(".unit4");
+
+function animatedToggle4() {
+  toggle4.classList.toggle("active");
+  if (toggle4.classList.contains("active")) {
+        text4.innerHTML = "{{ data[123] }}";
+    unit4.innerHTML = "Kiometres";
+  } else {
+      text4.innerHTML = "{{ data[124] }} ";
+        unit4.innerHTML = "Miles";
+  }
+}</script>
               </div>
 
             </div>

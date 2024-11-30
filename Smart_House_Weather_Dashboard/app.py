@@ -8,6 +8,8 @@ import hashlib, requests, time, hmac
 from datetime import date
 import calendar
 import re
+import http.client
+import ast
 
 app = Flask(__name__)
 
@@ -395,8 +397,39 @@ def weather():
     elif pressure >= 1091 and pressure <= 1100:
         angle = 180
 
+    precipitationProbability = openWeatherDataToday['pop']
+    precipitationProbability = precipitationProbability * 100
+    precipitationProbability = round(precipitationProbability, 0)
+    precipitationProbability = int(precipitationProbability)
+    strPrecipitationProbability = str(precipitationProbability) + "%"
+    print("Precipitation Probability", strPrecipitationProbability)
 
+    visibility = openWeatherDataToday['visibility']
+    visibilityKM = visibility / 1000
+    visibilityKM = round(visibilityKM, 0)
+    visibilityKM = int(visibilityKM)
+    strVisibilityKM = str(visibilityKM) + " Kilometres"
+    print("Visibility", strVisibilityKM)
+    visibilityMiles = visibilityKM / 1.60934
+    visibilityMiles = round(visibilityMiles, 0)
+    visibilityMiles = int(visibilityMiles)
+    strVisibilityMiles = str(visibilityMiles) + " Miles"
+    print("Visibility", strVisibilityMiles)
 
+    if visibilityKM >= 0 and visibilityKM <= 1:
+        visibilityDescription = "Very Poor"
+    elif visibilityKM >= 2 and visibilityKM <= 4:
+        visibilityDescription = "Poor"
+    elif visibilityKM >= 5 and visibilityKM <= 7:
+        visibilityDescription = "Moderate"
+    elif visibilityKM >= 8 and visibilityKM <= 10:
+        visibilityDescription = "Clear"
+    elif visibilityKM >= 11 and visibilityKM <= 15:
+        visibilityDescription = "Very Clear"
+    elif visibilityKM >= 16:
+        visibilityDescription = "Perfectly Clear"
+
+    #Tomorrow weather
     openWeatherDataTomorrow = openWeatherData[8]
     print(openWeatherDataTomorrow)
     OpenWeatherDataTomorrowWeather = openWeatherDataTomorrow['weather']
@@ -464,6 +497,8 @@ def weather():
     elif tomorrowWindDirection >= 292.5 and tomorrowWindDirection < 337.5:
         tomorrowWindDirectionDescription = "North West"
 
+    print("Tomorrow Wind Direction Description", tomorrowWindDirectionDescription)
+
     tomorrowHumidity = openWeatherDataTomorrow['main']
     tomorrowHumidity = tomorrowHumidity['humidity']
     tomorrowHumidity = str(tomorrowHumidity) + "%"
@@ -492,6 +527,7 @@ def weather():
         weatherConditionsThreeDayIcon = "/static/images/wind.svg"
     elif weatherConditionsThreeDay == "Hail":
         weatherConditionsThreeDayIcon = "/static/images/hailstones.svg"
+
 
     temperatureforecastThreeDay = openWeatherDataThreeDay['main']
     temperatureforecastThreeDay = temperatureforecastThreeDay['temp']
@@ -531,11 +567,13 @@ def weather():
     elif ThreeDayWindDirection >= 157.5 and ThreeDayWindDirection < 202.5:
         ThreeDayWindDirectionDescription = "South"
     elif ThreeDayWindDirection >= 202.5 and ThreeDayWindDirection < 247.5:
-        tomorrowWindDirectionDescription = "South West"
+        ThreeDayWindDirectionDescription = "South West"
     elif ThreeDayWindDirection >= 247.5 and ThreeDayWindDirection < 292.5:
         ThreeDayWindDirectionDescription = "West"
     elif ThreeDayWindDirection >= 292.5 and ThreeDayWindDirection < 337.5:
         ThreeDayWindDirectionDescription = "North West"
+
+    print("ThreeDay Wind Direction Description", ThreeDayWindDirectionDescription)
 
     ThreeDayHumidity = openWeatherDataThreeDay['main']
     ThreeDayHumidity = ThreeDayHumidity['humidity']
@@ -683,6 +721,7 @@ def weather():
     elif FiveDayWindDirection >= 292.5 and FiveDayWindDirection < 337.5:
         FiveDayWindDirectionDescription = "North West"
 
+
     FiveDayHumidity = openWeatherDataFiveDay['main']
     FiveDayHumidity = FiveDayHumidity['humidity']
     FiveDayHumidity = str(FiveDayHumidity) + "%"
@@ -784,13 +823,50 @@ def weather():
     print(weatherAPIDataCurrentCondition)
 
     regexThunderCurrent = re.findall("Thunder|thunder", weatherAPIDataCurrentCondition)
+    if regexThunderCurrent != []:
+        regexThunderCurrent = regexThunderCurrent[0]
+        regexThunderCurrent = regexThunderCurrent.split()
     regexRainCurrent = re.findall("Rain|rain|Shower|shower|Drizzle|drizzle", weatherAPIDataCurrentCondition)
+    if regexRainCurrent != []:
+        regexRainCurrent = regexRainCurrent[0]
+        regexRainCurrent = regexRainCurrent.split()
     regexCloudCurrent = re.findall("Cloud|cloud|Overcast|overcast|Cloudy|cloudy", weatherAPIDataCurrentCondition)
+    if regexCloudCurrent != []:
+        regexCloudCurrent = regexCloudCurrent[0]
+        regexCloudCurrent = regexCloudCurrent.split()
     regexClearCurrent = re.findall("Clear|clear|Sun|sun", weatherAPIDataCurrentCondition)
+    if regexClearCurrent != []:
+        regexClearCurrent = regexClearCurrent[0]
+        regexClearCurrent = regexClearCurrent.split()
     regexSnowCurrent = re.findall("Snow|snow|Sleet|sleet", weatherAPIDataCurrentCondition)
+    if regexSnowCurrent != []:
+        regexSnowCurrent = regexSnowCurrent[0]
+        regexSnowCurrent = regexSnowCurrent.split()
     regexWindCurrent = re.findall("Wind|wind", weatherAPIDataCurrentCondition)
+    if regexWindCurrent != []:
+        regexWindCurrent = regexWindCurrent[0]
+        regexWindCurrent = regexWindCurrent.split()
     regexHailCurrent = re.findall("Hail|hail", weatherAPIDataCurrentCondition)
+    if regexHailCurrent != []:
+        regexHailCurrent = regexHailCurrent[0]
+        regexHailCurrent = regexHailCurrent.split()
     regexMistCurrent = re.findall("Mist|mist|Fog|fog", weatherAPIDataCurrentCondition)
+    if regexMistCurrent != []:
+        regexMistCurrent = regexMistCurrent[0]
+        regexMistCurrent = regexMistCurrent.split()
+    else:
+        pass
+
+
+    print("Regex Thunder", regexThunderCurrent)
+    print("Regex Rain", regexRainCurrent)
+    print("Regex Cloud", regexCloudCurrent)
+    print(type(regexCloudCurrent))
+    print("Regex Clear", regexClearCurrent)
+    print("Regex Snow", regexSnowCurrent)
+    print("Regex Wind", regexWindCurrent)
+    print("Regex Hail", regexHailCurrent)
+    print("Regex Mist", regexMistCurrent)
 
     if regexThunderCurrent == ['Thunder'] or regexThunderCurrent == ['thunder']:
         weatherAPIDataCurrentConditionIcon = "/static/images/thunderstorms.svg"
@@ -846,13 +922,39 @@ def weather():
     print(weatherAPI01HourDataCondition)
 
     regexThunder01Hour = re.findall("Thunder|thunder", weatherAPI01HourDataCondition)
+    if regexThunder01Hour != []:
+        regexThunder01Hour = regexThunder01Hour[0]
+        regexThunder01Hour = regexThunder01Hour.split()
     regexRain01Hour = re.findall("Rain|rain|Shower|shower|Drizzle|drizzle", weatherAPI01HourDataCondition)
+    if regexRain01Hour != []:
+        regexRain01Hour = regexRain01Hour[0]
+        regexRain01Hour = regexRain01Hour.split()
     regexCloud01Hour = re.findall("Cloud|cloud|Overcast|overcast|Cloudy|cloudy", weatherAPI01HourDataCondition)
+    if regexCloud01Hour != []:
+        regexCloud01Hour = regexCloud01Hour[0]
+        regexCloud01Hour = regexCloud01Hour.split()
     regexClear01Hour = re.findall("Clear|clear|Sun|sun", weatherAPI01HourDataCondition)
+    if regexClear01Hour != []:
+        regexClear01Hour = regexClear01Hour[0]
+        regexClear01Hour = regexClear01Hour.split()
     regexSnow01Hour = re.findall("Snow|snow|Sleet|sleet", weatherAPI01HourDataCondition)
+    if regexSnow01Hour != []:
+        regexSnow01Hour = regexSnow01Hour[0]
+        regexSnow01Hour = regexSnow01Hour.split()
     regexWind01Hour = re.findall("Wind|wind", weatherAPI01HourDataCondition)
+    if regexWind01Hour != []:
+        regexWind01Hour = regexWind01Hour[0]
+        regexWind01Hour = regexWind01Hour.split()
     regexHail01Hour = re.findall("Hail|hail", weatherAPI01HourDataCondition)
+    if regexHail01Hour != []:
+        regexHail01Hour = regexHail01Hour[0]
+        regexHail01Hour = regexHail01Hour.split()
     regexMist01Hour = re.findall("Mist|mist|Fog|fog", weatherAPI01HourDataCondition)
+    if regexMist01Hour != []:
+        regexMist01Hour = regexMist01Hour[0]
+        regexMist01Hour = regexMist01Hour.split()
+    else:
+        pass
 
     if regexThunder01Hour == ['Thunder'] or regexThunder01Hour == ['thunder']:
         weatherAPI01HourDataConditionIcon = "/static/images/thunderstorms.svg"
@@ -914,13 +1016,38 @@ def weather():
     print(weatherAPI02HourDataCondition)
 
     regexThunder02Hour = re.findall("Thunder|thunder", weatherAPI02HourDataCondition)
+    if regexThunder02Hour != []:
+        regexThunder02Hour = regexThunder02Hour[0]
+        regexThunder02Hour = regexThunder02Hour.split()
     regexRain02Hour = re.findall("Rain|rain|Shower|shower|Drizzle|drizzle", weatherAPI02HourDataCondition)
+    if regexRain02Hour != []:
+        regexRain02Hour = regexRain02Hour[0]
+        regexRain02Hour = regexRain02Hour.split()
     regexCloud02Hour = re.findall("Cloud|cloud|Overcast|overcast|Cloudy|cloudy", weatherAPI02HourDataCondition)
+    if regexCloud02Hour != []:
+        regexCloud02Hour = regexCloud02Hour[0]
+        regexCloud02Hour = regexCloud02Hour.split()
     regexClear02Hour = re.findall("Clear|clear|Sun|sun", weatherAPI02HourDataCondition)
+    if regexClear02Hour != []:
+        regexClear02Hour = regexClear02Hour[0]
+        regexClear02Hour = regexClear02Hour.split()
     regexSnow02Hour = re.findall("Snow|snow|Sleet|sleet", weatherAPI02HourDataCondition)
+    if regexSnow02Hour != []:
+        regexSnow02Hour = regexSnow02Hour[0]
+        regexSnow02Hour = regexSnow02Hour.split()
     regexWind02Hour = re.findall("Wind|wind", weatherAPI02HourDataCondition)
+    if regexWind02Hour != []:
+        regexWind02Hour = regexWind02Hour[0]
+        regexWind02Hour = regexWind02Hour.split()
     regexHail02Hour = re.findall("Hail|hail", weatherAPI02HourDataCondition)
+    if regexHail02Hour != []:
+        regexHail02Hour = regexHail02Hour[0]
+        regexHail02Hour = regexHail02Hour.split()
     regexMist02Hour = re.findall("Mist|mist|Fog|fog", weatherAPI02HourDataCondition)
+    if regexMist02Hour != []:
+        regexMist02Hour = regexMist02Hour[0]
+        regexMist02Hour = regexMist02Hour.split()
+    print(regexRain02Hour)
 
     if regexThunder02Hour == ['Thunder'] or regexThunder02Hour == ['thunder']:
         weatherAPI02HourDataConditionIcon = "/static/images/thunderstorms.svg"
@@ -982,13 +1109,37 @@ def weather():
     print(weatherAPI03HourDataCondition)
 
     regexThunder03Hour = re.findall("Thunder|thunder", weatherAPI03HourDataCondition)
+    if regexThunder03Hour != []:
+        regexThunder03Hour = regexThunder03Hour[0]
+        regexThunder03Hour = regexThunder03Hour.split()
     regexRain03Hour = re.findall("Rain|rain|Shower|shower|Drizzle|drizzle", weatherAPI03HourDataCondition)
+    if regexRain03Hour != []:
+        regexRain03Hour = regexRain03Hour[0]
+        regexRain03Hour = regexRain03Hour.split()
     regexCloud03Hour = re.findall("Cloud|cloud|Overcast|overcast|Cloudy|cloudy", weatherAPI03HourDataCondition)
+    if regexCloud03Hour != []:
+        regexCloud03Hour = regexCloud03Hour[0]
+        regexCloud03Hour = regexCloud03Hour.split()
     regexClear03Hour = re.findall("Clear|clear|Sun|sun", weatherAPI03HourDataCondition)
+    if regexClear03Hour != []:
+        regexClear03Hour = regexClear03Hour[0]
+        regexClear03Hour = regexClear03Hour.split()
     regexSnow03Hour = re.findall("Snow|snow|Sleet|sleet", weatherAPI03HourDataCondition)
+    if regexSnow03Hour != []:
+        regexSnow03Hour = regexSnow03Hour[0]
+        regexSnow03Hour = regexSnow03Hour.split()
     regexWind03Hour = re.findall("Wind|wind", weatherAPI03HourDataCondition)
+    if regexWind03Hour != []:
+        regexWind03Hour = regexWind03Hour[0]
+        regexWind03Hour = regexWind03Hour.split()
     regexHail03Hour = re.findall("Hail|hail", weatherAPI03HourDataCondition)
+    if regexHail03Hour != []:
+        regexHail03Hour = regexHail03Hour[0]
+        regexHail03Hour = regexHail03Hour.split()
     regexMist03Hour = re.findall("Mist|mist|Fog|fog", weatherAPI03HourDataCondition)
+    if regexMist03Hour != []:
+        regexMist03Hour = regexMist03Hour[0]
+        regexMist03Hour = regexMist03Hour.split()
 
     if regexThunder03Hour == ['Thunder'] or regexThunder03Hour == ['thunder']:
         weatherAPI03HourDataConditionIcon = "/static/images/thunderstorms.svg"
@@ -1049,13 +1200,37 @@ def weather():
     print(weatherAPI04HourDataCondition)
 
     regexThunder04Hour = re.findall("Thunder|thunder", weatherAPI04HourDataCondition)
+    if regexThunder04Hour != []:
+        regexThunder04Hour = regexThunder04Hour[0]
+        regexThunder04Hour = regexThunder04Hour.split()
     regexRain04Hour = re.findall("Rain|rain|Shower|shower|Drizzle|drizzle", weatherAPI04HourDataCondition)
+    if regexRain04Hour != []:
+        regexRain04Hour = regexRain04Hour[0]
+        regexRain04Hour = regexRain04Hour.split()
     regexCloud04Hour = re.findall("Cloud|cloud|Overcast|overcast|Cloudy|cloudy", weatherAPI04HourDataCondition)
+    if regexCloud04Hour != []:
+        regexCloud04Hour = regexCloud04Hour[0]
+        regexCloud04Hour = regexCloud04Hour.split()
     regexClear04Hour = re.findall("Clear|clear|Sun|sun", weatherAPI04HourDataCondition)
+    if regexClear04Hour != []:
+        regexClear04Hour = regexClear04Hour[0]
+        regexClear04Hour = regexClear04Hour.split()
     regexSnow04Hour = re.findall("Snow|snow|Sleet|sleet", weatherAPI04HourDataCondition)
+    if regexSnow04Hour != []:
+        regexSnow04Hour = regexSnow04Hour[0]
+        regexSnow04Hour = regexSnow04Hour.split()
     regexWind04Hour = re.findall("Wind|wind", weatherAPI04HourDataCondition)
+    if regexWind04Hour != []:
+        regexWind04Hour = regexWind04Hour[0]
+        regexWind04Hour = regexWind04Hour.split()
     regexHail04Hour = re.findall("Hail|hail", weatherAPI04HourDataCondition)
+    if regexHail04Hour != []:
+        regexHail04Hour = regexHail04Hour[0]
+        regexHail04Hour = regexHail04Hour.split()
     regexMist04Hour = re.findall("Mist|mist|Fog|fog", weatherAPI04HourDataCondition)
+    if regexMist04Hour != []:
+        regexMist04Hour = regexMist04Hour[0]
+        regexMist04Hour = regexMist04Hour.split()
 
     if regexThunder04Hour == ['Thunder'] or regexThunder04Hour == ['thunder']:
         weatherAPI04HourDataConditionIcon = "/static/images/thunderstorms.svg"
@@ -1116,13 +1291,37 @@ def weather():
     print(weatherAPI05HourDataCondition)
 
     regexThunder05Hour = re.findall("Thunder|thunder", weatherAPI05HourDataCondition)
+    if regexThunder05Hour != []:
+        regexThunder05Hour = regexThunder05Hour[0]
+        regexThunder05Hour = regexThunder05Hour.split()
     regexRain05Hour = re.findall("Rain|rain|Shower|shower|Drizzle|drizzle", weatherAPI05HourDataCondition)
+    if regexRain05Hour != []:
+        regexRain05Hour = regexRain05Hour[0]
+        regexRain05Hour = regexRain05Hour.split()
     regexCloud05Hour = re.findall("Cloud|cloud|Overcast|overcast|Cloudy|cloudy", weatherAPI05HourDataCondition)
+    if regexCloud05Hour != []:
+        regexCloud05Hour = regexCloud05Hour[0]
+        regexCloud05Hour = regexCloud05Hour.split()
     regexClear05Hour = re.findall("Clear|clear|Sun|sun", weatherAPI05HourDataCondition)
+    if regexClear05Hour != []:
+        regexClear05Hour = regexClear05Hour[0]
+        regexClear05Hour = regexClear05Hour.split()
     regexSnow05Hour = re.findall("Snow|snow|Sleet|sleet", weatherAPI05HourDataCondition)
+    if regexSnow05Hour != []:
+        regexSnow05Hour = regexSnow05Hour[0]
+        regexSnow05Hour = regexSnow05Hour.split()
     regexWind05Hour = re.findall("Wind|wind", weatherAPI05HourDataCondition)
+    if regexWind05Hour != []:
+        regexWind05Hour = regexWind05Hour[0]
+        regexWind05Hour = regexWind05Hour.split()
     regexHail05Hour = re.findall("Hail|hail", weatherAPI05HourDataCondition)
+    if regexHail05Hour != []:
+        regexHail05Hour = regexHail05Hour[0]
+        regexHail05Hour = regexHail05Hour.split()
     regexMist05Hour = re.findall("Mist|mist|Fog|fog", weatherAPI05HourDataCondition)
+    if regexMist05Hour != []:
+        regexMist05Hour = regexMist05Hour[0]
+        regexMist05Hour = regexMist05Hour.split()
 
     if regexThunder05Hour == ['Thunder'] or regexThunder05Hour == ['thunder']:
         weatherAPI05HourDataConditionIcon = "/static/images/thunderstorms.svg"
@@ -1182,13 +1381,37 @@ def weather():
     print(weatherAPI06HourDataCondition)
 
     regexThunder06Hour = re.findall("Thunder|thunder", weatherAPI06HourDataCondition)
+    if regexThunder06Hour != []:
+        regexThunder06Hour = regexThunder06Hour[0]
+        regexThunder06Hour = regexThunder06Hour.split()
     regexRain06Hour = re.findall("Rain|rain|Shower|shower|Drizzle|drizzle", weatherAPI06HourDataCondition)
+    if regexRain06Hour != []:
+        regexRain06Hour = regexRain06Hour[0]
+        regexRain06Hour = regexRain06Hour.split()
     regexCloud06Hour = re.findall("Cloud|cloud|Overcast|overcast|Cloudy|cloudy", weatherAPI06HourDataCondition)
+    if regexCloud06Hour != []:
+        regexCloud06Hour = regexCloud06Hour[0]
+        regexCloud06Hour = regexCloud06Hour.split()
     regexClear06Hour = re.findall("Clear|clear|Sun|sun", weatherAPI06HourDataCondition)
+    if regexClear06Hour != []:
+        regexClear06Hour = regexClear06Hour[0]
+        regexClear06Hour = regexClear06Hour.split()
     regexSnow06Hour = re.findall("Snow|snow|Sleet|sleet", weatherAPI06HourDataCondition)
+    if regexSnow06Hour != []:
+        regexSnow06Hour = regexSnow06Hour[0]
+        regexSnow06Hour = regexSnow06Hour.split()
     regexWind06Hour = re.findall("Wind|wind", weatherAPI06HourDataCondition)
+    if regexWind06Hour != []:
+        regexWind06Hour = regexWind06Hour[0]
+        regexWind06Hour = regexWind06Hour.split()
     regexHail06Hour = re.findall("Hail|hail", weatherAPI06HourDataCondition)
+    if regexHail06Hour != []:
+        regexHail06Hour = regexHail06Hour[0]
+        regexHail06Hour = regexHail06Hour.split()
     regexMist06Hour = re.findall("Mist|mist|Fog|fog", weatherAPI06HourDataCondition)
+    if regexMist06Hour != []:
+        regexMist06Hour = regexMist06Hour[0]
+        regexMist06Hour = regexMist06Hour.split()
 
     if regexThunder06Hour == ['Thunder'] or regexThunder06Hour == ['thunder']:
         weatherAPI06HourDataConditionIcon = "/static/images/thunderstorms.svg"
@@ -1248,13 +1471,37 @@ def weather():
     print(weatherAPI07HourDataCondition)
 
     regexThunder07Hour = re.findall("Thunder|thunder", weatherAPI07HourDataCondition)
+    if regexThunder07Hour != []:
+        regexThunder07Hour = regexThunder07Hour[0]
+        regexThunder07Hour = regexThunder07Hour.split()
     regexRain07Hour = re.findall("Rain|rain|Shower|shower|Drizzle|drizzle", weatherAPI07HourDataCondition)
+    if regexRain07Hour != []:
+        regexRain07Hour = regexRain07Hour[0]
+        regexRain07Hour = regexRain07Hour.split()
     regexCloud07Hour = re.findall("Cloud|cloud|Overcast|overcast|Cloudy|cloudy", weatherAPI07HourDataCondition)
+    if regexCloud07Hour != []:
+        regexCloud07Hour = regexCloud07Hour[0]
+        regexCloud07Hour = regexCloud07Hour.split()
     regexClear07Hour = re.findall("Clear|clear|Sun|sun", weatherAPI07HourDataCondition)
+    if regexClear07Hour != []:
+        regexClear07Hour = regexClear07Hour[0]
+        regexClear07Hour = regexClear07Hour.split()
     regexSnow07Hour = re.findall("Snow|snow|Sleet|sleet", weatherAPI07HourDataCondition)
+    if regexSnow07Hour != []:
+        regexSnow07Hour = regexSnow07Hour[0]
+        regexSnow07Hour = regexSnow07Hour.split()
     regexWind07Hour = re.findall("Wind|wind", weatherAPI07HourDataCondition)
+    if regexWind07Hour != []:
+        regexWind07Hour = regexWind07Hour[0]
+        regexWind07Hour = regexWind07Hour.split()
     regexHail07Hour = re.findall("Hail|hail", weatherAPI07HourDataCondition)
+    if regexHail07Hour != []:
+        regexHail07Hour = regexHail07Hour[0]
+        regexHail07Hour = regexHail07Hour.split()
     regexMist07Hour = re.findall("Mist|mist|Fog|fog", weatherAPI07HourDataCondition)
+    if regexMist07Hour != []:
+        regexMist07Hour = regexMist07Hour[0]
+        regexMist07Hour = regexMist07Hour.split()
 
     if regexThunder07Hour == ['Thunder'] or regexThunder07Hour == ['thunder']:
         weatherAPI07HourDataConditionIcon = "/static/images/thunderstorms.svg"
@@ -1315,13 +1562,37 @@ def weather():
     print(weatherAPI08HourDataCondition)
 
     regexThunder08Hour = re.findall("Thunder|thunder", weatherAPI08HourDataCondition)
+    if regexThunder08Hour != []:
+        regexThunder08Hour = regexThunder08Hour[0]
+        regexThunder08Hour = regexThunder08Hour.split()
     regexRain08Hour = re.findall("Rain|rain|Shower|shower|Drizzle|drizzle", weatherAPI08HourDataCondition)
+    if regexRain08Hour != []:
+        regexRain08Hour = regexRain08Hour[0]
+        regexRain08Hour = regexRain08Hour.split()
     regexCloud08Hour = re.findall("Cloud|cloud|Overcast|overcast|Cloudy|cloudy", weatherAPI08HourDataCondition)
+    if regexCloud08Hour != []:
+        regexCloud08Hour = regexCloud08Hour[0]
+        regexCloud08Hour = regexCloud08Hour.split()
     regexClear08Hour = re.findall("Clear|clear|Sun|sun", weatherAPI08HourDataCondition)
+    if regexClear08Hour != []:
+        regexClear08Hour = regexClear08Hour[0]
+        regexClear08Hour = regexClear08Hour.split()
     regexSnow08Hour = re.findall("Snow|snow|Sleet|sleet", weatherAPI08HourDataCondition)
+    if regexSnow08Hour != []:
+        regexSnow08Hour = regexSnow08Hour[0]
+        regexSnow08Hour = regexSnow08Hour.split()
     regexWind08Hour = re.findall("Wind|wind", weatherAPI08HourDataCondition)
+    if regexWind08Hour != []:
+        regexWind08Hour = regexWind08Hour[0]
+        regexWind08Hour = regexWind08Hour.split()
     regexHail08Hour = re.findall("Hail|hail", weatherAPI08HourDataCondition)
+    if regexHail08Hour != []:
+        regexHail08Hour = regexHail08Hour[0]
+        regexHail08Hour = regexHail08Hour.split()
     regexMist08Hour = re.findall("Mist|mist|Fog|fog", weatherAPI08HourDataCondition)
+    if regexMist08Hour != []:
+        regexMist08Hour = regexMist08Hour[0]
+        regexMist08Hour = regexMist08Hour.split()
 
     if regexThunder08Hour == ['Thunder'] or regexThunder08Hour == ['thunder']:
         weatherAPI08HourDataConditionIcon = "/static/images/thunderstorms.svg"
@@ -1381,13 +1652,37 @@ def weather():
     print(weatherAPI09HourDataCondition)
 
     regexThunder09Hour = re.findall("Thunder|thunder", weatherAPI09HourDataCondition)
+    if regexThunder09Hour != []:
+        regexThunder09Hour = regexThunder09Hour[0]
+        regexThunder09Hour = regexThunder09Hour.split()
     regexRain09Hour = re.findall("Rain|rain|Shower|shower|Drizzle|drizzle", weatherAPI09HourDataCondition)
+    if regexRain09Hour != []:
+        regexRain09Hour = regexRain09Hour[0]
+        regexRain09Hour = regexRain09Hour.split()
     regexCloud09Hour = re.findall("Cloud|cloud|Overcast|overcast|Cloudy|cloudy", weatherAPI09HourDataCondition)
+    if regexCloud09Hour != []:
+        regexCloud09Hour = regexCloud09Hour[0]
+        regexCloud09Hour = regexCloud09Hour.split()
     regexClear09Hour = re.findall("Clear|clear|Sun|sun", weatherAPI09HourDataCondition)
+    if regexClear09Hour != []:
+        regexClear09Hour = regexClear09Hour[0]
+        regexClear09Hour = regexClear09Hour.split()
     regexSnow09Hour = re.findall("Snow|snow|Sleet|sleet", weatherAPI09HourDataCondition)
+    if regexSnow09Hour != []:
+        regexSnow09Hour = regexSnow09Hour[0]
+        regexSnow09Hour = regexSnow09Hour.split()
     regexWind09Hour = re.findall("Wind|wind", weatherAPI09HourDataCondition)
+    if regexWind09Hour != []:
+        regexWind09Hour = regexWind09Hour[0]
+        regexWind09Hour = regexWind09Hour.split()
     regexHail09Hour = re.findall("Hail|hail", weatherAPI09HourDataCondition)
+    if regexHail09Hour != []:
+        regexHail09Hour = regexHail09Hour[0]
+        regexHail09Hour = regexHail09Hour.split()
     regexMist09Hour = re.findall("Mist|mist|Fog|fog", weatherAPI09HourDataCondition)
+    if regexMist09Hour != []:
+        regexMist09Hour = regexMist09Hour[0]
+        regexMist09Hour = regexMist09Hour.split()
 
     if regexThunder09Hour == ['Thunder'] or regexThunder09Hour == ['thunder']:
         weatherAPI09HourDataConditionIcon = "/static/images/thunderstorms.svg"
@@ -1447,13 +1742,37 @@ def weather():
     print(weatherAPI10HourDataCondition)
 
     regexThunder10Hour = re.findall("Thunder|thunder", weatherAPI10HourDataCondition)
+    if regexThunder10Hour != []:
+        regexThunder10Hour = regexThunder10Hour[0]
+        regexThunder10Hour = regexThunder10Hour.split()
     regexRain10Hour = re.findall("Rain|rain|Shower|shower|Drizzle|drizzle", weatherAPI10HourDataCondition)
+    if regexRain10Hour != []:
+        regexRain10Hour = regexRain10Hour[0]
+        regexRain10Hour = regexRain10Hour.split()
     regexCloud10Hour = re.findall("Cloud|cloud|Overcast|overcast|Cloudy|cloudy", weatherAPI10HourDataCondition)
+    if regexCloud10Hour != []:
+        regexCloud10Hour = regexCloud10Hour[0]
+        regexCloud10Hour = regexCloud10Hour.split()
     regexClear10Hour = re.findall("Clear|clear|Sun|sun", weatherAPI10HourDataCondition)
+    if regexClear10Hour != []:
+        regexClear10Hour = regexClear10Hour[0]
+        regexClear10Hour = regexClear10Hour.split()
     regexSnow10Hour = re.findall("Snow|snow|Sleet|sleet", weatherAPI10HourDataCondition)
+    if regexSnow10Hour != []:
+        regexSnow10Hour = regexSnow10Hour[0]
+        regexSnow10Hour = regexSnow10Hour.split()
     regexWind10Hour = re.findall("Wind|wind", weatherAPI10HourDataCondition)
+    if regexWind10Hour != []:
+        regexWind10Hour = regexWind10Hour[0]
+        regexWind10Hour = regexWind10Hour.split()
     regexHail10Hour = re.findall("Hail|hail", weatherAPI10HourDataCondition)
+    if regexHail10Hour != []:
+        regexHail10Hour = regexHail10Hour[0]
+        regexHail10Hour = regexHail10Hour.split()
     regexMist10Hour = re.findall("Mist|mist|Fog|fog", weatherAPI10HourDataCondition)
+    if regexMist10Hour != []:
+        regexMist10Hour = regexMist10Hour[0]
+        regexMist10Hour = regexMist10Hour.split()
 
     if regexThunder10Hour == ['Thunder'] or regexThunder10Hour == ['thunder']:
         weatherAPI10HourDataConditionIcon = "/static/images/thunderstorms.svg"
@@ -1514,13 +1833,37 @@ def weather():
     print(weatherAPI11HourDataCondition)
 
     regexThunder11Hour = re.findall("Thunder|thunder", weatherAPI11HourDataCondition)
+    if regexThunder11Hour != []:
+        regexThunder11Hour = regexThunder11Hour[0]
+        regexThunder11Hour = regexThunder11Hour.split()
     regexRain11Hour = re.findall("Rain|rain|Shower|shower|Drizzle|drizzle", weatherAPI11HourDataCondition)
+    if regexRain11Hour != []:
+        regexRain11Hour = regexRain11Hour[0]
+        regexRain11Hour = regexRain11Hour.split()
     regexCloud11Hour = re.findall("Cloud|cloud|Overcast|overcast|Cloudy|cloudy", weatherAPI11HourDataCondition)
+    if regexCloud11Hour != []:
+        regexCloud11Hour = regexCloud11Hour[0]
+        regexCloud11Hour = regexCloud11Hour.split()
     regexClear11Hour = re.findall("Clear|clear|Sun|sun", weatherAPI11HourDataCondition)
+    if regexClear11Hour != []:
+        regexClear11Hour = regexClear11Hour[0]
+        regexClear11Hour = regexClear11Hour.split()
     regexSnow11Hour = re.findall("Snow|snow|Sleet|sleet", weatherAPI11HourDataCondition)
+    if regexSnow11Hour != []:
+        regexSnow11Hour = regexSnow11Hour[0]
+        regexSnow11Hour = regexSnow11Hour.split()
     regexWind11Hour = re.findall("Wind|wind", weatherAPI11HourDataCondition)
+    if regexWind11Hour != []:
+        regexWind11Hour = regexWind11Hour[0]
+        regexWind11Hour = regexWind11Hour.split()
     regexHail11Hour = re.findall("Hail|hail", weatherAPI11HourDataCondition)
+    if regexHail11Hour != []:
+        regexHail11Hour = regexHail11Hour[0]
+        regexHail11Hour = regexHail11Hour.split()
     regexMist11Hour = re.findall("Mist|mist|Fog|fog", weatherAPI11HourDataCondition)
+    if regexMist11Hour != []:
+        regexMist11Hour = regexMist11Hour[0]
+        regexMist11Hour = regexMist11Hour.split()
 
     if regexThunder11Hour == ['Thunder'] or regexThunder11Hour == ['thunder']:
         weatherAPI11HourDataConditionIcon = "/static/images/thunderstorms.svg"
@@ -1580,13 +1923,37 @@ def weather():
     print(weatherAPI12HourDataCondition)
 
     regexThunder12Hour = re.findall("Thunder|thunder", weatherAPI12HourDataCondition)
+    if regexThunder12Hour != []:
+        regexThunder12Hour = regexThunder12Hour[0]
+        regexThunder12Hour = regexThunder12Hour.split()
     regexRain12Hour = re.findall("Rain|rain|Shower|shower|Drizzle|drizzle", weatherAPI12HourDataCondition)
+    if regexRain12Hour != []:
+        regexRain12Hour = regexRain12Hour[0]
+        regexRain12Hour = regexRain12Hour.split()
     regexCloud12Hour = re.findall("Cloud|cloud|Overcast|overcast|Cloudy|cloudy", weatherAPI12HourDataCondition)
+    if regexCloud12Hour != []:
+        regexCloud12Hour = regexCloud12Hour[0]
+        regexCloud12Hour = regexCloud12Hour.split()
     regexClear12Hour = re.findall("Clear|clear|Sun|sun", weatherAPI12HourDataCondition)
+    if regexClear12Hour != []:
+        regexClear12Hour = regexClear12Hour[0]
+        regexClear12Hour = regexClear12Hour.split()
     regexSnow12Hour = re.findall("Snow|snow|Sleet|sleet", weatherAPI12HourDataCondition)
+    if regexSnow12Hour != []:
+        regexSnow12Hour = regexSnow12Hour[0]
+        regexSnow12Hour = regexSnow12Hour.split()
     regexWind12Hour = re.findall("Wind|wind", weatherAPI12HourDataCondition)
+    if regexWind12Hour != []:
+        regexWind12Hour = regexWind12Hour[0]
+        regexWind12Hour = regexWind12Hour.split()
     regexHail12Hour = re.findall("Hail|hail", weatherAPI12HourDataCondition)
+    if regexHail12Hour != []:
+        regexHail12Hour = regexHail12Hour[0]
+        regexHail12Hour = regexHail12Hour.split()
     regexMist12Hour = re.findall("Mist|mist|Fog|fog", weatherAPI12HourDataCondition)
+    if regexMist12Hour != []:
+        regexMist12Hour = regexMist12Hour[0]
+        regexMist12Hour = regexMist12Hour.split()
 
     if regexThunder12Hour == ['Thunder'] or regexThunder12Hour == ['thunder']:
         weatherAPI12HourDataConditionIcon = "/static/images/thunderstorms.svg"
@@ -1646,13 +2013,37 @@ def weather():
     print(weatherAPI13HourDataCondition)
 
     regexThunder13Hour = re.findall("Thunder|thunder", weatherAPI13HourDataCondition)
+    if regexThunder13Hour != []:
+        regexThunder13Hour = regexThunder13Hour[0]
+        regexThunder13Hour = regexThunder13Hour.split()
     regexRain13Hour = re.findall("Rain|rain|Shower|shower|Drizzle|drizzle", weatherAPI13HourDataCondition)
+    if regexRain13Hour != []:
+        regexRain13Hour = regexRain13Hour[0]
+        regexRain13Hour = regexRain13Hour.split()
     regexCloud13Hour = re.findall("Cloud|cloud|Overcast|overcast|Cloudy|cloudy", weatherAPI13HourDataCondition)
+    if regexCloud13Hour != []:
+        regexCloud13Hour = regexCloud13Hour[0]
+        regexCloud13Hour = regexCloud13Hour.split()
     regexClear13Hour = re.findall("Clear|clear|Sun|sun", weatherAPI13HourDataCondition)
+    if regexClear13Hour != []:
+        regexClear13Hour = regexClear13Hour[0]
+        regexClear13Hour = regexClear13Hour.split()
     regexSnow13Hour = re.findall("Snow|snow|Sleet|sleet", weatherAPI13HourDataCondition)
+    if regexSnow13Hour != []:
+        regexSnow13Hour = regexSnow13Hour[0]
+        regexSnow13Hour = regexSnow13Hour.split()
     regexWind13Hour = re.findall("Wind|wind", weatherAPI13HourDataCondition)
+    if regexWind13Hour != []:
+        regexWind13Hour = regexWind13Hour[0]
+        regexWind13Hour = regexWind13Hour.split()
     regexHail13Hour = re.findall("Hail|hail", weatherAPI13HourDataCondition)
+    if regexHail13Hour != []:
+        regexHail13Hour = regexHail13Hour[0]
+        regexHail13Hour = regexHail13Hour.split()
     regexMist13Hour = re.findall("Mist|mist|Fog|fog", weatherAPI13HourDataCondition)
+    if regexMist13Hour != []:
+        regexMist13Hour = regexMist13Hour[0]
+        regexMist13Hour = regexMist13Hour.split()
 
     if regexThunder13Hour == ['Thunder'] or regexThunder13Hour == ['thunder']:
         weatherAPI13HourDataConditionIcon = "/static/images/thunderstorms.svg"
@@ -1712,13 +2103,37 @@ def weather():
     print(weatherAPI14HourDataCondition)
 
     regexThunder14Hour = re.findall("Thunder|thunder", weatherAPI14HourDataCondition)
+    if regexThunder14Hour != []:
+        regexThunder14Hour = regexThunder14Hour[0]
+        regexThunder14Hour = regexThunder14Hour.split()
     regexRain14Hour = re.findall("Rain|rain|Shower|shower|Drizzle|drizzle", weatherAPI14HourDataCondition)
+    if regexRain14Hour != []:
+        regexRain14Hour = regexRain14Hour[0]
+        regexRain14Hour = regexRain14Hour.split()
     regexCloud14Hour = re.findall("Cloud|cloud|Overcast|overcast|Cloudy|cloudy", weatherAPI14HourDataCondition)
+    if regexCloud14Hour != []:
+        regexCloud14Hour = regexCloud14Hour[0]
+        regexCloud14Hour = regexCloud14Hour.split()
     regexClear14Hour = re.findall("Clear|clear|Sun|sun", weatherAPI14HourDataCondition)
+    if regexClear14Hour != []:
+        regexClear14Hour = regexClear14Hour[0]
+        regexClear14Hour = regexClear14Hour.split()
     regexSnow14Hour = re.findall("Snow|snow|Sleet|sleet", weatherAPI14HourDataCondition)
+    if regexSnow14Hour != []:
+        regexSnow14Hour = regexSnow14Hour[0]
+        regexSnow14Hour = regexSnow14Hour.split()
     regexWind14Hour = re.findall("Wind|wind", weatherAPI14HourDataCondition)
+    if regexWind14Hour != []:
+        regexWind14Hour = regexWind14Hour[0]
+        regexWind14Hour = regexWind14Hour.split()
     regexHail14Hour = re.findall("Hail|hail", weatherAPI14HourDataCondition)
+    if regexHail14Hour != []:
+        regexHail14Hour = regexHail14Hour[0]
+        regexHail14Hour = regexHail14Hour.split()
     regexMist14Hour = re.findall("Mist|mist|Fog|fog", weatherAPI14HourDataCondition)
+    if regexMist14Hour != []:
+        regexMist14Hour = regexMist14Hour[0]
+        regexMist14Hour = regexMist14Hour.split()
 
     if regexThunder14Hour == ['Thunder'] or regexThunder14Hour == ['thunder']:
         weatherAPI14HourDataConditionIcon = "/static/images/thunderstorms.svg"
@@ -1778,13 +2193,37 @@ def weather():
     print(weatherAPI15HourDataCondition)
 
     regexThunder15Hour = re.findall("Thunder|thunder", weatherAPI15HourDataCondition)
+    if regexThunder15Hour != []:
+        regexThunder15Hour = regexThunder15Hour[0]
+        regexThunder15Hour = regexThunder15Hour.split()
     regexRain15Hour = re.findall("Rain|rain|Shower|shower|Drizzle|drizzle", weatherAPI15HourDataCondition)
+    if regexRain15Hour != []:
+        regexRain15Hour = regexRain15Hour[0]
+        regexRain15Hour = regexRain15Hour.split()
     regexCloud15Hour = re.findall("Cloud|cloud|Overcast|overcast|Cloudy|cloudy", weatherAPI15HourDataCondition)
+    if regexCloud15Hour != []:
+        regexCloud15Hour = regexCloud15Hour[0]
+        regexCloud15Hour = regexCloud15Hour.split()
     regexClear15Hour = re.findall("Clear|clear|Sun|sun", weatherAPI15HourDataCondition)
+    if regexClear15Hour != []:
+        regexClear15Hour = regexClear15Hour[0]
+        regexClear15Hour = regexClear15Hour.split()
     regexSnow15Hour = re.findall("Snow|snow|Sleet|sleet", weatherAPI15HourDataCondition)
+    if regexSnow15Hour != []:
+        regexSnow15Hour = regexSnow15Hour[0]
+        regexSnow15Hour = regexSnow15Hour.split()
     regexWind15Hour = re.findall("Wind|wind", weatherAPI15HourDataCondition)
+    if regexWind15Hour != []:
+        regexWind15Hour = regexWind15Hour[0]
+        regexWind15Hour = regexWind15Hour.split()
     regexHail15Hour = re.findall("Hail|hail", weatherAPI15HourDataCondition)
+    if regexHail15Hour != []:
+        regexHail15Hour = regexHail15Hour[0]
+        regexHail15Hour = regexHail15Hour.split()
     regexMist15Hour = re.findall("Mist|mist|Fog|fog", weatherAPI15HourDataCondition)
+    if regexMist15Hour != []:
+        regexMist15Hour = regexMist15Hour[0]
+        regexMist15Hour = regexMist15Hour.split()
 
     if regexThunder15Hour == ['Thunder'] or regexThunder15Hour == ['thunder']:
         weatherAPI15HourDataConditionIcon = "/static/images/thunderstorms.svg"
@@ -1844,13 +2283,37 @@ def weather():
     print(weatherAPI16HourDataCondition)
 
     regexThunder16Hour = re.findall("Thunder|thunder", weatherAPI16HourDataCondition)
+    if regexThunder16Hour != []:
+        regexThunder16Hour = regexThunder16Hour[0]
+        regexThunder16Hour = regexThunder16Hour.split()
     regexRain16Hour = re.findall("Rain|rain|Shower|shower|Drizzle|drizzle", weatherAPI16HourDataCondition)
+    if regexRain16Hour != []:
+        regexRain16Hour = regexRain16Hour[0]
+        regexRain16Hour = regexRain16Hour.split()
     regexCloud16Hour = re.findall("Cloud|cloud|Overcast|overcast|Cloudy|cloudy", weatherAPI16HourDataCondition)
+    if regexCloud16Hour != []:
+        regexCloud16Hour = regexCloud16Hour[0]
+        regexCloud16Hour = regexCloud16Hour.split()
     regexClear16Hour = re.findall("Clear|clear|Sun|sun", weatherAPI16HourDataCondition)
+    if regexClear16Hour != []:
+        regexClear16Hour = regexClear16Hour[0]
+        regexClear16Hour = regexClear16Hour.split()
     regexSnow16Hour = re.findall("Snow|snow|Sleet|sleet", weatherAPI16HourDataCondition)
+    if regexSnow16Hour != []:
+        regexSnow16Hour = regexSnow16Hour[0]
+        regexSnow16Hour = regexSnow16Hour.split()
     regexWind16Hour = re.findall("Wind|wind", weatherAPI16HourDataCondition)
+    if regexWind16Hour != []:
+        regexWind16Hour = regexWind16Hour[0]
+        regexWind16Hour = regexWind16Hour.split()
     regexHail16Hour = re.findall("Hail|hail", weatherAPI16HourDataCondition)
+    if regexHail16Hour != []:
+        regexHail16Hour = regexHail16Hour[0]
+        regexHail16Hour = regexHail16Hour.split()
     regexMist16Hour = re.findall("Mist|mist|Fog|fog", weatherAPI16HourDataCondition)
+    if regexMist16Hour != []:
+        regexMist16Hour = regexMist16Hour[0]
+        regexMist16Hour = regexMist16Hour.split()
 
     if regexThunder16Hour == ['Thunder'] or regexThunder16Hour == ['thunder']:
         weatherAPI16HourDataConditionIcon = "/static/images/thunderstorms.svg"
@@ -1911,13 +2374,37 @@ def weather():
     print(weatherAPI17HourDataCondition)
 
     regexThunder17Hour = re.findall("Thunder|thunder", weatherAPI17HourDataCondition)
+    if regexThunder17Hour != []:
+        regexThunder17Hour = regexThunder17Hour[0]
+        regexThunder17Hour = regexThunder17Hour.split()
     regexRain17Hour = re.findall("Rain|rain|Shower|shower|Drizzle|drizzle", weatherAPI17HourDataCondition)
+    if regexRain17Hour != []:
+        regexRain17Hour = regexRain17Hour[0]
+        regexRain17Hour = regexRain17Hour.split()
     regexCloud17Hour = re.findall("Cloud|cloud|Overcast|overcast|Cloudy|cloudy", weatherAPI17HourDataCondition)
+    if regexCloud17Hour != []:
+        regexCloud17Hour = regexCloud17Hour[0]
+        regexCloud17Hour = regexCloud17Hour.split()
     regexClear17Hour = re.findall("Clear|clear|Sun|sun", weatherAPI17HourDataCondition)
+    if regexClear17Hour != []:
+        regexClear17Hour = regexClear17Hour[0]
+        regexClear17Hour = regexClear17Hour.split()
     regexSnow17Hour = re.findall("Snow|snow|Sleet|sleet", weatherAPI17HourDataCondition)
+    if regexSnow17Hour != []:
+        regexSnow17Hour = regexSnow17Hour[0]
+        regexSnow17Hour = regexSnow17Hour.split()
     regexWind17Hour = re.findall("Wind|wind", weatherAPI17HourDataCondition)
+    if regexWind17Hour != []:
+        regexWind17Hour = regexWind17Hour[0]
+        regexWind17Hour = regexWind17Hour.split()
     regexHail17Hour = re.findall("Hail|hail", weatherAPI17HourDataCondition)
+    if regexHail17Hour != []:
+        regexHail17Hour = regexHail17Hour[0]
+        regexHail17Hour = regexHail17Hour.split()
     regexMist17Hour = re.findall("Mist|mist|Fog|fog", weatherAPI17HourDataCondition)
+    if regexMist17Hour != []:
+        regexMist17Hour = regexMist17Hour[0]
+        regexMist17Hour = regexMist17Hour.split()
 
     if regexThunder17Hour == ['Thunder'] or regexThunder17Hour == ['thunder']:
         weatherAPI17HourDataConditionIcon = "/static/images/thunderstorms.svg"
@@ -1977,13 +2464,37 @@ def weather():
     print(weatherAPI18HourDataCondition)
 
     regexThunder18Hour = re.findall("Thunder|thunder", weatherAPI18HourDataCondition)
+    if regexThunder18Hour != []:
+        regexThunder18Hour = regexThunder18Hour[0]
+        regexThunder18Hour = regexThunder18Hour.split()
     regexRain18Hour = re.findall("Rain|rain|Shower|shower|Drizzle|drizzle", weatherAPI18HourDataCondition)
+    if regexRain18Hour != []:
+        regexRain18Hour = regexRain18Hour[0]
+        regexRain18Hour = regexRain18Hour.split()
     regexCloud18Hour = re.findall("Cloud|cloud|Overcast|overcast|Cloudy|cloudy", weatherAPI18HourDataCondition)
+    if regexCloud18Hour != []:
+        regexCloud18Hour = regexCloud18Hour[0]
+        regexCloud18Hour = regexCloud18Hour.split()
     regexClear18Hour = re.findall("Clear|clear|Sun|sun", weatherAPI18HourDataCondition)
+    if regexClear18Hour != []:
+        regexClear18Hour = regexClear18Hour[0]
+        regexClear18Hour = regexClear18Hour.split()
     regexSnow18Hour = re.findall("Snow|snow|Sleet|sleet", weatherAPI18HourDataCondition)
+    if regexSnow18Hour != []:
+        regexSnow18Hour = regexSnow18Hour[0]
+        regexSnow18Hour = regexSnow18Hour.split()
     regexWind18Hour = re.findall("Wind|wind", weatherAPI18HourDataCondition)
+    if regexWind18Hour != []:
+        regexWind18Hour = regexWind18Hour[0]
+        regexWind18Hour = regexWind18Hour.split()
     regexHail18Hour = re.findall("Hail|hail", weatherAPI18HourDataCondition)
+    if regexHail18Hour != []:
+        regexHail18Hour = regexHail18Hour[0]
+        regexHail18Hour = regexHail18Hour.split()
     regexMist18Hour = re.findall("Mist|mist|Fog|fog", weatherAPI18HourDataCondition)
+    if regexMist18Hour != []:
+        regexMist18Hour = regexMist18Hour[0]
+        regexMist18Hour = regexMist18Hour.split()
 
     if regexThunder18Hour == ['Thunder'] or regexThunder18Hour == ['thunder']:
         weatherAPI18HourDataConditionIcon = "/static/images/thunderstorms.svg"
@@ -2043,13 +2554,37 @@ def weather():
     print(weatherAPI19HourDataCondition)
 
     regexThunder19Hour = re.findall("Thunder|thunder", weatherAPI19HourDataCondition)
+    if regexThunder19Hour != []:
+        regexThunder19Hour = regexThunder19Hour[0]
+        regexThunder19Hour = regexThunder19Hour.split()
     regexRain19Hour = re.findall("Rain|rain|Shower|shower|Drizzle|drizzle", weatherAPI19HourDataCondition)
+    if regexRain19Hour != []:
+        regexRain19Hour = regexRain19Hour[0]
+        regexRain19Hour = regexRain19Hour.split()
     regexCloud19Hour = re.findall("Cloud|cloud|Overcast|overcast|Cloudy|cloudy", weatherAPI19HourDataCondition)
+    if regexCloud19Hour != []:
+        regexCloud19Hour = regexCloud19Hour[0]
+        regexCloud19Hour = regexCloud19Hour.split()
     regexClear19Hour = re.findall("Clear|clear|Sun|sun", weatherAPI19HourDataCondition)
+    if regexClear19Hour != []:
+        regexClear19Hour = regexClear19Hour[0]
+        regexClear19Hour = regexClear19Hour.split()
     regexSnow19Hour = re.findall("Snow|snow|Sleet|sleet", weatherAPI19HourDataCondition)
+    if regexSnow19Hour != []:
+        regexSnow19Hour = regexSnow19Hour[0]
+        regexSnow19Hour = regexSnow19Hour.split()
     regexWind19Hour = re.findall("Wind|wind", weatherAPI19HourDataCondition)
+    if regexWind19Hour != []:
+        regexWind19Hour = regexWind19Hour[0]
+        regexWind19Hour = regexWind19Hour.split()
     regexHail19Hour = re.findall("Hail|hail", weatherAPI19HourDataCondition)
+    if regexHail19Hour != []:
+        regexHail19Hour = regexHail19Hour[0]
+        regexHail19Hour = regexHail19Hour.split()
     regexMist19Hour = re.findall("Mist|mist|Fog|fog", weatherAPI19HourDataCondition)
+    if regexMist19Hour != []:
+        regexMist19Hour = regexMist19Hour[0]
+        regexMist19Hour = regexMist19Hour.split()
 
     if regexThunder19Hour == ['Thunder'] or regexThunder19Hour == ['thunder']:
         weatherAPI19HourDataConditionIcon = "/static/images/thunderstorms.svg"
@@ -2111,13 +2646,37 @@ def weather():
     print(weatherAPI20HourDataCondition)
 
     regexThunder20Hour = re.findall("Thunder|thunder", weatherAPI20HourDataCondition)
+    if regexThunder20Hour != []:
+        regexThunder20Hour = regexThunder20Hour[0]
+        regexThunder20Hour = regexThunder20Hour.split()
     regexRain20Hour = re.findall("Rain|rain|Shower|shower|Drizzle|drizzle", weatherAPI20HourDataCondition)
+    if regexRain20Hour != []:
+        regexRain20Hour = regexRain20Hour[0]
+        regexRain20Hour = regexRain20Hour.split()
     regexCloud20Hour = re.findall("Cloud|cloud|Overcast|overcast|Cloudy|cloudy", weatherAPI20HourDataCondition)
+    if regexCloud20Hour != []:
+        regexCloud20Hour = regexCloud20Hour[0]
+        regexCloud20Hour = regexCloud20Hour.split()
     regexClear20Hour = re.findall("Clear|clear|Sun|sun", weatherAPI20HourDataCondition)
+    if regexClear20Hour != []:
+        regexClear20Hour = regexClear20Hour[0]
+        regexClear20Hour = regexClear20Hour.split()
     regexSnow20Hour = re.findall("Snow|snow|Sleet|sleet", weatherAPI20HourDataCondition)
+    if regexSnow20Hour != []:
+        regexSnow20Hour = regexSnow20Hour[0]
+        regexSnow20Hour = regexSnow20Hour.split()
     regexWind20Hour = re.findall("Wind|wind", weatherAPI20HourDataCondition)
+    if regexWind20Hour != []:
+        regexWind20Hour = regexWind20Hour[0]
+        regexWind20Hour = regexWind20Hour.split()
     regexHail20Hour = re.findall("Hail|hail", weatherAPI20HourDataCondition)
+    if regexHail20Hour != []:
+        regexHail20Hour = regexHail20Hour[0]
+        regexHail20Hour = regexHail20Hour.split()
     regexMist20Hour = re.findall("Mist|mist|Fog|fog", weatherAPI20HourDataCondition)
+    if regexMist20Hour != []:
+        regexMist20Hour = regexMist20Hour[0]
+        regexMist20Hour = regexMist20Hour.split()
 
     if regexThunder20Hour == ['Thunder'] or regexThunder20Hour == ['thunder']:
         weatherAPI20HourDataConditionIcon = "/static/images/thunderstorms.svg"
@@ -2178,13 +2737,37 @@ def weather():
     print(weatherAPI21HourDataCondition)
 
     regexThunder21Hour = re.findall("Thunder|thunder", weatherAPI21HourDataCondition)
+    if regexThunder21Hour != []:
+        regexThunder21Hour = regexThunder21Hour[0]
+        regexThunder21Hour = regexThunder21Hour.split()
     regexRain21Hour = re.findall("Rain|rain|Shower|shower|Drizzle|drizzle", weatherAPI21HourDataCondition)
+    if regexRain21Hour != []:
+        regexRain21Hour = regexRain21Hour[0]
+        regexRain21Hour = regexRain21Hour.split()
     regexCloud21Hour = re.findall("Cloud|cloud|Overcast|overcast|Cloudy|cloudy", weatherAPI21HourDataCondition)
+    if regexCloud21Hour != []:
+        regexCloud21Hour = regexCloud21Hour[0]
+        regexCloud21Hour = regexCloud21Hour.split()
     regexClear21Hour = re.findall("Clear|clear|Sun|sun", weatherAPI21HourDataCondition)
+    if regexClear21Hour != []:
+        regexClear21Hour = regexClear21Hour[0]
+        regexClear21Hour = regexClear21Hour.split()
     regexSnow21Hour = re.findall("Snow|snow|Sleet|sleet", weatherAPI21HourDataCondition)
+    if regexSnow21Hour != []:
+        regexSnow21Hour = regexSnow21Hour[0]
+        regexSnow21Hour = regexSnow21Hour.split()
     regexWind21Hour = re.findall("Wind|wind", weatherAPI21HourDataCondition)
+    if regexWind21Hour != []:
+        regexWind21Hour = regexWind21Hour[0]
+        regexWind21Hour = regexWind21Hour.split()
     regexHail21Hour = re.findall("Hail|hail", weatherAPI21HourDataCondition)
+    if regexHail21Hour != []:
+        regexHail21Hour = regexHail21Hour[0]
+        regexHail21Hour = regexHail21Hour.split()
     regexMist21Hour = re.findall("Mist|mist|Fog|fog", weatherAPI21HourDataCondition)
+    if regexMist21Hour != []:
+        regexMist21Hour = regexMist21Hour[0]
+        regexMist21Hour = regexMist21Hour.split()
 
     if regexThunder21Hour == ['Thunder'] or regexThunder21Hour == ['thunder']:
         weatherAPI21HourDataConditionIcon = "/static/images/thunderstorms.svg"
@@ -2244,13 +2827,37 @@ def weather():
     print(weatherAPI22HourDataCondition)
 
     regexThunder22Hour = re.findall("Thunder|thunder", weatherAPI22HourDataCondition)
+    if regexThunder22Hour != []:
+        regexThunder22Hour = regexThunder22Hour[0]
+        regexThunder22Hour = regexThunder22Hour.split()
     regexRain22Hour = re.findall("Rain|rain|Shower|shower|Drizzle|drizzle", weatherAPI22HourDataCondition)
+    if regexRain22Hour != []:
+        regexRain22Hour = regexRain22Hour[0]
+        regexRain22Hour = regexRain22Hour.split()
     regexCloud22Hour = re.findall("Cloud|cloud|Overcast|overcast|Cloudy|cloudy", weatherAPI22HourDataCondition)
+    if regexCloud22Hour != []:
+        regexCloud22Hour = regexCloud22Hour[0]
+        regexCloud22Hour = regexCloud22Hour.split()
     regexClear22Hour = re.findall("Clear|clear|Sun|sun", weatherAPI22HourDataCondition)
+    if regexClear22Hour != []:
+        regexClear22Hour = regexClear22Hour[0]
+        regexClear22Hour = regexClear22Hour.split()
     regexSnow22Hour = re.findall("Snow|snow|Sleet|sleet", weatherAPI22HourDataCondition)
+    if regexSnow22Hour != []:
+        regexSnow22Hour = regexSnow22Hour[0]
+        regexSnow22Hour = regexSnow22Hour.split()
     regexWind22Hour = re.findall("Wind|wind", weatherAPI22HourDataCondition)
+    if regexWind22Hour != []:
+        regexWind22Hour = regexWind22Hour[0]
+        regexWind22Hour = regexWind22Hour.split()
     regexHail22Hour = re.findall("Hail|hail", weatherAPI22HourDataCondition)
+    if regexHail22Hour != []:
+        regexHail22Hour = regexHail22Hour[0]
+        regexHail22Hour = regexHail22Hour.split()
     regexMist22Hour = re.findall("Mist|mist|Fog|fog", weatherAPI22HourDataCondition)
+    if regexMist22Hour != []:
+        regexMist22Hour = regexMist22Hour[0]
+        regexMist22Hour = regexMist22Hour.split()
 
     if regexThunder22Hour == ['Thunder'] or regexThunder22Hour == ['thunder']:
         weatherAPI22HourDataConditionIcon = "/static/images/thunderstorms.svg"
@@ -2310,13 +2917,37 @@ def weather():
     print(weatherAPI23HourDataCondition)
 
     regexThunder23Hour = re.findall("Thunder|thunder", weatherAPI23HourDataCondition)
+    if regexThunder23Hour != []:
+        regexThunder23Hour = regexThunder23Hour[0]
+        regexThunder23Hour = regexThunder23Hour.split()
     regexRain23Hour = re.findall("Rain|rain|Shower|shower|Drizzle|drizzle", weatherAPI23HourDataCondition)
+    if regexRain23Hour != []:
+        regexRain23Hour = regexRain23Hour[0]
+        regexRain23Hour = regexRain23Hour.split()
     regexCloud23Hour = re.findall("Cloud|cloud|Overcast|overcast|Cloudy|cloudy", weatherAPI23HourDataCondition)
+    if regexCloud23Hour != []:
+        regexCloud23Hour = regexCloud23Hour[0]
+        regexCloud23Hour = regexCloud23Hour.split()
     regexClear23Hour = re.findall("Clear|clear|Sun|sun", weatherAPI23HourDataCondition)
+    if regexClear23Hour != []:
+        regexClear23Hour = regexClear23Hour[0]
+        regexClear23Hour = regexClear23Hour.split()
     regexSnow23Hour = re.findall("Snow|snow|Sleet|sleet", weatherAPI23HourDataCondition)
+    if regexSnow23Hour != []:
+        regexSnow23Hour = regexSnow23Hour[0]
+        regexSnow23Hour = regexSnow23Hour.split()
     regexWind23Hour = re.findall("Wind|wind", weatherAPI23HourDataCondition)
+    if regexWind23Hour != []:
+        regexWind23Hour = regexWind23Hour[0]
+        regexWind23Hour = regexWind23Hour.split()
     regexHail23Hour = re.findall("Hail|hail", weatherAPI23HourDataCondition)
+    if regexHail23Hour != []:
+        regexHail23Hour = regexHail23Hour[0]
+        regexHail23Hour = regexHail23Hour.split()
     regexMist23Hour = re.findall("Mist|mist|Fog|fog", weatherAPI23HourDataCondition)
+    if regexMist23Hour != []:
+        regexMist23Hour = regexMist23Hour[0]
+        regexMist23Hour = regexMist23Hour.split()
 
     if regexThunder23Hour == ['Thunder'] or regexThunder23Hour == ['thunder']:
         weatherAPI23HourDataConditionIcon = "/static/images/thunderstorms.svg"
@@ -2350,7 +2981,153 @@ def weather():
         print("Regex: Mist")
 
 
-    data = strTemperatureCelsius1, strHumidity, aqi, aqi_description, strWindSpeed, windDirectionDescription, UV_index, UV_index_description, UV_index_percentage, UV_index_colour, aqi_percentage, aqi_colour, compass, strTemperatureFarenheit, strWindSpeedKMH, openWeatherDataToday, temperatureforecastToday, weatherConditionsTodayIcon, tomorrowDate, weatherConditionsTomorrowIcon, temperatureforecastTomorrow, tomorrowWindSpeed, tomorrowWindDirectionDescription, tomorrowHumidity, ThreeDayDate, weatherConditionsThreeDayIcon, temperatureforecastThreeDay, ThreeDayWindSpeed, ThreeDayWindDirectionDescription, ThreeDayHumidity, FourDayDate, weatherConditionsFourDayIcon, temperatureforecastFourDay, FourDayWindSpeed, FourDayWindDirectionDescription, FourDayHumidity, FiveDayDate, weatherConditionsFiveDayIcon, temperatureforecastFiveDay, FiveDayWindSpeed, FiveDayWindDirectionDescription, FiveDayHumidity, SixDayDate, weatherConditionsSixDayIcon, temperatureforecastSixDay, SixDayWindSpeed, SixDayWindDirectionDescription, SixDayHumidity, weatherAPIDataCurrentTemperature, weatherAPIDataCurrentConditionIcon, weatherAPI01HourDataConditionTime, weatherAPI01HourDataTemperature, weatherAPI01HourDataConditionIcon, weatherAPI02HourDataConditionTime, weatherAPI02HourDataTemperature, weatherAPI02HourDataConditionIcon, weatherAPI03HourDataConditionTime, weatherAPI03HourDataTemperature, weatherAPI03HourDataConditionIcon, weatherAPI04HourDataConditionTime, weatherAPI04HourDataTemperature, weatherAPI04HourDataConditionIcon, weatherAPI05HourDataConditionTime, weatherAPI05HourDataTemperature, weatherAPI05HourDataConditionIcon, weatherAPI06HourDataConditionTime, weatherAPI06HourDataTemperature, weatherAPI06HourDataConditionIcon, weatherAPI07HourDataConditionTime, weatherAPI07HourDataTemperature, weatherAPI07HourDataConditionIcon, weatherAPI08HourDataConditionTime, weatherAPI08HourDataTemperature, weatherAPI08HourDataConditionIcon, weatherAPI09HourDataConditionTime, weatherAPI09HourDataTemperature, weatherAPI09HourDataConditionIcon, weatherAPI10HourDataConditionTime, weatherAPI10HourDataTemperature, weatherAPI10HourDataConditionIcon, weatherAPI11HourDataConditionTime, weatherAPI11HourDataTemperature, weatherAPI11HourDataConditionIcon, weatherAPI12HourDataConditionTime, weatherAPI12HourDataTemperature, weatherAPI12HourDataConditionIcon, weatherAPI13HourDataConditionTime, weatherAPI13HourDataTemperature, weatherAPI13HourDataConditionIcon, weatherAPI14HourDataConditionTime, weatherAPI14HourDataTemperature, weatherAPI14HourDataConditionIcon, weatherAPI15HourDataConditionTime, weatherAPI15HourDataTemperature, weatherAPI15HourDataConditionIcon, weatherAPI16HourDataConditionTime, weatherAPI16HourDataTemperature, weatherAPI16HourDataConditionIcon, weatherAPI17HourDataConditionTime, weatherAPI17HourDataTemperature, weatherAPI17HourDataConditionIcon, weatherAPI18HourDataConditionTime, weatherAPI18HourDataTemperature, weatherAPI18HourDataConditionIcon, weatherAPI19HourDataConditionTime, weatherAPI19HourDataTemperature, weatherAPI19HourDataConditionIcon, weatherAPI20HourDataConditionTime, weatherAPI20HourDataTemperature, weatherAPI20HourDataConditionIcon, weatherAPI21HourDataConditionTime, weatherAPI21HourDataTemperature, weatherAPI21HourDataConditionIcon, weatherAPI22HourDataConditionTime, weatherAPI22HourDataTemperature, weatherAPI22HourDataConditionIcon, weatherAPI23HourDataConditionTime, weatherAPI23HourDataTemperature, weatherAPI23HourDataConditionIcon, strPressure, angle
+    try:
+        conn = http.client.HTTPSConnection("api.ambeedata.com")
+
+        headers = {
+            'x-api-key': "01a4c1eae8cb507b14ee10ecd1b2c3984e8368ede6224aa2ffcd3d9ada2ce3d7",
+            'Content-type': "application/json"
+        }
+
+        conn.request("GET", "/latest/pollen/by-lat-lng?lat=52.05892202630986&lng=1.2847627151273548", headers=headers)
+
+        res = conn.getresponse()
+        data = res.read()
+
+        pollenData = data.decode("utf-8")
+        pollenData = ast.literal_eval(pollenData)
+        print("Pollen Data: ", pollenData)
+        print(type(pollenData))
+        pollenData = pollenData['data']
+        pollenData = pollenData[0]
+        pollenRisk = pollenData['Risk']
+        print("Pollen Risk: ", pollenRisk)
+        pollenRiskGrass = pollenRisk['grass_pollen']
+        print("Pollen Risk Grass: ", pollenRiskGrass)
+        pollenRiskTree = pollenRisk['tree_pollen']
+        print("Pollen Risk Tree: ", pollenRiskTree)
+        pollenRiskWeed = pollenRisk['weed_pollen']
+        print("Pollen Risk Weed: ", pollenRiskWeed)
+        pollenRisk = str(pollenRisk)
+
+        if "Extreme" in pollenRiskGrass:
+            pollenRiskLevelGrass = "Extreme"
+        elif "Very High" in pollenRiskGrass or "Very high" in pollenRiskGrass:
+            pollenRiskLevelGrass = "Very High"
+        elif "High" in pollenRiskGrass:
+            pollenRiskLevelGrass = "High"
+        elif "Moderate" in pollenRiskGrass:
+            pollenRiskLevelGrass = "Moderate"
+        elif "Low" in pollenRiskGrass:
+            pollenRiskLevelGrass = "Low"
+
+        if "Extreme" in pollenRiskTree:
+            pollenRiskLevelTree = "Extreme"
+        elif "Very High" in pollenRiskTree or "Very high" in pollenRiskTree:
+            pollenRiskLevelTree = "Very High"
+        elif "High" in pollenRiskTree:
+            pollenRiskLevelTree = "High"
+        elif "Moderate" in pollenRiskTree:
+            pollenRiskLevelTree = "Moderate"
+        elif "Low" in pollenRiskTree:
+            pollenRiskLevelTree = "Low"
+
+        if "Extreme" in pollenRiskWeed:
+            pollenRiskLevelWeed = "Extreme"
+        elif "Very High" in pollenRiskWeed or "Very high" in pollenRiskWeed:
+            pollenRiskLevelWeed = "Very High"
+        elif "High" in pollenRiskWeed:
+            pollenRiskLevelWeed = "High"
+        elif "Moderate" in pollenRiskWeed:
+            pollenRiskLevelWeed = "Moderate"
+        elif "Low" in pollenRiskWeed:
+            pollenRiskLevelWeed = "Low"
+
+
+
+        print("Pollen Risk Level: ", pollenRiskLevelGrass, pollenRiskLevelTree, pollenRiskLevelWeed)
+
+        pollenCount = pollenData['Count']
+        print("Pollen Count: ", pollenCount)
+        pollenCountTree = pollenCount['tree_pollen']
+        print("Pollen Count Tree: ", pollenCountTree)
+        pollenCountGrass = pollenCount['grass_pollen']
+        print("Pollen Count Grass: ", pollenCountGrass)
+        pollenCountWeed = pollenCount['weed_pollen']
+        print("Pollen Count Weed: ", pollenCountWeed)
+
+        if pollenCountTree == 0:
+            pollenCountTreePercentage = "0%"
+            pollenCountColourTree = "#4CAF50"
+        elif pollenCountTree > 0 and pollenCountTree <= 14:
+            pollenCountTreePercentage = "25%"
+            pollenCountColourTree = "#4CAF50"
+        elif pollenCountTree >= 15 and pollenCountTree <= 89:
+            pollenCountTreePercentage = "50%"
+            pollenCountColourTree = "#FFEB3B"
+        elif pollenCountTree >= 90 and pollenCountTree <= 1499:
+            pollenCountTreePercentage = "75%"
+            pollenCountColourTree = "#FF9800"
+        elif pollenCountTree >= 1500:
+            pollenCountTreePercentage = "100%"
+            pollenCountColourTree = "#D84315"
+
+
+        if pollenCountGrass == 0:
+            pollenCountGrassPercentage = "0%"
+            pollenCountColourGrass = "#4CAF50"
+        elif pollenCountGrass > 0 and pollenCountGrass <= 4:
+            pollenCountGrassPercentage = "25%"
+            pollenCountColourGrass = "#4CAF50"
+        elif pollenCountGrass >= 5 and pollenCountGrass <= 19:
+            pollenCountGrassPercentage = "50%"
+            pollenCountColourGrass = "#FFEB3B"
+        elif pollenCountGrass >= 20 and pollenCountGrass <= 199:
+            pollenCountGrassPercentage = "75%"
+            pollenCountColourGrass = "#FF9800"
+        elif pollenCountGrass >= 200:
+            pollenCountGrassPercentage = "100%"
+            pollenCountColourGrass = "#D84315"
+
+
+        if pollenCountWeed == 0:
+            pollenCountWeedPercentage = "0%"
+            pollenCountColourWeed = "#4CAF50"
+        elif pollenCountWeed > 0 and pollenCountWeed <= 9:
+            pollenCountWeedPercentage = "25%"
+            pollenCountColourWeed = "#4CAF50"
+        elif pollenCountWeed >= 10 and pollenCountWeed <= 49:
+            pollenCountWeedPercentage = "50%"
+            pollenCountColourWeed = "#FFEB3B"
+        elif pollenCountWeed >= 50 and pollenCountWeed <= 499:
+            pollenCountWeedPercentage = "75%"
+            pollenCountColourWeed = "#FF9800"
+        elif pollenCountWeed >= 500:
+            pollenCountWeedPercentage = "100%"
+            pollenCountColourWeed = "#D84315"
+
+
+    except UnboundLocalError:
+        pollenRiskLevel = "Error Retrieving Pollen Count"
+        pollenCountValue = "N/A"
+        pollenCountPercentage = "0%"
+        pollenCountColour = "#000000"
+        pollenCountGrass = "N/A"
+        pollenCountTree = "N/A"
+        pollenCountWeed = "N/A"
+        pollenCountGrassPercentage = "0%"
+        pollenCountColourGrass = "#000000"
+        pollenCountTreePercentage = "0%"
+        pollenCountColourTree = "#000000"
+        pollenCountWeedPercentage = "0%"
+        pollenCountColourWeed = "#000000"
+        pollenRiskLevelTree = "Error Retrieving Pollen Count"
+        pollenRiskLevelGrass = "Error Retrieving Pollen Count"
+        pollenRiskLevelWeed = "Error Retrieving Pollen Count"
+
+
+
+    data = strTemperatureCelsius1, strHumidity, aqi, aqi_description, strWindSpeed, windDirectionDescription, UV_index, UV_index_description, UV_index_percentage, UV_index_colour, aqi_percentage, aqi_colour, compass, strTemperatureFarenheit, strWindSpeedKMH, openWeatherDataToday, temperatureforecastToday, weatherConditionsTodayIcon, tomorrowDate, weatherConditionsTomorrowIcon, temperatureforecastTomorrow, tomorrowWindSpeed, tomorrowWindDirectionDescription, tomorrowHumidity, ThreeDayDate, weatherConditionsThreeDayIcon, temperatureforecastThreeDay, ThreeDayWindSpeed, ThreeDayWindDirectionDescription, ThreeDayHumidity, FourDayDate, weatherConditionsFourDayIcon, temperatureforecastFourDay, FourDayWindSpeed, FourDayWindDirectionDescription, FourDayHumidity, FiveDayDate, weatherConditionsFiveDayIcon, temperatureforecastFiveDay, FiveDayWindSpeed, FiveDayWindDirectionDescription, FiveDayHumidity, SixDayDate, weatherConditionsSixDayIcon, temperatureforecastSixDay, SixDayWindSpeed, SixDayWindDirectionDescription, SixDayHumidity, weatherAPIDataCurrentTemperature, weatherAPIDataCurrentConditionIcon, weatherAPI01HourDataConditionTime, weatherAPI01HourDataTemperature, weatherAPI01HourDataConditionIcon, weatherAPI02HourDataConditionTime, weatherAPI02HourDataTemperature, weatherAPI02HourDataConditionIcon, weatherAPI03HourDataConditionTime, weatherAPI03HourDataTemperature, weatherAPI03HourDataConditionIcon, weatherAPI04HourDataConditionTime, weatherAPI04HourDataTemperature, weatherAPI04HourDataConditionIcon, weatherAPI05HourDataConditionTime, weatherAPI05HourDataTemperature, weatherAPI05HourDataConditionIcon, weatherAPI06HourDataConditionTime, weatherAPI06HourDataTemperature, weatherAPI06HourDataConditionIcon, weatherAPI07HourDataConditionTime, weatherAPI07HourDataTemperature, weatherAPI07HourDataConditionIcon, weatherAPI08HourDataConditionTime, weatherAPI08HourDataTemperature, weatherAPI08HourDataConditionIcon, weatherAPI09HourDataConditionTime, weatherAPI09HourDataTemperature, weatherAPI09HourDataConditionIcon, weatherAPI10HourDataConditionTime, weatherAPI10HourDataTemperature, weatherAPI10HourDataConditionIcon, weatherAPI11HourDataConditionTime, weatherAPI11HourDataTemperature, weatherAPI11HourDataConditionIcon, weatherAPI12HourDataConditionTime, weatherAPI12HourDataTemperature, weatherAPI12HourDataConditionIcon, weatherAPI13HourDataConditionTime, weatherAPI13HourDataTemperature, weatherAPI13HourDataConditionIcon, weatherAPI14HourDataConditionTime, weatherAPI14HourDataTemperature, weatherAPI14HourDataConditionIcon, weatherAPI15HourDataConditionTime, weatherAPI15HourDataTemperature, weatherAPI15HourDataConditionIcon, weatherAPI16HourDataConditionTime, weatherAPI16HourDataTemperature, weatherAPI16HourDataConditionIcon, weatherAPI17HourDataConditionTime, weatherAPI17HourDataTemperature, weatherAPI17HourDataConditionIcon, weatherAPI18HourDataConditionTime, weatherAPI18HourDataTemperature, weatherAPI18HourDataConditionIcon, weatherAPI19HourDataConditionTime, weatherAPI19HourDataTemperature, weatherAPI19HourDataConditionIcon, weatherAPI20HourDataConditionTime, weatherAPI20HourDataTemperature, weatherAPI20HourDataConditionIcon, weatherAPI21HourDataConditionTime, weatherAPI21HourDataTemperature, weatherAPI21HourDataConditionIcon, weatherAPI22HourDataConditionTime, weatherAPI22HourDataTemperature, weatherAPI22HourDataConditionIcon, weatherAPI23HourDataConditionTime, weatherAPI23HourDataTemperature, weatherAPI23HourDataConditionIcon, strPressure, angle, weatherConditionsToday, strPrecipitationProbability, strVisibilityKM, strVisibilityMiles, visibilityDescription, pollenRiskLevelGrass, pollenCountGrass, pollenCountGrassPercentage, pollenCountColourGrass, pollenRiskLevelTree, pollenCountTree, pollenCountTreePercentage, pollenCountColourTree, pollenRiskLevelWeed, pollenCountWeed, pollenCountWeedPercentage, pollenCountColourWeed
     print("Data", data)
 
 
@@ -2791,6 +3568,28 @@ def weatherapitest():
 
 
     return jsonify(weatherAPIData)
+
+@app.route('/pollencounttest', methods=['GET', 'POST'])
+def pollencounttest():
+    import http.client
+
+    conn = http.client.HTTPSConnection("api.ambeedata.com")
+
+    headers = {
+        'x-api-key': "01a4c1eae8cb507b14ee10ecd1b2c3984e8368ede6224aa2ffcd3d9ada2ce3d7",
+        'Content-type': "application/json"
+    }
+
+    conn.request("GET", "/latest/pollen/by-lat-lng?lat=52.05892202630986&lng=1.2847627151273548", headers=headers)
+
+    res = conn.getresponse()
+    data = res.read()
+
+    decodedData = data.decode("utf-8")
+
+#52.05889042400749, 1.2847440196824491
+#AIzaSyBgf7iRnUCGVXge5biwB2o1K7lxM24kE_8
+    return jsonify(decodedData)
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))  # port number
