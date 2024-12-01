@@ -200,3 +200,54 @@
   font-size: 25px;
   margin-left: 10px;
 }
+
+/* zzzz */
+
+.togglecontainer5 {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.togglecontainer5 .toggle5 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 90px;
+  height: 50px;
+  background: rgb(58, 67, 85);
+  border-radius: 30px;
+}
+
+.togglecontainer5 .toggle5.active {
+  background: rgb(58, 67, 85);
+}
+
+.togglecontainer5 .toggle5 .toggle-button5 {
+  position: relative;
+  top: 5px;
+  left: 5px;
+  width: 40px;
+  height: 40px;
+  background: rgba(231, 108, 69, 1);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.togglecontainer5 .toggle5.active .toggle-button5 {
+  background: rgb(229, 107, 68);
+  left: 45px;
+}
+
+.togglecontainer5 .text5 .unit5 {
+  position: relative;
+  left: 95px;
+  font-size: 25px;
+  margin-left: 10px;
+}

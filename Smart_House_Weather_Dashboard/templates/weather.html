@@ -89,10 +89,30 @@ function animatedToggle() {
 
               <div class="card dashboard-card2">
               <div class="dashboard-content">
-                <h2 style="font-size: 1.3rem">Weather Warnings:</h2>
-                <h3 style="font-size: 2rem">High Wind </h3>
-                  <img src="/static/images/weatherwarning.svg" alt="Weather Warning" style="width:200px;height:200px; position: relative; top: -10px" align="center">
+                <h2 style="font-size: 2rem">Feels Like:</h2>
+                <h3 class="text5" style="font-size: 3.6rem; color: #000000">{{ data[143] }} </h3>
+                  <img src="/static/images/temperature.png" alt="Temperature" style="width:70px;height:150px;position: relative; top: -10px;" align="right">
+                  <div class="togglecontainer5">
+          <div class="toggle5" style="position: relative; top: -30px; left:-40px;">
+            <div class="toggle-button5" onclick="animatedToggle5()"></div>
+          </div>
+          <div class="unit5" style="color: #000000;position: relative; top: -30px; left:-40px; font-size: 40px">°C</div>
+        </div>
 
+        <script>let toggle5 = document.querySelector(".toggle5");
+let text5 = document.querySelector(".text5");
+let unit5 = document.querySelector(".unit5");
+
+function animatedToggle5() {
+  toggle5.classList.toggle("active");
+  if (toggle5.classList.contains("active")) {
+        text5.innerHTML = "{{ data[144] }}";
+    unit5.innerHTML = "°F";
+  } else {
+      text5.innerHTML = "{{ data[143] }}";
+        unit5.innerHTML = "°C";
+  }
+}</script>
               </div>
 
             </div>
