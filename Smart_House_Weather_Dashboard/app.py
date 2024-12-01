@@ -3109,16 +3109,16 @@ def weather():
         if pollenCountTree == 0:
             pollenCountTreePercentage = "0%"
             pollenCountColourTree = "#4CAF50"
-        elif pollenCountTree > 0 and pollenCountTree <= 14:
+        elif pollenRiskLevelTree == "Low":
             pollenCountTreePercentage = "25%"
             pollenCountColourTree = "#4CAF50"
-        elif pollenCountTree >= 15 and pollenCountTree <= 89:
+        elif pollenRiskLevelTree == "Moderate":
             pollenCountTreePercentage = "50%"
             pollenCountColourTree = "#FFEB3B"
-        elif pollenCountTree >= 90 and pollenCountTree <= 1499:
+        elif pollenRiskLevelTree == "High":
             pollenCountTreePercentage = "75%"
             pollenCountColourTree = "#FF9800"
-        elif pollenCountTree >= 1500:
+        elif pollenRiskLevelTree == "Very High" or pollenRiskLevelTree == "Extreme":
             pollenCountTreePercentage = "100%"
             pollenCountColourTree = "#D84315"
 
@@ -3126,16 +3126,16 @@ def weather():
         if pollenCountGrass == 0:
             pollenCountGrassPercentage = "0%"
             pollenCountColourGrass = "#4CAF50"
-        elif pollenCountGrass > 0 and pollenCountGrass <= 4:
+        elif pollenRiskLevelGrass == "Low":
             pollenCountGrassPercentage = "25%"
             pollenCountColourGrass = "#4CAF50"
-        elif pollenCountGrass >= 5 and pollenCountGrass <= 19:
+        elif pollenRiskLevelGrass == "Moderate":
             pollenCountGrassPercentage = "50%"
             pollenCountColourGrass = "#FFEB3B"
-        elif pollenCountGrass >= 20 and pollenCountGrass <= 199:
+        elif pollenRiskLevelGrass == "High":
             pollenCountGrassPercentage = "75%"
             pollenCountColourGrass = "#FF9800"
-        elif pollenCountGrass >= 200:
+        elif pollenRiskLevelGrass == "Very High" or pollenRiskLevelGrass == "Extreme":
             pollenCountGrassPercentage = "100%"
             pollenCountColourGrass = "#D84315"
 
@@ -3143,16 +3143,16 @@ def weather():
         if pollenCountWeed == 0:
             pollenCountWeedPercentage = "0%"
             pollenCountColourWeed = "#4CAF50"
-        elif pollenCountWeed > 0 and pollenCountWeed <= 9:
+        elif pollenRiskLevelWeed == "Low":
             pollenCountWeedPercentage = "25%"
             pollenCountColourWeed = "#4CAF50"
-        elif pollenCountWeed >= 10 and pollenCountWeed <= 49:
+        elif pollenRiskLevelWeed == "Moderate":
             pollenCountWeedPercentage = "50%"
             pollenCountColourWeed = "#FFEB3B"
-        elif pollenCountWeed >= 50 and pollenCountWeed <= 499:
+        elif pollenRiskLevelWeed == "High":
             pollenCountWeedPercentage = "75%"
             pollenCountColourWeed = "#FF9800"
-        elif pollenCountWeed >= 500:
+        elif pollenRiskLevelWeed == "Very High" or pollenRiskLevelWeed == "Extreme":
             pollenCountWeedPercentage = "100%"
             pollenCountColourWeed = "#D84315"
 
