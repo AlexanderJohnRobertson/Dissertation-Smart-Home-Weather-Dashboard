@@ -9,6 +9,9 @@ import calendar
 import re
 import http.client
 import ast
+import csv
+import codecs
+import json
 
 app = Flask(__name__)
 
@@ -3579,6 +3582,25 @@ def pollencounttest():
 #52.05889042400749, 1.2847440196824491
 #AIzaSyBgf7iRnUCGVXge5biwB2o1K7lxM24kE_8
     return jsonify(decodedData)
+
+@app.route('/csvtest', methods=['GET', 'POST'])
+def csvtest():
+    with open('Weather_Link_Outdoor.csv', mode='r', encoding = 'latin') as file:
+        csvFile = csv.reader(file)
+        jsonFile = []
+        for lines in csvFile:
+            jsonFile.append(lines)
+        print(jsonFile)
+
+    #with open('Weather_Link_Outdoor.csv', newline='', encoding = 'latin') as csvfile:
+     #   csvFile = csv.reader(csvfile, delimiter=' ', quotechar='|')
+     #   for row in csvFile:
+      #      csvData = ', '.join(row)
+
+      #  print(csvData)
+       # print("CSV Data")"""
+
+    return jsonify(jsonFile)
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))  # port number

@@ -1,0 +1,50 @@
+TITLE: Smart House Data Curation Project - Weather Station
+
+
+DESCRIPTION: 
+The following data has been extracted from the Weather Station in the Smart House for documentation and exploration purposes.
+
+COLUMNS:
+- Timestamp: Date and time of recorded event (format: DD-MM-YYYY HH:MM
+).
+- Serial Num: Unique identifier for the sensor.
+- Name: Location of the sensor (e.g., Front Door).
+- Mode: Operational mode (e.g., STATE).
+- Alarm: Status of the alarm (e.g., PRE-WARN, RESET).
+- rH: Relative humidity (percentage).
+- Temp: Temperature reading (degrees Celsius).
+
+
+CONTRIBUTORS: 
+Dr. Hannah Steventon 
+Research Fellow Suffolk Sustainability Institute,
+University of Suffolk.
+
+Leroy Okosi
+Masters Data Science & Artificial Intelligence,
+University of Suffolk.
+
+
+LINK & ADMIN ACCESS: 
+https://www.weatherlink.com/
+
+
+ADMINISTRATOR: 
+University of Suffolk Digitech Admin - digitech@uos.ac.uk
+
+
+DATA TIME FRAME | INTERVALS:
+Refer to folder name | 15 minutes.
+
+
+NUMBER OF WEATHER STATIONS & LOCATION:
+1. Weather Station indoor unit - Smart house desk upstairs.
+
+
+CONTACTS:
+If you have problems, questions, ideas or suggestions, please contact: 
+- Hannah Steventon (h.steventon@uos.ac.uk)
+- Digitech administrator (digitech@uos.ac.uk)
+
+
+

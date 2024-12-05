@@ -1,0 +1,43 @@
+TITLE: Smart House Data Curation Project - Invisible System.
+
+
+DESCRIPTION: 
+The following data has been extracted from the invisible system sensors in the Smart House and garden studio for documentation and exploration purposes.
+
+
+CONTRIBUTORS: 
+Dr. Hannah Steventon 
+Research Fellow Suffolk Sustainability Institute,
+University of Suffolk.
+
+Leroy Okosi
+Masters Data Science & Artificial Intelligence,
+University of Suffolk.
+
+
+LINK & ADMIN ACCESS: 
+https://www.realtime-online.com/
+
+
+ADMINISTRATOR: 
+University of Suffolk Digitech Admin - digitech@uos.ac.uk
+
+
+DATA TIME FRAME | INTERVALS:
+Refer to folder name | 5 - 10 minutes
+
+
+NUMBER OF INVISIBLE SYSTEM & LOCATION:
+1. Smart house ground floor | Kitchen (Serial No. 9720646) 131E Temperature, humidity, pressure, VOC & Light.
+
+2. Smart house ground floor | Top of kitchen cabinet EcoLab Ground (T107) (Serial No. 9706107) 105B Temperature, Humidity, CO2.
+
+3. Smart house upstairs | Window/desk facing digitech (Serial No. 9706108) 105B Temperature, Humidity, CO2.
+
+4. NBS Garden Studio (Serial No. 9720644) 131E Temperature, humidity, pressure, VOC & Light.
+
+
+CONTACTS:
+If you have problems, questions, ideas or suggestions, please contact: 
+- Hannah Steventon (h.steventon@uos.ac.uk)
+- Digitech administrator (digitech@uos.ac.uk)
