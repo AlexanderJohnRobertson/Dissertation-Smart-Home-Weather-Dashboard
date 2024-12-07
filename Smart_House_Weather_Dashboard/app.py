@@ -3181,8 +3181,93 @@ def temperature():
     print("Temperature Farenheit String", strTemperatureFarenheit2)
 
 
-    data=strTemperatureCelsius1, strTemperatureCelsius2, strTemperatureFarenheit1, strTemperatureFarenheit2
+
+    with open('Weather_Link_Outdoor.csv', mode='r', encoding = 'latin') as file:
+        csvFile = csv.reader(file)
+        jsonFile = []
+        for lines in csvFile:
+            jsonFile.append(lines)
+        print(jsonFile)
+
+        temperatures24Hours = []
+        timeHours = []
+        pointerTemperature = 1
+        pointerTime = 1
+        csvLength = len(jsonFile)
+
+        for i in range(1, 25):
+            lastLine = jsonFile[csvLength - pointerTemperature]
+            lastLineTemperature = lastLine[1]
+            lastLineTemperature = int(lastLineTemperature)
+            lastLineTime = lastLine[0]
+            timeHour = lastLineTime.split(" ")
+            timeHour = timeHour[1]
+            timeHour = timeHour.split(":")
+            timeHour = timeHour[0]
+            timeHours.append(timeHour)
+            temperatures24Hours.append(lastLineTemperature)
+            pointerTemperature += 12
+            pointerTime += 12
+            temperatureData = {"hour": timeHour, "temperature": lastLineTemperature}
+        print("24 Hour Temperatures", temperatures24Hours)
+        print("24 Hour Time", timeHours)
+
+        graphtest = [{'hour': '00', 'temperature': 8},]
+
+        hour0 = timeHours[0]
+        temperature0 = temperatures24Hours[0]
+        hour1 = timeHours[1]
+        temperature1 = temperatures24Hours[1]
+        hour2 = timeHours[2]
+        temperature2 = temperatures24Hours[2]
+        hour3 = timeHours[3]
+        temperature3 = temperatures24Hours[3]
+        hour4 = timeHours[4]
+        temperature4 = temperatures24Hours[4]
+        hour5 = timeHours[5]
+        temperature5 = temperatures24Hours[5]
+        hour6 = timeHours[6]
+        temperature6 = temperatures24Hours[6]
+        hour7 = timeHours[7]
+        temperature7 = temperatures24Hours[7]
+        hour8 = timeHours[8]
+        temperature8 = temperatures24Hours[8]
+        hour9 = timeHours[9]
+        temperature9 = temperatures24Hours[9]
+        hour10 = timeHours[10]
+        temperature10 = temperatures24Hours[10]
+        hour11 = timeHours[11]
+        temperature11 = temperatures24Hours[11]
+        hour12 = timeHours[12]
+        temperature12 = temperatures24Hours[12]
+        hour13 = timeHours[13]
+        temperature13 = temperatures24Hours[13]
+        hour14 = timeHours[14]
+        temperature14 = temperatures24Hours[14]
+        hour15 = timeHours[15]
+        temperature15 = temperatures24Hours[15]
+        hour16 = timeHours[16]
+        temperature16 = temperatures24Hours[16]
+        hour17 = timeHours[17]
+        temperature17 = temperatures24Hours[17]
+        hour18 = timeHours[18]
+        temperature18 = temperatures24Hours[18]
+        hour19 = timeHours[19]
+        temperature19 = temperatures24Hours[19]
+        hour20 = timeHours[20]
+        temperature20 = temperatures24Hours[20]
+        hour21 = timeHours[21]
+        temperature21 = temperatures24Hours[21]
+        hour22 = timeHours[22]
+        temperature22 = temperatures24Hours[22]
+        hour23 = timeHours[23]
+        temperature23 = temperatures24Hours[23]
+
+
+    data = strTemperatureCelsius1, strTemperatureCelsius2, strTemperatureFarenheit1, strTemperatureFarenheit2, graphtest, hour0, temperature0, hour1, temperature1, hour2, temperature2, hour3, temperature3, hour4, temperature4, hour5, temperature5, hour6, temperature6, hour7, temperature7, hour8, temperature8, hour9, temperature9, hour10, temperature10, hour11, temperature11, hour12, temperature12, hour13, temperature13, hour14, temperature14, hour15, temperature15, hour16, temperature16, hour17, temperature17, hour18, temperature18, hour19, temperature19, hour20, temperature20, hour21, temperature21, hour22, temperature22, hour23, temperature23
     print("Data", data)
+    print("Data 4", data[4])
+
 
     return render_template('temperature.html', data=data)
 
@@ -3235,7 +3320,92 @@ def humidity():
     averageHumidity = round(averageHumidity, 1)
     strAverageHumidity = str(averageHumidity) + "%"
 
-    data = strHumidity1, strHumidity2, strAverageHumidity
+    with open('Weather_Link_Outdoor.csv', mode='r', encoding = 'latin') as file:
+        csvFile = csv.reader(file)
+        jsonFile = []
+        for lines in csvFile:
+            jsonFile.append(lines)
+        print(jsonFile)
+
+        humidities24Hours = []
+        timeHours = []
+        pointerHumidity = 1
+        pointerTime = 1
+        csvLength = len(jsonFile)
+
+        for i in range(1, 25):
+            lastLine = jsonFile[csvLength - pointerHumidity]
+            lastLineHumidity = lastLine[4]
+            lastLineHumidity = int(lastLineHumidity)
+            lastLineTime = lastLine[0]
+            timeHour = lastLineTime.split(" ")
+            timeHour = timeHour[1]
+            timeHour = timeHour.split(":")
+            timeHour = timeHour[0]
+            timeHours.append(timeHour)
+            humidities24Hours.append(lastLineHumidity)
+            pointerHumidity += 12
+            pointerTime += 12
+            temperatureData = {"hour": timeHour, "temperature": lastLineHumidity}
+        print("24 Hour Temperatures", humidities24Hours)
+        print("24 Hour Time", timeHours)
+
+        graphtest = [{'hour': '00', 'temperature': 8},]
+
+        hour0 = timeHours[0]
+        temperature0 = humidities24Hours[0]
+        hour1 = timeHours[1]
+        temperature1 = humidities24Hours[1]
+        hour2 = timeHours[2]
+        temperature2 = humidities24Hours[2]
+        hour3 = timeHours[3]
+        temperature3 = humidities24Hours[3]
+        hour4 = timeHours[4]
+        temperature4 = humidities24Hours[4]
+        hour5 = timeHours[5]
+        temperature5 = humidities24Hours[5]
+        hour6 = timeHours[6]
+        temperature6 = humidities24Hours[6]
+        hour7 = timeHours[7]
+        temperature7 = humidities24Hours[7]
+        hour8 = timeHours[8]
+        temperature8 = humidities24Hours[8]
+        hour9 = timeHours[9]
+        temperature9 = humidities24Hours[9]
+        hour10 = timeHours[10]
+        temperature10 = humidities24Hours[10]
+        hour11 = timeHours[11]
+        temperature11 = humidities24Hours[11]
+        hour12 = timeHours[12]
+        temperature12 = humidities24Hours[12]
+        hour13 = timeHours[13]
+        temperature13 = humidities24Hours[13]
+        hour14 = timeHours[14]
+        temperature14 = humidities24Hours[14]
+        hour15 = timeHours[15]
+        temperature15 = humidities24Hours[15]
+        hour16 = timeHours[16]
+        temperature16 = humidities24Hours[16]
+        hour17 = timeHours[17]
+        temperature17 = humidities24Hours[17]
+        hour18 = timeHours[18]
+        temperature18 = humidities24Hours[18]
+        hour19 = timeHours[19]
+        temperature19 = humidities24Hours[19]
+        hour20 = timeHours[20]
+        temperature20 = humidities24Hours[20]
+        hour21 = timeHours[21]
+        temperature21 = humidities24Hours[21]
+        hour22 = timeHours[22]
+        temperature22 = humidities24Hours[22]
+        hour23 = timeHours[23]
+        temperature23 = humidities24Hours[23]
+
+
+
+
+
+    data = strHumidity1, strHumidity2, strAverageHumidity, graphtest, hour0, temperature0, hour1, temperature1, hour2, temperature2, hour3, temperature3, hour4, temperature4, hour5, temperature5, hour6, temperature6, hour7, temperature7, hour8, temperature8, hour9, temperature9, hour10, temperature10, hour11, temperature11, hour12, temperature12, hour13, temperature13, hour14, temperature14, hour15, temperature15, hour16, temperature16, hour17, temperature17, hour18, temperature18, hour19, temperature19, hour20, temperature20, hour21, temperature21, hour22, temperature22, hour23, temperature23
     print("Data", data)
 
     return render_template('humidity.html', data=data)
@@ -3485,6 +3655,7 @@ def weathertest():
     print("UV Index Percentage", UV_index_percentage)
     print("UV Index Colour", UV_index_colour)
     print("AQI Percentage", aqi_percentage)
+
 
     data = strTemperatureCelsius1, strHumidity, aqi, aqi_description, strWindSpeed, windDirectionDescription, UV_index, UV_index_description, UV_index_percentage, UV_index_colour, aqi_percentage, aqi_colour, compass
     print("Data", data)

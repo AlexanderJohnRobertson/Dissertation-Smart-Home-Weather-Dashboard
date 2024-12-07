@@ -133,7 +133,7 @@ body {
 
 .dashboard-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
   grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
   padding: 14px 0 20px;
