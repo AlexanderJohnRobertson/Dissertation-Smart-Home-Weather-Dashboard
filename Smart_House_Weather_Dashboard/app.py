@@ -1,6 +1,6 @@
-"""Flask application for the Smart Home Weather Dashboard Author: S275931."""
+"""Flask application for the Dissertation Smart Home Weather Dashboard Author: S275931."""
 
-
+# Import the required libraries & modules
 from flask import Flask, render_template, jsonify
 import os
 import hashlib, requests, time, hmac
@@ -13,17 +13,18 @@ import csv
 import codecs
 import json
 
-app = Flask(__name__)
+app = Flask(__name__) # Create a Flask application
 
 
 @app.route('/', methods=['GET', 'POST'])
-def index():  # put application's code here
-    api_key = 'e9acjapvjih3rpbcnjnj8c8kfsnyivkb'
-    api_secret = 'p9ltsbyvv137bkskvuerqfs7s8qbe8gy'
-    station_id = 142820
+def index():
+    """Render the index.html template (landing dashboard page)"""
+    api_key = 'e9acjapvjih3rpbcnjnj8c8kfsnyivkb' # WeatherLink API Key
+    api_secret = 'p9ltsbyvv137bkskvuerqfs7s8qbe8gy' # WeatherLink API Secret
+    station_id = 142820 # Weather Station ID
 
     # current time
-    local_time = int(time.time())
+    local_time = int(time.time()) # Get the current local time
 
     # api signature
     data_to_sign = f"api-key{api_key}station-id{station_id}t{local_time}"
@@ -31,57 +32,58 @@ def index():  # put application's code here
         api_secret.encode('utf-8'),
         data_to_sign.encode('utf-8'),
         hashlib.sha256
-    ).hexdigest()
+    ).hexdigest() # Create the API signature
 
-    url = f"https://api.weatherlink.com/v2/current/{station_id}"
+    url = f"https://api.weatherlink.com/v2/current/{station_id}" # WeatherLink API URL
     params = {
         "api-key": api_key,
         "t": local_time,
         "api-signature": signature
-    }
+    } # WeatherLink API parameters
 
-    response = requests.get(url, params=params)
-    current_weather = response.json()
-    sensors = current_weather['sensors']
-    sensors = sensors[2]
-    sensorData = sensors['data']
-    sensorData = sensorData[0]
-    temperatureFarenheit = sensorData['temp']
+    response = requests.get(url, params=params) # Get the WeatherLink API response
+    current_weather = response.json() # Convert the response to JSON
+    sensors = current_weather['sensors'] # Get the sensors data
+    sensors = sensors[2] # Get the sensor data for the temperature sensor
+    sensorData = sensors['data'] # Get the sensor data
+    sensorData = sensorData[0] # Get the first sensor data
+    temperatureFarenheit = sensorData['temp'] # Get the temperature in Farenheit
     print("Temperature Farenheit", temperatureFarenheit)
-    temperatureCelsius = (temperatureFarenheit - 32) * 5.0 / 9.0
+    temperatureCelsius = (temperatureFarenheit - 32) * 5.0 / 9.0 # Convert Farenheit to Celsius
     temperatureCelsius = round(temperatureCelsius, 1)  # round to 1 decimal place
     print("Temperature Celsius", temperatureCelsius)
-    strTemperatureCelsius = str(temperatureCelsius) + "°C"
+    strTemperatureCelsius = str(temperatureCelsius) + "°C" # Convert the temperature to a string
     print("Temperature Celsius String", strTemperatureCelsius)
-    strTemperatureFarenheit = str(temperatureFarenheit) + "°F"
+    strTemperatureFarenheit = str(temperatureFarenheit) + "°F" # Convert the temperature to a string
     print("Temperature Farenheit String", strTemperatureFarenheit)
 
 
 
-    response = requests.get(url, params=params)
-    current_weather = response.json()
-    sensors = current_weather['sensors']
-    sensors = sensors[2]
-    sensorData = sensors['data']
-    sensorData = sensorData[0]
-    humidity = sensorData['hum']
+    response = requests.get(url, params=params) # Get the WeatherLink API response
+    current_weather = response.json() # Convert the response to JSON
+    sensors = current_weather['sensors'] # Get the sensors data
+    sensors = sensors[2] # Get the sensor data for the temperature sensor
+    sensorData = sensors['data'] # Get the sensor data
+    sensorData = sensorData[0] # Get the first sensor data
+    humidity = sensorData['hum'] # Get the humidity
     print("Temperature Farenheit", humidity)
-    strHumidity = str(humidity) + "%"
+    strHumidity = str(humidity) + "%" # Convert the humidity to a string
     print("Humidity String", strHumidity)
 
 
-    data = strTemperatureCelsius, strHumidity, strTemperatureFarenheit
+    data = strTemperatureCelsius, strHumidity, strTemperatureFarenheit # Create a tuple of the data to send to front end
     print("Data", data)
-    return render_template('index.html', data=data)
+    return render_template('index.html', data=data) # Render the index.html template with the data
 
 @app.route('/weather', methods=['GET', 'POST'])
 def weather():
-    api_key = 'e9acjapvjih3rpbcnjnj8c8kfsnyivkb'
-    api_secret = 'p9ltsbyvv137bkskvuerqfs7s8qbe8gy'
-    station_id = 142820
+    """Render the weather.html template (weather dashboard page with weather data)"""
+    api_key = 'e9acjapvjih3rpbcnjnj8c8kfsnyivkb' # WeatherLink API Key
+    api_secret = 'p9ltsbyvv137bkskvuerqfs7s8qbe8gy' # WeatherLink API Secret
+    station_id = 142820 # Weather Station ID
 
     # current time
-    local_time = int(time.time())
+    local_time = int(time.time()) # Get the current local time
 
     # api signature
     data_to_sign = f"api-key{api_key}station-id{station_id}t{local_time}"
@@ -89,139 +91,140 @@ def weather():
         api_secret.encode('utf-8'),
         data_to_sign.encode('utf-8'),
         hashlib.sha256
-    ).hexdigest()
+    ).hexdigest() # Create the API signature
 
-    url = f"https://api.weatherlink.com/v2/current/{station_id}"
+    url = f"https://api.weatherlink.com/v2/current/{station_id}" # WeatherLink API URL
     params = {
         "api-key": api_key,
         "t": local_time,
         "api-signature": signature
-    }
+    } # WeatherLink API parameters
 
-    response = requests.get(url, params=params)
-    current_weather = response.json()
-    sensors = current_weather['sensors']
-    sensors = sensors[2]
-    sensorData = sensors['data']
-    sensorData = sensorData[0]
-    temperatureFarenheit = sensorData['temp']
+    response = requests.get(url, params=params) # Get the WeatherLink API response
+    current_weather = response.json() # Convert the response to JSON
+    sensors = current_weather['sensors'] # Get the sensors data
+    sensors = sensors[2] # Get the sensor data for the temperature sensor
+    sensorData = sensors['data'] # Get the sensor data
+    sensorData = sensorData[0] # Get the first sensor data
+    temperatureFarenheit = sensorData['temp'] # Get the temperature in Farenheit
     print("Temperature Farenheit", temperatureFarenheit)
-    temperatureCelsius = (temperatureFarenheit - 32) * 5.0 / 9.0
+    temperatureCelsius = (temperatureFarenheit - 32) * 5.0 / 9.0 # Convert Farenheit to Celsius
     temperatureCelsius1 = round(temperatureCelsius, 1)  # round to 1 decimal place
     print("Temperature Celsius", temperatureCelsius1)
-    strTemperatureCelsius1 = str(temperatureCelsius1) + "°C"
+    strTemperatureCelsius1 = str(temperatureCelsius1) + "°C" # Convert the temperature to a string
     print("Temperature Celsius String", strTemperatureCelsius1)
-    strTemperatureFarenheit = str(temperatureFarenheit) + "°F"
+    strTemperatureFarenheit = str(temperatureFarenheit) + "°F" # Convert the temperature to a string
     print("Temperature Farenheit String", strTemperatureFarenheit)
 
-    sensors = current_weather['sensors']
-    sensors = sensors[2]
-    sensorData = sensors['data']
-    sensorData = sensorData[0]
-    humidity = sensorData['hum']
-    humidity = int(humidity)
+    sensors = current_weather['sensors'] # Get the sensors data
+    sensors = sensors[2] # Get the sensor data for the temperature sensor
+    sensorData = sensors['data'] # Get the sensor data
+    sensorData = sensorData[0] # Get the first sensor data
+    humidity = sensorData['hum'] # Get the humidity
+    humidity = int(humidity) # Convert the humidity to an integer
     print("Humidity ", humidity)
-    strHumidity = str(humidity) + "%"
+    strHumidity = str(humidity) + "%" # Convert the humidity to a string
     print("Humidity String", strHumidity)
 
-    sensors = current_weather['sensors']
-    sensors = sensors[4]
-    sensorData = sensors['data']
-    sensorData = sensorData[0]
-    aqi = sensorData['aqi_val']
+    sensors = current_weather['sensors'] # Get the sensors data
+    sensors = sensors[4] # Get the sensor data for the rain sensor
+    sensorData = sensors['data'] # Get the sensor data
+    sensorData = sensorData[0] # Get the first sensor data
+    aqi = sensorData['aqi_val'] # Get air quality index value
     print("AQI ", aqi)
-    aqi_description = sensorData['aqi_desc']
+    aqi_description = sensorData['aqi_desc'] # Get air quality index description
     print("AQI Description", aqi_description)
-    aqi = int(aqi)
+    aqi = int(aqi) # Convert the air quality index to an integer
 
+    # AQI Colour and Percentage for bar chart on weather dashboard
     if aqi == 0:
         aqi_percentage ="0%"
-        aqi_colour = "#00FF00"
+        aqi_colour = "#00FF00" # Green
     elif aqi== 1:
         aqi_percentage = "10%"
-        aqi_colour = "#7aff00"
+        aqi_colour = "#7aff00" # Light Green
     elif aqi == 2:
         aqi_percentage = "20%"
-        aqi_colour = "#a1ff00"
+        aqi_colour = "#a1ff00" # Light Green
     elif aqi == 3:
         aqi_percentage = "30%"
-        aqi_colour = "#c7ff00"
+        aqi_colour = "#c7ff00" # Light Green
     elif aqi == 4:
         aqi_percentage = "40%"
-        aqi_colour = "#faff00"
+        aqi_colour = "#faff00" # Yellow
     elif aqi == 5:
         aqi_percentage = "50%"
-        aqi_colour = "#ffea00"
+        aqi_colour = "#ffea00" # Yellow
     elif aqi == 6:
         aqi_percentage = "60%"
-        aqi_colour = "#ffc400"
+        aqi_colour = "#ffc400" # Orange
     elif aqi == 7:
         aqi_percentage = "70%"
-        aqi_colour = "#ff9100"
+        aqi_colour = "#ff9100" # Orange
     elif aqi == 8:
         aqi_percentage = "80%"
-        aqi_colour = "#ff5e00"
+        aqi_colour = "#ff5e00" # Orange
     elif aqi == 9:
         aqi_percentage = "90%"
-        aqi_colour = "#ff3700"
+        aqi_colour = "#ff3700" # Red
     elif aqi == 10:
         aqi_percentage = "100%"
-        aqi_colour = "#ff0000"
+        aqi_colour = "#ff0000" # Red
 
 
-    sensors = current_weather['sensors']
-    sensors = sensors[2]
-    sensorData = sensors['data']
-    sensorData = sensorData[0]
-    windSpeed = sensorData['wind_speed_last']
-    windSpeedKMH = windSpeed * 1.60934
-    windSpeedKMH = round(windSpeedKMH, 1)
-    windSpeedKMH = int(windSpeedKMH)
+    sensors = current_weather['sensors'] # Get the sensors data
+    sensors = sensors[2] # Get the sensor data for the temperature sensor
+    sensorData = sensors['data'] # Get the sensor data
+    sensorData = sensorData[0] # Get the first sensor data
+    windSpeed = sensorData['wind_speed_last'] # Get the wind speed
+    windSpeedKMH = windSpeed * 1.60934 # Convert wind speed to km/h
+    windSpeedKMH = round(windSpeedKMH, 1) # round to 1 decimal place
+    windSpeedKMH = int(windSpeedKMH) # Convert the wind speed to an integer
     print("Wind Speed ", windSpeed)
     print("Wind Speed KMH", windSpeedKMH)
-    strWindSpeed = str(windSpeed) + " mph"
-    strWindSpeedKMH = str(windSpeedKMH) + " km/h"
+    strWindSpeed = str(windSpeed) + " mph" # Convert the wind speed to a string mph
+    strWindSpeedKMH = str(windSpeedKMH) + " km/h" # Convert the wind speed to a string kmh
 
-    sensors = current_weather['sensors']
-    sensors = sensors[2]
-    sensorData = sensors['data']
-    sensorData = sensorData[0]
-    windDirection = sensorData['wind_dir_last']
-    print("Wind Direction ", windDirection)
+    sensors = current_weather['sensors'] # Get the sensors data
+    sensors = sensors[2] # Get the sensor data for the temperature sensor
+    sensorData = sensors['data'] # Get the sensor data
+    sensorData = sensorData[0] # Get the first sensor data
+    windDirection = sensorData['wind_dir_last'] # Get the wind direction
+    print("Wind Direction ", windDirection) # Print the wind direction
     if windDirection >=0 and windDirection < 22.5 or windDirection >= 337.5 and windDirection <= 360:
-        windDirectionDescription = "North"
-        compass = "/static/images/compassNorth.svg"
+        windDirectionDescription = "North" # Wind direction description as North
+        compass = "/static/images/compassNorth.svg" # Compass image for wind direction as North
     elif windDirection >= 22.5 and windDirection < 67.5:
-        windDirectionDescription = "North East"
-        compass = "/static/images/compassNorthEast.svg"
+        windDirectionDescription = "North East" # Wind direction description as North East
+        compass = "/static/images/compassNorthEast.svg" # Compass image for wind direction as North East
     elif windDirection >= 67.5 and windDirection < 112.5:
-        windDirectionDescription = "East"
-        compass = "/static/images/compassEast.svg"
+        windDirectionDescription = "East" # Wind direction description as East
+        compass = "/static/images/compassEast.svg" # Compass image for wind direction as East
     elif windDirection >= 112.5 and windDirection < 157.5:
-        windDirectionDescription = "South East"
-        compass = "/static/images/compassSouthEast.svg"
+        windDirectionDescription = "South East" # Wind direction description as South East
+        compass = "/static/images/compassSouthEast.svg" # Compass image for wind direction as South East
     elif windDirection >= 157.5 and windDirection < 202.5:
-        windDirectionDescription = "South"
-        compass = "/static/images/compassSouth.svg"
+        windDirectionDescription = "South" # Wind direction description as South
+        compass = "/static/images/compassSouth.svg" # Compass image for wind direction as South
     elif windDirection >= 202.5 and windDirection < 247.5:
-        windDirectionDescription = "South West"
-        compass = "/static/images/compassSouthWest.svg"
+        windDirectionDescription = "South West" # Wind direction description as South West
+        compass = "/static/images/compassSouthWest.svg" # Compass image for wind direction as South West
     elif windDirection >= 247.5 and windDirection < 292.5:
-        windDirectionDescription = "West"
-        compass = "/static/images/compassWest.svg"
+        windDirectionDescription = "West" # Wind direction description as West
+        compass = "/static/images/compassWest.svg" # Compass image for wind direction as West
     elif windDirection >= 292.5 and windDirection < 337.5:
-        windDirectionDescription = "North West"
-        compass = "/static/images/compassNorthWest.svg"
+        windDirectionDescription = "North West"   # Wind direction description as North West
+        compass = "/static/images/compassNorthWest.svg" # Compass image for wind direction as North West
 
     print("Wind Direction Description", windDirectionDescription)
 
-    sensors = current_weather['sensors']
-    sensors = sensors[2]
-    sensorData = sensors['data']
-    sensorData = sensorData[0]
-    UV_index= sensorData['uv_index']
+    sensors = current_weather['sensors'] # Get the sensors data
+    sensors = sensors[2] # Get the sensor data for the temperature sensor
+    sensorData = sensors['data'] # Get the sensor data
+    sensorData = sensorData[0] # Get the first sensor data
+    UV_index= sensorData['uv_index'] # Get the UV index
     print("UV Index", UV_index)
-    if UV_index <= 2:
+    if UV_index <= 2: # UV index description based on the UV index value
         UV_index_description = " Low"
     elif UV_index >= 3 and UV_index <= 5:
         UV_index_description = " Moderate"
@@ -232,39 +235,40 @@ def weather():
 
     UV_index = int(UV_index)
 
+    # UV Index Colour and Percentage for bar chart on weather dashboard
     if UV_index == 0:
         UV_index_percentage ="0%"
-        UV_index_colour = "#00FF00"
+        UV_index_colour = "#00FF00" # Green
     elif UV_index == 1:
         UV_index_percentage = "10%"
-        UV_index_colour = "#7aff00"
+        UV_index_colour = "#7aff00" # Light Green
     elif UV_index == 2:
         UV_index_percentage = "20%"
-        UV_index_colour = "#a1ff00"
+        UV_index_colour = "#a1ff00" # Light Green
     elif UV_index == 3:
         UV_index_percentage = "30%"
-        UV_index_colour = "#c7ff00"
+        UV_index_colour = "#c7ff00" # Light Green
     elif UV_index == 4:
         UV_index_percentage = "40%"
-        UV_index_colour = "#faff00"
+        UV_index_colour = "#faff00" # Yellow
     elif UV_index == 5:
         UV_index_percentage = "50%"
-        UV_index_colour = "#ffea00"
+        UV_index_colour = "#ffea00" # Yellow
     elif UV_index == 6:
         UV_index_percentage = "60%"
-        UV_index_colour = "#ffc400"
+        UV_index_colour = "#ffc400" # Orange
     elif UV_index == 7:
         UV_index_percentage = "70%"
-        UV_index_colour = "#ff9100"
+        UV_index_colour = "#ff9100" # Orange
     elif UV_index == 8:
         UV_index_percentage = "80%"
-        UV_index_colour = "#ff5e00"
+        UV_index_colour = "#ff5e00" # Orange
     elif UV_index == 9:
         UV_index_percentage = "90%"
-        UV_index_colour = "#ff3700"
+        UV_index_colour = "#ff3700" # Red
     elif UV_index == 10:
         UV_index_percentage = "100%"
-        UV_index_colour = "#ff0000"
+        UV_index_colour = "#ff0000" # Red
 
 
     print("UV Index Description", UV_index_description)
@@ -273,27 +277,28 @@ def weather():
     print("UV Index Colour", UV_index_colour)
     print("AQI Percentage", aqi_percentage)
 
-    openWeather_API_Key = 'cdb2f81a0c0053ff42b1db37fdb0b39b'
-    openWeatherID = 2646057
-    local_time = int(time.time())
+    openWeather_API_Key = 'cdb2f81a0c0053ff42b1db37fdb0b39b' # OpenWeather API Key
+    openWeatherID = 2646057 # OpenWeather City ID for London
+    local_time = int(time.time()) # Get the current local time
     params = {
         "t": local_time
-    }
+    } # OpenWeather API parameters
     openWeatherURL = 'https://api.openweathermap.org/data/2.5/forecast?id=' + str(
-        openWeatherID) + '&appid=' + openWeather_API_Key
-    response = requests.get(openWeatherURL, params=params)
-    openWeatherData = response.json()
+        openWeatherID) + '&appid=' + openWeather_API_Key # OpenWeather API URL
+    response = requests.get(openWeatherURL, params=params) # Get the OpenWeather API response
+    openWeatherData = response.json() # Convert the response to JSON
     print("openWeatherData", openWeatherData)
     print(type(openWeatherData))
-    openWeatherData = openWeatherData['list']
-    openWeatherDataToday = openWeatherData[0]
+    openWeatherData = openWeatherData['list'] # Get the list of weather data
+    openWeatherDataToday = openWeatherData[0] # Get the weather data for today
     print(openWeatherDataToday)
-    OpenWeatherDataTodayWeather = openWeatherDataToday['weather']
-    OpenWeatherDataTodayWeather = OpenWeatherDataTodayWeather[0]
+    OpenWeatherDataTodayWeather = openWeatherDataToday['weather'] # Get the weather conditions for today
+    OpenWeatherDataTodayWeather = OpenWeatherDataTodayWeather[0] # Get the first weather condition for today
     print(OpenWeatherDataTodayWeather)
-    weatherConditionsToday = OpenWeatherDataTodayWeather['main']
+    weatherConditionsToday = OpenWeatherDataTodayWeather['main'] # Get the main weather condition for today
     print(weatherConditionsToday)
 
+    # Set the weather icon based on the weather conditions
     if weatherConditionsToday == "Rain":
         weatherConditionsTodayIcon = "/static/images/rain.svg"
     elif weatherConditionsToday == "Clouds":
@@ -309,15 +314,17 @@ def weather():
     elif weatherConditionsToday == "Hail":
         weatherConditionsTodayIcon = "/static/images/hailstones.svg"
 
-    temperatureforecastToday = round(temperatureCelsius1, 0)
-    temperatureforecastToday = int(temperatureforecastToday)
-    temperatureforecastToday = str(temperatureforecastToday) + "°C"
+    temperatureforecastToday = round(temperatureCelsius1, 0) # round to 0 decimal places
+    temperatureforecastToday = int(temperatureforecastToday) # Convert the temperature to an integer
+    temperatureforecastToday = str(temperatureforecastToday) + "°C" # Convert the temperature to a string
 
-    pressure = openWeatherDataToday['main']
-    pressure = pressure['pressure']
-    pressure = round(pressure, 0)
-    pressure = int(pressure)
-    strPressure = str(pressure) + " hPa/mbar"
+    pressure = openWeatherDataToday['main'] # Get the pressure for today
+    pressure = pressure['pressure'] # Get the pressure value
+    pressure = round(pressure, 0) # round to 0 decimal places
+    pressure = int(pressure) # Convert the pressure to an integer
+    strPressure = str(pressure) + " hPa/mbar" # Convert the pressure to a string
+
+    # Set pressure dial angle based on the pressure value
     if pressure >= 700 and pressure <= 710:
         angle= 4.5
     elif pressure >= 711 and pressure <= 720:
@@ -399,25 +406,26 @@ def weather():
     elif pressure >= 1091 and pressure <= 1100:
         angle = 180
 
-    precipitationProbability = openWeatherDataToday['pop']
-    precipitationProbability = precipitationProbability * 100
-    precipitationProbability = round(precipitationProbability, 0)
-    precipitationProbability = int(precipitationProbability)
-    strPrecipitationProbability = str(precipitationProbability) + "%"
+    precipitationProbability = openWeatherDataToday['pop'] # Get the precipitation probability for today
+    precipitationProbability = precipitationProbability * 100 # Convert the precipitation probability to a percentage
+    precipitationProbability = round(precipitationProbability, 0) # round to 0 decimal places
+    precipitationProbability = int(precipitationProbability) # Convert the precipitation probability to an integer
+    strPrecipitationProbability = str(precipitationProbability) + "%" # Convert the precipitation probability to a string
     print("Precipitation Probability", strPrecipitationProbability)
 
-    visibility = openWeatherDataToday['visibility']
-    visibilityKM = visibility / 1000
-    visibilityKM = round(visibilityKM, 0)
-    visibilityKM = int(visibilityKM)
-    strVisibilityKM = str(visibilityKM) + " Kilometres"
+    visibility = openWeatherDataToday['visibility'] # Get the visibility for today
+    visibilityKM = visibility / 1000 # Convert the visibility to kilometres
+    visibilityKM = round(visibilityKM, 0) # round to 0 decimal places
+    visibilityKM = int(visibilityKM) # Convert the visibility to an integer
+    strVisibilityKM = str(visibilityKM) + " Kilometres" # Convert the visibility to a string
     print("Visibility", strVisibilityKM)
-    visibilityMiles = visibilityKM / 1.60934
-    visibilityMiles = round(visibilityMiles, 0)
-    visibilityMiles = int(visibilityMiles)
-    strVisibilityMiles = str(visibilityMiles) + " Miles"
+    visibilityMiles = visibilityKM / 1.60934 # Convert the visibility to miles
+    visibilityMiles = round(visibilityMiles, 0) # round to 0 decimal places
+    visibilityMiles = int(visibilityMiles) # Convert the visibility to an integer
+    strVisibilityMiles = str(visibilityMiles) + " Miles" # Convert the visibility to a string
     print("Visibility", strVisibilityMiles)
 
+    # Visibility Description based on the visibility value
     if visibilityKM >= 0 and visibilityKM <= 1:
         visibilityDescription = "Very Poor"
     elif visibilityKM >= 2 and visibilityKM <= 4:
@@ -431,35 +439,36 @@ def weather():
     elif visibilityKM >= 16:
         visibilityDescription = "Perfectly Clear"
 
-    feelsLike = openWeatherDataToday['main']
-    feelsLike = feelsLike['feels_like']
-    feelsLikeCelcius = (feelsLike - 273.15)
-    feelsLikeFarenheit = (feelsLike - 273.15) * 9/5 + 32
-    feelsLikeFarenheit = round(feelsLikeFarenheit, 1)
-    strFeelsLikeFarenheit = str(feelsLikeFarenheit) + "°F"
-    feelsLikeCelcius = round(feelsLikeCelcius, 1)
-    strFeelsLikeCelcius = str(feelsLikeCelcius) + "°C"
+    feelsLike = openWeatherDataToday['main'] # Get the feels like temperature for today based on the temperature, wind speed, humidity wether conditions
+    feelsLike = feelsLike['feels_like'] # Get the feels like temperature value
+    feelsLikeCelcius = (feelsLike - 273.15) # Convert the feels like temperature to Celsius
+    feelsLikeFarenheit = (feelsLike - 273.15) * 9/5 + 32 # Convert the feels like temperature to Farenheit
+    feelsLikeFarenheit = round(feelsLikeFarenheit, 1) # round to 1 decimal place
+    strFeelsLikeFarenheit = str(feelsLikeFarenheit) + "°F"  # Convert the feels like temperature to a string
+    feelsLikeCelcius = round(feelsLikeCelcius, 1) # round to 1 decimal place
+    strFeelsLikeCelcius = str(feelsLikeCelcius) + "°C" # Convert the feels like temperature to a string
     print("Feels Like", strFeelsLikeCelcius)
     print("Feels Like Farenheit", strFeelsLikeFarenheit)
 
-    todayDate = openWeatherDataToday['dt_txt']
-    todayDate = todayDate.split(" ")
-    todayDate = todayDate[0]
-    todayDate = date.fromisoformat(todayDate)
-    todayDate = calendar.day_name[todayDate.weekday()]
-    todayDate = str(todayDate)
-    todayDate = todayDate[0:3]
+    todayDate = openWeatherDataToday['dt_txt'] # Get the date for today
+    todayDate = todayDate.split(" ") # Split the date
+    todayDate = todayDate[0] # Get the date
+    todayDate = date.fromisoformat(todayDate) # Convert the date to a date object
+    todayDate = calendar.day_name[todayDate.weekday()] # Get the day name for the date
+    todayDate = str(todayDate) # Convert the day name to a string
+    todayDate = todayDate[0:3] # Get the first 3 characters of the day name
     print(todayDate)
 
     #Tomorrow weather
-    openWeatherDataTomorrow = openWeatherData[8]
+    openWeatherDataTomorrow = openWeatherData[8] # Get the weather data for tomorrow
     print(openWeatherDataTomorrow)
-    OpenWeatherDataTomorrowWeather = openWeatherDataTomorrow['weather']
+    OpenWeatherDataTomorrowWeather = openWeatherDataTomorrow['weather'] # Get the weather conditions for tomorrow
     OpenWeatherDataTomorrowWeather = OpenWeatherDataTomorrowWeather[0]
-    print(OpenWeatherDataTomorrowWeather)
+    print(OpenWeatherDataTomorrowWeather) # Get the first weather condition for tomorrow
     weatherConditionsTomorrow = OpenWeatherDataTomorrowWeather['main']
-    print(weatherConditionsTomorrow)
+    print(weatherConditionsTomorrow) # Get the main weather condition for tomorrow
 
+    # Set the weather icon based on the weather conditions
     if weatherConditionsTomorrow == "Rain":
         weatherConditionsTomorrowIcon = "/static/images/rain.svg"
     elif weatherConditionsTomorrow == "Clouds":
@@ -475,33 +484,34 @@ def weather():
     elif weatherConditionsTomorrow == "Hail":
         weatherConditionsTomorrowIcon = "/static/images/hailstones.svg"
 
-    temperatureforecastTomorrow = openWeatherDataTomorrow['main']
-    temperatureforecastTomorrow = temperatureforecastTomorrow['temp']
-    temperatureforecastTomorrow = (temperatureforecastTomorrow - 273.15)
-    temperatureforecastTomorrow = round(temperatureforecastTomorrow, 0)
-    temperatureforecastTomorrow = int(temperatureforecastTomorrow)
-    temperatureforecastTomorrow = str(temperatureforecastTomorrow) + "°C"
+    temperatureforecastTomorrow = openWeatherDataTomorrow['main'] # Get the temperature forecast for tomorrow
+    temperatureforecastTomorrow = temperatureforecastTomorrow['temp'] # Get the temperature value
+    temperatureforecastTomorrow = (temperatureforecastTomorrow - 273.15) # Convert the temperature to Celsius
+    temperatureforecastTomorrow = round(temperatureforecastTomorrow, 0) # round to 0 decimal places
+    temperatureforecastTomorrow = int(temperatureforecastTomorrow) # Convert the temperature to an integer
+    temperatureforecastTomorrow = str(temperatureforecastTomorrow) + "°C" # Convert the temperature to a string
 
-    tomorrowDate = openWeatherDataTomorrow['dt_txt']
-    tomorrowDate = tomorrowDate.split(" ")
-    tomorrowDate = tomorrowDate[0]
-    tomorrowDate = date.fromisoformat(tomorrowDate)
-    tomorrowDate = calendar.day_name[tomorrowDate.weekday()]
-    tomorrowDate = str(tomorrowDate)
-    tomorrowDate = tomorrowDate[0:3]
+    tomorrowDate = openWeatherDataTomorrow['dt_txt'] # Get the date for tomorrow
+    tomorrowDate = tomorrowDate.split(" ") # Split the date
+    tomorrowDate = tomorrowDate[0] # Get the date
+    tomorrowDate = date.fromisoformat(tomorrowDate) # Convert the date to a date object
+    tomorrowDate = calendar.day_name[tomorrowDate.weekday()] # Get the day name for the date
+    tomorrowDate = str(tomorrowDate) # Convert the day name to a string
+    tomorrowDate = tomorrowDate[0:3] # Get the first 3 characters of the day name
     print(tomorrowDate)
 
-    tomorrowWindSpeed = openWeatherDataTomorrow['wind']
-    tomorrowWindSpeed = tomorrowWindSpeed['speed']
-    tomorrowWindSpeed = tomorrowWindSpeed / 0.447
-    tomorrowWindSpeed = round(tomorrowWindSpeed, 0)
-    tomorrowWindSpeed = int(tomorrowWindSpeed)
-    tomorrowWindSpeed = str(tomorrowWindSpeed) + "mph"
+    tomorrowWindSpeed = openWeatherDataTomorrow['wind'] # Get the wind speed for tomorrow
+    tomorrowWindSpeed = tomorrowWindSpeed['speed'] # Get the wind speed value
+    tomorrowWindSpeed = tomorrowWindSpeed / 0.447  # Convert the wind speed to mph
+    tomorrowWindSpeed = round(tomorrowWindSpeed, 0) # round to 0 decimal places
+    tomorrowWindSpeed = int(tomorrowWindSpeed) # Convert the wind speed to an integer
+    tomorrowWindSpeed = str(tomorrowWindSpeed) + "mph" # Convert the wind speed to a string
     print("Tomorrow Wind Speed", tomorrowWindSpeed)
 
-    tomorrowWindDirection = openWeatherDataTomorrow['wind']
-    tomorrowWindDirection = tomorrowWindDirection['deg']
+    tomorrowWindDirection = openWeatherDataTomorrow['wind'] # Get the wind direction for tomorrow
+    tomorrowWindDirection = tomorrowWindDirection['deg'] # Get the wind direction value
     print("Tomorrow Wind Direction", tomorrowWindDirection)
+    # Set the wind direction description based on the wind direction value
     if tomorrowWindDirection >= 0 and tomorrowWindDirection < 22.5 or tomorrowWindDirection >= 337.5 and tomorrowWindDirection <= 360:
         tomorrowWindDirectionDescription = "North"
     elif tomorrowWindDirection >= 22.5 and tomorrowWindDirection < 67.5:
@@ -521,20 +531,20 @@ def weather():
 
     print("Tomorrow Wind Direction Description", tomorrowWindDirectionDescription)
 
-    tomorrowHumidity = openWeatherDataTomorrow['main']
-    tomorrowHumidity = tomorrowHumidity['humidity']
-    tomorrowHumidity = str(tomorrowHumidity) + "%"
+    tomorrowHumidity = openWeatherDataTomorrow['main'] # Get the humidity for tomorrow
+    tomorrowHumidity = tomorrowHumidity['humidity']  # Get the humidity value
+    tomorrowHumidity = str(tomorrowHumidity) + "%" # Convert the humidity to a string
     print("Tomorrow Humidity", tomorrowHumidity)
 
-    precipitationProbabilityTomorrow = openWeatherDataTomorrow['pop']
-    precipitationProbabilityTomorrow = precipitationProbabilityTomorrow * 100
-    precipitationProbabilityTomorrow = round(precipitationProbabilityTomorrow, 0)
-    precipitationProbabilityTomorrow = int(precipitationProbabilityTomorrow)
-    strPrecipitationProbabilityTomorrow = str(precipitationProbabilityTomorrow) + "%"
+    precipitationProbabilityTomorrow = openWeatherDataTomorrow['pop'] # Get the precipitation probability for tomorrow
+    precipitationProbabilityTomorrow = precipitationProbabilityTomorrow * 100 # Convert the precipitation probability to a percentage
+    precipitationProbabilityTomorrow = round(precipitationProbabilityTomorrow, 0) # round to 0 decimal places
+    precipitationProbabilityTomorrow = int(precipitationProbabilityTomorrow) # Convert the precipitation probability to an integer
+    strPrecipitationProbabilityTomorrow = str(precipitationProbabilityTomorrow) + "%" # Convert the precipitation probability to a string
     print("Precipitation Probability Tomorrow", strPrecipitationProbabilityTomorrow)
 
 
-    #3Day
+    # 3 Day Weather - Similar code as Tomorrow Weather
     openWeatherDataThreeDay = openWeatherData[16]
     print(openWeatherDataThreeDay)
     OpenWeatherDataThreeDayWeather = openWeatherDataThreeDay['weather']
@@ -618,7 +628,7 @@ def weather():
     print("Precipitation Probability Three Day", strPrecipitationProbabilityThreeDay)
 
 
-    #4 Day
+    # 4 Day Weather - Similar code as 4 Day Weather
     openWeatherDataFourDay = openWeatherData[24]
     print(openWeatherDataFourDay)
     OpenWeatherDataFourDayWeather = openWeatherDataFourDay['weather']
@@ -698,7 +708,7 @@ def weather():
     strPrecipitationProbabilityFourDay = str(precipitationProbabilityFourDay) + "%"
     print("Precipitation Probability Four Day", strPrecipitationProbabilityFourDay)
 
-    #5 Day
+    # 5 Day Weather - Similar code as 5 Day Weather
     openWeatherDataFiveDay = openWeatherData[32]
     print(openWeatherDataFiveDay)
     OpenWeatherDataFiveDayWeather = openWeatherDataFiveDay['weather']
@@ -780,7 +790,7 @@ def weather():
     print("Precipitation Probability Five Day", strPrecipitationProbabilityFiveDay)
 
 
-    #6 Day
+    # 6 Day Weather - Similar code as 6 Day Weather (not in use in the current version due to technical issues)
 
     SixDayHumidity = 1
     SixDayWindSpeed = 1
@@ -794,58 +804,58 @@ def weather():
 
     #Weather API Hourly Forecast
     # Current Weather
-    weatherAPI_key = '33d91967a1b04700807201804242711'
-    weatherAPIurl = 'https://api.weatherapi.com/v1/forecast.json?key=' + weatherAPI_key + '&q=IP5 3RE&days=1&aqi=yes&alerts=yes'
+    weatherAPI_key = '33d91967a1b04700807201804242711' # Weather API Key
+    weatherAPIurl = 'https://api.weatherapi.com/v1/forecast.json?key=' + weatherAPI_key + '&q=IP5 3RE&days=1&aqi=yes&alerts=yes' # Weather API URL
     print(weatherAPIurl)
-    response = requests.get(weatherAPIurl)
-    weatherAPIData = response.json()
+    response = requests.get(weatherAPIurl) # Get the weather API data
+    weatherAPIData = response.json() # Convert the weather API data to JSON
     print(weatherAPIData)
     print(type(weatherAPIData))
-    weatherAPIDataCurrent = weatherAPIData['current']
+    weatherAPIDataCurrent = weatherAPIData['current'] # Get the current weather data
     print(weatherAPIDataCurrent)
-    weatherAPIDataCurrentTemperature = weatherAPIDataCurrent['temp_c']
+    weatherAPIDataCurrentTemperature = weatherAPIDataCurrent['temp_c'] # Get the current temperature
     print(weatherAPIDataCurrentTemperature)
-    weatherAPIDataCurrentTemperature = round(weatherAPIDataCurrentTemperature, 0)
-    weatherAPIDataCurrentTemperature = int(weatherAPIDataCurrentTemperature)
-    weatherAPIDataCurrentTemperature = str(weatherAPIDataCurrentTemperature) + "°C"
+    weatherAPIDataCurrentTemperature = round(weatherAPIDataCurrentTemperature, 0) # round to 0 decimal places
+    weatherAPIDataCurrentTemperature = int(weatherAPIDataCurrentTemperature) # Convert the temperature to an integer
+    weatherAPIDataCurrentTemperature = str(weatherAPIDataCurrentTemperature) + "°C" # Convert the temperature to a string
     print(weatherAPIDataCurrentTemperature)
-    weatherAPIDataCurrentCondition = weatherAPIDataCurrent['condition']
+    weatherAPIDataCurrentCondition = weatherAPIDataCurrent['condition'] # Get the current weather condition
     print(weatherAPIDataCurrentCondition)
-    weatherAPIDataCurrentCondition = weatherAPIDataCurrentCondition['text']
+    weatherAPIDataCurrentCondition = weatherAPIDataCurrentCondition['text'] # Get the current weather condition text
     print(weatherAPIDataCurrentCondition)
 
-    regexThunderCurrent = re.findall("Thunder|thunder", weatherAPIDataCurrentCondition)
-    if regexThunderCurrent != []:
-        regexThunderCurrent = regexThunderCurrent[0]
-        regexThunderCurrent = regexThunderCurrent.split()
-    regexRainCurrent = re.findall("Rain|rain|Shower|shower|Drizzle|drizzle", weatherAPIDataCurrentCondition)
-    if regexRainCurrent != []:
-        regexRainCurrent = regexRainCurrent[0]
-        regexRainCurrent = regexRainCurrent.split()
-    regexCloudCurrent = re.findall("Cloud|cloud|Overcast|overcast|Cloudy|cloudy", weatherAPIDataCurrentCondition)
-    if regexCloudCurrent != []:
-        regexCloudCurrent = regexCloudCurrent[0]
-        regexCloudCurrent = regexCloudCurrent.split()
-    regexClearCurrent = re.findall("Clear|clear|Sun|sun", weatherAPIDataCurrentCondition)
-    if regexClearCurrent != []:
-        regexClearCurrent = regexClearCurrent[0]
-        regexClearCurrent = regexClearCurrent.split()
-    regexSnowCurrent = re.findall("Snow|snow|Sleet|sleet", weatherAPIDataCurrentCondition)
-    if regexSnowCurrent != []:
-        regexSnowCurrent = regexSnowCurrent[0]
-        regexSnowCurrent = regexSnowCurrent.split()
-    regexWindCurrent = re.findall("Wind|wind", weatherAPIDataCurrentCondition)
-    if regexWindCurrent != []:
-        regexWindCurrent = regexWindCurrent[0]
-        regexWindCurrent = regexWindCurrent.split()
-    regexHailCurrent = re.findall("Hail|hail", weatherAPIDataCurrentCondition)
-    if regexHailCurrent != []:
-        regexHailCurrent = regexHailCurrent[0]
-        regexHailCurrent = regexHailCurrent.split()
-    regexMistCurrent = re.findall("Mist|mist|Fog|fog", weatherAPIDataCurrentCondition)
-    if regexMistCurrent != []:
-        regexMistCurrent = regexMistCurrent[0]
-        regexMistCurrent = regexMistCurrent.split()
+    regexThunderCurrent = re.findall("Thunder|thunder", weatherAPIDataCurrentCondition) # Find the word Thunder in the current weather condition
+    if regexThunderCurrent != []: # If the word Thunder is found
+        regexThunderCurrent = regexThunderCurrent[0] # Get the first word Thunder
+        regexThunderCurrent = regexThunderCurrent.split() # Split the word Thunder
+    regexRainCurrent = re.findall("Rain|rain|Shower|shower|Drizzle|drizzle", weatherAPIDataCurrentCondition) # Find the word Rain in the current weather condition
+    if regexRainCurrent != []: # If the word Rain is found
+        regexRainCurrent = regexRainCurrent[0] # Get the first word Rain
+        regexRainCurrent = regexRainCurrent.split() # Split the word Rain
+    regexCloudCurrent = re.findall("Cloud|cloud|Overcast|overcast|Cloudy|cloudy", weatherAPIDataCurrentCondition) # Find the word Cloud in the current weather condition
+    if regexCloudCurrent != []: # If the word Cloud is found
+        regexCloudCurrent = regexCloudCurrent[0] # Get the first word Cloud
+        regexCloudCurrent = regexCloudCurrent.split() # Split the word Cloud
+    regexClearCurrent = re.findall("Clear|clear|Sun|sun", weatherAPIDataCurrentCondition) # Find the word Clear in the current weather condition
+    if regexClearCurrent != []: # If the word Clear is found
+        regexClearCurrent = regexClearCurrent[0] # Get the first word Clear
+        regexClearCurrent = regexClearCurrent.split() # Split the word Clear
+    regexSnowCurrent = re.findall("Snow|snow|Sleet|sleet", weatherAPIDataCurrentCondition) # Find the word Snow in the current weather condition
+    if regexSnowCurrent != []: # If the word Snow is found
+        regexSnowCurrent = regexSnowCurrent[0] # Get the first word Snow
+        regexSnowCurrent = regexSnowCurrent.split() # Split the word Snow
+    regexWindCurrent = re.findall("Wind|wind", weatherAPIDataCurrentCondition) # Find the word Wind in the current weather condition
+    if regexWindCurrent != []: # If the word Wind is found
+        regexWindCurrent = regexWindCurrent[0] # Get the first word Wind
+        regexWindCurrent = regexWindCurrent.split() # Split the word Wind
+    regexHailCurrent = re.findall("Hail|hail", weatherAPIDataCurrentCondition) # Find the word Hail in the current weather condition
+    if regexHailCurrent != []: # If the word Hail is found
+        regexHailCurrent = regexHailCurrent[0] # Get the first word Hail
+        regexHailCurrent = regexHailCurrent.split() # Split the word Hail
+    regexMistCurrent = re.findall("Mist|mist|Fog|fog", weatherAPIDataCurrentCondition) # Find the word Mist in the current weather condition
+    if regexMistCurrent != []: # If the word Mist is found
+        regexMistCurrent = regexMistCurrent[0] # Get the first word Mist
+        regexMistCurrent = regexMistCurrent.split() # Split the word Mist
     else:
         pass
 
@@ -860,34 +870,34 @@ def weather():
     print("Regex Hail", regexHailCurrent)
     print("Regex Mist", regexMistCurrent)
 
-    if regexThunderCurrent == ['Thunder'] or regexThunderCurrent == ['thunder']:
-        weatherAPIDataCurrentConditionIcon = "/static/images/thunderstorms.svg"
+    if regexThunderCurrent == ['Thunder'] or regexThunderCurrent == ['thunder']: # If the word Thunder is found
+        weatherAPIDataCurrentConditionIcon = "/static/images/thunderstorms.svg" # Set the weather icon to thunderstorms
         print("Regex: Thunder")
-    elif regexRainCurrent == ['Rain'] or regexRainCurrent == ['rain'] or regexRainCurrent == ['Shower'] or regexRainCurrent == ['shower'] or regexRainCurrent == ['Drizzle'] or regexRainCurrent == ['drizzle']:
-        weatherAPIDataCurrentConditionIcon = "/static/images/rain.svg"
+    elif regexRainCurrent == ['Rain'] or regexRainCurrent == ['rain'] or regexRainCurrent == ['Shower'] or regexRainCurrent == ['shower'] or regexRainCurrent == ['Drizzle'] or regexRainCurrent == ['drizzle']: # If the word Rain is found
+        weatherAPIDataCurrentConditionIcon = "/static/images/rain.svg" # Set the weather icon to rain
         print("Regex: Rain")
-    elif regexCloudCurrent == ['Cloud'] or regexCloudCurrent == ['cloud'] or regexCloudCurrent == ['Overcast'] or regexCloudCurrent == ['overcast'] or regexCloudCurrent == ['Cloudy'] or regexCloudCurrent == ['cloudy']:
-        weatherAPIDataCurrentConditionIcon = "/static/images/cloudy.svg"
+    elif regexCloudCurrent == ['Cloud'] or regexCloudCurrent == ['cloud'] or regexCloudCurrent == ['Overcast'] or regexCloudCurrent == ['overcast'] or regexCloudCurrent == ['Cloudy'] or regexCloudCurrent == ['cloudy']: # If the word Cloud is found
+        weatherAPIDataCurrentConditionIcon = "/static/images/cloudy.svg" # Set the weather icon to cloudy
         print("Regex: Cloud")
-    elif regexClearCurrent == ['Clear'] or regexClearCurrent == ['clear'] or regexClearCurrent == ['Sun'] or regexClearCurrent == ['sun']:
-        weatherAPIDataCurrentConditionIcon = "/static/images/sunny.svg"
+    elif regexClearCurrent == ['Clear'] or regexClearCurrent == ['clear'] or regexClearCurrent == ['Sun'] or regexClearCurrent == ['sun']: # If the word Clear is found
+        weatherAPIDataCurrentConditionIcon = "/static/images/sunny.svg" # Set the weather icon to sunny
         print("Regex: Clear")
-    elif regexSnowCurrent == ['Snow'] or regexSnowCurrent == ['snow'] or regexSnowCurrent == ['Sleet'] or regexSnowCurrent == ['sleet']:
-        weatherAPIDataCurrentConditionIcon = "/static/images/snow.svg"
+    elif regexSnowCurrent == ['Snow'] or regexSnowCurrent == ['snow'] or regexSnowCurrent == ['Sleet'] or regexSnowCurrent == ['sleet']: # If the word Snow is found
+        weatherAPIDataCurrentConditionIcon = "/static/images/snow.svg" # Set the weather icon to snow
         print("Regex: Snow")
-    elif regexWindCurrent == ['Wind'] or regexWindCurrent == ['wind']:
-        weatherAPIDataCurrentConditionIcon = "/static/images/wind.svg"
+    elif regexWindCurrent == ['Wind'] or regexWindCurrent == ['wind']: # If the word Wind is found
+        weatherAPIDataCurrentConditionIcon = "/static/images/wind.svg" # Set the weather icon to wind
         print("Regex: Wind")
-    elif regexHailCurrent == ['Hail'] or regexHailCurrent == ['hail']:
-        weatherAPIDataCurrentConditionIcon = "/static/images/hailstones.svg"
+    elif regexHailCurrent == ['Hail'] or regexHailCurrent == ['hail']: # If the word Hail is found
+        weatherAPIDataCurrentConditionIcon = "/static/images/hailstones.svg" # Set the weather icon to hail
         print("Regex: Hail")
-    elif regexMistCurrent == ['Mist'] or regexMistCurrent == ['mist'] or regexMistCurrent == ['Fog'] or regexMistCurrent == ['fog']:
-        weatherAPIDataCurrentConditionIcon = "/static/images/mist.svg"
+    elif regexMistCurrent == ['Mist'] or regexMistCurrent == ['mist'] or regexMistCurrent == ['Fog'] or regexMistCurrent == ['fog']: # If the word Mist is found
+        weatherAPIDataCurrentConditionIcon = "/static/images/mist.svg" # Set the weather icon to mist
         print("Regex: Mist")
 
     print("Weather API Current Condition Icon", weatherAPIDataCurrentConditionIcon)
 
-    #01 Hour Forecast
+    #01 Hour Forecast - Similar code as Current Weather
     weatherAPI01HourData = weatherAPIData['forecast']
     weatherAPI01HourData = weatherAPI01HourData['forecastday']
     weatherAPI01HourData = weatherAPI01HourData[0]
@@ -981,7 +991,7 @@ def weather():
 
     print("Weather API 01 Hour Condition Icon", weatherAPI01HourDataConditionIcon)
 
-    #02 Hour Forecast
+    #02 Hour Forecast - Similar code as 01 Hour Forecast
     weatherAPI02HourData = weatherAPIData['forecast']
     weatherAPI02HourData = weatherAPI02HourData['forecastday']
     weatherAPI02HourData = weatherAPI02HourData[0]
@@ -1165,7 +1175,7 @@ def weather():
         print("Regex: Mist")
 
 
-    #04 Hour Forecast
+    #04 Hour Forecast - Similar code as 03 Hour Forecast
     weatherAPI04HourData = weatherAPIData['forecast']
     weatherAPI04HourData = weatherAPI04HourData['forecastday']
     weatherAPI04HourData = weatherAPI04HourData[0]
@@ -1256,7 +1266,7 @@ def weather():
         print("Regex: Mist")
 
 
-    #05 Hour Forecast
+    #05 Hour Forecast - Similar code as 04 Hour Forecast
     weatherAPI05HourData = weatherAPIData['forecast']
     weatherAPI05HourData = weatherAPI05HourData['forecastday']
     weatherAPI05HourData = weatherAPI05HourData[0]
@@ -1346,7 +1356,7 @@ def weather():
         weatherAPI05HourDataConditionIcon = "/static/images/mist.svg"
         print("Regex: Mist")
 
-    #06 Hour Forecast
+    #06 Hour Forecast - Similar code as 05 Hour Forecast
     weatherAPI06HourData = weatherAPIData['forecast']
     weatherAPI06HourData = weatherAPI06HourData['forecastday']
     weatherAPI06HourData = weatherAPI06HourData[0]
@@ -1436,7 +1446,7 @@ def weather():
         weatherAPI06HourDataConditionIcon = "/static/images/mist.svg"
         print("Regex: Mist")
 
-    #07 Hour Forecast
+    #07 Hour Forecast - Similar code as 06 Hour Forecast
     weatherAPI07HourData = weatherAPIData['forecast']
     weatherAPI07HourData = weatherAPI07HourData['forecastday']
     weatherAPI07HourData = weatherAPI07HourData[0]
@@ -1527,7 +1537,7 @@ def weather():
         print("Regex: Mist")
 
 
-    #08 Hour Forecast
+    #08 Hour Forecast - Similar code as 07 Hour Forecast
     weatherAPI08HourData = weatherAPIData['forecast']
     weatherAPI08HourData = weatherAPI08HourData['forecastday']
     weatherAPI08HourData = weatherAPI08HourData[0]
@@ -1617,7 +1627,7 @@ def weather():
         weatherAPI08HourDataConditionIcon = "/static/images/mist.svg"
         print("Regex: Mist")
 
-    #09 Hour Forecast
+    #09 Hour Forecast - Similar code as 08 Hour Forecast
     weatherAPI09HourData = weatherAPIData['forecast']
     weatherAPI09HourData = weatherAPI09HourData['forecastday']
     weatherAPI09HourData = weatherAPI09HourData[0]
@@ -1707,7 +1717,7 @@ def weather():
         weatherAPI09HourDataConditionIcon = "/static/images/mist.svg"
         print("Regex: Mist")
 
-    #10 Hour Forecast
+    #10 Hour Forecast - Similar code as 09 Hour Forecast
     weatherAPI10HourData = weatherAPIData['forecast']
     weatherAPI10HourData = weatherAPI10HourData['forecastday']
     weatherAPI10HourData = weatherAPI10HourData[0]
@@ -1798,7 +1808,7 @@ def weather():
         print("Regex: Mist")
 
 
-    #11 Hour Forecast
+    #11 Hour Forecast - Similar code as 10 Hour Forecast
     weatherAPI11HourData = weatherAPIData['forecast']
     weatherAPI11HourData = weatherAPI11HourData['forecastday']
     weatherAPI11HourData = weatherAPI11HourData[0]
@@ -1888,7 +1898,7 @@ def weather():
         weatherAPI11HourDataConditionIcon = "/static/images/mist.svg"
         print("Regex: Mist")
 
-    #12 Hour Forecast
+    #12 Hour Forecast - Similar code as 11 Hour Forecast
     weatherAPI12HourData = weatherAPIData['forecast']
     weatherAPI12HourData = weatherAPI12HourData['forecastday']
     weatherAPI12HourData = weatherAPI12HourData[0]
@@ -1978,7 +1988,7 @@ def weather():
         weatherAPI12HourDataConditionIcon = "/static/images/mist.svg"
         print("Regex: Mist")
 
-    #13 Hour Forecast
+    #13 Hour Forecast - Similar code as 12 Hour Forecast
     weatherAPI13HourData = weatherAPIData['forecast']
     weatherAPI13HourData = weatherAPI13HourData['forecastday']
     weatherAPI13HourData = weatherAPI13HourData[0]
@@ -2068,7 +2078,7 @@ def weather():
         weatherAPI13HourDataConditionIcon = "/static/images/mist.svg"
         print("Regex: Mist")
 
-    #14 Hour Forecast
+    #14 Hour Forecast - Similar code as 13 Hour Forecast
     weatherAPI14HourData = weatherAPIData['forecast']
     weatherAPI14HourData = weatherAPI14HourData['forecastday']
     weatherAPI14HourData = weatherAPI14HourData[0]
@@ -2158,7 +2168,7 @@ def weather():
         weatherAPI14HourDataConditionIcon = "/static/images/mist.svg"
         print("Regex: Mist")
 
-    #15 Hour Forecast
+    #15 Hour Forecast - Similar code as 14 Hour Forecast
     weatherAPI15HourData = weatherAPIData['forecast']
     weatherAPI15HourData = weatherAPI15HourData['forecastday']
     weatherAPI15HourData = weatherAPI15HourData[0]
@@ -2248,7 +2258,7 @@ def weather():
         weatherAPI15HourDataConditionIcon = "/static/images/mist.svg"
         print("Regex: Mist")
 
-    #16 Hour Forecast
+    #16 Hour Forecast - Similar code as 15 Hour Forecast
     weatherAPI16HourData = weatherAPIData['forecast']
     weatherAPI16HourData = weatherAPI16HourData['forecastday']
     weatherAPI16HourData = weatherAPI16HourData[0]
@@ -2339,7 +2349,7 @@ def weather():
         print("Regex: Mist")
 
 
-    #17 Hour Forecast
+    #17 Hour Forecast - Similar code as 16 Hour Forecast
     weatherAPI17HourData = weatherAPIData['forecast']
     weatherAPI17HourData = weatherAPI17HourData['forecastday']
     weatherAPI17HourData = weatherAPI17HourData[0]
@@ -2429,7 +2439,7 @@ def weather():
         weatherAPI17HourDataConditionIcon = "/static/images/mist.svg"
         print("Regex: Mist")
 
-    #18 Hour Forecast
+    #18 Hour Forecast - Similar code as 17 Hour Forecast
     weatherAPI18HourData = weatherAPIData['forecast']
     weatherAPI18HourData = weatherAPI18HourData['forecastday']
     weatherAPI18HourData = weatherAPI18HourData[0]
@@ -2519,7 +2529,7 @@ def weather():
         weatherAPI18HourDataConditionIcon = "/static/images/mist.svg"
         print("Regex: Mist")
 
-    #19 Hour Forecast
+    #19 Hour Forecast - Similar code as 18 Hour Forecast
     weatherAPI19HourData = weatherAPIData['forecast']
     weatherAPI19HourData = weatherAPI19HourData['forecastday']
     weatherAPI19HourData = weatherAPI19HourData[0]
@@ -2611,7 +2621,7 @@ def weather():
 
     print("weatherAPI19HourDataConditionIcon", weatherAPI19HourDataConditionIcon)
 
-    # 20 Hour Forecast
+    # 20 Hour Forecast - Similar code as 19 Hour Forecast
     weatherAPI20HourData = weatherAPIData['forecast']
     weatherAPI20HourData = weatherAPI20HourData['forecastday']
     weatherAPI20HourData = weatherAPI20HourData[0]
@@ -2701,7 +2711,7 @@ def weather():
         weatherAPI20HourDataConditionIcon = "/static/images/mist.svg"
         print("Regex: Mist")
 
-    # 21 Hour Forecast
+    # 21 Hour Forecast - Similar code as 20 Hour Forecast
     weatherAPI21HourData = weatherAPIData['forecast']
     weatherAPI21HourData = weatherAPI21HourData['forecastday']
     weatherAPI21HourData = weatherAPI21HourData[0]
@@ -2792,7 +2802,7 @@ def weather():
         weatherAPI21HourDataConditionIcon = "/static/images/mist.svg"
         print("Regex: Mist")
 
-    # 22 Hour Forecast
+    # 22 Hour Forecast - Similar code as 21 Hour Forecast
     weatherAPI22HourData = weatherAPIData['forecast']
     weatherAPI22HourData = weatherAPI22HourData['forecastday']
     weatherAPI22HourData = weatherAPI22HourData[0]
@@ -2882,7 +2892,7 @@ def weather():
         weatherAPI22HourDataConditionIcon = "/static/images/mist.svg"
         print("Regex: Mist")
 
-    # 23 Hour Forecast
+    # 23 Hour Forecast - Similar code as 22 Hour Forecast
     weatherAPI23HourData = weatherAPIData['forecast']
     weatherAPI23HourData = weatherAPI23HourData['forecastday']
     weatherAPI23HourData = weatherAPI23HourData[0]
@@ -2973,35 +2983,37 @@ def weather():
         print("Regex: Mist")
 
 
-    try:
-        conn = http.client.HTTPSConnection("api.ambeedata.com")
+    try: # Pollen Count Data API
+        conn = http.client.HTTPSConnection("api.ambeedata.com") # API Connection
 
         headers = {
             'x-api-key': "01a4c1eae8cb507b14ee10ecd1b2c3984e8368ede6224aa2ffcd3d9ada2ce3d7",
             'Content-type': "application/json"
-        }
+        } # API Headers
 
-        conn.request("GET", "/latest/pollen/by-lat-lng?lat=52.05892202630986&lng=1.2847627151273548", headers=headers)
+        conn.request("GET", "/latest/pollen/by-lat-lng?lat=52.05892202630986&lng=1.2847627151273548", headers=headers) # API Request
 
-        res = conn.getresponse()
-        data = res.read()
+        res = conn.getresponse() # API Response
+        data = res.read() # API Data
 
-        pollenData = data.decode("utf-8")
-        pollenData = ast.literal_eval(pollenData)
-        print("Pollen Data: ", pollenData)
-        print(type(pollenData))
-        pollenData = pollenData['data']
-        pollenData = pollenData[0]
-        pollenRisk = pollenData['Risk']
+        pollenData = data.decode("utf-8") # API Data Decode
+        pollenData = ast.literal_eval(pollenData) # API Data Literal Evaluation
+        print("Pollen Data: ", pollenData) # API Data Print
+        print(type(pollenData)) # API Data Type
+        pollenData = pollenData['data'] # Pollen Data
+        pollenData = pollenData[0]  # Pollen Data
+        pollenRisk = pollenData['Risk'] # Pollen Risk
         print("Pollen Risk: ", pollenRisk)
-        pollenRiskGrass = pollenRisk['grass_pollen']
+        pollenRiskGrass = pollenRisk['grass_pollen'] # Pollen Risk Grass
         print("Pollen Risk Grass: ", pollenRiskGrass)
-        pollenRiskTree = pollenRisk['tree_pollen']
+        pollenRiskTree = pollenRisk['tree_pollen'] # Pollen Risk Tree
         print("Pollen Risk Tree: ", pollenRiskTree)
-        pollenRiskWeed = pollenRisk['weed_pollen']
+        pollenRiskWeed = pollenRisk['weed_pollen'] # Pollen Risk Weeds
         print("Pollen Risk Weed: ", pollenRiskWeed)
         pollenRisk = str(pollenRisk)
 
+        # Set Pollen Risk Level for each pollen type
+        # Set Pollen Risk Level for grass pollen
         if "Extreme" in pollenRiskGrass:
             pollenRiskLevelGrass = "Extreme"
         elif "Very High" in pollenRiskGrass or "Very high" in pollenRiskGrass:
@@ -3013,6 +3025,7 @@ def weather():
         elif "Low" in pollenRiskGrass:
             pollenRiskLevelGrass = "Low"
 
+        # Set Pollen Risk Level for tree pollen
         if "Extreme" in pollenRiskTree:
             pollenRiskLevelTree = "Extreme"
         elif "Very High" in pollenRiskTree or "Very high" in pollenRiskTree:
@@ -3024,6 +3037,7 @@ def weather():
         elif "Low" in pollenRiskTree:
             pollenRiskLevelTree = "Low"
 
+        # Set Pollen Risk Level for weed pollen
         if "Extreme" in pollenRiskWeed:
             pollenRiskLevelWeed = "Extreme"
         elif "Very High" in pollenRiskWeed or "Very high" in pollenRiskWeed:
@@ -3039,32 +3053,34 @@ def weather():
 
         print("Pollen Risk Level: ", pollenRiskLevelGrass, pollenRiskLevelTree, pollenRiskLevelWeed)
 
-        pollenCount = pollenData['Count']
+        pollenCount = pollenData['Count'] # Pollen Count
         print("Pollen Count: ", pollenCount)
-        pollenCountTree = pollenCount['tree_pollen']
+        pollenCountTree = pollenCount['tree_pollen'] # Pollen Count Tree
         print("Pollen Count Tree: ", pollenCountTree)
-        pollenCountGrass = pollenCount['grass_pollen']
+        pollenCountGrass = pollenCount['grass_pollen'] # Pollen Count Grass
         print("Pollen Count Grass: ", pollenCountGrass)
-        pollenCountWeed = pollenCount['weed_pollen']
+        pollenCountWeed = pollenCount['weed_pollen'] # Pollen Count Weeds
         print("Pollen Count Weed: ", pollenCountWeed)
 
+        # Set Pollen Count for each pollen type (percentage and bar chart colour)
+        # Set Pollen Count for tree pollen
         if pollenCountTree == 0:
             pollenCountTreePercentage = "0%"
-            pollenCountColourTree = "#4CAF50"
+            pollenCountColourTree = "#4CAF50" # Green
         elif pollenRiskLevelTree == "Low":
             pollenCountTreePercentage = "25%"
-            pollenCountColourTree = "#4CAF50"
+            pollenCountColourTree = "#4CAF50" # Green
         elif pollenRiskLevelTree == "Moderate":
             pollenCountTreePercentage = "50%"
-            pollenCountColourTree = "#FFEB3B"
+            pollenCountColourTree = "#FFEB3B" # Yellow
         elif pollenRiskLevelTree == "High":
             pollenCountTreePercentage = "75%"
-            pollenCountColourTree = "#FF9800"
+            pollenCountColourTree = "#FF9800" # Orange
         elif pollenRiskLevelTree == "Very High" or pollenRiskLevelTree == "Extreme":
             pollenCountTreePercentage = "100%"
-            pollenCountColourTree = "#D84315"
+            pollenCountColourTree = "#D84315" # Red
 
-
+        # Set Pollen Count for grass pollen
         if pollenCountGrass == 0:
             pollenCountGrassPercentage = "0%"
             pollenCountColourGrass = "#4CAF50"
@@ -3081,7 +3097,7 @@ def weather():
             pollenCountGrassPercentage = "100%"
             pollenCountColourGrass = "#D84315"
 
-
+        # Set Pollen Count for weed pollen
         if pollenCountWeed == 0:
             pollenCountWeedPercentage = "0%"
             pollenCountColourWeed = "#4CAF50"
@@ -3099,7 +3115,7 @@ def weather():
             pollenCountColourWeed = "#D84315"
 
 
-    except UnboundLocalError:
+    except UnboundLocalError: # Error Handling for Pollen Count Data API is API is not available
         pollenRiskLevel = "Error Retrieving Pollen Count"
         pollenCountValue = "N/A"
         pollenCountPercentage = "0%"
@@ -3118,22 +3134,22 @@ def weather():
         pollenRiskLevelWeed = "Error Retrieving Pollen Count"
 
 
-
+    # Set data to be passed to the front end
     data = strTemperatureCelsius1, strHumidity, aqi, aqi_description, strWindSpeed, windDirectionDescription, UV_index, UV_index_description, UV_index_percentage, UV_index_colour, aqi_percentage, aqi_colour, compass, strTemperatureFarenheit, strWindSpeedKMH, openWeatherDataToday, temperatureforecastToday, weatherConditionsTodayIcon, tomorrowDate, weatherConditionsTomorrowIcon, temperatureforecastTomorrow, tomorrowWindSpeed, tomorrowWindDirectionDescription, tomorrowHumidity, ThreeDayDate, weatherConditionsThreeDayIcon, temperatureforecastThreeDay, ThreeDayWindSpeed, ThreeDayWindDirectionDescription, ThreeDayHumidity, FourDayDate, weatherConditionsFourDayIcon, temperatureforecastFourDay, FourDayWindSpeed, FourDayWindDirectionDescription, FourDayHumidity, FiveDayDate, weatherConditionsFiveDayIcon, temperatureforecastFiveDay, FiveDayWindSpeed, FiveDayWindDirectionDescription, FiveDayHumidity, SixDayDate, weatherConditionsSixDayIcon, temperatureforecastSixDay, SixDayWindSpeed, SixDayWindDirectionDescription, SixDayHumidity, weatherAPIDataCurrentTemperature, weatherAPIDataCurrentConditionIcon, weatherAPI01HourDataConditionTime, weatherAPI01HourDataTemperature, weatherAPI01HourDataConditionIcon, weatherAPI02HourDataConditionTime, weatherAPI02HourDataTemperature, weatherAPI02HourDataConditionIcon, weatherAPI03HourDataConditionTime, weatherAPI03HourDataTemperature, weatherAPI03HourDataConditionIcon, weatherAPI04HourDataConditionTime, weatherAPI04HourDataTemperature, weatherAPI04HourDataConditionIcon, weatherAPI05HourDataConditionTime, weatherAPI05HourDataTemperature, weatherAPI05HourDataConditionIcon, weatherAPI06HourDataConditionTime, weatherAPI06HourDataTemperature, weatherAPI06HourDataConditionIcon, weatherAPI07HourDataConditionTime, weatherAPI07HourDataTemperature, weatherAPI07HourDataConditionIcon, weatherAPI08HourDataConditionTime, weatherAPI08HourDataTemperature, weatherAPI08HourDataConditionIcon, weatherAPI09HourDataConditionTime, weatherAPI09HourDataTemperature, weatherAPI09HourDataConditionIcon, weatherAPI10HourDataConditionTime, weatherAPI10HourDataTemperature, weatherAPI10HourDataConditionIcon, weatherAPI11HourDataConditionTime, weatherAPI11HourDataTemperature, weatherAPI11HourDataConditionIcon, weatherAPI12HourDataConditionTime, weatherAPI12HourDataTemperature, weatherAPI12HourDataConditionIcon, weatherAPI13HourDataConditionTime, weatherAPI13HourDataTemperature, weatherAPI13HourDataConditionIcon, weatherAPI14HourDataConditionTime, weatherAPI14HourDataTemperature, weatherAPI14HourDataConditionIcon, weatherAPI15HourDataConditionTime, weatherAPI15HourDataTemperature, weatherAPI15HourDataConditionIcon, weatherAPI16HourDataConditionTime, weatherAPI16HourDataTemperature, weatherAPI16HourDataConditionIcon, weatherAPI17HourDataConditionTime, weatherAPI17HourDataTemperature, weatherAPI17HourDataConditionIcon, weatherAPI18HourDataConditionTime, weatherAPI18HourDataTemperature, weatherAPI18HourDataConditionIcon, weatherAPI19HourDataConditionTime, weatherAPI19HourDataTemperature, weatherAPI19HourDataConditionIcon, weatherAPI20HourDataConditionTime, weatherAPI20HourDataTemperature, weatherAPI20HourDataConditionIcon, weatherAPI21HourDataConditionTime, weatherAPI21HourDataTemperature, weatherAPI21HourDataConditionIcon, weatherAPI22HourDataConditionTime, weatherAPI22HourDataTemperature, weatherAPI22HourDataConditionIcon, weatherAPI23HourDataConditionTime, weatherAPI23HourDataTemperature, weatherAPI23HourDataConditionIcon, strPressure, angle, weatherConditionsToday, strPrecipitationProbability, strVisibilityKM, strVisibilityMiles, visibilityDescription, pollenRiskLevelGrass, pollenCountGrass, pollenCountGrassPercentage, pollenCountColourGrass, pollenRiskLevelTree, pollenCountTree, pollenCountTreePercentage, pollenCountColourTree, pollenRiskLevelWeed, pollenCountWeed, pollenCountWeedPercentage, pollenCountColourWeed, strPrecipitationProbabilityTomorrow, strPrecipitationProbabilityThreeDay, strPrecipitationProbabilityFourDay, strPrecipitationProbabilityFiveDay, strPrecipitationProbabilitySixDay, strFeelsLikeCelcius, strFeelsLikeFarenheit, todayDate
     print("Data", data)
 
-
-
+    # Return data to the front end
     return render_template('weather.html', data=data)
 
 @app.route('/temperature', methods=['GET', 'POST'])
 def temperature():
-    api_key = 'e9acjapvjih3rpbcnjnj8c8kfsnyivkb'
-    api_secret = 'p9ltsbyvv137bkskvuerqfs7s8qbe8gy'
-    station_id = 142820
+    """Backend for temperature page using WeatherLink API"""
+    api_key = 'e9acjapvjih3rpbcnjnj8c8kfsnyivkb' # WeatherLink API key
+    api_secret = 'p9ltsbyvv137bkskvuerqfs7s8qbe8gy' # WeatherLink API secret
+    station_id = 142820 # Weather station ID
 
     # current time
-    local_time = int(time.time())
+    local_time = int(time.time()) # set local current time
 
     # api signature
     data_to_sign = f"api-key{api_key}station-id{station_id}t{local_time}"
@@ -3141,79 +3157,80 @@ def temperature():
         api_secret.encode('utf-8'),
         data_to_sign.encode('utf-8'),
         hashlib.sha256
-    ).hexdigest()
+    ).hexdigest() # generate signature
 
-    url = f"https://api.weatherlink.com/v2/current/{station_id}"
+    url = f"https://api.weatherlink.com/v2/current/{station_id}" # set WeatherLink API url
     params = {
         "api-key": api_key,
         "t": local_time,
         "api-signature": signature
-    }
+    } # set parameters
 
-    response = requests.get(url, params=params)
-    current_weather = response.json()
-    sensors = current_weather['sensors']
-    sensors = sensors[2]
-    sensorData = sensors['data']
-    sensorData = sensorData[0]
-    temperatureFarenheit1 = sensorData['temp']
+    response = requests.get(url, params=params) # get response from WeatherLink API
+    current_weather = response.json() # get current weather data
+    sensors = current_weather['sensors'] # get sensor data
+    sensors = sensors[2] # get sensor data from indoor sensor
+    sensorData = sensors['data'] # get sensor data
+    sensorData = sensorData[0] # get sensor data
+    temperatureFarenheit1 = sensorData['temp'] # get indoor temperature in Farenheit from sensor
     print("Temperature Farenheit", temperatureFarenheit1)
-    temperatureCelsius = (temperatureFarenheit1 - 32) * 5.0/9.0
+    temperatureCelsius = (temperatureFarenheit1 - 32) * 5.0/9.0 # convert Farenheit to Celsius
     temperatureCelsius1 = round(temperatureCelsius, 1) # round to 1 decimal place
     print("Temperature Celsius", temperatureCelsius1)
-    strTemperatureCelsius1 = str(temperatureCelsius1) + "°C"
+    strTemperatureCelsius1 = str(temperatureCelsius1) + "°C" # convert celcius temperature to string
     print("Temperature Celsius String", strTemperatureCelsius1)
-    strTemperatureFarenheit1 = str(temperatureFarenheit1) + "°F"
+    strTemperatureFarenheit1 = str(temperatureFarenheit1) + "°F" # convert farenheit temperature to string
     print("Temperature Farenheit String", strTemperatureFarenheit1)
-    current_weather = response.json()
-    sensors = current_weather['sensors']
-    sensors = sensors[4]
-    sensorData = sensors['data']
-    sensorData = sensorData[0]
-    temperatureFarenheit2 = sensorData['temp']
+    current_weather = response.json() # get current weather data
+    sensors = current_weather['sensors'] # get sensor data
+    sensors = sensors[4] # get sensor data from outdoor sensor
+    sensorData = sensors['data'] # get sensor data
+    sensorData = sensorData[0] # get sensor data
+    temperatureFarenheit2 = sensorData['temp'] # get outdoor temperature in Farenheit from sensor
     print("Temperature Farenheit", temperatureFarenheit2)
-    temperatureCelsius = (temperatureFarenheit2 - 32) * 5.0 / 9.0
+    temperatureCelsius = (temperatureFarenheit2 - 32) * 5.0 / 9.0 # convert Farenheit to Celsius
     temperatureCelsius2 = round(temperatureCelsius, 1)  # round to 1 decimal place
     print("Temperature Celsius", temperatureCelsius2)
-    strTemperatureCelsius2 = str(temperatureCelsius2) + "°C"
+    strTemperatureCelsius2 = str(temperatureCelsius2) + "°C" # convert celcius temperature to string
     print("Temperature Celsius String", strTemperatureCelsius2)
-    strTemperatureFarenheit2 = str(temperatureFarenheit2) + "°F"
+    strTemperatureFarenheit2 = str(temperatureFarenheit2) + "°F" # convert farenheit temperature to string
     print("Temperature Farenheit String", strTemperatureFarenheit2)
 
 
 
-    with open('Weather_Link_Outdoor.csv', mode='r', encoding = 'latin') as file:
-        csvFile = csv.reader(file)
-        jsonFile = []
-        for lines in csvFile:
-            jsonFile.append(lines)
+    with open('Weather_Link_Outdoor.csv', mode='r', encoding = 'latin') as file: # open WeatherLink CSV file
+        csvFile = csv.reader(file) # read CSV file
+        jsonFile = [] # create empty list
+        for lines in csvFile: # loop through CSV file
+            jsonFile.append(lines) # append lines to list
 
 
-        temperatures24Hours = []
-        timeHours = []
-        pointerTemperature = 1
-        pointerTime = 1
-        csvLength = len(jsonFile)
+        temperatures24Hours = [] # create empty list of temperatures
+        timeHours = [] # create empty list of hours
+        pointerTemperature = 1 # set temperature pointer to 1
+        pointerTime = 1 # set time pointer to 1
+        csvLength = len(jsonFile) # get length of CSV file
 
-        for i in range(1, 25):
-            lastLine = jsonFile[csvLength - pointerTemperature]
-            lastLineTemperature = lastLine[1]
-            lastLineTemperature = int(lastLineTemperature)
-            lastLineTime = lastLine[0]
-            timeHour = lastLineTime.split(" ")
-            timeHour = timeHour[1]
-            timeHour = timeHour.split(":")
-            timeHour = timeHour[0]
-            timeHours.append(timeHour)
-            temperatures24Hours.append(lastLineTemperature)
-            pointerTemperature += 12
-            pointerTime += 12
+        for i in range(1, 25): # loop through last 24 hours of data
+            lastLine = jsonFile[csvLength - pointerTemperature] # get last line of data
+            lastLineTemperature = lastLine[1] # get last line temperature
+            lastLineTemperature = int(lastLineTemperature) # convert temperature to integer
+            lastLineTime = lastLine[0] # get last line time
+            timeHour = lastLineTime.split(" ") # split time by space
+            timeHour = timeHour[1] # get time
+            timeHour = timeHour.split(":") # split time by colon
+            timeHour = timeHour[0] # get hour
+            timeHours.append(timeHour) # append hour to list of hours
+            temperatures24Hours.append(lastLineTemperature) # append temperature to list of temperatures
+            pointerTemperature += 12 # increment temperature pointer
+            pointerTime += 12 # increment time pointer
             temperatureData = {"hour": timeHour, "temperature": lastLineTemperature}
         print("24 Hour Temperatures", temperatures24Hours)
         print("24 Hour Time", timeHours)
 
         graphtest = [{'hour': '00', 'temperature': 8},]
 
+        # Get the hourly humidity data for the last 24 hours
         hour0 = timeHours[0]
         temperature0 = temperatures24Hours[0]
         hour1 = timeHours[1]
@@ -3263,28 +3280,28 @@ def temperature():
         hour23 = timeHours[23]
         temperature23 = temperatures24Hours[23]
 
-        pointerDate = 1
-        pointerTemperature = 1
-        dateDaily = []
-        temperatureDaily = []
-        csvLength = len(jsonFile)
+        pointerDate = 1 # set date pointer to 1
+        pointerTemperature = 1 # set temperature pointer to 1
+        dateDaily = [] # create empty list of dates
+        temperatureDaily = [] # create empty list of temperatures
+        csvLength = len(jsonFile) # get length of CSV file
 
-        for i in range(1, 31):
-            lastLine = jsonFile[csvLength - pointerDate]
-            lastLineDate = lastLine[0]
-            lastLineTemperature = lastLine[1]
-            lastLineTemperature = int(lastLineTemperature)
-            dateDaily.append(lastLineDate)
-            temperatureDaily.append(lastLineTemperature)
-            pointerDate += 288
-            pointerTemperature += 288
+        for i in range(1, 31): # loop through last 30 days of data
+            lastLine = jsonFile[csvLength - pointerDate] # get last line of data
+            lastLineDate = lastLine[0] # get last line date
+            lastLineTemperature = lastLine[1] # get last line temperature
+            lastLineTemperature = int(lastLineTemperature)  # convert temperature to integer
+            dateDaily.append(lastLineDate) # append date to list of dates
+            temperatureDaily.append(lastLineTemperature) # append temperature to list of temperatures
+            pointerDate += 288 # increment date pointer
+            pointerTemperature += 288 # increment temperature pointer
             temperatureData = {"date": lastLineDate, "temperature": lastLineTemperature}
         print("Daily Temperatures", temperatureDaily)
         print("Daily Dates", dateDaily)
 
         graphtest = [{'hour': '00', 'temperature': 8},]
 
-
+        # Get the daily temperature data for the last 30 days
         temperatureDay0 = temperatureDaily[0]
         temperatureDay1 = temperatureDaily[1]
         temperatureDay2 = temperatureDaily[2]
@@ -3317,47 +3334,37 @@ def temperature():
         temperatureDay29 = temperatureDaily[29]
 
 
+    pointerMonth = 6 # set month pointer to 6
+    pointerTemperature = 1 # set temperature pointer to 1
+    months = [] # create empty list of months
+    temperaturesMonthly = [] # create empty list of temperatures
+    csvLength = len(jsonFile) # get length of CSV file
 
-#3977
-
-    pointerMonth = 6
-    pointerTemperature = 1
-    months = []
-    temperaturesMonthly = []
-    csvLength = len(jsonFile)
-
-    firstLine = jsonFile[pointerMonth]
+    firstLine = jsonFile[pointerMonth] # get first line of data
     print("First Line", firstLine)
     #print(jsonFile)
 
-    x = '1/1/23 00:15' in firstLine
-    print("X", x)
-    print(len(jsonFile))
-
-    #52870
-    #52864
-
-    for i in range(len(jsonFile)):
-        if pointerMonth < 52864:
-            firstLine = jsonFile[pointerMonth]
-            firstLineMonth = firstLine[0]
-            pointerMonth += 1
-            if '1/1/23 12:00' in firstLineMonth:
-                if '11/1/23 12:00' in firstLineMonth:
+    for i in range(len(jsonFile)): # loop through all data
+        if pointerMonth < 52864: #Check if the pointer is less than the length of the CSV file
+            firstLine = jsonFile[pointerMonth] # get first line of data
+            firstLineMonth = firstLine[0] # get first line month
+            pointerMonth += 1 # increment month pointer
+            if '1/1/23 12:00' in firstLineMonth: # check if first line month is January
+                if '11/1/23 12:00' in firstLineMonth: #ignore repeated searches for the same month
                     pass
-                elif '21/1/23 12:00' in firstLineMonth:
+                elif '21/1/23 12:00' in firstLineMonth: #ignore repeated searches for the same month
                     pass
-                elif '31/1/23 12:00' in firstLineMonth:
+                elif '31/1/23 12:00' in firstLineMonth: #ignore repeated searches for the same month
                     pass
-                else:
-                    firstLineTemperature = firstLine[1]
-                    temperaturesMonthly.append(firstLineTemperature)
-                    firstLineMonth = "Jan"
-                    months.append(firstLineMonth)
+                else: # if first line month is January
+                    firstLineTemperature = firstLine[1] # get first line temperature
+                    temperaturesMonthly.append(firstLineTemperature) # append temperature to list of temperatures
+                    firstLineMonth = "Jan" # set first line month to January
+                    months.append(firstLineMonth) # append month to list of months
                     print("First Line Month", firstLineMonth)
                     print("First Line Temperature", firstLineTemperature)
                     print("First Line Temperature", firstLineTemperature)
-            elif '1/2/23 12:00' in firstLineMonth:
+            elif '1/2/23 12:00' in firstLineMonth: # check if first line month is February (repeated code for each month)
                 if '11/2/23 12:00' in firstLineMonth:
                     pass
                 elif '21/2/23 12:00' in firstLineMonth:
@@ -3372,7 +3379,7 @@ def temperature():
                     print("First Line Month", firstLineMonth)
                     print("First Line Temperature", firstLineTemperature)
                     print("First Line Temperature", firstLineTemperature)
-            elif '1/3/23 12:00' in firstLineMonth:
+            elif '1/3/23 12:00' in firstLineMonth: # check if first line month is March (repeated code for each month)
                 if '11/3/23 12:00' in firstLineMonth:
                     pass
                 elif '21/3/23 12:00' in firstLineMonth:
@@ -3387,7 +3394,7 @@ def temperature():
                     print("First Line Month", firstLineMonth)
                     print("First Line Temperature", firstLineTemperature)
                     print("First Line Temperature", firstLineTemperature)
-            elif '1/4/23 12:00' in firstLineMonth:
+            elif '1/4/23 12:00' in firstLineMonth: # check if first line month is April (repeated code for each month)
                 if '11/4/23 12:00' in firstLineMonth:
                     pass
                 elif '21/4/23 12:00' in firstLineMonth:
@@ -3402,7 +3409,7 @@ def temperature():
                     print("First Line Month", firstLineMonth)
                     print("First Line Temperature", firstLineTemperature)
                     print("First Line Temperature", firstLineTemperature)
-            elif '3/5/23 17:15' in firstLineMonth:
+            elif '3/5/23 17:15' in firstLineMonth: # check if first line month is May (repeated code for each month)
                 if '13/5/23 17:15' in firstLineMonth:
                     pass
                 elif '23/5/23 17:15' in firstLineMonth:
@@ -3417,7 +3424,7 @@ def temperature():
                     print("First Line Month", firstLineMonth)
                     print("First Line Temperature", firstLineTemperature)
                     print("First Line Temperature", firstLineTemperature)
-            elif '1/6/23 12:00' in firstLineMonth:
+            elif '1/6/23 12:00' in firstLineMonth: # check if first line month is June (repeated code for each month)
                 if '11/6/23 12:00' in firstLineMonth:
                     pass
                 elif '21/6/23 12:00' in firstLineMonth:
@@ -3432,7 +3439,7 @@ def temperature():
                     print("First Line Month", firstLineMonth)
                     print("First Line Temperature", firstLineTemperature)
                     print("First Line Temperature", firstLineTemperature)
-            elif '1/7/23 12:00' in firstLineMonth:
+            elif '1/7/23 12:00' in firstLineMonth: # check if first line month is July (repeated code for each month)
                 if '11/7/23 12:00' in firstLineMonth:
                     pass
                 elif '21/7/23 12:00' in firstLineMonth:
@@ -3447,7 +3454,7 @@ def temperature():
                     print("First Line Month", firstLineMonth)
                     print("First Line Temperature", firstLineTemperature)
                     print("First Line Temperature", firstLineTemperature)
-            elif '1/8/23 12:00' in firstLineMonth:
+            elif '1/8/23 12:00' in firstLineMonth: # check if first line month is August (repeated code for each month)
                 if '11/8/23 12:00' in firstLineMonth:
                     pass
                 elif '21/8/23 12:00' in firstLineMonth:
@@ -3462,7 +3469,7 @@ def temperature():
                     print("First Line Month", firstLineMonth)
                     print("First Line Temperature", firstLineTemperature)
                     print("First Line Temperature", firstLineTemperature)
-            elif '1/9/23 12:00' in firstLineMonth:
+            elif '1/9/23 12:00' in firstLineMonth: # check if first line month is September (repeated code for each month)
                 if '11/9/23 12:00' in firstLineMonth:
                     pass
                 elif '21/9/23 12:00' in firstLineMonth:
@@ -3477,7 +3484,7 @@ def temperature():
                     print("First Line Month", firstLineMonth)
                     print("First Line Temperature", firstLineTemperature)
                     print("First Line Temperature", firstLineTemperature)
-            elif '1/10/23 12:00' in firstLineMonth:
+            elif '1/10/23 12:00' in firstLineMonth: # check if first line month is October (repeated code for each month)
                 if '11/10/23 12:00' in firstLineMonth:
                     pass
                 elif '21/10/23 12:00' in firstLineMonth:
@@ -3492,7 +3499,7 @@ def temperature():
                     print("First Line Month", firstLineMonth)
                     print("First Line Temperature", firstLineTemperature)
                     print("First Line Temperature", firstLineTemperature)
-            elif '1/11/23 12:00' in firstLineMonth:
+            elif '1/11/23 12:00' in firstLineMonth: # check if first line month is November (repeated code for each month)
                 if '11/11/23 12:00' in firstLineMonth:
                     pass
                 elif '21/11/23 12:00' in firstLineMonth:
@@ -3507,7 +3514,7 @@ def temperature():
                     print("First Line Month", firstLineMonth)
                     print("First Line Temperature", firstLineTemperature)
                     print("First Line Temperature", firstLineTemperature)
-            elif '1/12/23 12:00' in firstLineMonth:
+            elif '1/12/23 12:00' in firstLineMonth: # check if first line month is December (repeated code for each month)
                 if '11/12/23 12:00' in firstLineMonth:
                     pass
                 elif '21/12/23 12:00' in firstLineMonth:
@@ -3525,7 +3532,7 @@ def temperature():
     print("Monthly Temperatures", temperaturesMonthly)
     print("Monthly Dates", months)
 
-
+    # Get the monthly temperature data for the last 12 months
     temperatureMonth1 = temperaturesMonthly[0]
     temperatureMonth2 = temperaturesMonthly[1]
     temperatureMonth3 = temperaturesMonthly[2]
@@ -3538,23 +3545,25 @@ def temperature():
     temperatureMonth10 = temperaturesMonthly[9]
     temperatureMonth11 = temperaturesMonthly[10]
 
+    # Create a string of the humidity data to pass to the front end
     data = strTemperatureCelsius1, strTemperatureCelsius2, strTemperatureFarenheit1, strTemperatureFarenheit2, graphtest, hour0, temperature0, hour1, temperature1, hour2, temperature2, hour3, temperature3, hour4, temperature4, hour5, temperature5, hour6, temperature6, hour7, temperature7, hour8, temperature8, hour9, temperature9, hour10, temperature10, hour11, temperature11, hour12, temperature12, hour13, temperature13, hour14, temperature14, hour15, temperature15, hour16, temperature16, hour17, temperature17, hour18, temperature18, hour19, temperature19, hour20, temperature20, hour21, temperature21, hour22, temperature22, hour23, temperature23, temperatureDay0, temperatureDay1, temperatureDay2, temperatureDay3, temperatureDay4, temperatureDay5, temperatureDay6, temperatureDay7, temperatureDay8, temperatureDay9, temperatureDay10, temperatureDay11, temperatureDay12, temperatureDay13, temperatureDay14, temperatureDay15, temperatureDay16, temperatureDay17, temperatureDay18, temperatureDay19, temperatureDay20, temperatureDay21, temperatureDay22, temperatureDay23, temperatureDay24, temperatureDay25, temperatureDay26, temperatureDay27, temperatureDay28, temperatureDay29, temperatureMonth1, temperatureMonth2, temperatureMonth3, temperatureMonth4, temperatureMonth5, temperatureMonth6, temperatureMonth7, temperatureMonth8, temperatureMonth9, temperatureMonth10, temperatureMonth11
     print("Data", data)
     print("Data 4", data[4])
 
 
-    return render_template('temperature.html', data=data)
+    return render_template('temperature.html', data=data) # render the temperature page with the data
 
 @app.route('/humidity', methods=['GET', 'POST'])
 def humidity():
-    api_key = 'e9acjapvjih3rpbcnjnj8c8kfsnyivkb'
-    api_secret = 'p9ltsbyvv137bkskvuerqfs7s8qbe8gy'
-    station_id = 142820
+    """Backend for humidity page using WeatherLink API"""
+    api_key = 'e9acjapvjih3rpbcnjnj8c8kfsnyivkb' #WeatherLink API Key
+    api_secret = 'p9ltsbyvv137bkskvuerqfs7s8qbe8gy' #WeatherLink API Secret
+    station_id = 142820 #Weather Station ID
 
     # current time
-    local_time = int(time.time())
+    local_time = int(time.time()) #Get the current local time
 
-    # api signature
+    # api signature to authenticate the request
     data_to_sign = f"api-key{api_key}station-id{station_id}t{local_time}"
     signature = hmac.new(
         api_secret.encode('utf-8'),
@@ -3562,31 +3571,31 @@ def humidity():
         hashlib.sha256
     ).hexdigest()
 
-    url = f"https://api.weatherlink.com/v2/current/{station_id}"
+    url = f"https://api.weatherlink.com/v2/current/{station_id}" #WeatherLink API URL
     params = {
         "api-key": api_key,
         "t": local_time,
         "api-signature": signature
-    }
+    } #Parameters for the API request
 
-    response = requests.get(url, params=params)
-    current_weather = response.json()
-    sensors = current_weather['sensors']
-    sensors = sensors[2]
-    sensorData = sensors['data']
-    sensorData = sensorData[0]
-    humidity1 = sensorData['hum']
+    response = requests.get(url, params=params) #Send the request to the WeatherLink API
+    current_weather = response.json() #Get the JSON response from the API
+    sensors = current_weather['sensors'] #Get the sensor data from the JSON response
+    sensors = sensors[2] #Get the sensor data from indoor sensor
+    sensorData = sensors['data'] #Get the sensor data from the indoor sensor
+    sensorData = sensorData[0] #Get the sensor data from the indoor sensor
+    humidity1 = sensorData['hum'] #Get the humidity data from the indoor sensor
     print("Humidity ", humidity1)
-    strHumidity1 = str(humidity1) + "%"
+    strHumidity1 = str(humidity1) + "%" #Convert the humidity data to a string
     print("Humidity String", strHumidity1)
-    current_weather = response.json()
-    sensors = current_weather['sensors']
-    sensors = sensors[4]
-    sensorData = sensors['data']
-    sensorData = sensorData[0]
-    humidity2 = sensorData['hum']
+    current_weather = response.json() #Get the JSON response from the API
+    sensors = current_weather['sensors'] #Get the sensor data from the JSON response
+    sensors = sensors[4] #Get the sensor data from outdoor sensor
+    sensorData = sensors['data'] #Get the sensor data from the outdoor sensor
+    sensorData = sensorData[0] #Get the sensor data from the outdoor sensor
+    humidity2 = sensorData['hum'] #Get the humidity data from the outdoor sensor
     print("Humidity", humidity2)
-    strHumidity2 = str(humidity2) + "%"
+    strHumidity2 = str(humidity2) + "%" #Convert the humidity data to a string
     print("Humidity String", strHumidity2)
 
 
@@ -3594,38 +3603,39 @@ def humidity():
     averageHumidity = round(averageHumidity, 1)
     strAverageHumidity = str(averageHumidity) + "%"
 
-    with open('Weather_Link_Outdoor.csv', mode='r', encoding = 'latin') as file:
-        csvFile = csv.reader(file)
-        jsonFile = []
-        for lines in csvFile:
-            jsonFile.append(lines)
+    with open('Weather_Link_Outdoor.csv', mode='r', encoding = 'latin') as file: #Open the WeatherLink historic data CSV file
+        csvFile = csv.reader(file) #Read the CSV file
+        jsonFile = [] #Create an empty list to store the CSV data
+        for lines in csvFile: #Loop through the CSV file
+            jsonFile.append(lines) #Append the CSV data to the list
 
 
-        humidities24Hours = []
-        timeHours = []
-        pointerHumidity = 1
-        pointerTime = 1
-        csvLength = len(jsonFile)
+        humidities24Hours = [] #Create an empty list to store the 24 hour humidity data
+        timeHours = [] #Create an empty list to store the 24 hour time data
+        pointerHumidity = 1 #Set the pointer for the humidity data
+        pointerTime = 1 #Set the pointer for the time data
+        csvLength = len(jsonFile) #Get the length of the CSV file
 
-        for i in range(1, 25):
-            lastLine = jsonFile[csvLength - pointerHumidity]
-            lastLineHumidity = lastLine[4]
-            lastLineHumidity = int(lastLineHumidity)
-            lastLineTime = lastLine[0]
-            timeHour = lastLineTime.split(" ")
-            timeHour = timeHour[1]
-            timeHour = timeHour.split(":")
-            timeHour = timeHour[0]
-            timeHours.append(timeHour)
-            humidities24Hours.append(lastLineHumidity)
-            pointerHumidity += 12
-            pointerTime += 12
+        for i in range(1, 25): #Loop through the 24 hours to get hourly humidity data (last 24 hours)
+            lastLine = jsonFile[csvLength - pointerHumidity] #Get the last line of the CSV file
+            lastLineHumidity = lastLine[4] #Get the humidity data from the last line
+            lastLineHumidity = int(lastLineHumidity) #Convert the humidity data to an integer
+            lastLineTime = lastLine[0] #Get the time data from the last line
+            timeHour = lastLineTime.split(" ") #Split the time data to get the hour
+            timeHour = timeHour[1] #Get the hour from the time data
+            timeHour = timeHour.split(":") #Split the hour data to get the hour
+            timeHour = timeHour[0] #Get the hour from the time data
+            timeHours.append(timeHour) #Append the hour data to the timeHours list
+            humidities24Hours.append(lastLineHumidity) #Append the humidity data to the humidities24Hours list
+            pointerHumidity += 12 #Increment the pointer for the humidity data
+            pointerTime += 12 #Increment the pointer for the time data
             temperatureData = {"hour": timeHour, "temperature": lastLineHumidity}
         print("24 Hour Temperatures", humidities24Hours)
         print("24 Hour Time", timeHours)
 
         graphtest = [{'hour': '00', 'temperature': 8},]
 
+        #Get the hourly humidity data for the last 24 hours
         hour0 = timeHours[0]
         temperature0 = humidities24Hours[0]
         hour1 = timeHours[1]
@@ -3675,27 +3685,28 @@ def humidity():
         hour23 = timeHours[23]
         temperature23 = humidities24Hours[23]
 
-    pointerDate = 1
-    pointerHumidity = 1
-    dateDaily = []
-    humidityDaily = []
-    csvLength = len(jsonFile)
+    pointerDate = 1 #Set the pointer for the date data
+    pointerHumidity = 1 #Set the pointer for the humidity data
+    dateDaily = [] #Create an empty list to store the daily date data
+    humidityDaily = [] #Create an empty list to store the daily humidity data
+    csvLength = len(jsonFile) #Get the length of the CSV file
 
-    for i in range(1, 31):
-        lastLine = jsonFile[csvLength - pointerDate]
-        lastLineDate = lastLine[0]
-        lastLineHumidity = lastLine[4]
-        lastLineHumidity = int(lastLineHumidity)
-        dateDaily.append(lastLineDate)
-        humidityDaily.append(lastLineHumidity)
-        pointerDate += 288
-        pointerHumidity += 288
+    for i in range(1, 31): #Loop through the 30 days to get daily humidity data (last 30 days)
+        lastLine = jsonFile[csvLength - pointerDate] #Get the last line of the CSV file
+        lastLineDate = lastLine[0] #Get the date data from the last line
+        lastLineHumidity = lastLine[4] #Get the humidity data from the last line
+        lastLineHumidity = int(lastLineHumidity) #Convert the humidity data to an integer
+        dateDaily.append(lastLineDate) #Append the date data to the dateDaily list
+        humidityDaily.append(lastLineHumidity)  # Append the humidity data to the humidityDaily list
+        pointerDate += 288 #Increment the pointer for the date data
+        pointerHumidity += 288 #Increment the pointer for the humidity data
         humidityData = {"date": lastLineDate, "humidity": lastLineHumidity}
     print("Daily Humidity", humidityDaily)
     print("Daily Dates", dateDaily)
 
     graphtest = [{'hour': '00', 'humidity': 8}, ]
 
+    #Get the daily humidity data for the last 30 days
     humidityDay0 = humidityDaily[0]
     humidityDay1 = humidityDaily[1]
     humidityDay2 = humidityDaily[2]
@@ -3728,44 +3739,38 @@ def humidity():
     humidityDay29 = humidityDaily[29]
 
 
-    pointerMonth = 6
-    pointerTemperature = 1
-    months = []
-    humiditiesMonthly = []
-    csvLength = len(jsonFile)
+    pointerMonth = 6 #Set the pointer for the month data
+    pointerTemperature = 1 #Set the pointer for the temperature data
+    months = [] #Create an empty list to store the monthly date data
+    humiditiesMonthly = [] #Create an empty list to store the monthly humidity data
+    csvLength = len(jsonFile) #Get the length of the CSV file
 
-    firstLine = jsonFile[pointerMonth]
-    print("First Line", firstLine)
+    firstLine = jsonFile[pointerMonth] #Get the first line of the CSV file
+    print("First Line", firstLine) #Print the first line of the CSV file
     # print(jsonFile)
 
-    x = '1/1/23 00:15' in firstLine
-    print("X", x)
-    print(len(jsonFile))
 
-    # 52870
-    # 52864
-
-    for i in range(len(jsonFile)):
-        if pointerMonth < 52864:
-            firstLine = jsonFile[pointerMonth]
-            firstLineMonth = firstLine[0]
-            pointerMonth += 1
-            if '1/1/23 12:00' in firstLineMonth:
-                if '11/1/23 12:00' in firstLineMonth:
+    for i in range(len(jsonFile)): #Loop through the CSV file
+        if pointerMonth < 52864: #Check if the pointer is less than the length of the CSV file
+            firstLine = jsonFile[pointerMonth] #Get the first line of the CSV file
+            firstLineMonth = firstLine[0] #Get the month data from the first line
+            pointerMonth += 1 #Increment the pointer for the month data
+            if '1/1/23 12:00' in firstLineMonth: #Check if the month is January
+                if '11/1/23 12:00' in firstLineMonth: #ignore repeated searches for the same month
                     pass
-                elif '21/1/23 12:00' in firstLineMonth:
+                elif '21/1/23 12:00' in firstLineMonth: #ignore repeated searches for the same month
                     pass
-                elif '31/1/23 12:00' in firstLineMonth:
+                elif '31/1/23 12:00' in firstLineMonth: #ignore repeated searches for the same month
                     pass
                 else:
-                    firstLineHumidity = firstLine[4]
-                    humiditiesMonthly.append(firstLineHumidity)
-                    firstLineMonth = "Jan"
-                    months.append(firstLineMonth)
-                    print("First Line Month", firstLineMonth)
-                    print("First Line Humidtity", firstLineHumidity)
-                    print("First Line Humidtity", firstLineHumidity)
-            elif '1/2/23 12:00' in firstLineMonth:
+                    firstLineHumidity = firstLine[4] #Get the humidity data from the first line
+                    humiditiesMonthly.append(firstLineHumidity) #Append the humidity data to the humiditiesMonthly list
+                    firstLineMonth = "Jan" #Set the month to January
+                    months.append(firstLineMonth) #Append the month data to the months list
+                    print("First Line Month", firstLineMonth) #Print the month data
+                    print("First Line Humidtity", firstLineHumidity) #Print the humidity data
+                    print("First Line Humidtity", firstLineHumidity)    #Print the humidity data
+            elif '1/2/23 12:00' in firstLineMonth: #Check if the month is February (repeated code for each month except for month searches)
                 if '11/2/23 12:00' in firstLineMonth:
                     pass
                 elif '21/2/23 12:00' in firstLineMonth:
@@ -3780,7 +3785,7 @@ def humidity():
                     print("First Line Month", firstLineMonth)
                     print("First Line Humidtity", firstLineHumidity)
                     print("First Line Humidtity", firstLineHumidity)
-            elif '1/3/23 12:00' in firstLineMonth:
+            elif '1/3/23 12:00' in firstLineMonth: #Check if the month is March (repeated code for each month except for month searches)
                 if '11/3/23 12:00' in firstLineMonth:
                     pass
                 elif '21/3/23 12:00' in firstLineMonth:
@@ -3795,7 +3800,7 @@ def humidity():
                     print("First Line Month", firstLineMonth)
                     print("First Line Humidtity", firstLineHumidity)
                     print("First Line Humidtity", firstLineHumidity)
-            elif '1/4/23 12:00' in firstLineMonth:
+            elif '1/4/23 12:00' in firstLineMonth: #Check if the month is April (repeated code for each month except for month searches)
                 if '11/4/23 12:00' in firstLineMonth:
                     pass
                 elif '21/4/23 12:00' in firstLineMonth:
@@ -3810,7 +3815,7 @@ def humidity():
                     print("First Line Month", firstLineMonth)
                     print("First Line Humidtity", firstLineHumidity)
                     print("First Line Humidtity", firstLineHumidity)
-            elif '3/5/23 17:30' in firstLineMonth:
+            elif '3/5/23 17:30' in firstLineMonth: #Check if the month is May (repeated code for each month except for month searches)
                 if '13/5/23 17:30' in firstLineMonth:
                     pass
                 elif '23/5/23 17:30' in firstLineMonth:
@@ -3825,7 +3830,7 @@ def humidity():
                     print("First Line Month", firstLineMonth)
                     print("First Line Humidtity", firstLineHumidity)
                     print("First Line Humidtity", firstLineHumidity)
-            elif '1/6/23 12:00' in firstLineMonth:
+            elif '1/6/23 12:00' in firstLineMonth: #Check if the month is June (repeated code for each month except for month searches)
                 if '11/6/23 12:00' in firstLineMonth:
                     pass
                 elif '21/6/23 12:00' in firstLineMonth:
@@ -3840,7 +3845,7 @@ def humidity():
                     print("First Line Month", firstLineMonth)
                     print("First Line Humidtity", firstLineHumidity)
                     print("First Line Humidtity", firstLineHumidity)
-            elif '1/7/23 12:00' in firstLineMonth:
+            elif '1/7/23 12:00' in firstLineMonth: #Check if the month is July (repeated code for each month except for month searches)
                 if '11/7/23 12:00' in firstLineMonth:
                     pass
                 elif '21/7/23 12:00' in firstLineMonth:
@@ -3855,7 +3860,7 @@ def humidity():
                     print("First Line Month", firstLineMonth)
                     print("First Line Humidtity", firstLineHumidity)
                     print("First Line Humidtity", firstLineHumidity)
-            elif '1/8/23 12:00' in firstLineMonth:
+            elif '1/8/23 12:00' in firstLineMonth: #Check if the month is August (repeated code for each month except for month searches)
                 if '11/8/23 12:00' in firstLineMonth:
                     pass
                 elif '21/8/23 12:00' in firstLineMonth:
@@ -3870,7 +3875,7 @@ def humidity():
                     print("First Line Month", firstLineMonth)
                     print("First Line Humidtity", firstLineHumidity)
                     print("First Line Humidtity", firstLineHumidity)
-            elif '1/9/23 12:00' in firstLineMonth:
+            elif '1/9/23 12:00' in firstLineMonth: #Check if the month is September (repeated code for each month except for month searches)
                 if '11/9/23 12:00' in firstLineMonth:
                     pass
                 elif '21/9/23 12:00' in firstLineMonth:
@@ -3885,7 +3890,7 @@ def humidity():
                     print("First Line Month", firstLineMonth)
                     print("First Line Humidtity", firstLineHumidity)
                     print("First Line Humidtity", firstLineHumidity)
-            elif '1/10/23 12:00' in firstLineMonth:
+            elif '1/10/23 12:00' in firstLineMonth: #Check if the month is October (repeated code for each month except for month searches)
                 if '11/10/23 12:00' in firstLineMonth:
                     pass
                 elif '21/10/23 12:00' in firstLineMonth:
@@ -3900,7 +3905,7 @@ def humidity():
                     print("First Line Month", firstLineMonth)
                     print("First Line Humidtity", firstLineHumidity)
                     print("First Line Humidtity", firstLineHumidity)
-            elif '1/11/23 12:00' in firstLineMonth:
+            elif '1/11/23 12:00' in firstLineMonth: #Check if the month is November (repeated code for each month except for month searches)
                 if '11/11/23 12:00' in firstLineMonth:
                     pass
                 elif '21/11/23 12:00' in firstLineMonth:
@@ -3915,7 +3920,7 @@ def humidity():
                     print("First Line Month", firstLineMonth)
                     print("First Line Humidtity", firstLineHumidity)
                     print("First Line Humidtity", firstLineHumidity)
-            elif '1/12/23 12:00' in firstLineMonth:
+            elif '1/12/23 12:00' in firstLineMonth: #Check if the month is December (repeated code for each month except for month searches)
                 if '11/12/23 12:00' in firstLineMonth:
                     pass
                 elif '21/12/23 12:00' in firstLineMonth:
@@ -3932,6 +3937,7 @@ def humidity():
                     print("First Line Humidtity", firstLineHumidity)
 
 
+    #Get the monthly humidity data for the last 12 months
     humidityMonth1 = humiditiesMonthly[0]
     humidityMonth2 = humiditiesMonthly[1]
     humidityMonth3 = humiditiesMonthly[2]
@@ -3944,38 +3950,40 @@ def humidity():
     humidityMonth10 = humiditiesMonthly[9]
     humidityMonth11 = humiditiesMonthly[10]
 
-
-
-
-
-
+    #Create a string of the humidity data to pass to the front end
     data = strHumidity1, strHumidity2, strAverageHumidity, graphtest, hour0, temperature0, hour1, temperature1, hour2, temperature2, hour3, temperature3, hour4, temperature4, hour5, temperature5, hour6, temperature6, hour7, temperature7, hour8, temperature8, hour9, temperature9, hour10, temperature10, hour11, temperature11, hour12, temperature12, hour13, temperature13, hour14, temperature14, hour15, temperature15, hour16, temperature16, hour17, temperature17, hour18, temperature18, hour19, temperature19, hour20, temperature20, hour21, temperature21, hour22, temperature22, hour23, temperature23, humidityDay0, humidityDay1, humidityDay2, humidityDay3, humidityDay4, humidityDay5, humidityDay6, humidityDay7, humidityDay8, humidityDay9, humidityDay10, humidityDay11, humidityDay12, humidityDay13, humidityDay14, humidityDay15, humidityDay16, humidityDay17, humidityDay18, humidityDay19, humidityDay20, humidityDay21, humidityDay22, humidityDay23, humidityDay24, humidityDay25, humidityDay26, humidityDay27, humidityDay28, humidityDay29, humidityMonth1, humidityMonth2, humidityMonth3, humidityMonth4, humidityMonth5, humidityMonth6, humidityMonth7, humidityMonth8, humidityMonth9, humidityMonth10, humidityMonth11
     print("Data", data)
 
-    return render_template('humidity.html', data=data)
+    return render_template('humidity.html', data=data) #Render the humidity page with the humidity data passed to the front end
 
 @app.route('/weathermaps')
 def weathermaps():
+    """Weather Maps page"""
     return render_template('weathermaps.html')
 
 @app.route('/clocktest')
 def clocktest():
+    """Test Clock page"""
     return render_template('clocktest.html')
 
 @app.route('/calendartest')
 def calendartest():
+    """Test Calendar page"""
     return render_template('calendartest.html')
 
 @app.route('/tabletest1')
 def tabletest():
+    """Test Tables"""
     return render_template('tabletest1.html')
 
 @app.route('/graphtest1')
 def graphtest():
+    """Test Graphs"""
     return render_template('graphtest1.html')
 
 @app.route('/weatherdatatest')
 def weatherdatatest():
+    """Test WeatherLink API"""
     api_key = 'e9acjapvjih3rpbcnjnj8c8kfsnyivkb'
     api_secret = 'p9ltsbyvv137bkskvuerqfs7s8qbe8gy'
     station_id = 142820
@@ -4010,204 +4018,13 @@ def test():
 
 @app.route('/weathertest', methods=['GET', 'POST'])
 def weathertest():
-    api_key = 'e9acjapvjih3rpbcnjnj8c8kfsnyivkb'
-    api_secret = 'p9ltsbyvv137bkskvuerqfs7s8qbe8gy'
-    station_id = 142820
+    """Test Weather page"""
 
-    # current time
-    local_time = int(time.time())
-
-    # api signature
-    data_to_sign = f"api-key{api_key}station-id{station_id}t{local_time}"
-    signature = hmac.new(
-        api_secret.encode('utf-8'),
-        data_to_sign.encode('utf-8'),
-        hashlib.sha256
-    ).hexdigest()
-
-    url = f"https://api.weatherlink.com/v2/current/{station_id}"
-    params = {
-        "api-key": api_key,
-        "t": local_time,
-        "api-signature": signature
-    }
-
-    response = requests.get(url, params=params)
-    current_weather = response.json()
-    sensors = current_weather['sensors']
-    sensors = sensors[2]
-    sensorData = sensors['data']
-    sensorData = sensorData[0]
-    temperatureFarenheit = sensorData['temp']
-    print("Temperature Farenheit", temperatureFarenheit)
-    temperatureCelsius = (temperatureFarenheit - 32) * 5.0 / 9.0
-    temperatureCelsius1 = round(temperatureCelsius, 1)  # round to 1 decimal place
-    print("Temperature Celsius", temperatureCelsius1)
-    strTemperatureCelsius1 = str(temperatureCelsius1) + "°C"
-    print("Temperature Celsius String", strTemperatureCelsius1)
-    strTemperatureFarenheit = str(temperatureFarenheit) + "°F"
-    print("Temperature Farenheit String", strTemperatureFarenheit)
-
-    sensors = current_weather['sensors']
-    sensors = sensors[2]
-    sensorData = sensors['data']
-    sensorData = sensorData[0]
-    humidity = sensorData['hum']
-    humidity = int(humidity)
-    print("Humidity ", humidity)
-    strHumidity = str(humidity) + "%"
-    print("Humidity String", strHumidity)
-
-    sensors = current_weather['sensors']
-    sensors = sensors[4]
-    sensorData = sensors['data']
-    sensorData = sensorData[0]
-    aqi = sensorData['aqi_val']
-    print("AQI ", aqi)
-    aqi_description = sensorData['aqi_desc']
-    print("AQI Description", aqi_description)
-    aqi = int(aqi)
-
-    if aqi == 0:
-        aqi_percentage = "0%"
-        aqi_colour = "#00FF00"
-    elif aqi == 1:
-        aqi_percentage = "10%"
-        aqi_colour = "#7aff00"
-    elif aqi == 2:
-        aqi_percentage = "20%"
-        aqi_colour = "#a1ff00"
-    elif aqi == 3:
-        aqi_percentage = "30%"
-        aqi_colour = "#c7ff00"
-    elif aqi == 4:
-        aqi_percentage = "40%"
-        aqi_colour = "#faff00"
-    elif aqi == 5:
-        aqi_percentage = "50%"
-        aqi_colour = "#ffea00"
-    elif aqi == 6:
-        aqi_percentage = "60%"
-        aqi_colour = "#ffc400"
-    elif aqi == 7:
-        aqi_percentage = "70%"
-        aqi_colour = "#ff9100"
-    elif aqi == 8:
-        aqi_percentage = "80%"
-        aqi_colour = "#ff5e00"
-    elif aqi == 9:
-        aqi_percentage = "90%"
-        aqi_colour = "#ff3700"
-    elif aqi == 10:
-        aqi_percentage = "100%"
-        aqi_colour = "#ff0000"
-
-    sensors = current_weather['sensors']
-    sensors = sensors[2]
-    sensorData = sensors['data']
-    sensorData = sensorData[0]
-    windSpeed = sensorData['wind_speed_last']
-    print("Wind Speed ", windSpeed)
-    strWindSpeed = str(windSpeed) + " mph"
-
-    sensors = current_weather['sensors']
-    sensors = sensors[2]
-    sensorData = sensors['data']
-    sensorData = sensorData[0]
-    windDirection = sensorData['wind_dir_last']
-    print("Wind Direction ", windDirection)
-    if windDirection >= 0 and windDirection < 22.5 or windDirection >= 337.5 and windDirection <= 360:
-        windDirectionDescription = "North"
-        compass = "/static/images/compassNorth.svg"
-    elif windDirection >= 22.5 and windDirection < 67.5:
-        windDirectionDescription = "North East"
-        compass = "/static/images/compassNorthEast.svg"
-    elif windDirection >= 67.5 and windDirection < 112.5:
-        windDirectionDescription = "East"
-        compass = "/static/images/compassEast.svg"
-    elif windDirection >= 112.5 and windDirection < 157.5:
-        windDirectionDescription = "South East"
-        compass = "/static/images/compassSouthEast.svg"
-    elif windDirection >= 157.5 and windDirection < 202.5:
-        windDirectionDescription = "South"
-        compass = "/static/images/compassSouth.svg"
-    elif windDirection >= 202.5 and windDirection < 247.5:
-        windDirectionDescription = "South West"
-        compass = "/static/images/compassSouthWest.svg"
-    elif windDirection >= 247.5 and windDirection < 292.5:
-        windDirectionDescription = "West"
-        compass = "/static/images/compassWest.svg"
-    elif windDirection >= 292.5 and windDirection < 337.5:
-        windDirectionDescription = "North West"
-        compass = "/static/images/compassNorthWest.svg"
-
-    print("Wind Direction Description", windDirectionDescription)
-
-    sensors = current_weather['sensors']
-    sensors = sensors[2]
-    sensorData = sensors['data']
-    sensorData = sensorData[0]
-    UV_index = sensorData['uv_index']
-    print("UV Index", UV_index)
-    if UV_index <= 2:
-        UV_index_description = " Low"
-    elif UV_index >= 3 and UV_index <= 5:
-        UV_index_description = " Moderate"
-    elif UV_index >= 6 and UV_index <= 7:
-        UV_index_description = " High"
-    elif UV_index >= 8 and UV_index <= 10:
-        UV_index_description = " Very High"
-
-    UV_index = int(UV_index)
-
-    if UV_index == 0:
-        UV_index_percentage = "0%"
-        UV_index_colour = "#00FF00"
-    elif UV_index == 1:
-        UV_index_percentage = "10%"
-        UV_index_colour = "#7aff00"
-    elif UV_index == 2:
-        UV_index_percentage = "20%"
-        UV_index_colour = "#a1ff00"
-    elif UV_index == 3:
-        UV_index_percentage = "30%"
-        UV_index_colour = "#c7ff00"
-    elif UV_index == 4:
-        UV_index_percentage = "40%"
-        UV_index_colour = "#faff00"
-    elif UV_index == 5:
-        UV_index_percentage = "50%"
-        UV_index_colour = "#ffea00"
-    elif UV_index == 6:
-        UV_index_percentage = "60%"
-        UV_index_colour = "#ffc400"
-    elif UV_index == 7:
-        UV_index_percentage = "70%"
-        UV_index_colour = "#ff9100"
-    elif UV_index == 8:
-        UV_index_percentage = "80%"
-        UV_index_colour = "#ff5e00"
-    elif UV_index == 9:
-        UV_index_percentage = "90%"
-        UV_index_colour = "#ff3700"
-    elif UV_index == 10:
-        UV_index_percentage = "100%"
-        UV_index_colour = "#ff0000"
-
-    print("UV Index Description", UV_index_description)
-    print("UV Index", UV_index)
-    print("UV Index Percentage", UV_index_percentage)
-    print("UV Index Colour", UV_index_colour)
-    print("AQI Percentage", aqi_percentage)
-
-
-    data = strTemperatureCelsius1, strHumidity, aqi, aqi_description, strWindSpeed, windDirectionDescription, UV_index, UV_index_description, UV_index_percentage, UV_index_colour, aqi_percentage, aqi_colour, compass
-    print("Data", data)
-
-    return render_template('weathertest.html', data=data)
+    return render_template('weathertest.html')
 
 @app.route('/openweathertest', methods=['GET', 'POST'])
 def openweathertest():
+    """Test Open Weather API"""
     openWeather_API_Key = 'cdb2f81a0c0053ff42b1db37fdb0b39b'
     openWeatherID = 2646057
     local_time = int(time.time())
@@ -4236,6 +4053,7 @@ def openweathertest():
 
 @app.route('/weatherapitest', methods=['GET', 'POST'])
 def weatherapitest():
+    """Test weather API"""
     weatherAPI_key = '33d91967a1b04700807201804242711'
     weatherAPIurl = 'https://api.weatherapi.com/v1/forecast.json?key=' + weatherAPI_key + '&q=IP5 3RE&days=1&aqi=yes&alerts=yes'
     print(weatherAPIurl)
@@ -4278,6 +4096,7 @@ def weatherapitest():
 
 @app.route('/pollencounttest', methods=['GET', 'POST'])
 def pollencounttest():
+    """Test pollen count API"""
     import http.client
 
     conn = http.client.HTTPSConnection("api.ambeedata.com")
@@ -4294,26 +4113,18 @@ def pollencounttest():
 
     decodedData = data.decode("utf-8")
 
-#52.05889042400749, 1.2847440196824491
-#AIzaSyBgf7iRnUCGVXge5biwB2o1K7lxM24kE_8
+
     return jsonify(decodedData)
 
 @app.route('/csvtest', methods=['GET', 'POST'])
 def csvtest():
+    """Test CSV file"""
     with open('Weather_Link_Outdoor.csv', mode='r', encoding = 'latin') as file:
         csvFile = csv.reader(file)
         jsonFile = []
         for lines in csvFile:
             jsonFile.append(lines)
         print(jsonFile)
-
-    #with open('Weather_Link_Outdoor.csv', newline='', encoding = 'latin') as csvfile:
-     #   csvFile = csv.reader(csvfile, delimiter=' ', quotechar='|')
-     #   for row in csvFile:
-      #      csvData = ', '.join(row)
-
-      #  print(csvData)
-       # print("CSV Data")"""
 
     return jsonify(jsonFile)
 
