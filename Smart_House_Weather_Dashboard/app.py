@@ -3263,8 +3263,282 @@ def temperature():
         hour23 = timeHours[23]
         temperature23 = temperatures24Hours[23]
 
+        pointerDate = 1
+        pointerTemperature = 1
+        dateDaily = []
+        temperatureDaily = []
+        csvLength = len(jsonFile)
 
-    data = strTemperatureCelsius1, strTemperatureCelsius2, strTemperatureFarenheit1, strTemperatureFarenheit2, graphtest, hour0, temperature0, hour1, temperature1, hour2, temperature2, hour3, temperature3, hour4, temperature4, hour5, temperature5, hour6, temperature6, hour7, temperature7, hour8, temperature8, hour9, temperature9, hour10, temperature10, hour11, temperature11, hour12, temperature12, hour13, temperature13, hour14, temperature14, hour15, temperature15, hour16, temperature16, hour17, temperature17, hour18, temperature18, hour19, temperature19, hour20, temperature20, hour21, temperature21, hour22, temperature22, hour23, temperature23
+        for i in range(1, 31):
+            lastLine = jsonFile[csvLength - pointerDate]
+            lastLineDate = lastLine[0]
+            lastLineTemperature = lastLine[1]
+            lastLineTemperature = int(lastLineTemperature)
+            dateDaily.append(lastLineDate)
+            temperatureDaily.append(lastLineTemperature)
+            pointerDate += 288
+            pointerTemperature += 288
+            temperatureData = {"date": lastLineDate, "temperature": lastLineTemperature}
+        print("Daily Temperatures", temperatureDaily)
+        print("Daily Dates", dateDaily)
+
+        graphtest = [{'hour': '00', 'temperature': 8},]
+
+
+        temperatureDay0 = temperatureDaily[0]
+        temperatureDay1 = temperatureDaily[1]
+        temperatureDay2 = temperatureDaily[2]
+        temperatureDay3 = temperatureDaily[3]
+        temperatureDay4 = temperatureDaily[4]
+        temperatureDay5 = temperatureDaily[5]
+        temperatureDay6 = temperatureDaily[6]
+        temperatureDay7 = temperatureDaily[7]
+        temperatureDay8 = temperatureDaily[8]
+        temperatureDay9 = temperatureDaily[9]
+        temperatureDay10 = temperatureDaily[10]
+        temperatureDay11 = temperatureDaily[11]
+        temperatureDay12 = temperatureDaily[12]
+        temperatureDay13 = temperatureDaily[13]
+        temperatureDay14 = temperatureDaily[14]
+        temperatureDay15 = temperatureDaily[15]
+        temperatureDay16 = temperatureDaily[16]
+        temperatureDay17 = temperatureDaily[17]
+        temperatureDay18 = temperatureDaily[18]
+        temperatureDay19 = temperatureDaily[19]
+        temperatureDay20 = temperatureDaily[20]
+        temperatureDay21 = temperatureDaily[21]
+        temperatureDay22 = temperatureDaily[22]
+        temperatureDay23 = temperatureDaily[23]
+        temperatureDay24 = temperatureDaily[24]
+        temperatureDay25 = temperatureDaily[25]
+        temperatureDay26 = temperatureDaily[26]
+        temperatureDay27 = temperatureDaily[27]
+        temperatureDay28 = temperatureDaily[28]
+        temperatureDay29 = temperatureDaily[29]
+
+
+
+#3977
+
+    pointerMonth = 6
+    pointerTemperature = 1
+    months = []
+    temperaturesMonthly = []
+    csvLength = len(jsonFile)
+
+    firstLine = jsonFile[pointerMonth]
+    print("First Line", firstLine)
+    #print(jsonFile)
+
+    x = '1/1/23 00:15' in firstLine
+    print("X", x)
+    print(len(jsonFile))
+
+    #52870
+    #52864
+
+    for i in range(len(jsonFile)):
+        if pointerMonth < 52864:
+            firstLine = jsonFile[pointerMonth]
+            firstLineMonth = firstLine[0]
+            pointerMonth += 1
+            if '1/1/23 12:00' in firstLineMonth:
+                if '11/1/23 12:00' in firstLineMonth:
+                    pass
+                elif '21/1/23 12:00' in firstLineMonth:
+                    pass
+                elif '31/1/23 12:00' in firstLineMonth:
+                    pass
+                else:
+                    firstLineTemperature = firstLine[1]
+                    temperaturesMonthly.append(firstLineTemperature)
+                    firstLineMonth = "Jan"
+                    months.append(firstLineMonth)
+                    print("First Line Month", firstLineMonth)
+                    print("First Line Temperature", firstLineTemperature)
+                    print("First Line Temperature", firstLineTemperature)
+            elif '1/2/23 12:00' in firstLineMonth:
+                if '11/2/23 12:00' in firstLineMonth:
+                    pass
+                elif '21/2/23 12:00' in firstLineMonth:
+                    pass
+                elif '31/2/23 12:00' in firstLineMonth:
+                    pass
+                else:
+                    firstLineTemperature = firstLine[1]
+                    temperaturesMonthly.append(firstLineTemperature)
+                    firstLineMonth = "Feb"
+                    months.append(firstLineMonth)
+                    print("First Line Month", firstLineMonth)
+                    print("First Line Temperature", firstLineTemperature)
+                    print("First Line Temperature", firstLineTemperature)
+            elif '1/3/23 12:00' in firstLineMonth:
+                if '11/3/23 12:00' in firstLineMonth:
+                    pass
+                elif '21/3/23 12:00' in firstLineMonth:
+                    pass
+                elif '31/3/23 12:00' in firstLineMonth:
+                    pass
+                else:
+                    firstLineTemperature = firstLine[1]
+                    temperaturesMonthly.append(firstLineTemperature)
+                    firstLineMonth = "Mar"
+                    months.append(firstLineMonth)
+                    print("First Line Month", firstLineMonth)
+                    print("First Line Temperature", firstLineTemperature)
+                    print("First Line Temperature", firstLineTemperature)
+            elif '1/4/23 12:00' in firstLineMonth:
+                if '11/4/23 12:00' in firstLineMonth:
+                    pass
+                elif '21/4/23 12:00' in firstLineMonth:
+                    pass
+                elif '31/4/23 12:00' in firstLineMonth:
+                    pass
+                else:
+                    firstLineTemperature = firstLine[1]
+                    temperaturesMonthly.append(firstLineTemperature)
+                    firstLineMonth = "Apr"
+                    months.append(firstLineMonth)
+                    print("First Line Month", firstLineMonth)
+                    print("First Line Temperature", firstLineTemperature)
+                    print("First Line Temperature", firstLineTemperature)
+            elif '3/5/23 17:15' in firstLineMonth:
+                if '13/5/23 17:15' in firstLineMonth:
+                    pass
+                elif '23/5/23 17:15' in firstLineMonth:
+                    pass
+                elif '31/5/23 17:15' in firstLineMonth:
+                    pass
+                else:
+                    firstLineTemperature = firstLine[1]
+                    temperaturesMonthly.append(firstLineTemperature)
+                    firstLineMonth = "May"
+                    months.append(firstLineMonth)
+                    print("First Line Month", firstLineMonth)
+                    print("First Line Temperature", firstLineTemperature)
+                    print("First Line Temperature", firstLineTemperature)
+            elif '1/6/23 12:00' in firstLineMonth:
+                if '11/6/23 12:00' in firstLineMonth:
+                    pass
+                elif '21/6/23 12:00' in firstLineMonth:
+                    pass
+                elif '31/6/23 12:00' in firstLineMonth:
+                    pass
+                else:
+                    firstLineTemperature = firstLine[1]
+                    temperaturesMonthly.append(firstLineTemperature)
+                    firstLineMonth = "Jun"
+                    months.append(firstLineMonth)
+                    print("First Line Month", firstLineMonth)
+                    print("First Line Temperature", firstLineTemperature)
+                    print("First Line Temperature", firstLineTemperature)
+            elif '1/7/23 12:00' in firstLineMonth:
+                if '11/7/23 12:00' in firstLineMonth:
+                    pass
+                elif '21/7/23 12:00' in firstLineMonth:
+                    pass
+                elif '31/7/23 12:00' in firstLineMonth:
+                    pass
+                else:
+                    firstLineTemperature = firstLine[1]
+                    temperaturesMonthly.append(firstLineTemperature)
+                    firstLineMonth = "Jul"
+                    months.append(firstLineMonth)
+                    print("First Line Month", firstLineMonth)
+                    print("First Line Temperature", firstLineTemperature)
+                    print("First Line Temperature", firstLineTemperature)
+            elif '1/8/23 12:00' in firstLineMonth:
+                if '11/8/23 12:00' in firstLineMonth:
+                    pass
+                elif '21/8/23 12:00' in firstLineMonth:
+                    pass
+                elif '31/8/23 12:00' in firstLineMonth:
+                    pass
+                else:
+                    firstLineTemperature = firstLine[1]
+                    temperaturesMonthly.append(firstLineTemperature)
+                    firstLineMonth = "Aug"
+                    months.append(firstLineMonth)
+                    print("First Line Month", firstLineMonth)
+                    print("First Line Temperature", firstLineTemperature)
+                    print("First Line Temperature", firstLineTemperature)
+            elif '1/9/23 12:00' in firstLineMonth:
+                if '11/9/23 12:00' in firstLineMonth:
+                    pass
+                elif '21/9/23 12:00' in firstLineMonth:
+                    pass
+                elif '31/9/23 12:00' in firstLineMonth:
+                    pass
+                else:
+                    firstLineTemperature = firstLine[1]
+                    temperaturesMonthly.append(firstLineTemperature)
+                    firstLineMonth = "Sep"
+                    months.append(firstLineMonth)
+                    print("First Line Month", firstLineMonth)
+                    print("First Line Temperature", firstLineTemperature)
+                    print("First Line Temperature", firstLineTemperature)
+            elif '1/10/23 12:00' in firstLineMonth:
+                if '11/10/23 12:00' in firstLineMonth:
+                    pass
+                elif '21/10/23 12:00' in firstLineMonth:
+                    pass
+                elif '31/10/23 12:00' in firstLineMonth:
+                    pass
+                else:
+                    firstLineTemperature = firstLine[1]
+                    temperaturesMonthly.append(firstLineTemperature)
+                    firstLineMonth = "Oct"
+                    months.append(firstLineMonth)
+                    print("First Line Month", firstLineMonth)
+                    print("First Line Temperature", firstLineTemperature)
+                    print("First Line Temperature", firstLineTemperature)
+            elif '1/11/23 12:00' in firstLineMonth:
+                if '11/11/23 12:00' in firstLineMonth:
+                    pass
+                elif '21/11/23 12:00' in firstLineMonth:
+                    pass
+                elif '31/11/23 12:00' in firstLineMonth:
+                    pass
+                else:
+                    firstLineTemperature = firstLine[1]
+                    temperaturesMonthly.append(firstLineTemperature)
+                    firstLineMonth = "Nov"
+                    months.append(firstLineMonth)
+                    print("First Line Month", firstLineMonth)
+                    print("First Line Temperature", firstLineTemperature)
+                    print("First Line Temperature", firstLineTemperature)
+            elif '1/12/23 12:00' in firstLineMonth:
+                if '11/12/23 12:00' in firstLineMonth:
+                    pass
+                elif '21/12/23 12:00' in firstLineMonth:
+                    pass
+                elif '31/12/23 12:00' in firstLineMonth:
+                    pass
+                else:
+                    firstLineTemperature = firstLine[1]
+                    temperaturesMonthly.append(firstLineTemperature)
+                    firstLineMonth = "Dec"
+                    months.append(firstLineMonth)
+                    print("First Line Month", firstLineMonth)
+                    print("First Line Temperature", firstLineTemperature)
+                    print("First Line Temperature", firstLineTemperature)
+    print("Monthly Temperatures", temperaturesMonthly)
+    print("Monthly Dates", months)
+
+
+    temperatureMonth1 = temperaturesMonthly[0]
+    temperatureMonth2 = temperaturesMonthly[1]
+    temperatureMonth3 = temperaturesMonthly[2]
+    temperatureMonth4 = temperaturesMonthly[3]
+    temperatureMonth5 = temperaturesMonthly[4]
+    temperatureMonth6 = temperaturesMonthly[5]
+    temperatureMonth7 = temperaturesMonthly[6]
+    temperatureMonth8 = temperaturesMonthly[7]
+    temperatureMonth9 = temperaturesMonthly[8]
+    temperatureMonth10 = temperaturesMonthly[9]
+    temperatureMonth11 = temperaturesMonthly[10]
+
+    data = strTemperatureCelsius1, strTemperatureCelsius2, strTemperatureFarenheit1, strTemperatureFarenheit2, graphtest, hour0, temperature0, hour1, temperature1, hour2, temperature2, hour3, temperature3, hour4, temperature4, hour5, temperature5, hour6, temperature6, hour7, temperature7, hour8, temperature8, hour9, temperature9, hour10, temperature10, hour11, temperature11, hour12, temperature12, hour13, temperature13, hour14, temperature14, hour15, temperature15, hour16, temperature16, hour17, temperature17, hour18, temperature18, hour19, temperature19, hour20, temperature20, hour21, temperature21, hour22, temperature22, hour23, temperature23, temperatureDay0, temperatureDay1, temperatureDay2, temperatureDay3, temperatureDay4, temperatureDay5, temperatureDay6, temperatureDay7, temperatureDay8, temperatureDay9, temperatureDay10, temperatureDay11, temperatureDay12, temperatureDay13, temperatureDay14, temperatureDay15, temperatureDay16, temperatureDay17, temperatureDay18, temperatureDay19, temperatureDay20, temperatureDay21, temperatureDay22, temperatureDay23, temperatureDay24, temperatureDay25, temperatureDay26, temperatureDay27, temperatureDay28, temperatureDay29, temperatureMonth1, temperatureMonth2, temperatureMonth3, temperatureMonth4, temperatureMonth5, temperatureMonth6, temperatureMonth7, temperatureMonth8, temperatureMonth9, temperatureMonth10, temperatureMonth11
     print("Data", data)
     print("Data 4", data[4])
 
@@ -3401,11 +3675,281 @@ def humidity():
         hour23 = timeHours[23]
         temperature23 = humidities24Hours[23]
 
+    pointerDate = 1
+    pointerHumidity = 1
+    dateDaily = []
+    humidityDaily = []
+    csvLength = len(jsonFile)
+
+    for i in range(1, 31):
+        lastLine = jsonFile[csvLength - pointerDate]
+        lastLineDate = lastLine[0]
+        lastLineHumidity = lastLine[4]
+        lastLineHumidity = int(lastLineHumidity)
+        dateDaily.append(lastLineDate)
+        humidityDaily.append(lastLineHumidity)
+        pointerDate += 288
+        pointerHumidity += 288
+        humidityData = {"date": lastLineDate, "humidity": lastLineHumidity}
+    print("Daily Humidity", humidityDaily)
+    print("Daily Dates", dateDaily)
+
+    graphtest = [{'hour': '00', 'humidity': 8}, ]
+
+    humidityDay0 = humidityDaily[0]
+    humidityDay1 = humidityDaily[1]
+    humidityDay2 = humidityDaily[2]
+    humidityDay3 = humidityDaily[3]
+    humidityDay4 = humidityDaily[4]
+    humidityDay5 = humidityDaily[5]
+    humidityDay6 = humidityDaily[6]
+    humidityDay7 = humidityDaily[7]
+    humidityDay8 = humidityDaily[8]
+    humidityDay9 = humidityDaily[9]
+    humidityDay10 = humidityDaily[10]
+    humidityDay11 = humidityDaily[11]
+    humidityDay12 = humidityDaily[12]
+    humidityDay13 = humidityDaily[13]
+    humidityDay14 = humidityDaily[14]
+    humidityDay15 = humidityDaily[15]
+    humidityDay16 = humidityDaily[16]
+    humidityDay17 = humidityDaily[17]
+    humidityDay18 = humidityDaily[18]
+    humidityDay19 = humidityDaily[19]
+    humidityDay20 = humidityDaily[20]
+    humidityDay21 = humidityDaily[21]
+    humidityDay22 = humidityDaily[22]
+    humidityDay23 = humidityDaily[23]
+    humidityDay24 = humidityDaily[24]
+    humidityDay25 = humidityDaily[25]
+    humidityDay26 = humidityDaily[26]
+    humidityDay27 = humidityDaily[27]
+    humidityDay28 = humidityDaily[28]
+    humidityDay29 = humidityDaily[29]
+
+
+    pointerMonth = 6
+    pointerTemperature = 1
+    months = []
+    humiditiesMonthly = []
+    csvLength = len(jsonFile)
+
+    firstLine = jsonFile[pointerMonth]
+    print("First Line", firstLine)
+    # print(jsonFile)
+
+    x = '1/1/23 00:15' in firstLine
+    print("X", x)
+    print(len(jsonFile))
+
+    # 52870
+    # 52864
+
+    for i in range(len(jsonFile)):
+        if pointerMonth < 52864:
+            firstLine = jsonFile[pointerMonth]
+            firstLineMonth = firstLine[0]
+            pointerMonth += 1
+            if '1/1/23 12:00' in firstLineMonth:
+                if '11/1/23 12:00' in firstLineMonth:
+                    pass
+                elif '21/1/23 12:00' in firstLineMonth:
+                    pass
+                elif '31/1/23 12:00' in firstLineMonth:
+                    pass
+                else:
+                    firstLineHumidity = firstLine[4]
+                    humiditiesMonthly.append(firstLineHumidity)
+                    firstLineMonth = "Jan"
+                    months.append(firstLineMonth)
+                    print("First Line Month", firstLineMonth)
+                    print("First Line Humidtity", firstLineHumidity)
+                    print("First Line Humidtity", firstLineHumidity)
+            elif '1/2/23 12:00' in firstLineMonth:
+                if '11/2/23 12:00' in firstLineMonth:
+                    pass
+                elif '21/2/23 12:00' in firstLineMonth:
+                    pass
+                elif '31/2/23 12:00' in firstLineMonth:
+                    pass
+                else:
+                    firstLineHumidity = firstLine[4]
+                    humiditiesMonthly.append(firstLineHumidity)
+                    firstLineMonth = "Feb"
+                    months.append(firstLineMonth)
+                    print("First Line Month", firstLineMonth)
+                    print("First Line Humidtity", firstLineHumidity)
+                    print("First Line Humidtity", firstLineHumidity)
+            elif '1/3/23 12:00' in firstLineMonth:
+                if '11/3/23 12:00' in firstLineMonth:
+                    pass
+                elif '21/3/23 12:00' in firstLineMonth:
+                    pass
+                elif '31/3/23 12:00' in firstLineMonth:
+                    pass
+                else:
+                    firstLineHumidity = firstLine[4]
+                    humiditiesMonthly.append(firstLineHumidity)
+                    firstLineMonth = "Mar"
+                    months.append(firstLineMonth)
+                    print("First Line Month", firstLineMonth)
+                    print("First Line Humidtity", firstLineHumidity)
+                    print("First Line Humidtity", firstLineHumidity)
+            elif '1/4/23 12:00' in firstLineMonth:
+                if '11/4/23 12:00' in firstLineMonth:
+                    pass
+                elif '21/4/23 12:00' in firstLineMonth:
+                    pass
+                elif '31/4/23 12:00' in firstLineMonth:
+                    pass
+                else:
+                    firstLineHumidity = firstLine[4]
+                    humiditiesMonthly.append(firstLineHumidity)
+                    firstLineMonth = "Apr"
+                    months.append(firstLineMonth)
+                    print("First Line Month", firstLineMonth)
+                    print("First Line Humidtity", firstLineHumidity)
+                    print("First Line Humidtity", firstLineHumidity)
+            elif '3/5/23 17:30' in firstLineMonth:
+                if '13/5/23 17:30' in firstLineMonth:
+                    pass
+                elif '23/5/23 17:30' in firstLineMonth:
+                    pass
+                elif '31/5/23 17:30' in firstLineMonth:
+                    pass
+                else:
+                    firstLineHumidity = firstLine[4]
+                    humiditiesMonthly.append(firstLineHumidity)
+                    firstLineMonth = "May"
+                    months.append(firstLineMonth)
+                    print("First Line Month", firstLineMonth)
+                    print("First Line Humidtity", firstLineHumidity)
+                    print("First Line Humidtity", firstLineHumidity)
+            elif '1/6/23 12:00' in firstLineMonth:
+                if '11/6/23 12:00' in firstLineMonth:
+                    pass
+                elif '21/6/23 12:00' in firstLineMonth:
+                    pass
+                elif '31/6/23 12:00' in firstLineMonth:
+                    pass
+                else:
+                    firstLineHumidity = firstLine[4]
+                    humiditiesMonthly.append(firstLineHumidity)
+                    firstLineMonth = "Jun"
+                    months.append(firstLineMonth)
+                    print("First Line Month", firstLineMonth)
+                    print("First Line Humidtity", firstLineHumidity)
+                    print("First Line Humidtity", firstLineHumidity)
+            elif '1/7/23 12:00' in firstLineMonth:
+                if '11/7/23 12:00' in firstLineMonth:
+                    pass
+                elif '21/7/23 12:00' in firstLineMonth:
+                    pass
+                elif '31/7/23 12:00' in firstLineMonth:
+                    pass
+                else:
+                    firstLineHumidity = firstLine[4]
+                    humiditiesMonthly.append(firstLineHumidity)
+                    firstLineMonth = "Jul"
+                    months.append(firstLineMonth)
+                    print("First Line Month", firstLineMonth)
+                    print("First Line Humidtity", firstLineHumidity)
+                    print("First Line Humidtity", firstLineHumidity)
+            elif '1/8/23 12:00' in firstLineMonth:
+                if '11/8/23 12:00' in firstLineMonth:
+                    pass
+                elif '21/8/23 12:00' in firstLineMonth:
+                    pass
+                elif '31/8/23 12:00' in firstLineMonth:
+                    pass
+                else:
+                    firstLineHumidity = firstLine[4]
+                    humiditiesMonthly.append(firstLineHumidity)
+                    firstLineMonth = "Aug"
+                    months.append(firstLineMonth)
+                    print("First Line Month", firstLineMonth)
+                    print("First Line Humidtity", firstLineHumidity)
+                    print("First Line Humidtity", firstLineHumidity)
+            elif '1/9/23 12:00' in firstLineMonth:
+                if '11/9/23 12:00' in firstLineMonth:
+                    pass
+                elif '21/9/23 12:00' in firstLineMonth:
+                    pass
+                elif '31/9/23 12:00' in firstLineMonth:
+                    pass
+                else:
+                    firstLineHumidity = firstLine[4]
+                    humiditiesMonthly.append(firstLineHumidity)
+                    firstLineMonth = "Sep"
+                    months.append(firstLineMonth)
+                    print("First Line Month", firstLineMonth)
+                    print("First Line Humidtity", firstLineHumidity)
+                    print("First Line Humidtity", firstLineHumidity)
+            elif '1/10/23 12:00' in firstLineMonth:
+                if '11/10/23 12:00' in firstLineMonth:
+                    pass
+                elif '21/10/23 12:00' in firstLineMonth:
+                    pass
+                elif '31/10/23 12:00' in firstLineMonth:
+                    pass
+                else:
+                    firstLineHumidity = firstLine[4]
+                    humiditiesMonthly.append(firstLineHumidity)
+                    firstLineMonth = "Oct"
+                    months.append(firstLineMonth)
+                    print("First Line Month", firstLineMonth)
+                    print("First Line Humidtity", firstLineHumidity)
+                    print("First Line Humidtity", firstLineHumidity)
+            elif '1/11/23 12:00' in firstLineMonth:
+                if '11/11/23 12:00' in firstLineMonth:
+                    pass
+                elif '21/11/23 12:00' in firstLineMonth:
+                    pass
+                elif '31/11/23 12:00' in firstLineMonth:
+                    pass
+                else:
+                    firstLineHumidity = firstLine[4]
+                    humiditiesMonthly.append(firstLineHumidity)
+                    firstLineMonth = "Nov"
+                    months.append(firstLineMonth)
+                    print("First Line Month", firstLineMonth)
+                    print("First Line Humidtity", firstLineHumidity)
+                    print("First Line Humidtity", firstLineHumidity)
+            elif '1/12/23 12:00' in firstLineMonth:
+                if '11/12/23 12:00' in firstLineMonth:
+                    pass
+                elif '21/12/23 12:00' in firstLineMonth:
+                    pass
+                elif '31/12/23 12:00' in firstLineMonth:
+                    pass
+                else:
+                    firstLineHumidity = firstLine[4]
+                    humiditiesMonthly.append(firstLineHumidity)
+                    firstLineMonth = "Dec"
+                    months.append(firstLineMonth)
+                    print("First Line Month", firstLineMonth)
+                    print("First Line Humidtity", firstLineHumidity)
+                    print("First Line Humidtity", firstLineHumidity)
+
+
+    humidityMonth1 = humiditiesMonthly[0]
+    humidityMonth2 = humiditiesMonthly[1]
+    humidityMonth3 = humiditiesMonthly[2]
+    humidityMonth4 = humiditiesMonthly[3]
+    humidityMonth5 = humiditiesMonthly[4]
+    humidityMonth6 = humiditiesMonthly[5]
+    humidityMonth7 = humiditiesMonthly[6]
+    humidityMonth8 = humiditiesMonthly[7]
+    humidityMonth9 = humiditiesMonthly[8]
+    humidityMonth10 = humiditiesMonthly[9]
+    humidityMonth11 = humiditiesMonthly[10]
 
 
 
 
-    data = strHumidity1, strHumidity2, strAverageHumidity, graphtest, hour0, temperature0, hour1, temperature1, hour2, temperature2, hour3, temperature3, hour4, temperature4, hour5, temperature5, hour6, temperature6, hour7, temperature7, hour8, temperature8, hour9, temperature9, hour10, temperature10, hour11, temperature11, hour12, temperature12, hour13, temperature13, hour14, temperature14, hour15, temperature15, hour16, temperature16, hour17, temperature17, hour18, temperature18, hour19, temperature19, hour20, temperature20, hour21, temperature21, hour22, temperature22, hour23, temperature23
+
+
+    data = strHumidity1, strHumidity2, strAverageHumidity, graphtest, hour0, temperature0, hour1, temperature1, hour2, temperature2, hour3, temperature3, hour4, temperature4, hour5, temperature5, hour6, temperature6, hour7, temperature7, hour8, temperature8, hour9, temperature9, hour10, temperature10, hour11, temperature11, hour12, temperature12, hour13, temperature13, hour14, temperature14, hour15, temperature15, hour16, temperature16, hour17, temperature17, hour18, temperature18, hour19, temperature19, hour20, temperature20, hour21, temperature21, hour22, temperature22, hour23, temperature23, humidityDay0, humidityDay1, humidityDay2, humidityDay3, humidityDay4, humidityDay5, humidityDay6, humidityDay7, humidityDay8, humidityDay9, humidityDay10, humidityDay11, humidityDay12, humidityDay13, humidityDay14, humidityDay15, humidityDay16, humidityDay17, humidityDay18, humidityDay19, humidityDay20, humidityDay21, humidityDay22, humidityDay23, humidityDay24, humidityDay25, humidityDay26, humidityDay27, humidityDay28, humidityDay29, humidityMonth1, humidityMonth2, humidityMonth3, humidityMonth4, humidityMonth5, humidityMonth6, humidityMonth7, humidityMonth8, humidityMonth9, humidityMonth10, humidityMonth11
     print("Data", data)
 
     return render_template('humidity.html', data=data)
