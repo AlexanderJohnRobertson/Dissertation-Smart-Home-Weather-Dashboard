@@ -102,7 +102,7 @@ body {
 .left-content {
   padding: 25px 50px 40px;
   color: var(--primary-color);
-  height: 95vh;
+  height: 100vh;
   overflow: auto;
 }
 
