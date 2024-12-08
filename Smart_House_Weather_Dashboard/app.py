@@ -3187,7 +3187,7 @@ def temperature():
         jsonFile = []
         for lines in csvFile:
             jsonFile.append(lines)
-        print(jsonFile)
+
 
         temperatures24Hours = []
         timeHours = []
@@ -3599,7 +3599,7 @@ def humidity():
         jsonFile = []
         for lines in csvFile:
             jsonFile.append(lines)
-        print(jsonFile)
+
 
         humidities24Hours = []
         timeHours = []
