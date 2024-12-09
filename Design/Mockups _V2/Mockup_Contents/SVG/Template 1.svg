@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <clipPath id="clip-Template_1">
+      <rect width="1920" height="1080"/>
+    </clipPath>
+  </defs>
+  <g id="Template_1" data-name="Template 1" clip-path="url(#clip-Template_1)">
+    <rect width="1920" height="1080" fill="#fff"/>
+    <g id="Group_1" data-name="Group 1">
+      <g id="Rectangle_1" data-name="Rectangle 1" fill="#3688be" stroke="#707070" stroke-width="1">
+        <rect width="1896" height="101" stroke="none"/>
+        <rect x="0.5" y="0.5" width="1895" height="100" fill="none"/>
+      </g>
+      <g id="Rectangle_2" data-name="Rectangle 2" transform="translate(1896)" fill="#fff" stroke="#707070" stroke-width="1">
+        <rect width="24" height="1080" stroke="none"/>
+        <rect x="0.5" y="0.5" width="23" height="1079" fill="none"/>
+      </g>
+      <g id="Rectangle_3" data-name="Rectangle 3" transform="translate(1896)" fill="#fff" stroke="#707070" stroke-width="1">
+        <rect width="24" height="27" stroke="none"/>
+        <rect x="0.5" y="0.5" width="23" height="26" fill="none"/>
+      </g>
+      <g id="Rectangle_4" data-name="Rectangle 4" transform="translate(1896 1053)" fill="#fff" stroke="#707070" stroke-width="1">
+        <rect width="24" height="27" stroke="none"/>
+        <rect x="0.5" y="0.5" width="23" height="26" fill="none"/>
+      </g>
+      <g id="Rectangle_5" data-name="Rectangle 5" transform="translate(1896 101)" fill="#00c5ff" stroke="#707070" stroke-width="1">
+        <rect width="24" height="194" stroke="none"/>
+        <rect x="0.5" y="0.5" width="23" height="193" fill="none"/>
+      </g>
+      <g id="Polygon_1" data-name="Polygon 1" transform="translate(1898 1)" fill="#00c5ff">
+        <path d="M 20.22210311889648 22.5 L 0.7778975963592529 22.5 L 10.5 1.20396614074707 L 20.22210311889648 22.5 Z" stroke="none"/>
+        <path d="M 10.5 2.407943725585938 L 1.555801391601562 22 L 19.44419860839844 22 L 10.5 2.407943725585938 M 10.5 0 L 21 23 L 0 23 L 10.5 0 Z" stroke="none" fill="#707070"/>
+      </g>
+      <g id="Polygon_2" data-name="Polygon 2" transform="translate(1918 1078) rotate(-180)" fill="#00c5ff">
+        <path d="M 20.22210311889648 22.5 L 0.7778975963592529 22.5 L 10.5 1.20396614074707 L 20.22210311889648 22.5 Z" stroke="none"/>
+        <path d="M 10.5 2.407943725585938 L 1.555801391601562 22 L 19.44419860839844 22 L 10.5 2.407943725585938 M 10.5 0 L 21 23 L 0 23 L 10.5 0 Z" stroke="none" fill="#707070"/>
+      </g>
+      <g id="Rectangle_6" data-name="Rectangle 6" transform="translate(601 33)" fill="#3a4658" stroke="#f90" stroke-linejoin="round" stroke-width="10">
+        <rect width="332" height="77" rx="16" stroke="none"/>
+        <rect x="5" y="5" width="322" height="67" rx="11" fill="none"/>
+      </g>
+      <g id="Rectangle_7" data-name="Rectangle 7" transform="translate(980 31)" fill="#52b6f8" stroke="#f90" stroke-width="10">
+        <rect width="332" height="77" rx="15" stroke="none"/>
+        <rect x="5" y="5" width="322" height="67" rx="10" fill="none"/>
+      </g>
+      <text id="Smart_Home" data-name="Smart Home" transform="translate(620 35)" fill="#f90" font-size="45" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-133.671" y="49">Smart Home</tspan></text>
+      <text id="Weather" transform="translate(1013 38)" fill="#f90" font-size="45" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-89.714" y="49">Weather</tspan></text>
+      <g id="Rectangle_8" data-name="Rectangle 8" transform="translate(0 101)" fill="#3a4658" stroke="#707070" stroke-width="1">
+        <rect width="1896" height="979" stroke="none"/>
+        <rect x="0.5" y="0.5" width="1895" height="978" fill="none"/>
+      </g>
+      <line id="Line_1" data-name="Line 1" x2="1896" transform="translate(0.5 101.5)" fill="none" stroke="#f90" stroke-width="10"/>
+      <line id="Line_2" data-name="Line 2" x2="312" transform="translate(611.5 101.5)" fill="none" stroke="#3a4658" stroke-width="11"/>
+    </g>
+    <text id="S275931" transform="translate(1352.5 867.5)" fill="#f90" stroke="#f90" stroke-width="1" font-size="100" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="108">S275931</tspan></text>
+  </g>
+</svg>
