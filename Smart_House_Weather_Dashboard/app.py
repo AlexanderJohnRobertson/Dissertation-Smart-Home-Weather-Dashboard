@@ -182,8 +182,8 @@ def weather():
     windSpeedKMH = int(windSpeedKMH) # Convert the wind speed to an integer
     print("Wind Speed ", windSpeed)
     print("Wind Speed KMH", windSpeedKMH)
-    strWindSpeed = str(windSpeed) + " mph" # Convert the wind speed to a string mph
-    strWindSpeedKMH = str(windSpeedKMH) + " km/h" # Convert the wind speed to a string kmh
+    strWindSpeed = str(windSpeed) + "mph" # Convert the wind speed to a string mph
+    strWindSpeedKMH = str(windSpeedKMH) + "km/h" # Convert the wind speed to a string kmh
 
     sensors = current_weather['sensors'] # Get the sensors data
     sensors = sensors[2] # Get the sensor data for the temperature sensor
