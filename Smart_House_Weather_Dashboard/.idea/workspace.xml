@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1db2f1c2-a298-4643-969f-c3b80d70a65a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Acceptance Testing Form.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../Acceptance Testing Form.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,8 +109,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-PY-243.21565.199" />
-        <option value="bundled-python-sdk-cab1f2013843-4ae2d6a61b08-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.21565.199" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-PY-243.22562.180" />
+        <option value="bundled-python-sdk-85c76a3b01b3-9a18a617cbe4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.22562.180" />
       </set>
     </attachedChunks>
   </component>
@@ -202,6 +203,11 @@
       <workItem from="1733717508973" duration="774000" />
       <workItem from="1733875103726" duration="614000" />
       <workItem from="1734098308016" duration="759000" />
+      <workItem from="1734290053850" duration="14000" />
+      <workItem from="1734290184836" duration="27000" />
+      <workItem from="1734290219761" duration="2760000" />
+      <workItem from="1734300027902" duration="1714000" />
+      <workItem from="1734365940597" duration="188000" />
     </task>
     <servers />
   </component>
@@ -209,7 +215,7 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Smart_House_Weather_Dashboard$Smart_House_Weather_Dashboard.coverage" NAME="Smart_House_Weather_Dashboard Coverage Results" MODIFIED="1733875110151" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Smart_House_Weather_Dashboard$Smart_House_Weather_Dashboard.coverage" NAME="Smart_House_Weather_Dashboard Coverage Results" MODIFIED="1734365943927" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Smart_House_Weather_Dashboard$.coverage" NAME=" Coverage Results" MODIFIED="1733694703429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
