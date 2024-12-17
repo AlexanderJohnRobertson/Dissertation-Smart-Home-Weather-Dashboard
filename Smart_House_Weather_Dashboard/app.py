@@ -203,7 +203,6 @@ def weather():
     sensorData = sensors['data'] # Get the sensor data
     sensorData = sensorData[0] # Get the first sensor data
     UV_index= sensorData['uv_index'] # Get the UV index
-    print("UV Index", UV_index)
     if UV_index <= 2: # UV index description based on the UV index value
         UV_index_description = " Low"
     elif UV_index >= 3 and UV_index <= 5:
@@ -422,7 +421,6 @@ def weather():
     todayDate = calendar.day_name[todayDate.weekday()] # Get the day name for the date
     todayDate = str(todayDate) # Convert the day name to a string
     todayDate = todayDate[0:3] # Get the first 3 characters of the day name
-    print(todayDate)
 
     #Tomorrow weather
     openWeatherDataTomorrow = openWeatherData[8] # Get the weather data for tomorrow
@@ -786,28 +784,20 @@ def weather():
 
     if regexThunderCurrent == ['Thunder'] or regexThunderCurrent == ['thunder']: # If the word Thunder is found
         weatherAPIDataCurrentConditionIcon = "/static/images/thunderstorms.svg" # Set the weather icon to thunderstorms
-        print("Regex: Thunder")
     elif regexRainCurrent == ['Rain'] or regexRainCurrent == ['rain'] or regexRainCurrent == ['Shower'] or regexRainCurrent == ['shower'] or regexRainCurrent == ['Drizzle'] or regexRainCurrent == ['drizzle']: # If the word Rain is found
         weatherAPIDataCurrentConditionIcon = "/static/images/rain.svg" # Set the weather icon to rain
-        print("Regex: Rain")
     elif regexCloudCurrent == ['Cloud'] or regexCloudCurrent == ['cloud'] or regexCloudCurrent == ['Overcast'] or regexCloudCurrent == ['overcast'] or regexCloudCurrent == ['Cloudy'] or regexCloudCurrent == ['cloudy']: # If the word Cloud is found
         weatherAPIDataCurrentConditionIcon = "/static/images/cloudy.svg" # Set the weather icon to cloudy
-        print("Regex: Cloud")
     elif regexClearCurrent == ['Clear'] or regexClearCurrent == ['clear'] or regexClearCurrent == ['Sun'] or regexClearCurrent == ['sun']: # If the word Clear is found
         weatherAPIDataCurrentConditionIcon = "/static/images/sunny.svg" # Set the weather icon to sunny
-        print("Regex: Clear")
     elif regexSnowCurrent == ['Snow'] or regexSnowCurrent == ['snow'] or regexSnowCurrent == ['Sleet'] or regexSnowCurrent == ['sleet']: # If the word Snow is found
         weatherAPIDataCurrentConditionIcon = "/static/images/snow.svg" # Set the weather icon to snow
-        print("Regex: Snow")
     elif regexWindCurrent == ['Wind'] or regexWindCurrent == ['wind']: # If the word Wind is found
         weatherAPIDataCurrentConditionIcon = "/static/images/wind.svg" # Set the weather icon to wind
-        print("Regex: Wind")
     elif regexHailCurrent == ['Hail'] or regexHailCurrent == ['hail']: # If the word Hail is found
         weatherAPIDataCurrentConditionIcon = "/static/images/hailstones.svg" # Set the weather icon to hail
-        print("Regex: Hail")
     elif regexMistCurrent == ['Mist'] or regexMistCurrent == ['mist'] or regexMistCurrent == ['Fog'] or regexMistCurrent == ['fog']: # If the word Mist is found
         weatherAPIDataCurrentConditionIcon = "/static/images/mist.svg" # Set the weather icon to mist
-        print("Regex: Mist")
 
 
     #01 Hour Forecast - Similar code as Current Weather
@@ -886,7 +876,6 @@ def weather():
     elif regexMist01Hour == ['Mist'] or regexMist01Hour == ['mist'] or regexMist01Hour == ['Fog'] or regexMist01Hour == ['fog']:
         weatherAPI01HourDataConditionIcon = "/static/images/mist.svg"
 
-    print("Weather API 01 Hour Condition Icon", weatherAPI01HourDataConditionIcon)
 
     #02 Hour Forecast - Similar code as 01 Hour Forecast
     weatherAPI02HourData = weatherAPIData['forecast']
@@ -1273,17 +1262,12 @@ def weather():
     weatherAPI07HourDataConditionTime = weatherAPI07HourDataConditionTime[1]
     weatherAPI07HourDataConditionTime = weatherAPI07HourDataConditionTime.split(":")
     weatherAPI07HourDataConditionTime = weatherAPI07HourDataConditionTime[0]
-    print(weatherAPI07HourDataConditionTime)
     weatherAPI07HourDataTemperature = weatherAPI07HourData['temp_c']
-    print(weatherAPI07HourDataTemperature)
     weatherAPI07HourDataTemperature = round(weatherAPI07HourDataTemperature, 0)
     weatherAPI07HourDataTemperature = int(weatherAPI07HourDataTemperature)
     weatherAPI07HourDataTemperature = str(weatherAPI07HourDataTemperature) + "°C"
-    print(weatherAPI07HourDataTemperature)
     weatherAPI07HourDataCondition = weatherAPI07HourData['condition']
-    print(weatherAPI07HourDataCondition)
     weatherAPI07HourDataCondition = weatherAPI07HourDataCondition['text']
-    print(weatherAPI07HourDataCondition)
 
     regexThunder07Hour = re.findall("Thunder|thunder", weatherAPI07HourDataCondition)
     if regexThunder07Hour != []:
@@ -1320,34 +1304,26 @@ def weather():
 
     if regexThunder07Hour == ['Thunder'] or regexThunder07Hour == ['thunder']:
         weatherAPI07HourDataConditionIcon = "/static/images/thunderstorms.svg"
-        print("Regex: Thunder")
     elif regexRain07Hour == ['Rain'] or regexRain07Hour == ['rain'] or regexRain07Hour == [
         'Shower'] or regexRain07Hour == ['shower'] or regexRain07Hour == ['Drizzle'] or regexRain07Hour == [
         'drizzle']:
         weatherAPI07HourDataConditionIcon = "/static/images/rain.svg"
-        print("Regex: Rain")
     elif regexCloud07Hour == ['Cloud'] or regexCloud07Hour == ['cloud'] or regexCloud07Hour == [
         'Overcast'] or regexCloud07Hour == ['overcast'] or regexCloud07Hour == ['Cloudy'] or regexCloud07Hour == [
         'cloudy']:
         weatherAPI07HourDataConditionIcon = "/static/images/cloudy.svg"
-        print("Regex: Cloud")
     elif regexClear07Hour == ['Clear'] or regexClear07Hour == ['clear'] or regexClear07Hour == [
         'Sun'] or regexClear07Hour == ['sun']:
         weatherAPI07HourDataConditionIcon = "/static/images/sunny.svg"
-        print("Regex: Clear")
     elif regexSnow07Hour == ['Snow'] or regexSnow07Hour == ['snow'] or regexSnow07Hour == [
         'Sleet'] or regexSnow07Hour == ['sleet']:
         weatherAPI07HourDataConditionIcon = "/static/images/snow.svg"
-        print("Regex: Snow")
     elif regexWind07Hour == ['Wind'] or regexWind07Hour == ['wind']:
         weatherAPI07HourDataConditionIcon = "/static/images/wind.svg"
-        print("Regex: Wind")
     elif regexHail07Hour == ['Hail'] or regexHail07Hour == ['hail']:
         weatherAPI07HourDataConditionIcon = "/static/images/hailstones.svg"
-        print("Regex: Hail")
     elif regexMist07Hour == ['Mist'] or regexMist07Hour == ['mist'] or regexMist07Hour == ['Fog'] or regexMist07Hour == ['fog']:
         weatherAPI07HourDataConditionIcon = "/static/images/mist.svg"
-        print("Regex: Mist")
 
 
     #08 Hour Forecast - Similar code as 07 Hour Forecast
@@ -1358,23 +1334,15 @@ def weather():
     weatherAPI08HourData = weatherAPI08HourData[7]
     weatherAPI08HourDataConditionTime = weatherAPI08HourData['time']
     weatherAPI08HourDataConditionTime = weatherAPI08HourDataConditionTime.split(" ")
-    print(weatherAPI08HourDataConditionTime)
     weatherAPI08HourDataConditionTime = weatherAPI08HourDataConditionTime[1]
-    print(weatherAPI08HourDataConditionTime)
     weatherAPI08HourDataConditionTime = weatherAPI08HourDataConditionTime.split(":")
-    print(weatherAPI08HourDataConditionTime)
     weatherAPI08HourDataConditionTime = weatherAPI08HourDataConditionTime[0]
-    print(weatherAPI08HourDataConditionTime)
     weatherAPI08HourDataTemperature = weatherAPI08HourData['temp_c']
-    print(weatherAPI08HourDataTemperature)
     weatherAPI08HourDataTemperature = round(weatherAPI08HourDataTemperature, 0)
     weatherAPI08HourDataTemperature = int(weatherAPI08HourDataTemperature)
     weatherAPI08HourDataTemperature = str(weatherAPI08HourDataTemperature) + "°C"
-    print(weatherAPI08HourDataTemperature)
     weatherAPI08HourDataCondition = weatherAPI08HourData['condition']
-    print(weatherAPI08HourDataCondition)
     weatherAPI08HourDataCondition = weatherAPI08HourDataCondition['text']
-    print(weatherAPI08HourDataCondition)
 
     regexThunder08Hour = re.findall("Thunder|thunder", weatherAPI08HourDataCondition)
     if regexThunder08Hour != []:
@@ -1411,34 +1379,26 @@ def weather():
 
     if regexThunder08Hour == ['Thunder'] or regexThunder08Hour == ['thunder']:
         weatherAPI08HourDataConditionIcon = "/static/images/thunderstorms.svg"
-        print("Regex: Thunder")
     elif regexRain08Hour == ['Rain'] or regexRain08Hour == ['rain'] or regexRain08Hour == [
         'Shower'] or regexRain08Hour == ['shower'] or regexRain08Hour == ['Drizzle'] or regexRain08Hour == [
         'drizzle']:
         weatherAPI08HourDataConditionIcon = "/static/images/rain.svg"
-        print("Regex: Rain")
     elif regexCloud08Hour == ['Cloud'] or regexCloud08Hour == ['cloud'] or regexCloud08Hour == [
         'Overcast'] or regexCloud08Hour == ['overcast'] or regexCloud08Hour == ['Cloudy'] or regexCloud08Hour == [
         'cloudy']:
         weatherAPI08HourDataConditionIcon = "/static/images/cloudy.svg"
-        print("Regex: Cloud")
     elif regexClear08Hour == ['Clear'] or regexClear08Hour == ['clear'] or regexClear08Hour == [
         'Sun'] or regexClear08Hour == ['sun']:
         weatherAPI08HourDataConditionIcon = "/static/images/sunny.svg"
-        print("Regex: Clear")
     elif regexSnow08Hour == ['Snow'] or regexSnow08Hour == ['snow'] or regexSnow08Hour == [
         'Sleet'] or regexSnow08Hour == ['sleet']:
         weatherAPI08HourDataConditionIcon = "/static/images/snow.svg"
-        print("Regex: Snow")
     elif regexWind08Hour == ['Wind'] or regexWind08Hour == ['wind']:
         weatherAPI08HourDataConditionIcon = "/static/images/wind.svg"
-        print("Regex: Wind")
     elif regexHail08Hour == ['Hail'] or regexHail08Hour == ['hail']:
         weatherAPI08HourDataConditionIcon = "/static/images/hailstones.svg"
-        print("Regex: Hail")
     elif regexMist08Hour == ['Mist'] or regexMist08Hour == ['mist'] or regexMist08Hour == ['Fog'] or regexMist08Hour == ['fog']:
         weatherAPI08HourDataConditionIcon = "/static/images/mist.svg"
-        print("Regex: Mist")
 
     #09 Hour Forecast - Similar code as 08 Hour Forecast
     weatherAPI09HourData = weatherAPIData['forecast']
@@ -1448,23 +1408,15 @@ def weather():
     weatherAPI09HourData = weatherAPI09HourData[8]
     weatherAPI09HourDataConditionTime = weatherAPI09HourData['time']
     weatherAPI09HourDataConditionTime = weatherAPI09HourDataConditionTime.split(" ")
-    print(weatherAPI09HourDataConditionTime)
     weatherAPI09HourDataConditionTime = weatherAPI09HourDataConditionTime[1]
-    print(weatherAPI09HourDataConditionTime)
     weatherAPI09HourDataConditionTime = weatherAPI09HourDataConditionTime.split(":")
-    print(weatherAPI09HourDataConditionTime)
     weatherAPI09HourDataConditionTime = weatherAPI09HourDataConditionTime[0]
-    print(weatherAPI09HourDataConditionTime)
     weatherAPI09HourDataTemperature = weatherAPI09HourData['temp_c']
-    print(weatherAPI09HourDataTemperature)
     weatherAPI09HourDataTemperature = round(weatherAPI09HourDataTemperature, 0)
     weatherAPI09HourDataTemperature = int(weatherAPI09HourDataTemperature)
     weatherAPI09HourDataTemperature = str(weatherAPI09HourDataTemperature) + "°C"
-    print(weatherAPI09HourDataTemperature)
     weatherAPI09HourDataCondition = weatherAPI09HourData['condition']
-    print(weatherAPI09HourDataCondition)
     weatherAPI09HourDataCondition = weatherAPI09HourDataCondition['text']
-    print(weatherAPI09HourDataCondition)
 
     regexThunder09Hour = re.findall("Thunder|thunder", weatherAPI09HourDataCondition)
     if regexThunder09Hour != []:
@@ -1501,34 +1453,26 @@ def weather():
 
     if regexThunder09Hour == ['Thunder'] or regexThunder09Hour == ['thunder']:
         weatherAPI09HourDataConditionIcon = "/static/images/thunderstorms.svg"
-        print("Regex: Thunder")
     elif regexRain09Hour == ['Rain'] or regexRain09Hour == ['rain'] or regexRain09Hour == [
         'Shower'] or regexRain09Hour == ['shower'] or regexRain09Hour == ['Drizzle'] or regexRain09Hour == [
         'drizzle']:
         weatherAPI09HourDataConditionIcon = "/static/images/rain.svg"
-        print("Regex: Rain")
     elif regexCloud09Hour == ['Cloud'] or regexCloud09Hour == ['cloud'] or regexCloud09Hour == [
         'Overcast'] or regexCloud09Hour == ['overcast'] or regexCloud09Hour == ['Cloudy'] or regexCloud09Hour == [
         'cloudy']:
         weatherAPI09HourDataConditionIcon = "/static/images/cloudy.svg"
-        print("Regex: Cloud")
     elif regexClear09Hour == ['Clear'] or regexClear09Hour == ['clear'] or regexClear09Hour == [
         'Sun'] or regexClear09Hour == ['sun']:
         weatherAPI09HourDataConditionIcon = "/static/images/sunny.svg"
-        print("Regex: Clear")
     elif regexSnow09Hour == ['Snow'] or regexSnow09Hour == ['snow'] or regexSnow09Hour == [
         'Sleet'] or regexSnow09Hour == ['sleet']:
         weatherAPI09HourDataConditionIcon = "/static/images/snow.svg"
-        print("Regex: Snow")
     elif regexWind09Hour == ['Wind'] or regexWind09Hour == ['wind']:
         weatherAPI09HourDataConditionIcon = "/static/images/wind.svg"
-        print("Regex: Wind")
     elif regexHail09Hour == ['Hail'] or regexHail09Hour == ['hail']:
         weatherAPI09HourDataConditionIcon = "/static/images/hailstones.svg"
-        print("Regex: Hail")
     elif regexMist09Hour == ['Mist'] or regexMist09Hour == ['mist'] or regexMist09Hour == ['Fog'] or regexMist09Hour == ['fog']:
         weatherAPI09HourDataConditionIcon = "/static/images/mist.svg"
-        print("Regex: Mist")
 
     #10 Hour Forecast - Similar code as 09 Hour Forecast
     weatherAPI10HourData = weatherAPIData['forecast']
@@ -1538,23 +1482,15 @@ def weather():
     weatherAPI10HourData = weatherAPI10HourData[9]
     weatherAPI10HourDataConditionTime = weatherAPI10HourData['time']
     weatherAPI10HourDataConditionTime = weatherAPI10HourDataConditionTime.split(" ")
-    print(weatherAPI10HourDataConditionTime)
     weatherAPI10HourDataConditionTime = weatherAPI10HourDataConditionTime[1]
-    print(weatherAPI10HourDataConditionTime)
     weatherAPI10HourDataConditionTime = weatherAPI10HourDataConditionTime.split(":")
-    print(weatherAPI10HourDataConditionTime)
     weatherAPI10HourDataConditionTime = weatherAPI10HourDataConditionTime[0]
-    print(weatherAPI10HourDataConditionTime)
     weatherAPI10HourDataTemperature = weatherAPI10HourData['temp_c']
-    print(weatherAPI10HourDataTemperature)
     weatherAPI10HourDataTemperature = round(weatherAPI10HourDataTemperature, 0)
     weatherAPI10HourDataTemperature = int(weatherAPI10HourDataTemperature)
     weatherAPI10HourDataTemperature = str(weatherAPI10HourDataTemperature) + "°C"
-    print(weatherAPI10HourDataTemperature)
     weatherAPI10HourDataCondition = weatherAPI10HourData['condition']
-    print(weatherAPI10HourDataCondition)
     weatherAPI10HourDataCondition = weatherAPI10HourDataCondition['text']
-    print(weatherAPI10HourDataCondition)
 
     regexThunder10Hour = re.findall("Thunder|thunder", weatherAPI10HourDataCondition)
     if regexThunder10Hour != []:
@@ -1591,34 +1527,26 @@ def weather():
 
     if regexThunder10Hour == ['Thunder'] or regexThunder10Hour == ['thunder']:
         weatherAPI10HourDataConditionIcon = "/static/images/thunderstorms.svg"
-        print("Regex: Thunder")
     elif regexRain10Hour == ['Rain'] or regexRain10Hour == ['rain'] or regexRain10Hour == [
         'Shower'] or regexRain10Hour == ['shower'] or regexRain10Hour == ['Drizzle'] or regexRain10Hour == [
         'drizzle']:
         weatherAPI10HourDataConditionIcon = "/static/images/rain.svg"
-        print("Regex: Rain")
     elif regexCloud10Hour == ['Cloud'] or regexCloud10Hour == ['cloud'] or regexCloud10Hour == [
         'Overcast'] or regexCloud10Hour == ['overcast'] or regexCloud10Hour == ['Cloudy'] or regexCloud10Hour == [
         'cloudy']:
         weatherAPI10HourDataConditionIcon = "/static/images/cloudy.svg"
-        print("Regex: Cloud")
     elif regexClear10Hour == ['Clear'] or regexClear10Hour == ['clear'] or regexClear10Hour == [
         'Sun'] or regexClear10Hour == ['sun']:
         weatherAPI10HourDataConditionIcon = "/static/images/sunny.svg"
-        print("Regex: Clear")
     elif regexSnow10Hour == ['Snow'] or regexSnow10Hour == ['snow'] or regexSnow10Hour == [
         'Sleet'] or regexSnow10Hour == ['sleet']:
         weatherAPI10HourDataConditionIcon = "/static/images/snow.svg"
-        print("Regex: Snow")
     elif regexWind10Hour == ['Wind'] or regexWind10Hour == ['wind']:
         weatherAPI10HourDataConditionIcon = "/static/images/wind.svg"
-        print("Regex: Wind")
     elif regexHail10Hour == ['Hail'] or regexHail10Hour == ['hail']:
         weatherAPI10HourDataConditionIcon = "/static/images/hailstones.svg"
-        print("Regex: Hail")
     elif regexMist10Hour == ['Mist'] or regexMist10Hour == ['mist'] or regexMist10Hour == ['Fog'] or regexMist10Hour == ['fog']:
         weatherAPI10HourDataConditionIcon = "/static/images/mist.svg"
-        print("Regex: Mist")
 
 
     #11 Hour Forecast - Similar code as 10 Hour Forecast
@@ -1629,23 +1557,15 @@ def weather():
     weatherAPI11HourData = weatherAPI11HourData[10]
     weatherAPI11HourDataConditionTime = weatherAPI11HourData['time']
     weatherAPI11HourDataConditionTime = weatherAPI11HourDataConditionTime.split(" ")
-    print(weatherAPI11HourDataConditionTime)
     weatherAPI11HourDataConditionTime = weatherAPI11HourDataConditionTime[1]
-    print(weatherAPI11HourDataConditionTime)
     weatherAPI11HourDataConditionTime = weatherAPI11HourDataConditionTime.split(":")
-    print(weatherAPI11HourDataConditionTime)
     weatherAPI11HourDataConditionTime = weatherAPI11HourDataConditionTime[0]
-    print(weatherAPI11HourDataConditionTime)
     weatherAPI11HourDataTemperature = weatherAPI11HourData['temp_c']
-    print(weatherAPI11HourDataTemperature)
     weatherAPI11HourDataTemperature = round(weatherAPI11HourDataTemperature, 0)
     weatherAPI11HourDataTemperature = int(weatherAPI11HourDataTemperature)
     weatherAPI11HourDataTemperature = str(weatherAPI11HourDataTemperature) + "°C"
-    print(weatherAPI11HourDataTemperature)
     weatherAPI11HourDataCondition = weatherAPI11HourData['condition']
-    print(weatherAPI11HourDataCondition)
     weatherAPI11HourDataCondition = weatherAPI11HourDataCondition['text']
-    print(weatherAPI11HourDataCondition)
 
     regexThunder11Hour = re.findall("Thunder|thunder", weatherAPI11HourDataCondition)
     if regexThunder11Hour != []:
@@ -1682,34 +1602,26 @@ def weather():
 
     if regexThunder11Hour == ['Thunder'] or regexThunder11Hour == ['thunder']:
         weatherAPI11HourDataConditionIcon = "/static/images/thunderstorms.svg"
-        print("Regex: Thunder")
     elif regexRain11Hour == ['Rain'] or regexRain11Hour == ['rain'] or regexRain11Hour == [
         'Shower'] or regexRain11Hour == ['shower'] or regexRain11Hour == ['Drizzle'] or regexRain11Hour == [
         'drizzle']:
         weatherAPI11HourDataConditionIcon = "/static/images/rain.svg"
-        print("Regex: Rain")
     elif regexCloud11Hour == ['Cloud'] or regexCloud11Hour == ['cloud'] or regexCloud11Hour == [
         'Overcast'] or regexCloud11Hour == ['overcast'] or regexCloud11Hour == ['Cloudy'] or regexCloud11Hour == [
         'cloudy']:
         weatherAPI11HourDataConditionIcon = "/static/images/cloudy.svg"
-        print("Regex: Cloud")
     elif regexClear11Hour == ['Clear'] or regexClear11Hour == ['clear'] or regexClear11Hour == [
         'Sun'] or regexClear11Hour == ['sun']:
         weatherAPI11HourDataConditionIcon = "/static/images/sunny.svg"
-        print("Regex: Clear")
     elif regexSnow11Hour == ['Snow'] or regexSnow11Hour == ['snow'] or regexSnow11Hour == [
         'Sleet'] or regexSnow11Hour == ['sleet']:
         weatherAPI11HourDataConditionIcon = "/static/images/snow.svg"
-        print("Regex: Snow")
     elif regexWind11Hour == ['Wind'] or regexWind11Hour == ['wind']:
         weatherAPI11HourDataConditionIcon = "/static/images/wind.svg"
-        print("Regex: Wind")
     elif regexHail11Hour == ['Hail'] or regexHail11Hour == ['hail']:
         weatherAPI11HourDataConditionIcon = "/static/images/hailstones.svg"
-        print("Regex: Hail")
     elif regexMist11Hour == ['Mist'] or regexMist11Hour == ['mist'] or regexMist11Hour == ['Fog'] or regexMist11Hour == ['fog']:
         weatherAPI11HourDataConditionIcon = "/static/images/mist.svg"
-        print("Regex: Mist")
 
     #12 Hour Forecast - Similar code as 11 Hour Forecast
     weatherAPI12HourData = weatherAPIData['forecast']
@@ -1719,23 +1631,15 @@ def weather():
     weatherAPI12HourData = weatherAPI12HourData[11]
     weatherAPI12HourDataConditionTime = weatherAPI12HourData['time']
     weatherAPI12HourDataConditionTime = weatherAPI12HourDataConditionTime.split(" ")
-    print(weatherAPI12HourDataConditionTime)
     weatherAPI12HourDataConditionTime = weatherAPI12HourDataConditionTime[1]
-    print(weatherAPI12HourDataConditionTime)
     weatherAPI12HourDataConditionTime = weatherAPI12HourDataConditionTime.split(":")
-    print(weatherAPI12HourDataConditionTime)
     weatherAPI12HourDataConditionTime = weatherAPI12HourDataConditionTime[0]
-    print(weatherAPI12HourDataConditionTime)
     weatherAPI12HourDataTemperature = weatherAPI12HourData['temp_c']
-    print(weatherAPI12HourDataTemperature)
     weatherAPI12HourDataTemperature = round(weatherAPI12HourDataTemperature, 0)
     weatherAPI12HourDataTemperature = int(weatherAPI12HourDataTemperature)
     weatherAPI12HourDataTemperature = str(weatherAPI12HourDataTemperature) + "°C"
-    print(weatherAPI12HourDataTemperature)
     weatherAPI12HourDataCondition = weatherAPI12HourData['condition']
-    print(weatherAPI12HourDataCondition)
     weatherAPI12HourDataCondition = weatherAPI12HourDataCondition['text']
-    print(weatherAPI12HourDataCondition)
 
     regexThunder12Hour = re.findall("Thunder|thunder", weatherAPI12HourDataCondition)
     if regexThunder12Hour != []:
@@ -1772,34 +1676,26 @@ def weather():
 
     if regexThunder12Hour == ['Thunder'] or regexThunder12Hour == ['thunder']:
         weatherAPI12HourDataConditionIcon = "/static/images/thunderstorms.svg"
-        print("Regex: Thunder")
     elif regexRain12Hour == ['Rain'] or regexRain12Hour == ['rain'] or regexRain12Hour == [
         'Shower'] or regexRain12Hour == ['shower'] or regexRain12Hour == ['Drizzle'] or regexRain12Hour == [
         'drizzle']:
         weatherAPI12HourDataConditionIcon = "/static/images/rain.svg"
-        print("Regex: Rain")
     elif regexCloud12Hour == ['Cloud'] or regexCloud12Hour == ['cloud'] or regexCloud12Hour == [
         'Overcast'] or regexCloud12Hour == ['overcast'] or regexCloud12Hour == ['Cloudy'] or regexCloud12Hour == [
         'cloudy']:
         weatherAPI12HourDataConditionIcon = "/static/images/cloudy.svg"
-        print("Regex: Cloud")
     elif regexClear12Hour == ['Clear'] or regexClear12Hour == ['clear'] or regexClear12Hour == [
         'Sun'] or regexClear12Hour == ['sun']:
         weatherAPI12HourDataConditionIcon = "/static/images/sunny.svg"
-        print("Regex: Clear")
     elif regexSnow12Hour == ['Snow'] or regexSnow12Hour == ['snow'] or regexSnow12Hour == [
         'Sleet'] or regexSnow12Hour == ['sleet']:
         weatherAPI12HourDataConditionIcon = "/static/images/snow.svg"
-        print("Regex: Snow")
     elif regexWind12Hour == ['Wind'] or regexWind12Hour == ['wind']:
         weatherAPI12HourDataConditionIcon = "/static/images/wind.svg"
-        print("Regex: Wind")
     elif regexHail12Hour == ['Hail'] or regexHail12Hour == ['hail']:
         weatherAPI12HourDataConditionIcon = "/static/images/hailstones.svg"
-        print("Regex: Hail")
     elif regexMist12Hour == ['Mist'] or regexMist12Hour == ['mist'] or regexMist12Hour == ['Fog'] or regexMist12Hour == ['fog']:
         weatherAPI12HourDataConditionIcon = "/static/images/mist.svg"
-        print("Regex: Mist")
 
     #13 Hour Forecast - Similar code as 12 Hour Forecast
     weatherAPI13HourData = weatherAPIData['forecast']
@@ -1809,23 +1705,15 @@ def weather():
     weatherAPI13HourData = weatherAPI13HourData[12]
     weatherAPI13HourDataConditionTime = weatherAPI13HourData['time']
     weatherAPI13HourDataConditionTime = weatherAPI13HourDataConditionTime.split(" ")
-    print(weatherAPI13HourDataConditionTime)
     weatherAPI13HourDataConditionTime = weatherAPI13HourDataConditionTime[1]
-    print(weatherAPI13HourDataConditionTime)
     weatherAPI13HourDataConditionTime = weatherAPI13HourDataConditionTime.split(":")
-    print(weatherAPI13HourDataConditionTime)
     weatherAPI13HourDataConditionTime = weatherAPI13HourDataConditionTime[0]
-    print(weatherAPI13HourDataConditionTime)
     weatherAPI13HourDataTemperature = weatherAPI13HourData['temp_c']
-    print(weatherAPI13HourDataTemperature)
     weatherAPI13HourDataTemperature = round(weatherAPI13HourDataTemperature, 0)
     weatherAPI13HourDataTemperature = int(weatherAPI13HourDataTemperature)
     weatherAPI13HourDataTemperature = str(weatherAPI13HourDataTemperature) + "°C"
-    print(weatherAPI13HourDataTemperature)
     weatherAPI13HourDataCondition = weatherAPI13HourData['condition']
-    print(weatherAPI13HourDataCondition)
     weatherAPI13HourDataCondition = weatherAPI13HourDataCondition['text']
-    print(weatherAPI13HourDataCondition)
 
     regexThunder13Hour = re.findall("Thunder|thunder", weatherAPI13HourDataCondition)
     if regexThunder13Hour != []:
@@ -1862,34 +1750,26 @@ def weather():
 
     if regexThunder13Hour == ['Thunder'] or regexThunder13Hour == ['thunder']:
         weatherAPI13HourDataConditionIcon = "/static/images/thunderstorms.svg"
-        print("Regex: Thunder")
     elif regexRain13Hour == ['Rain'] or regexRain13Hour == ['rain'] or regexRain13Hour == [
         'Shower'] or regexRain13Hour == ['shower'] or regexRain13Hour == ['Drizzle'] or regexRain13Hour == [
         'drizzle']:
         weatherAPI13HourDataConditionIcon = "/static/images/rain.svg"
-        print("Regex: Rain")
     elif regexCloud13Hour == ['Cloud'] or regexCloud13Hour == ['cloud'] or regexCloud13Hour == [
         'Overcast'] or regexCloud13Hour == ['overcast'] or regexCloud13Hour == ['Cloudy'] or regexCloud13Hour == [
         'cloudy']:
         weatherAPI13HourDataConditionIcon = "/static/images/cloudy.svg"
-        print("Regex: Cloud")
     elif regexClear13Hour == ['Clear'] or regexClear13Hour == ['clear'] or regexClear13Hour == [
         'Sun'] or regexClear13Hour == ['sun']:
         weatherAPI13HourDataConditionIcon = "/static/images/sunny.svg"
-        print("Regex: Clear")
     elif regexSnow13Hour == ['Snow'] or regexSnow13Hour == ['snow'] or regexSnow13Hour == [
         'Sleet'] or regexSnow13Hour == ['sleet']:
         weatherAPI13HourDataConditionIcon = "/static/images/snow.svg"
-        print("Regex: Snow")
     elif regexWind13Hour == ['Wind'] or regexWind13Hour == ['wind']:
         weatherAPI13HourDataConditionIcon = "/static/images/wind.svg"
-        print("Regex: Wind")
     elif regexHail13Hour == ['Hail'] or regexHail13Hour == ['hail']:
         weatherAPI13HourDataConditionIcon = "/static/images/hailstones.svg"
-        print("Regex: Hail")
     elif regexMist13Hour == ['Mist'] or regexMist13Hour == ['mist'] or regexMist13Hour == ['Fog'] or regexMist13Hour == ['fog']:
         weatherAPI13HourDataConditionIcon = "/static/images/mist.svg"
-        print("Regex: Mist")
 
     #14 Hour Forecast - Similar code as 13 Hour Forecast
     weatherAPI14HourData = weatherAPIData['forecast']
@@ -1899,23 +1779,15 @@ def weather():
     weatherAPI14HourData = weatherAPI14HourData[13]
     weatherAPI14HourDataConditionTime = weatherAPI14HourData['time']
     weatherAPI14HourDataConditionTime = weatherAPI14HourDataConditionTime.split(" ")
-    print(weatherAPI14HourDataConditionTime)
     weatherAPI14HourDataConditionTime = weatherAPI14HourDataConditionTime[1]
-    print(weatherAPI14HourDataConditionTime)
     weatherAPI14HourDataConditionTime = weatherAPI14HourDataConditionTime.split(":")
-    print(weatherAPI14HourDataConditionTime)
     weatherAPI14HourDataConditionTime = weatherAPI14HourDataConditionTime[0]
-    print(weatherAPI14HourDataConditionTime)
     weatherAPI14HourDataTemperature = weatherAPI14HourData['temp_c']
-    print(weatherAPI14HourDataTemperature)
     weatherAPI14HourDataTemperature = round(weatherAPI14HourDataTemperature, 0)
     weatherAPI14HourDataTemperature = int(weatherAPI14HourDataTemperature)
     weatherAPI14HourDataTemperature = str(weatherAPI14HourDataTemperature) + "°C"
-    print(weatherAPI14HourDataTemperature)
     weatherAPI14HourDataCondition = weatherAPI14HourData['condition']
-    print(weatherAPI14HourDataCondition)
     weatherAPI14HourDataCondition = weatherAPI14HourDataCondition['text']
-    print(weatherAPI14HourDataCondition)
 
     regexThunder14Hour = re.findall("Thunder|thunder", weatherAPI14HourDataCondition)
     if regexThunder14Hour != []:
@@ -1952,34 +1824,26 @@ def weather():
 
     if regexThunder14Hour == ['Thunder'] or regexThunder14Hour == ['thunder']:
         weatherAPI14HourDataConditionIcon = "/static/images/thunderstorms.svg"
-        print("Regex: Thunder")
     elif regexRain14Hour == ['Rain'] or regexRain14Hour == ['rain'] or regexRain14Hour == [
         'Shower'] or regexRain14Hour == ['shower'] or regexRain14Hour == ['Drizzle'] or regexRain14Hour == [
         'drizzle']:
         weatherAPI14HourDataConditionIcon = "/static/images/rain.svg"
-        print("Regex: Rain")
     elif regexCloud14Hour == ['Cloud'] or regexCloud14Hour == ['cloud'] or regexCloud14Hour == [
         'Overcast'] or regexCloud14Hour == ['overcast'] or regexCloud14Hour == ['Cloudy'] or regexCloud14Hour == [
         'cloudy']:
         weatherAPI14HourDataConditionIcon = "/static/images/cloudy.svg"
-        print("Regex: Cloud")
     elif regexClear14Hour == ['Clear'] or regexClear14Hour == ['clear'] or regexClear14Hour == [
         'Sun'] or regexClear14Hour == ['sun']:
         weatherAPI14HourDataConditionIcon = "/static/images/sunny.svg"
-        print("Regex: Clear")
     elif regexSnow14Hour == ['Snow'] or regexSnow14Hour == ['snow'] or regexSnow14Hour == [
         'Sleet'] or regexSnow14Hour == ['sleet']:
         weatherAPI14HourDataConditionIcon = "/static/images/snow.svg"
-        print("Regex: Snow")
     elif regexWind14Hour == ['Wind'] or regexWind14Hour == ['wind']:
         weatherAPI14HourDataConditionIcon = "/static/images/wind.svg"
-        print("Regex: Wind")
     elif regexHail14Hour == ['Hail'] or regexHail14Hour == ['hail']:
         weatherAPI14HourDataConditionIcon = "/static/images/hailstones.svg"
-        print("Regex: Hail")
     elif regexMist14Hour == ['Mist'] or regexMist14Hour == ['mist'] or regexMist14Hour == ['Fog'] or regexMist14Hour == ['fog']:
         weatherAPI14HourDataConditionIcon = "/static/images/mist.svg"
-        print("Regex: Mist")
 
     #15 Hour Forecast - Similar code as 14 Hour Forecast
     weatherAPI15HourData = weatherAPIData['forecast']
@@ -1989,23 +1853,15 @@ def weather():
     weatherAPI15HourData = weatherAPI15HourData[14]
     weatherAPI15HourDataConditionTime = weatherAPI15HourData['time']
     weatherAPI15HourDataConditionTime = weatherAPI15HourDataConditionTime.split(" ")
-    print(weatherAPI15HourDataConditionTime)
     weatherAPI15HourDataConditionTime = weatherAPI15HourDataConditionTime[1]
-    print(weatherAPI15HourDataConditionTime)
     weatherAPI15HourDataConditionTime = weatherAPI15HourDataConditionTime.split(":")
-    print(weatherAPI15HourDataConditionTime)
     weatherAPI15HourDataConditionTime = weatherAPI15HourDataConditionTime[0]
-    print(weatherAPI15HourDataConditionTime)
     weatherAPI15HourDataTemperature = weatherAPI15HourData['temp_c']
-    print(weatherAPI15HourDataTemperature)
     weatherAPI15HourDataTemperature = round(weatherAPI15HourDataTemperature, 0)
     weatherAPI15HourDataTemperature = int(weatherAPI15HourDataTemperature)
     weatherAPI15HourDataTemperature = str(weatherAPI15HourDataTemperature) + "°C"
-    print(weatherAPI15HourDataTemperature)
     weatherAPI15HourDataCondition = weatherAPI15HourData['condition']
-    print(weatherAPI15HourDataCondition)
     weatherAPI15HourDataCondition = weatherAPI15HourDataCondition['text']
-    print(weatherAPI15HourDataCondition)
 
     regexThunder15Hour = re.findall("Thunder|thunder", weatherAPI15HourDataCondition)
     if regexThunder15Hour != []:
@@ -2042,34 +1898,26 @@ def weather():
 
     if regexThunder15Hour == ['Thunder'] or regexThunder15Hour == ['thunder']:
         weatherAPI15HourDataConditionIcon = "/static/images/thunderstorms.svg"
-        print("Regex: Thunder")
     elif regexRain15Hour == ['Rain'] or regexRain15Hour == ['rain'] or regexRain15Hour == [
         'Shower'] or regexRain15Hour == ['shower'] or regexRain15Hour == ['Drizzle'] or regexRain15Hour == [
         'drizzle']:
         weatherAPI15HourDataConditionIcon = "/static/images/rain.svg"
-        print("Regex: Rain")
     elif regexCloud15Hour == ['Cloud'] or regexCloud15Hour == ['cloud'] or regexCloud15Hour == [
         'Overcast'] or regexCloud15Hour == ['overcast'] or regexCloud15Hour == ['Cloudy'] or regexCloud15Hour == [
         'cloudy']:
         weatherAPI15HourDataConditionIcon = "/static/images/cloudy.svg"
-        print("Regex: Cloud")
     elif regexClear15Hour == ['Clear'] or regexClear15Hour == ['clear'] or regexClear15Hour == [
         'Sun'] or regexClear15Hour == ['sun']:
         weatherAPI15HourDataConditionIcon = "/static/images/sunny.svg"
-        print("Regex: Clear")
     elif regexSnow15Hour == ['Snow'] or regexSnow15Hour == ['snow'] or regexSnow15Hour == [
         'Sleet'] or regexSnow15Hour == ['sleet']:
         weatherAPI15HourDataConditionIcon = "/static/images/snow.svg"
-        print("Regex: Snow")
     elif regexWind15Hour == ['Wind'] or regexWind15Hour == ['wind']:
         weatherAPI15HourDataConditionIcon = "/static/images/wind.svg"
-        print("Regex: Wind")
     elif regexHail15Hour == ['Hail'] or regexHail15Hour == ['hail']:
         weatherAPI15HourDataConditionIcon = "/static/images/hailstones.svg"
-        print("Regex: Hail")
     elif regexMist15Hour == ['Mist'] or regexMist15Hour == ['mist'] or regexMist15Hour == ['Fog'] or regexMist15Hour == ['fog']:
         weatherAPI15HourDataConditionIcon = "/static/images/mist.svg"
-        print("Regex: Mist")
 
     #16 Hour Forecast - Similar code as 15 Hour Forecast
     weatherAPI16HourData = weatherAPIData['forecast']
@@ -2079,23 +1927,15 @@ def weather():
     weatherAPI16HourData = weatherAPI16HourData[15]
     weatherAPI16HourDataConditionTime = weatherAPI16HourData['time']
     weatherAPI16HourDataConditionTime = weatherAPI16HourDataConditionTime.split(" ")
-    print(weatherAPI16HourDataConditionTime)
     weatherAPI16HourDataConditionTime = weatherAPI16HourDataConditionTime[1]
-    print(weatherAPI16HourDataConditionTime)
     weatherAPI16HourDataConditionTime = weatherAPI16HourDataConditionTime.split(":")
-    print(weatherAPI16HourDataConditionTime)
     weatherAPI16HourDataConditionTime = weatherAPI16HourDataConditionTime[0]
-    print(weatherAPI16HourDataConditionTime)
     weatherAPI16HourDataTemperature = weatherAPI16HourData['temp_c']
-    print(weatherAPI16HourDataTemperature)
     weatherAPI16HourDataTemperature = round(weatherAPI16HourDataTemperature, 0)
     weatherAPI16HourDataTemperature = int(weatherAPI16HourDataTemperature)
     weatherAPI16HourDataTemperature = str(weatherAPI16HourDataTemperature) + "°C"
-    print(weatherAPI16HourDataTemperature)
     weatherAPI16HourDataCondition = weatherAPI16HourData['condition']
-    print(weatherAPI16HourDataCondition)
     weatherAPI16HourDataCondition = weatherAPI16HourDataCondition['text']
-    print(weatherAPI16HourDataCondition)
 
     regexThunder16Hour = re.findall("Thunder|thunder", weatherAPI16HourDataCondition)
     if regexThunder16Hour != []:
@@ -2132,34 +1972,27 @@ def weather():
 
     if regexThunder16Hour == ['Thunder'] or regexThunder16Hour == ['thunder']:
         weatherAPI16HourDataConditionIcon = "/static/images/thunderstorms.svg"
-        print("Regex: Thunder")
     elif regexRain16Hour == ['Rain'] or regexRain16Hour == ['rain'] or regexRain16Hour == [
         'Shower'] or regexRain16Hour == ['shower'] or regexRain16Hour == ['Drizzle'] or regexRain16Hour == [
         'drizzle']:
         weatherAPI16HourDataConditionIcon = "/static/images/rain.svg"
-        print("Regex: Rain")
     elif regexCloud16Hour == ['Cloud'] or regexCloud16Hour == ['cloud'] or regexCloud16Hour == [
         'Overcast'] or regexCloud16Hour == ['overcast'] or regexCloud16Hour == ['Cloudy'] or regexCloud16Hour == [
         'cloudy']:
         weatherAPI16HourDataConditionIcon = "/static/images/cloudy.svg"
-        print("Regex: Cloud")
     elif regexClear16Hour == ['Clear'] or regexClear16Hour == ['clear'] or regexClear16Hour == [
         'Sun'] or regexClear16Hour == ['sun']:
         weatherAPI16HourDataConditionIcon = "/static/images/sunny.svg"
-        print("Regex: Clear")
     elif regexSnow16Hour == ['Snow'] or regexSnow16Hour == ['snow'] or regexSnow16Hour == [
         'Sleet'] or regexSnow16Hour == ['sleet']:
         weatherAPI16HourDataConditionIcon = "/static/images/snow.svg"
-        print("Regex: Snow")
     elif regexWind16Hour == ['Wind'] or regexWind16Hour == ['wind']:
         weatherAPI16HourDataConditionIcon = "/static/images/wind.svg"
-        print("Regex: Wind")
     elif regexHail16Hour == ['Hail'] or regexHail16Hour == ['hail']:
         weatherAPI16HourDataConditionIcon = "/static/images/hailstones.svg"
-        print("Regex: Hail")
     elif regexMist16Hour == ['Mist'] or regexMist16Hour == ['mist'] or regexMist16Hour == ['Fog'] or regexMist16Hour == ['fog']:
         weatherAPI16HourDataConditionIcon = "/static/images/mist.svg"
-        print("Regex: Mist")
+
 
 
     #17 Hour Forecast - Similar code as 16 Hour Forecast
@@ -2170,23 +2003,15 @@ def weather():
     weatherAPI17HourData = weatherAPI17HourData[16]
     weatherAPI17HourDataConditionTime = weatherAPI17HourData['time']
     weatherAPI17HourDataConditionTime = weatherAPI17HourDataConditionTime.split(" ")
-    print(weatherAPI17HourDataConditionTime)
     weatherAPI17HourDataConditionTime = weatherAPI17HourDataConditionTime[1]
-    print(weatherAPI17HourDataConditionTime)
     weatherAPI17HourDataConditionTime = weatherAPI17HourDataConditionTime.split(":")
-    print(weatherAPI17HourDataConditionTime)
     weatherAPI17HourDataConditionTime = weatherAPI17HourDataConditionTime[0]
-    print(weatherAPI17HourDataConditionTime)
     weatherAPI17HourDataTemperature = weatherAPI17HourData['temp_c']
-    print(weatherAPI17HourDataTemperature)
     weatherAPI17HourDataTemperature = round(weatherAPI17HourDataTemperature, 0)
     weatherAPI17HourDataTemperature = int(weatherAPI17HourDataTemperature)
     weatherAPI17HourDataTemperature = str(weatherAPI17HourDataTemperature) + "°C"
-    print(weatherAPI17HourDataTemperature)
     weatherAPI17HourDataCondition = weatherAPI17HourData['condition']
-    print(weatherAPI17HourDataCondition)
     weatherAPI17HourDataCondition = weatherAPI17HourDataCondition['text']
-    print(weatherAPI17HourDataCondition)
 
     regexThunder17Hour = re.findall("Thunder|thunder", weatherAPI17HourDataCondition)
     if regexThunder17Hour != []:
@@ -2223,34 +2048,26 @@ def weather():
 
     if regexThunder17Hour == ['Thunder'] or regexThunder17Hour == ['thunder']:
         weatherAPI17HourDataConditionIcon = "/static/images/thunderstorms.svg"
-        print("Regex: Thunder")
     elif regexRain17Hour == ['Rain'] or regexRain17Hour == ['rain'] or regexRain17Hour == [
         'Shower'] or regexRain17Hour == ['shower'] or regexRain17Hour == ['Drizzle'] or regexRain17Hour == [
         'drizzle']:
         weatherAPI17HourDataConditionIcon = "/static/images/rain.svg"
-        print("Regex: Rain")
     elif regexCloud17Hour == ['Cloud'] or regexCloud17Hour == ['cloud'] or regexCloud17Hour == [
         'Overcast'] or regexCloud17Hour == ['overcast'] or regexCloud17Hour == ['Cloudy'] or regexCloud17Hour == [
         'cloudy']:
         weatherAPI17HourDataConditionIcon = "/static/images/cloudy.svg"
-        print("Regex: Cloud")
     elif regexClear17Hour == ['Clear'] or regexClear17Hour == ['clear'] or regexClear17Hour == [
         'Sun'] or regexClear17Hour == ['sun']:
         weatherAPI17HourDataConditionIcon = "/static/images/sunny.svg"
-        print("Regex: Clear")
     elif regexSnow17Hour == ['Snow'] or regexSnow17Hour == ['snow'] or regexSnow17Hour == [
         'Sleet'] or regexSnow17Hour == ['sleet']:
         weatherAPI17HourDataConditionIcon = "/static/images/snow.svg"
-        print("Regex: Snow")
     elif regexWind17Hour == ['Wind'] or regexWind17Hour == ['wind']:
         weatherAPI17HourDataConditionIcon = "/static/images/wind.svg"
-        print("Regex: Wind")
     elif regexHail17Hour == ['Hail'] or regexHail17Hour == ['hail']:
         weatherAPI17HourDataConditionIcon = "/static/images/hailstones.svg"
-        print("Regex: Hail")
     elif regexMist17Hour == ['Mist'] or regexMist17Hour == ['mist'] or regexMist17Hour == ['Fog'] or regexMist17Hour == ['fog']:
         weatherAPI17HourDataConditionIcon = "/static/images/mist.svg"
-        print("Regex: Mist")
 
     #18 Hour Forecast - Similar code as 17 Hour Forecast
     weatherAPI18HourData = weatherAPIData['forecast']
@@ -2260,23 +2077,15 @@ def weather():
     weatherAPI18HourData = weatherAPI18HourData[17]
     weatherAPI18HourDataConditionTime = weatherAPI18HourData['time']
     weatherAPI18HourDataConditionTime = weatherAPI18HourDataConditionTime.split(" ")
-    print(weatherAPI18HourDataConditionTime)
     weatherAPI18HourDataConditionTime = weatherAPI18HourDataConditionTime[1]
-    print(weatherAPI18HourDataConditionTime)
     weatherAPI18HourDataConditionTime = weatherAPI18HourDataConditionTime.split(":")
-    print(weatherAPI18HourDataConditionTime)
     weatherAPI18HourDataConditionTime = weatherAPI18HourDataConditionTime[0]
-    print(weatherAPI18HourDataConditionTime)
     weatherAPI18HourDataTemperature = weatherAPI18HourData['temp_c']
-    print(weatherAPI18HourDataTemperature)
     weatherAPI18HourDataTemperature = round(weatherAPI18HourDataTemperature, 0)
     weatherAPI18HourDataTemperature = int(weatherAPI18HourDataTemperature)
     weatherAPI18HourDataTemperature = str(weatherAPI18HourDataTemperature) + "°C"
-    print(weatherAPI18HourDataTemperature)
     weatherAPI18HourDataCondition = weatherAPI18HourData['condition']
-    print(weatherAPI18HourDataCondition)
     weatherAPI18HourDataCondition = weatherAPI18HourDataCondition['text']
-    print(weatherAPI18HourDataCondition)
 
     regexThunder18Hour = re.findall("Thunder|thunder", weatherAPI18HourDataCondition)
     if regexThunder18Hour != []:
@@ -2313,34 +2122,26 @@ def weather():
 
     if regexThunder18Hour == ['Thunder'] or regexThunder18Hour == ['thunder']:
         weatherAPI18HourDataConditionIcon = "/static/images/thunderstorms.svg"
-        print("Regex: Thunder")
     elif regexRain18Hour == ['Rain'] or regexRain18Hour == ['rain'] or regexRain18Hour == [
         'Shower'] or regexRain18Hour == ['shower'] or regexRain18Hour == ['Drizzle'] or regexRain18Hour == [
         'drizzle']:
         weatherAPI18HourDataConditionIcon = "/static/images/rain.svg"
-        print("Regex: Rain")
     elif regexCloud18Hour == ['Cloud'] or regexCloud18Hour == ['cloud'] or regexCloud18Hour == [
         'Overcast'] or regexCloud18Hour == ['overcast'] or regexCloud18Hour == ['Cloudy'] or regexCloud18Hour == [
         'cloudy']:
         weatherAPI18HourDataConditionIcon = "/static/images/cloudy.svg"
-        print("Regex: Cloud")
     elif regexClear18Hour == ['Clear'] or regexClear18Hour == ['clear'] or regexClear18Hour == [
         'Sun'] or regexClear18Hour == ['sun']:
         weatherAPI18HourDataConditionIcon = "/static/images/sunny.svg"
-        print("Regex: Clear")
     elif regexSnow18Hour == ['Snow'] or regexSnow18Hour == ['snow'] or regexSnow18Hour == [
         'Sleet'] or regexSnow18Hour == ['sleet']:
         weatherAPI18HourDataConditionIcon = "/static/images/snow.svg"
-        print("Regex: Snow")
     elif regexWind18Hour == ['Wind'] or regexWind18Hour == ['wind']:
         weatherAPI18HourDataConditionIcon = "/static/images/wind.svg"
-        print("Regex: Wind")
     elif regexHail18Hour == ['Hail'] or regexHail18Hour == ['hail']:
         weatherAPI18HourDataConditionIcon = "/static/images/hailstones.svg"
-        print("Regex: Hail")
     elif regexMist18Hour == ['Mist'] or regexMist18Hour == ['mist'] or regexMist18Hour == ['Fog'] or regexMist18Hour == ['fog']:
         weatherAPI18HourDataConditionIcon = "/static/images/mist.svg"
-        print("Regex: Mist")
 
     #19 Hour Forecast - Similar code as 18 Hour Forecast
     weatherAPI19HourData = weatherAPIData['forecast']
@@ -2350,23 +2151,15 @@ def weather():
     weatherAPI19HourData = weatherAPI19HourData[18]
     weatherAPI19HourDataConditionTime = weatherAPI19HourData['time']
     weatherAPI19HourDataConditionTime = weatherAPI19HourDataConditionTime.split(" ")
-    print(weatherAPI19HourDataConditionTime)
     weatherAPI19HourDataConditionTime = weatherAPI19HourDataConditionTime[1]
-    print(weatherAPI19HourDataConditionTime)
     weatherAPI19HourDataConditionTime = weatherAPI19HourDataConditionTime.split(":")
-    print(weatherAPI19HourDataConditionTime)
     weatherAPI19HourDataConditionTime = weatherAPI19HourDataConditionTime[0]
-    print(weatherAPI19HourDataConditionTime)
     weatherAPI19HourDataTemperature = weatherAPI19HourData['temp_c']
-    print(weatherAPI19HourDataTemperature)
     weatherAPI19HourDataTemperature = round(weatherAPI19HourDataTemperature, 0)
     weatherAPI19HourDataTemperature = int(weatherAPI19HourDataTemperature)
     weatherAPI19HourDataTemperature = str(weatherAPI19HourDataTemperature) + "°C"
-    print(weatherAPI19HourDataTemperature)
     weatherAPI19HourDataCondition = weatherAPI19HourData['condition']
-    print(weatherAPI19HourDataCondition)
     weatherAPI19HourDataCondition = weatherAPI19HourDataCondition['text']
-    print(weatherAPI19HourDataCondition)
 
     regexThunder19Hour = re.findall("Thunder|thunder", weatherAPI19HourDataCondition)
     if regexThunder19Hour != []:
@@ -2403,36 +2196,27 @@ def weather():
 
     if regexThunder19Hour == ['Thunder'] or regexThunder19Hour == ['thunder']:
         weatherAPI19HourDataConditionIcon = "/static/images/thunderstorms.svg"
-        print("Regex: Thunder")
     elif regexRain19Hour == ['Rain'] or regexRain19Hour == ['rain'] or regexRain19Hour == [
         'Shower'] or regexRain19Hour == ['shower'] or regexRain19Hour == ['Drizzle'] or regexRain19Hour == [
         'drizzle']:
         weatherAPI19HourDataConditionIcon = "/static/images/rain.svg"
-        print("Regex: Rain")
     elif regexCloud19Hour == ['Cloud'] or regexCloud19Hour == ['cloud'] or regexCloud19Hour == [
         'Overcast'] or regexCloud19Hour == ['overcast'] or regexCloud19Hour == ['Cloudy'] or regexCloud19Hour == [
         'cloudy']:
         weatherAPI19HourDataConditionIcon = "/static/images/cloudy.svg"
-        print("Regex: Cloud")
     elif regexClear19Hour == ['Clear'] or regexClear19Hour == ['clear'] or regexClear19Hour == [
         'Sun'] or regexClear19Hour == ['sun']:
         weatherAPI19HourDataConditionIcon = "/static/images/sunny.svg"
-        print("Regex: Clear")
     elif regexSnow19Hour == ['Snow'] or regexSnow19Hour == ['snow'] or regexSnow19Hour == [
         'Sleet'] or regexSnow19Hour == ['sleet']:
         weatherAPI19HourDataConditionIcon = "/static/images/snow.svg"
-        print("Regex: Snow")
     elif regexWind19Hour == ['Wind'] or regexWind19Hour == ['wind']:
         weatherAPI19HourDataConditionIcon = "/static/images/wind.svg"
-        print("Regex: Wind")
     elif regexHail19Hour == ['Hail'] or regexHail19Hour == ['hail']:
         weatherAPI19HourDataConditionIcon = "/static/images/hailstones.svg"
-        print("Regex: Hail")
     elif regexMist19Hour == ['Mist'] or regexMist19Hour == ['mist'] or regexMist19Hour == ['Fog'] or regexMist19Hour == ['fog']:
         weatherAPI19HourDataConditionIcon = "/static/images/mist.svg"
-        print("Regex: Mist")
 
-    print("weatherAPI19HourDataConditionIcon", weatherAPI19HourDataConditionIcon)
 
     # 20 Hour Forecast - Similar code as 19 Hour Forecast
     weatherAPI20HourData = weatherAPIData['forecast']
@@ -2442,23 +2226,15 @@ def weather():
     weatherAPI20HourData = weatherAPI20HourData[19]
     weatherAPI20HourDataConditionTime = weatherAPI20HourData['time']
     weatherAPI20HourDataConditionTime = weatherAPI20HourDataConditionTime.split(" ")
-    print(weatherAPI20HourDataConditionTime)
     weatherAPI20HourDataConditionTime = weatherAPI20HourDataConditionTime[1]
-    print(weatherAPI20HourDataConditionTime)
     weatherAPI20HourDataConditionTime = weatherAPI20HourDataConditionTime.split(":")
-    print(weatherAPI20HourDataConditionTime)
     weatherAPI20HourDataConditionTime = weatherAPI20HourDataConditionTime[0]
-    print(weatherAPI20HourDataConditionTime)
     weatherAPI20HourDataTemperature = weatherAPI20HourData['temp_c']
-    print(weatherAPI20HourDataTemperature)
     weatherAPI20HourDataTemperature = round(weatherAPI20HourDataTemperature, 0)
     weatherAPI20HourDataTemperature = int(weatherAPI20HourDataTemperature)
     weatherAPI20HourDataTemperature = str(weatherAPI20HourDataTemperature) + "°C"
-    print(weatherAPI20HourDataTemperature)
     weatherAPI20HourDataCondition = weatherAPI20HourData['condition']
-    print(weatherAPI20HourDataCondition)
     weatherAPI20HourDataCondition = weatherAPI20HourDataCondition['text']
-    print(weatherAPI20HourDataCondition)
 
     regexThunder20Hour = re.findall("Thunder|thunder", weatherAPI20HourDataCondition)
     if regexThunder20Hour != []:
@@ -2495,34 +2271,26 @@ def weather():
 
     if regexThunder20Hour == ['Thunder'] or regexThunder20Hour == ['thunder']:
         weatherAPI20HourDataConditionIcon = "/static/images/thunderstorms.svg"
-        print("Regex: Thunder")
     elif regexRain20Hour == ['Rain'] or regexRain20Hour == ['rain'] or regexRain20Hour == [
         'Shower'] or regexRain20Hour == ['shower'] or regexRain20Hour == ['Drizzle'] or regexRain20Hour == [
         'drizzle']:
         weatherAPI20HourDataConditionIcon = "/static/images/rain.svg"
-        print("Regex: Rain")
     elif regexCloud20Hour == ['Cloud'] or regexCloud20Hour == ['cloud'] or regexCloud20Hour == [
         'Overcast'] or regexCloud20Hour == ['overcast'] or regexCloud20Hour == ['Cloudy'] or regexCloud20Hour == [
         'cloudy']:
         weatherAPI20HourDataConditionIcon = "/static/images/cloudy.svg"
-        print("Regex: Cloud")
     elif regexClear20Hour == ['Clear'] or regexClear20Hour == ['clear'] or regexClear20Hour == [
         'Sun'] or regexClear20Hour == ['sun']:
         weatherAPI20HourDataConditionIcon = "/static/images/sunny.svg"
-        print("Regex: Clear")
     elif regexSnow20Hour == ['Snow'] or regexSnow20Hour == ['snow'] or regexSnow20Hour == [
         'Sleet'] or regexSnow20Hour == ['sleet']:
         weatherAPI20HourDataConditionIcon = "/static/images/snow.svg"
-        print("Regex: Snow")
     elif regexWind20Hour == ['Wind'] or regexWind20Hour == ['wind']:
         weatherAPI20HourDataConditionIcon = "/static/images/wind.svg"
-        print("Regex: Wind")
     elif regexHail20Hour == ['Hail'] or regexHail20Hour == ['hail']:
         weatherAPI20HourDataConditionIcon = "/static/images/hailstones.svg"
-        print("Regex: Hail")
     elif regexMist20Hour == ['Mist'] or regexMist20Hour == ['mist'] or regexMist20Hour == ['Fog'] or regexMist20Hour == ['fog']:
         weatherAPI20HourDataConditionIcon = "/static/images/mist.svg"
-        print("Regex: Mist")
 
     # 21 Hour Forecast - Similar code as 20 Hour Forecast
     weatherAPI21HourData = weatherAPIData['forecast']
@@ -2532,24 +2300,15 @@ def weather():
     weatherAPI21HourData = weatherAPI21HourData[20]
     weatherAPI21HourDataConditionTime = weatherAPI21HourData['time']
     weatherAPI21HourDataConditionTime = weatherAPI21HourDataConditionTime.split(" ")
-    print(weatherAPI21HourDataConditionTime)
-
     weatherAPI21HourDataConditionTime = weatherAPI21HourDataConditionTime[1]
-    print(weatherAPI21HourDataConditionTime)
     weatherAPI21HourDataConditionTime = weatherAPI21HourDataConditionTime.split(":")
-    print(weatherAPI21HourDataConditionTime)
     weatherAPI21HourDataConditionTime = weatherAPI21HourDataConditionTime[0]
-    print(weatherAPI21HourDataConditionTime)
     weatherAPI21HourDataTemperature = weatherAPI21HourData['temp_c']
-    print(weatherAPI21HourDataTemperature)
     weatherAPI21HourDataTemperature = round(weatherAPI21HourDataTemperature, 0)
     weatherAPI21HourDataTemperature = int(weatherAPI21HourDataTemperature)
     weatherAPI21HourDataTemperature = str(weatherAPI21HourDataTemperature) + "°C"
-    print(weatherAPI21HourDataTemperature)
     weatherAPI21HourDataCondition = weatherAPI21HourData['condition']
-    print(weatherAPI21HourDataCondition)
     weatherAPI21HourDataCondition = weatherAPI21HourDataCondition['text']
-    print(weatherAPI21HourDataCondition)
 
     regexThunder21Hour = re.findall("Thunder|thunder", weatherAPI21HourDataCondition)
     if regexThunder21Hour != []:
@@ -2586,34 +2345,26 @@ def weather():
 
     if regexThunder21Hour == ['Thunder'] or regexThunder21Hour == ['thunder']:
         weatherAPI21HourDataConditionIcon = "/static/images/thunderstorms.svg"
-        print("Regex: Thunder")
     elif regexRain21Hour == ['Rain'] or regexRain21Hour == ['rain'] or regexRain21Hour == [
         'Shower'] or regexRain21Hour == ['shower'] or regexRain21Hour == ['Drizzle'] or regexRain21Hour == [
         'drizzle']:
         weatherAPI21HourDataConditionIcon = "/static/images/rain.svg"
-        print("Regex: Rain")
     elif regexCloud21Hour == ['Cloud'] or regexCloud21Hour == ['cloud'] or regexCloud21Hour == [
         'Overcast'] or regexCloud21Hour == ['overcast'] or regexCloud21Hour == ['Cloudy'] or regexCloud21Hour == [
         'cloudy']:
         weatherAPI21HourDataConditionIcon = "/static/images/cloudy.svg"
-        print("Regex: Cloud")
     elif regexClear21Hour == ['Clear'] or regexClear21Hour == ['clear'] or regexClear21Hour == [
         'Sun'] or regexClear21Hour == ['sun']:
         weatherAPI21HourDataConditionIcon = "/static/images/sunny.svg"
-        print("Regex: Clear")
     elif regexSnow21Hour == ['Snow'] or regexSnow21Hour == ['snow'] or regexSnow21Hour == [
         'Sleet'] or regexSnow21Hour == ['sleet']:
         weatherAPI21HourDataConditionIcon = "/static/images/snow.svg"
-        print("Regex: Snow")
     elif regexWind21Hour == ['Wind'] or regexWind21Hour == ['wind']:
         weatherAPI21HourDataConditionIcon = "/static/images/wind.svg"
-        print("Regex: Wind")
     elif regexHail21Hour == ['Hail'] or regexHail21Hour == ['hail']:
         weatherAPI21HourDataConditionIcon = "/static/images/hailstones.svg"
-        print("Regex: Hail")
     elif regexMist21Hour == ['Mist'] or regexMist21Hour == ['mist'] or regexMist21Hour == ['Fog'] or regexMist21Hour == ['fog']:
         weatherAPI21HourDataConditionIcon = "/static/images/mist.svg"
-        print("Regex: Mist")
 
     # 22 Hour Forecast - Similar code as 21 Hour Forecast
     weatherAPI22HourData = weatherAPIData['forecast']
@@ -2623,23 +2374,15 @@ def weather():
     weatherAPI22HourData = weatherAPI22HourData[21]
     weatherAPI22HourDataConditionTime = weatherAPI22HourData['time']
     weatherAPI22HourDataConditionTime = weatherAPI22HourDataConditionTime.split(" ")
-    print(weatherAPI22HourDataConditionTime)
     weatherAPI22HourDataConditionTime = weatherAPI22HourDataConditionTime[1]
-    print(weatherAPI22HourDataConditionTime)
     weatherAPI22HourDataConditionTime = weatherAPI22HourDataConditionTime.split(":")
-    print(weatherAPI22HourDataConditionTime)
     weatherAPI22HourDataConditionTime = weatherAPI22HourDataConditionTime[0]
-    print(weatherAPI22HourDataConditionTime)
     weatherAPI22HourDataTemperature = weatherAPI22HourData['temp_c']
-    print(weatherAPI22HourDataTemperature)
     weatherAPI22HourDataTemperature = round(weatherAPI22HourDataTemperature, 0)
     weatherAPI22HourDataTemperature = int(weatherAPI22HourDataTemperature)
     weatherAPI22HourDataTemperature = str(weatherAPI22HourDataTemperature) + "°C"
-    print(weatherAPI22HourDataTemperature)
     weatherAPI22HourDataCondition = weatherAPI22HourData['condition']
-    print(weatherAPI22HourDataCondition)
     weatherAPI22HourDataCondition = weatherAPI22HourDataCondition['text']
-    print(weatherAPI22HourDataCondition)
 
     regexThunder22Hour = re.findall("Thunder|thunder", weatherAPI22HourDataCondition)
     if regexThunder22Hour != []:
@@ -2676,34 +2419,26 @@ def weather():
 
     if regexThunder22Hour == ['Thunder'] or regexThunder22Hour == ['thunder']:
         weatherAPI22HourDataConditionIcon = "/static/images/thunderstorms.svg"
-        print("Regex: Thunder")
     elif regexRain22Hour == ['Rain'] or regexRain22Hour == ['rain'] or regexRain22Hour == [
         'Shower'] or regexRain22Hour == ['shower'] or regexRain22Hour == ['Drizzle'] or regexRain22Hour == [
         'drizzle']:
         weatherAPI22HourDataConditionIcon = "/static/images/rain.svg"
-        print("Regex: Rain")
     elif regexCloud22Hour == ['Cloud'] or regexCloud22Hour == ['cloud'] or regexCloud22Hour == [
         'Overcast'] or regexCloud22Hour == ['overcast'] or regexCloud22Hour == ['Cloudy'] or regexCloud22Hour == [
         'cloudy']:
         weatherAPI22HourDataConditionIcon = "/static/images/cloudy.svg"
-        print("Regex: Cloud")
     elif regexClear22Hour == ['Clear'] or regexClear22Hour == ['clear'] or regexClear22Hour == [
         'Sun'] or regexClear22Hour == ['sun']:
         weatherAPI22HourDataConditionIcon = "/static/images/sunny.svg"
-        print("Regex: Clear")
     elif regexSnow22Hour == ['Snow'] or regexSnow22Hour == ['snow'] or regexSnow22Hour == [
         'Sleet'] or regexSnow22Hour == ['sleet']:
         weatherAPI22HourDataConditionIcon = "/static/images/snow.svg"
-        print("Regex: Snow")
     elif regexWind22Hour == ['Wind'] or regexWind22Hour == ['wind']:
         weatherAPI22HourDataConditionIcon = "/static/images/wind.svg"
-        print("Regex: Wind")
     elif regexHail22Hour == ['Hail'] or regexHail22Hour == ['hail']:
         weatherAPI22HourDataConditionIcon = "/static/images/hailstones.svg"
-        print("Regex: Hail")
     elif regexMist22Hour == ['Mist'] or regexMist22Hour == ['mist'] or regexMist22Hour == ['Fog'] or regexMist22Hour == ['fog']:
         weatherAPI22HourDataConditionIcon = "/static/images/mist.svg"
-        print("Regex: Mist")
 
     # 23 Hour Forecast - Similar code as 22 Hour Forecast
     weatherAPI23HourData = weatherAPIData['forecast']
@@ -2713,23 +2448,15 @@ def weather():
     weatherAPI23HourData = weatherAPI23HourData[22]
     weatherAPI23HourDataConditionTime = weatherAPI23HourData['time']
     weatherAPI23HourDataConditionTime = weatherAPI23HourDataConditionTime.split(" ")
-    print(weatherAPI23HourDataConditionTime)
     weatherAPI23HourDataConditionTime = weatherAPI23HourDataConditionTime[1]
-    print(weatherAPI23HourDataConditionTime)
     weatherAPI23HourDataConditionTime = weatherAPI23HourDataConditionTime.split(":")
-    print(weatherAPI23HourDataConditionTime)
     weatherAPI23HourDataConditionTime = weatherAPI23HourDataConditionTime[0]
-    print(weatherAPI23HourDataConditionTime)
     weatherAPI23HourDataTemperature = weatherAPI23HourData['temp_c']
-    print(weatherAPI23HourDataTemperature)
     weatherAPI23HourDataTemperature = round(weatherAPI23HourDataTemperature, 0)
     weatherAPI23HourDataTemperature = int(weatherAPI23HourDataTemperature)
     weatherAPI23HourDataTemperature = str(weatherAPI23HourDataTemperature) + "°C"
-    print(weatherAPI23HourDataTemperature)
     weatherAPI23HourDataCondition = weatherAPI23HourData['condition']
-    print(weatherAPI23HourDataCondition)
     weatherAPI23HourDataCondition = weatherAPI23HourDataCondition['text']
-    print(weatherAPI23HourDataCondition)
 
     regexThunder23Hour = re.findall("Thunder|thunder", weatherAPI23HourDataCondition)
     if regexThunder23Hour != []:
@@ -2766,34 +2493,26 @@ def weather():
 
     if regexThunder23Hour == ['Thunder'] or regexThunder23Hour == ['thunder']:
         weatherAPI23HourDataConditionIcon = "/static/images/thunderstorms.svg"
-        print("Regex: Thunder")
     elif regexRain23Hour == ['Rain'] or regexRain23Hour == ['rain'] or regexRain23Hour == [
         'Shower'] or regexRain23Hour == ['shower'] or regexRain23Hour == ['Drizzle'] or regexRain23Hour == [
         'drizzle']:
         weatherAPI23HourDataConditionIcon = "/static/images/rain.svg"
-        print("Regex: Rain")
     elif regexCloud23Hour == ['Cloud'] or regexCloud23Hour == ['cloud'] or regexCloud23Hour == [
         'Overcast'] or regexCloud23Hour == ['overcast'] or regexCloud23Hour == ['Cloudy'] or regexCloud23Hour == [
         'cloudy']:
         weatherAPI23HourDataConditionIcon = "/static/images/cloudy.svg"
-        print("Regex: Cloud")
     elif regexClear23Hour == ['Clear'] or regexClear23Hour == ['clear'] or regexClear23Hour == [
         'Sun'] or regexClear23Hour == ['sun']:
         weatherAPI23HourDataConditionIcon = "/static/images/sunny.svg"
-        print("Regex: Clear")
     elif regexSnow23Hour == ['Snow'] or regexSnow23Hour == ['snow'] or regexSnow23Hour == [
         'Sleet'] or regexSnow23Hour == ['sleet']:
         weatherAPI23HourDataConditionIcon = "/static/images/snow.svg"
-        print("Regex: Snow")
     elif regexWind23Hour == ['Wind'] or regexWind23Hour == ['wind']:
         weatherAPI23HourDataConditionIcon = "/static/images/wind.svg"
-        print("Regex: Wind")
     elif regexHail23Hour == ['Hail'] or regexHail23Hour == ['hail']:
         weatherAPI23HourDataConditionIcon = "/static/images/hailstones.svg"
-        print("Regex: Hail")
     elif regexMist23Hour == ['Mist'] or regexMist23Hour == ['mist'] or regexMist23Hour == ['Fog'] or regexMist23Hour == ['fog']:
         weatherAPI23HourDataConditionIcon = "/static/images/mist.svg"
-        print("Regex: Mist")
 
 
     try: # Pollen Count Data API
@@ -2811,18 +2530,12 @@ def weather():
 
         pollenData = data.decode("utf-8") # API Data Decode
         pollenData = ast.literal_eval(pollenData) # API Data Literal Evaluation
-        print("Pollen Data: ", pollenData) # API Data Print
-        print(type(pollenData)) # API Data Type
         pollenData = pollenData['data'] # Pollen Data
         pollenData = pollenData[0]  # Pollen Data
         pollenRisk = pollenData['Risk'] # Pollen Risk
-        print("Pollen Risk: ", pollenRisk)
         pollenRiskGrass = pollenRisk['grass_pollen'] # Pollen Risk Grass
-        print("Pollen Risk Grass: ", pollenRiskGrass)
         pollenRiskTree = pollenRisk['tree_pollen'] # Pollen Risk Tree
-        print("Pollen Risk Tree: ", pollenRiskTree)
         pollenRiskWeed = pollenRisk['weed_pollen'] # Pollen Risk Weeds
-        print("Pollen Risk Weed: ", pollenRiskWeed)
         pollenRisk = str(pollenRisk)
 
         # Set Pollen Risk Level for each pollen type
@@ -2863,17 +2576,10 @@ def weather():
             pollenRiskLevelWeed = "Low"
 
 
-
-        print("Pollen Risk Level: ", pollenRiskLevelGrass, pollenRiskLevelTree, pollenRiskLevelWeed)
-
         pollenCount = pollenData['Count'] # Pollen Count
-        print("Pollen Count: ", pollenCount)
         pollenCountTree = pollenCount['tree_pollen'] # Pollen Count Tree
-        print("Pollen Count Tree: ", pollenCountTree)
         pollenCountGrass = pollenCount['grass_pollen'] # Pollen Count Grass
-        print("Pollen Count Grass: ", pollenCountGrass)
         pollenCountWeed = pollenCount['weed_pollen'] # Pollen Count Weeds
-        print("Pollen Count Weed: ", pollenCountWeed)
 
         # Set Pollen Count for each pollen type (percentage and bar chart colour)
         # Set Pollen Count for tree pollen
@@ -2966,7 +2672,7 @@ def weather():
 
     # Set data to be passed to the front end
     data = strTemperatureCelsius1, strHumidity, aqi, aqi_description, strWindSpeed, windDirectionDescription, UV_index, UV_index_description, UV_index_percentage, UV_index_colour, aqi_percentage, aqi_colour, compass, strTemperatureFarenheit, strWindSpeedKMH, openWeatherDataToday, temperatureforecastToday, weatherConditionsTodayIcon, tomorrowDate, weatherConditionsTomorrowIcon, temperatureforecastTomorrow, tomorrowWindSpeed, tomorrowWindDirectionDescription, tomorrowHumidity, ThreeDayDate, weatherConditionsThreeDayIcon, temperatureforecastThreeDay, ThreeDayWindSpeed, ThreeDayWindDirectionDescription, ThreeDayHumidity, FourDayDate, weatherConditionsFourDayIcon, temperatureforecastFourDay, FourDayWindSpeed, FourDayWindDirectionDescription, FourDayHumidity, FiveDayDate, weatherConditionsFiveDayIcon, temperatureforecastFiveDay, FiveDayWindSpeed, FiveDayWindDirectionDescription, FiveDayHumidity, SixDayDate, weatherConditionsSixDayIcon, temperatureforecastSixDay, SixDayWindSpeed, SixDayWindDirectionDescription, SixDayHumidity, weatherAPIDataCurrentTemperature, weatherAPIDataCurrentConditionIcon, weatherAPI01HourDataConditionTime, weatherAPI01HourDataTemperature, weatherAPI01HourDataConditionIcon, weatherAPI02HourDataConditionTime, weatherAPI02HourDataTemperature, weatherAPI02HourDataConditionIcon, weatherAPI03HourDataConditionTime, weatherAPI03HourDataTemperature, weatherAPI03HourDataConditionIcon, weatherAPI04HourDataConditionTime, weatherAPI04HourDataTemperature, weatherAPI04HourDataConditionIcon, weatherAPI05HourDataConditionTime, weatherAPI05HourDataTemperature, weatherAPI05HourDataConditionIcon, weatherAPI06HourDataConditionTime, weatherAPI06HourDataTemperature, weatherAPI06HourDataConditionIcon, weatherAPI07HourDataConditionTime, weatherAPI07HourDataTemperature, weatherAPI07HourDataConditionIcon, weatherAPI08HourDataConditionTime, weatherAPI08HourDataTemperature, weatherAPI08HourDataConditionIcon, weatherAPI09HourDataConditionTime, weatherAPI09HourDataTemperature, weatherAPI09HourDataConditionIcon, weatherAPI10HourDataConditionTime, weatherAPI10HourDataTemperature, weatherAPI10HourDataConditionIcon, weatherAPI11HourDataConditionTime, weatherAPI11HourDataTemperature, weatherAPI11HourDataConditionIcon, weatherAPI12HourDataConditionTime, weatherAPI12HourDataTemperature, weatherAPI12HourDataConditionIcon, weatherAPI13HourDataConditionTime, weatherAPI13HourDataTemperature, weatherAPI13HourDataConditionIcon, weatherAPI14HourDataConditionTime, weatherAPI14HourDataTemperature, weatherAPI14HourDataConditionIcon, weatherAPI15HourDataConditionTime, weatherAPI15HourDataTemperature, weatherAPI15HourDataConditionIcon, weatherAPI16HourDataConditionTime, weatherAPI16HourDataTemperature, weatherAPI16HourDataConditionIcon, weatherAPI17HourDataConditionTime, weatherAPI17HourDataTemperature, weatherAPI17HourDataConditionIcon, weatherAPI18HourDataConditionTime, weatherAPI18HourDataTemperature, weatherAPI18HourDataConditionIcon, weatherAPI19HourDataConditionTime, weatherAPI19HourDataTemperature, weatherAPI19HourDataConditionIcon, weatherAPI20HourDataConditionTime, weatherAPI20HourDataTemperature, weatherAPI20HourDataConditionIcon, weatherAPI21HourDataConditionTime, weatherAPI21HourDataTemperature, weatherAPI21HourDataConditionIcon, weatherAPI22HourDataConditionTime, weatherAPI22HourDataTemperature, weatherAPI22HourDataConditionIcon, weatherAPI23HourDataConditionTime, weatherAPI23HourDataTemperature, weatherAPI23HourDataConditionIcon, strPressure, angle, weatherConditionsToday, strPrecipitationProbability, strVisibilityKM, strVisibilityMiles, visibilityDescription, pollenRiskLevelGrass, pollenCountGrass, pollenCountGrassPercentage, pollenCountColourGrass, pollenRiskLevelTree, pollenCountTree, pollenCountTreePercentage, pollenCountColourTree, pollenRiskLevelWeed, pollenCountWeed, pollenCountWeedPercentage, pollenCountColourWeed, strPrecipitationProbabilityTomorrow, strPrecipitationProbabilityThreeDay, strPrecipitationProbabilityFourDay, strPrecipitationProbabilityFiveDay, strPrecipitationProbabilitySixDay, strFeelsLikeCelcius, strFeelsLikeFarenheit, todayDate
-    print("Data", data)
+
 
     # Return data to the front end
     return render_template('weather.html', data=data)
@@ -3003,28 +2709,20 @@ def temperature():
     sensorData = sensors['data'] # get sensor data
     sensorData = sensorData[0] # get sensor data
     temperatureFarenheit1 = sensorData['temp'] # get indoor temperature in Farenheit from sensor
-    print("Temperature Farenheit", temperatureFarenheit1)
     temperatureCelsius = (temperatureFarenheit1 - 32) * 5.0/9.0 # convert Farenheit to Celsius
     temperatureCelsius1 = round(temperatureCelsius, 1) # round to 1 decimal place
-    print("Temperature Celsius", temperatureCelsius1)
     strTemperatureCelsius1 = str(temperatureCelsius1) + "°C" # convert celcius temperature to string
-    print("Temperature Celsius String", strTemperatureCelsius1)
     strTemperatureFarenheit1 = str(temperatureFarenheit1) + "°F" # convert farenheit temperature to string
-    print("Temperature Farenheit String", strTemperatureFarenheit1)
     current_weather = response.json() # get current weather data
     sensors = current_weather['sensors'] # get sensor data
     sensors = sensors[4] # get sensor data from outdoor sensor
     sensorData = sensors['data'] # get sensor data
     sensorData = sensorData[0] # get sensor data
     temperatureFarenheit2 = sensorData['temp'] # get outdoor temperature in Farenheit from sensor
-    print("Temperature Farenheit", temperatureFarenheit2)
     temperatureCelsius = (temperatureFarenheit2 - 32) * 5.0 / 9.0 # convert Farenheit to Celsius
     temperatureCelsius2 = round(temperatureCelsius, 1)  # round to 1 decimal place
-    print("Temperature Celsius", temperatureCelsius2)
     strTemperatureCelsius2 = str(temperatureCelsius2) + "°C" # convert celcius temperature to string
-    print("Temperature Celsius String", strTemperatureCelsius2)
     strTemperatureFarenheit2 = str(temperatureFarenheit2) + "°F" # convert farenheit temperature to string
-    print("Temperature Farenheit String", strTemperatureFarenheit2)
 
 
 
@@ -3055,8 +2753,6 @@ def temperature():
             pointerTemperature += 12 # increment temperature pointer
             pointerTime += 12 # increment time pointer
             temperatureData = {"hour": timeHour, "temperature": lastLineTemperature}
-        print("24 Hour Temperatures", temperatures24Hours)
-        print("24 Hour Time", timeHours)
 
         graphtest = [{'hour': '00', 'temperature': 8},]
 
@@ -3126,8 +2822,6 @@ def temperature():
             pointerDate += 288 # increment date pointer
             pointerTemperature += 288 # increment temperature pointer
             temperatureData = {"date": lastLineDate, "temperature": lastLineTemperature}
-        print("Daily Temperatures", temperatureDaily)
-        print("Daily Dates", dateDaily)
 
         graphtest = [{'hour': '00', 'temperature': 8},]
 
@@ -3171,8 +2865,6 @@ def temperature():
     csvLength = len(jsonFile) # get length of CSV file
 
     firstLine = jsonFile[pointerMonth] # get first line of data
-    print("First Line", firstLine)
-    #print(jsonFile)
 
     for i in range(len(jsonFile)): # loop through all data
         if pointerMonth < 52864: #Check if the pointer is less than the length of the CSV file
@@ -3191,9 +2883,6 @@ def temperature():
                     temperaturesMonthly.append(firstLineTemperature) # append temperature to list of temperatures
                     firstLineMonth = "Jan" # set first line month to January
                     months.append(firstLineMonth) # append month to list of months
-                    print("First Line Month", firstLineMonth)
-                    print("First Line Temperature", firstLineTemperature)
-                    print("First Line Temperature", firstLineTemperature)
             elif '1/2/23 12:00' in firstLineMonth: # check if first line month is February (repeated code for each month)
                 if '11/2/23 12:00' in firstLineMonth:
                     pass
@@ -3206,9 +2895,6 @@ def temperature():
                     temperaturesMonthly.append(firstLineTemperature)
                     firstLineMonth = "Feb"
                     months.append(firstLineMonth)
-                    print("First Line Month", firstLineMonth)
-                    print("First Line Temperature", firstLineTemperature)
-                    print("First Line Temperature", firstLineTemperature)
             elif '1/3/23 12:00' in firstLineMonth: # check if first line month is March (repeated code for each month)
                 if '11/3/23 12:00' in firstLineMonth:
                     pass
@@ -3221,9 +2907,6 @@ def temperature():
                     temperaturesMonthly.append(firstLineTemperature)
                     firstLineMonth = "Mar"
                     months.append(firstLineMonth)
-                    print("First Line Month", firstLineMonth)
-                    print("First Line Temperature", firstLineTemperature)
-                    print("First Line Temperature", firstLineTemperature)
             elif '1/4/23 12:00' in firstLineMonth: # check if first line month is April (repeated code for each month)
                 if '11/4/23 12:00' in firstLineMonth:
                     pass
@@ -3236,9 +2919,6 @@ def temperature():
                     temperaturesMonthly.append(firstLineTemperature)
                     firstLineMonth = "Apr"
                     months.append(firstLineMonth)
-                    print("First Line Month", firstLineMonth)
-                    print("First Line Temperature", firstLineTemperature)
-                    print("First Line Temperature", firstLineTemperature)
             elif '3/5/23 17:15' in firstLineMonth: # check if first line month is May (repeated code for each month)
                 if '13/5/23 17:15' in firstLineMonth:
                     pass
@@ -3251,9 +2931,6 @@ def temperature():
                     temperaturesMonthly.append(firstLineTemperature)
                     firstLineMonth = "May"
                     months.append(firstLineMonth)
-                    print("First Line Month", firstLineMonth)
-                    print("First Line Temperature", firstLineTemperature)
-                    print("First Line Temperature", firstLineTemperature)
             elif '1/6/23 12:00' in firstLineMonth: # check if first line month is June (repeated code for each month)
                 if '11/6/23 12:00' in firstLineMonth:
                     pass
@@ -3266,9 +2943,6 @@ def temperature():
                     temperaturesMonthly.append(firstLineTemperature)
                     firstLineMonth = "Jun"
                     months.append(firstLineMonth)
-                    print("First Line Month", firstLineMonth)
-                    print("First Line Temperature", firstLineTemperature)
-                    print("First Line Temperature", firstLineTemperature)
             elif '1/7/23 12:00' in firstLineMonth: # check if first line month is July (repeated code for each month)
                 if '11/7/23 12:00' in firstLineMonth:
                     pass
@@ -3281,9 +2955,6 @@ def temperature():
                     temperaturesMonthly.append(firstLineTemperature)
                     firstLineMonth = "Jul"
                     months.append(firstLineMonth)
-                    print("First Line Month", firstLineMonth)
-                    print("First Line Temperature", firstLineTemperature)
-                    print("First Line Temperature", firstLineTemperature)
             elif '1/8/23 12:00' in firstLineMonth: # check if first line month is August (repeated code for each month)
                 if '11/8/23 12:00' in firstLineMonth:
                     pass
@@ -3296,9 +2967,6 @@ def temperature():
                     temperaturesMonthly.append(firstLineTemperature)
                     firstLineMonth = "Aug"
                     months.append(firstLineMonth)
-                    print("First Line Month", firstLineMonth)
-                    print("First Line Temperature", firstLineTemperature)
-                    print("First Line Temperature", firstLineTemperature)
             elif '1/9/23 12:00' in firstLineMonth: # check if first line month is September (repeated code for each month)
                 if '11/9/23 12:00' in firstLineMonth:
                     pass
@@ -3311,9 +2979,6 @@ def temperature():
                     temperaturesMonthly.append(firstLineTemperature)
                     firstLineMonth = "Sep"
                     months.append(firstLineMonth)
-                    print("First Line Month", firstLineMonth)
-                    print("First Line Temperature", firstLineTemperature)
-                    print("First Line Temperature", firstLineTemperature)
             elif '1/10/23 12:00' in firstLineMonth: # check if first line month is October (repeated code for each month)
                 if '11/10/23 12:00' in firstLineMonth:
                     pass
@@ -3326,9 +2991,6 @@ def temperature():
                     temperaturesMonthly.append(firstLineTemperature)
                     firstLineMonth = "Oct"
                     months.append(firstLineMonth)
-                    print("First Line Month", firstLineMonth)
-                    print("First Line Temperature", firstLineTemperature)
-                    print("First Line Temperature", firstLineTemperature)
             elif '1/11/23 12:00' in firstLineMonth: # check if first line month is November (repeated code for each month)
                 if '11/11/23 12:00' in firstLineMonth:
                     pass
@@ -3341,9 +3003,6 @@ def temperature():
                     temperaturesMonthly.append(firstLineTemperature)
                     firstLineMonth = "Nov"
                     months.append(firstLineMonth)
-                    print("First Line Month", firstLineMonth)
-                    print("First Line Temperature", firstLineTemperature)
-                    print("First Line Temperature", firstLineTemperature)
             elif '1/12/23 12:00' in firstLineMonth: # check if first line month is December (repeated code for each month)
                 if '11/12/23 12:00' in firstLineMonth:
                     pass
@@ -3356,11 +3015,7 @@ def temperature():
                     temperaturesMonthly.append(firstLineTemperature)
                     firstLineMonth = "Dec"
                     months.append(firstLineMonth)
-                    print("First Line Month", firstLineMonth)
-                    print("First Line Temperature", firstLineTemperature)
-                    print("First Line Temperature", firstLineTemperature)
-    print("Monthly Temperatures", temperaturesMonthly)
-    print("Monthly Dates", months)
+
 
     # Get the monthly temperature data for the last 12 months
     temperatureMonth1 = temperaturesMonthly[0]
@@ -3377,8 +3032,7 @@ def temperature():
 
     # Create a string of the humidity data to pass to the front end
     data = strTemperatureCelsius1, strTemperatureCelsius2, strTemperatureFarenheit1, strTemperatureFarenheit2, graphtest, hour0, temperature0, hour1, temperature1, hour2, temperature2, hour3, temperature3, hour4, temperature4, hour5, temperature5, hour6, temperature6, hour7, temperature7, hour8, temperature8, hour9, temperature9, hour10, temperature10, hour11, temperature11, hour12, temperature12, hour13, temperature13, hour14, temperature14, hour15, temperature15, hour16, temperature16, hour17, temperature17, hour18, temperature18, hour19, temperature19, hour20, temperature20, hour21, temperature21, hour22, temperature22, hour23, temperature23, temperatureDay0, temperatureDay1, temperatureDay2, temperatureDay3, temperatureDay4, temperatureDay5, temperatureDay6, temperatureDay7, temperatureDay8, temperatureDay9, temperatureDay10, temperatureDay11, temperatureDay12, temperatureDay13, temperatureDay14, temperatureDay15, temperatureDay16, temperatureDay17, temperatureDay18, temperatureDay19, temperatureDay20, temperatureDay21, temperatureDay22, temperatureDay23, temperatureDay24, temperatureDay25, temperatureDay26, temperatureDay27, temperatureDay28, temperatureDay29, temperatureMonth1, temperatureMonth2, temperatureMonth3, temperatureMonth4, temperatureMonth5, temperatureMonth6, temperatureMonth7, temperatureMonth8, temperatureMonth9, temperatureMonth10, temperatureMonth11
-    print("Data", data)
-    print("Data 4", data[4])
+
 
 
     return render_template('temperature.html', data=data) # render the temperature page with the data
@@ -3415,18 +3069,14 @@ def humidity():
     sensorData = sensors['data'] #Get the sensor data from the indoor sensor
     sensorData = sensorData[0] #Get the sensor data from the indoor sensor
     humidity1 = sensorData['hum'] #Get the humidity data from the indoor sensor
-    print("Humidity ", humidity1)
     strHumidity1 = str(humidity1) + "%" #Convert the humidity data to a string
-    print("Humidity String", strHumidity1)
     current_weather = response.json() #Get the JSON response from the API
     sensors = current_weather['sensors'] #Get the sensor data from the JSON response
     sensors = sensors[4] #Get the sensor data from outdoor sensor
     sensorData = sensors['data'] #Get the sensor data from the outdoor sensor
     sensorData = sensorData[0] #Get the sensor data from the outdoor sensor
     humidity2 = sensorData['hum'] #Get the humidity data from the outdoor sensor
-    print("Humidity", humidity2)
     strHumidity2 = str(humidity2) + "%" #Convert the humidity data to a string
-    print("Humidity String", strHumidity2)
 
 
     averageHumidity = (humidity1 + humidity2) / 2
@@ -3460,8 +3110,6 @@ def humidity():
             pointerHumidity += 12 #Increment the pointer for the humidity data
             pointerTime += 12 #Increment the pointer for the time data
             temperatureData = {"hour": timeHour, "temperature": lastLineHumidity}
-        print("24 Hour Temperatures", humidities24Hours)
-        print("24 Hour Time", timeHours)
 
         graphtest = [{'hour': '00', 'temperature': 8},]
 
@@ -3531,8 +3179,6 @@ def humidity():
         pointerDate += 288 #Increment the pointer for the date data
         pointerHumidity += 288 #Increment the pointer for the humidity data
         humidityData = {"date": lastLineDate, "humidity": lastLineHumidity}
-    print("Daily Humidity", humidityDaily)
-    print("Daily Dates", dateDaily)
 
     graphtest = [{'hour': '00', 'humidity': 8}, ]
 
@@ -3576,8 +3222,6 @@ def humidity():
     csvLength = len(jsonFile) #Get the length of the CSV file
 
     firstLine = jsonFile[pointerMonth] #Get the first line of the CSV file
-    print("First Line", firstLine) #Print the first line of the CSV file
-    # print(jsonFile)
 
 
     for i in range(len(jsonFile)): #Loop through the CSV file
@@ -3597,9 +3241,6 @@ def humidity():
                     humiditiesMonthly.append(firstLineHumidity) #Append the humidity data to the humiditiesMonthly list
                     firstLineMonth = "Jan" #Set the month to January
                     months.append(firstLineMonth) #Append the month data to the months list
-                    print("First Line Month", firstLineMonth) #Print the month data
-                    print("First Line Humidtity", firstLineHumidity) #Print the humidity data
-                    print("First Line Humidtity", firstLineHumidity)    #Print the humidity data
             elif '1/2/23 12:00' in firstLineMonth: #Check if the month is February (repeated code for each month except for month searches)
                 if '11/2/23 12:00' in firstLineMonth:
                     pass
@@ -3612,9 +3253,6 @@ def humidity():
                     humiditiesMonthly.append(firstLineHumidity)
                     firstLineMonth = "Feb"
                     months.append(firstLineMonth)
-                    print("First Line Month", firstLineMonth)
-                    print("First Line Humidtity", firstLineHumidity)
-                    print("First Line Humidtity", firstLineHumidity)
             elif '1/3/23 12:00' in firstLineMonth: #Check if the month is March (repeated code for each month except for month searches)
                 if '11/3/23 12:00' in firstLineMonth:
                     pass
@@ -3627,9 +3265,6 @@ def humidity():
                     humiditiesMonthly.append(firstLineHumidity)
                     firstLineMonth = "Mar"
                     months.append(firstLineMonth)
-                    print("First Line Month", firstLineMonth)
-                    print("First Line Humidtity", firstLineHumidity)
-                    print("First Line Humidtity", firstLineHumidity)
             elif '1/4/23 12:00' in firstLineMonth: #Check if the month is April (repeated code for each month except for month searches)
                 if '11/4/23 12:00' in firstLineMonth:
                     pass
@@ -3642,9 +3277,6 @@ def humidity():
                     humiditiesMonthly.append(firstLineHumidity)
                     firstLineMonth = "Apr"
                     months.append(firstLineMonth)
-                    print("First Line Month", firstLineMonth)
-                    print("First Line Humidtity", firstLineHumidity)
-                    print("First Line Humidtity", firstLineHumidity)
             elif '3/5/23 17:30' in firstLineMonth: #Check if the month is May (repeated code for each month except for month searches)
                 if '13/5/23 17:30' in firstLineMonth:
                     pass
@@ -3657,9 +3289,6 @@ def humidity():
                     humiditiesMonthly.append(firstLineHumidity)
                     firstLineMonth = "May"
                     months.append(firstLineMonth)
-                    print("First Line Month", firstLineMonth)
-                    print("First Line Humidtity", firstLineHumidity)
-                    print("First Line Humidtity", firstLineHumidity)
             elif '1/6/23 12:00' in firstLineMonth: #Check if the month is June (repeated code for each month except for month searches)
                 if '11/6/23 12:00' in firstLineMonth:
                     pass
@@ -3672,9 +3301,6 @@ def humidity():
                     humiditiesMonthly.append(firstLineHumidity)
                     firstLineMonth = "Jun"
                     months.append(firstLineMonth)
-                    print("First Line Month", firstLineMonth)
-                    print("First Line Humidtity", firstLineHumidity)
-                    print("First Line Humidtity", firstLineHumidity)
             elif '1/7/23 12:00' in firstLineMonth: #Check if the month is July (repeated code for each month except for month searches)
                 if '11/7/23 12:00' in firstLineMonth:
                     pass
@@ -3687,9 +3313,6 @@ def humidity():
                     humiditiesMonthly.append(firstLineHumidity)
                     firstLineMonth = "Jul"
                     months.append(firstLineMonth)
-                    print("First Line Month", firstLineMonth)
-                    print("First Line Humidtity", firstLineHumidity)
-                    print("First Line Humidtity", firstLineHumidity)
             elif '1/8/23 12:00' in firstLineMonth: #Check if the month is August (repeated code for each month except for month searches)
                 if '11/8/23 12:00' in firstLineMonth:
                     pass
@@ -3702,9 +3325,6 @@ def humidity():
                     humiditiesMonthly.append(firstLineHumidity)
                     firstLineMonth = "Aug"
                     months.append(firstLineMonth)
-                    print("First Line Month", firstLineMonth)
-                    print("First Line Humidtity", firstLineHumidity)
-                    print("First Line Humidtity", firstLineHumidity)
             elif '1/9/23 12:00' in firstLineMonth: #Check if the month is September (repeated code for each month except for month searches)
                 if '11/9/23 12:00' in firstLineMonth:
                     pass
@@ -3717,9 +3337,6 @@ def humidity():
                     humiditiesMonthly.append(firstLineHumidity)
                     firstLineMonth = "Sep"
                     months.append(firstLineMonth)
-                    print("First Line Month", firstLineMonth)
-                    print("First Line Humidtity", firstLineHumidity)
-                    print("First Line Humidtity", firstLineHumidity)
             elif '1/10/23 12:00' in firstLineMonth: #Check if the month is October (repeated code for each month except for month searches)
                 if '11/10/23 12:00' in firstLineMonth:
                     pass
@@ -3732,9 +3349,6 @@ def humidity():
                     humiditiesMonthly.append(firstLineHumidity)
                     firstLineMonth = "Oct"
                     months.append(firstLineMonth)
-                    print("First Line Month", firstLineMonth)
-                    print("First Line Humidtity", firstLineHumidity)
-                    print("First Line Humidtity", firstLineHumidity)
             elif '1/11/23 12:00' in firstLineMonth: #Check if the month is November (repeated code for each month except for month searches)
                 if '11/11/23 12:00' in firstLineMonth:
                     pass
@@ -3747,9 +3361,6 @@ def humidity():
                     humiditiesMonthly.append(firstLineHumidity)
                     firstLineMonth = "Nov"
                     months.append(firstLineMonth)
-                    print("First Line Month", firstLineMonth)
-                    print("First Line Humidtity", firstLineHumidity)
-                    print("First Line Humidtity", firstLineHumidity)
             elif '1/12/23 12:00' in firstLineMonth: #Check if the month is December (repeated code for each month except for month searches)
                 if '11/12/23 12:00' in firstLineMonth:
                     pass
@@ -3762,9 +3373,6 @@ def humidity():
                     humiditiesMonthly.append(firstLineHumidity)
                     firstLineMonth = "Dec"
                     months.append(firstLineMonth)
-                    print("First Line Month", firstLineMonth)
-                    print("First Line Humidtity", firstLineHumidity)
-                    print("First Line Humidtity", firstLineHumidity)
 
 
     #Get the monthly humidity data for the last 12 months
@@ -3782,7 +3390,7 @@ def humidity():
 
     #Create a string of the humidity data to pass to the front end
     data = strHumidity1, strHumidity2, strAverageHumidity, graphtest, hour0, temperature0, hour1, temperature1, hour2, temperature2, hour3, temperature3, hour4, temperature4, hour5, temperature5, hour6, temperature6, hour7, temperature7, hour8, temperature8, hour9, temperature9, hour10, temperature10, hour11, temperature11, hour12, temperature12, hour13, temperature13, hour14, temperature14, hour15, temperature15, hour16, temperature16, hour17, temperature17, hour18, temperature18, hour19, temperature19, hour20, temperature20, hour21, temperature21, hour22, temperature22, hour23, temperature23, humidityDay0, humidityDay1, humidityDay2, humidityDay3, humidityDay4, humidityDay5, humidityDay6, humidityDay7, humidityDay8, humidityDay9, humidityDay10, humidityDay11, humidityDay12, humidityDay13, humidityDay14, humidityDay15, humidityDay16, humidityDay17, humidityDay18, humidityDay19, humidityDay20, humidityDay21, humidityDay22, humidityDay23, humidityDay24, humidityDay25, humidityDay26, humidityDay27, humidityDay28, humidityDay29, humidityMonth1, humidityMonth2, humidityMonth3, humidityMonth4, humidityMonth5, humidityMonth6, humidityMonth7, humidityMonth8, humidityMonth9, humidityMonth10, humidityMonth11
-    print("Data", data)
+
 
     return render_template('humidity.html', data=data) #Render the humidity page with the humidity data passed to the front end
 
