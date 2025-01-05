@@ -1,0 +1,16 @@
+
+# Documentation for the Smart House Weather Dashboard EULA and User Manual 
+### Author: S275931 
+## Introduction 
+The Smart House Weather Dashboard is a Python-based web application that obtains live indoor and outdoor temperature and humidity data and live weather data from sensors and a weather station at the Digitech Smart House that is used by the University of Suffolk and is located at Adastral Park in Martlesham, Ipswich, Suffolk, United Kingdom.  The Smart House Weather dashboard also obtains additional weather data, pollen data and weather forecasts (hourly and daily) from third party weather APIs. The APIs providing this data include WeatherLink, OpenWeather, Weather API and Ambee. This application also obtains historical hourly, daily, and monthly temperature and humidity data through Kaggle and presents this data as user friendly graphs. Finally, this application presents the temperature and humidity sensor data, weather data and historic data on a series of user-friendly dashboards and graphs that is hosted on an online web application that is publicly accessible. The Smart House Weather Dashboard can also be installed and deployed locally using Docker.
+
+View full documentation here: https://github.com/AlexanderJohnRobertson/Dissertation-Smart-Home-Weather-Dashboard/wiki/Documentation
+
+
+## End User License Agreement 
+IMPORTANT – YOU MUST AGREE TO THE SMART HOUSE WEATHER DASHBOARD GNU AGPLv3 LICENSE BEFORE YOU CAN USE THIS PRODUCT IN ANY WAY.
+The full license agreement is available in a separate document. The Smart House Weather Dashboard is open source with the copyleft GNU Affero General Public License.
+You must comply with the following permissions, conditions and limitations when using, managing, downloading, installing, setting up, distributing, deploying, or modifying the Smart House Weather Dashboard as stated in the table below in accordance with the open-source GNU Affero General Public License Agreement. Failure to comply can result in legal action under U.K. law, international law, and local laws of your country where you are using this software.
+The GNU Affero General Public License Agreement is available here: https://www.gnu.org/licenses/agpl-3.0.en.html 
+Alternative links to license agreement: https://github.com/AlexanderJohnRobertson/Dissertation-Smart-Home-Weather-Dashboard/wiki/License
+
