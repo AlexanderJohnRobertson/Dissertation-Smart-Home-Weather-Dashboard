@@ -98,6 +98,7 @@ def weather():
     sensors = sensors[2] # Get the sensor data for the temperature sensor
     sensorData = sensors['data'] # Get the sensor data
     sensorData = sensorData[0] # Get the first sensor data
+    print(sensorData)
     temperatureFarenheit = sensorData['temp'] # Get the temperature in Farenheit
     temperatureCelsius = (temperatureFarenheit - 32) * 5.0 / 9.0 # Convert Farenheit to Celsius
     temperatureCelsius1 = round(temperatureCelsius, 1)  # round to 1 decimal place
@@ -160,7 +161,11 @@ def weather():
     sensors = sensors[2] # Get the sensor data for the temperature sensor
     sensorData = sensors['data'] # Get the sensor data
     sensorData = sensorData[0] # Get the first sensor data
+    print(sensorData)
     windSpeed = sensorData['wind_speed_last'] # Get the wind speed
+    print("Wind Speed: ", windSpeed)
+    if windSpeed == None:
+        windSpeed = 0
     windSpeedKMH = windSpeed * 1.60934 # Convert wind speed to km/h
     windSpeedKMH = round(windSpeedKMH, 1) # round to 1 decimal place
     windSpeedKMH = int(windSpeedKMH) # Convert the wind speed to an integer
@@ -172,6 +177,7 @@ def weather():
     sensorData = sensors['data'] # Get the sensor data
     sensorData = sensorData[0] # Get the first sensor data
     windDirection = sensorData['wind_dir_last'] # Get the wind direction
+    print("Wind Direction: ", windDirection)
     if windDirection >=0 and windDirection < 22.5 or windDirection >= 337.5 and windDirection <= 360:
         windDirectionDescription = "North" # Wind direction description as North
         compass = "/static/images/compassNorth.svg" # Compass image for wind direction as North
