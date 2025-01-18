@@ -3573,6 +3573,31 @@ def csvtest():
 
     return jsonify(jsonFile)
 
+@app.route('/classdiagramhtml', methods=['GET', 'POST'])
+def classdiagramhtml():
+    """Class Diagram HTML"""
+    return render_template('Weather_Monitoring_Dashboard_Application_Class_Diagram.html')
+
+@app.route('/usecasediagramhtml', methods=['GET', 'POST'])
+def usecasediagramhtml():
+    """Use Case Diagram HTML"""
+    return render_template('Smart_House_and_Weather_Monitoring_Dashboard_Use_Case_Diagram.html')
+
+@app.route('/architecturaldiagramhtml', methods=['GET', 'POST'])
+def architecturaldiagramhtml():
+    """Architectural Diagram HTML"""
+    return render_template('Architectural_Diagram.html')
+
+@app.route('/architecturaldiagram2html', methods=['GET', 'POST'])
+def architecturaldiagram2html():
+    """Architectural Diagram 2 HTML"""
+    return render_template('Architectural_Diagram_2.html')
+
+@app.route('/wireframehtml', methods=['GET', 'POST'])
+def wireframehtml():
+    """Wireframe HTML"""
+    return render_template('Smart_Home_Weather_Dashboard_Wireframe_V2.html')
+
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))  # port number
     app.run(debug=True, host='0.0.0.0', port=port)  # run the application
