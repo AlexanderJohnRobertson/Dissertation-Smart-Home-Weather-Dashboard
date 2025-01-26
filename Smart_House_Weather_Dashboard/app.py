@@ -3598,6 +3598,11 @@ def wireframehtml():
     """Wireframe HTML"""
     return render_template('Smart_Home_Weather_Dashboard_Wireframe_V2.html')
 
+@app.route('/mvtarchitecturaldiagramhtml', methods=['GET', 'POST'])
+def mvtarchitecturaldiagramhtml():
+    """MVT Architectural Diagram"""
+    return render_template('MVT_Architectural_Diagram.html')
+
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))  # port number
     app.run(debug=True, host='0.0.0.0', port=port)  # run the application
