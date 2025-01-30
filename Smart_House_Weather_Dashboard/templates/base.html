@@ -50,9 +50,6 @@
       <div>
     <hr>
     <div class="content">
-        {% for message in get_flashed_messages() %}
-            <div class="badalert">{{ message }}</div> <!-- Enable Flash messages for the user -->
-        {% endfor %}
         {% block content %} {% endblock %}
     </div>
     </div>
