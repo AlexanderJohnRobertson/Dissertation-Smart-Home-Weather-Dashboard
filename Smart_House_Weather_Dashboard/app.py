@@ -43,6 +43,8 @@ def index():
 
     response = requests.get(url, params=params) # Get the WeatherLink API response
     current_weather = response.json() # Convert the response to JSON
+    print(type(current_weather))
+    print(current_weather)
     sensors = current_weather['sensors'] # Get the sensors data
     sensors = sensors[2] # Get the sensor data for the temperature sensor
     sensorData = sensors['data'] # Get the sensor data
@@ -65,6 +67,8 @@ def index():
     strHumidity = str(humidity) + "%" # Convert the humidity to a string
 
     data = strTemperatureCelsius, strHumidity, strTemperatureFarenheit # Create a tuple of the data to send to front end
+    print(type(data))
+    print(data)
     return render_template('index.html', data=data) # Render the index.html template with the data
 
 @app.route('/weather', methods=['GET', 'POST'])
@@ -106,6 +110,8 @@ def weather():
     strTemperatureFarenheit = str(temperatureFarenheit) + "°F" # Convert the temperature to a string
 
     sensors = current_weather['sensors'] # Get the sensors data
+    print(type(sensors))
+    print("Sensors: ", sensors)
     sensors = sensors[2] # Get the sensor data for the temperature sensor
     sensorData = sensors['data'] # Get the sensor data
     sensorData = sensorData[0] # Get the first sensor data
@@ -2764,6 +2770,10 @@ def temperature():
         graphtest = [{'hour': '00', 'temperature': 8},]
 
         # Get the hourly humidity data for the last 24 hours
+        print(type(temperatures24Hours))
+        print("Hourly Temperatures: ", temperatures24Hours)
+        print(type(timeHours))
+        print("Time in Hours: ", timeHours)
         hour0 = timeHours[0]
         temperature0 = temperatures24Hours[0]
         hour1 = timeHours[1]
@@ -2833,6 +2843,10 @@ def temperature():
         graphtest = [{'hour': '00', 'temperature': 8},]
 
         # Get the daily temperature data for the last 30 days
+        print(type(temperatureDaily))
+        print("Daily Temperatures: ", temperatureDaily)
+        print(type(dateDaily))
+        print("Days: ", dateDaily)
         temperatureDay0 = temperatureDaily[0]
         temperatureDay1 = temperatureDaily[1]
         temperatureDay2 = temperatureDaily[2]
@@ -3025,6 +3039,8 @@ def temperature():
 
 
     # Get the monthly temperature data for the last 12 months
+    print(type(temperaturesMonthly))
+    print("Monthly Temperatures: ", temperaturesMonthly)
     temperatureMonth1 = temperaturesMonthly[0]
     temperatureMonth2 = temperaturesMonthly[1]
     temperatureMonth3 = temperaturesMonthly[2]
@@ -3121,6 +3137,10 @@ def humidity():
         graphtest = [{'hour': '00', 'temperature': 8},]
 
         #Get the hourly humidity data for the last 24 hours
+        print(type(humidities24Hours))
+        print("Hourly Humidities: ", humidities24Hours)
+        print(type(timeHours))
+        print("Hours: ", timeHours)
         hour0 = timeHours[0]
         temperature0 = humidities24Hours[0]
         hour1 = timeHours[1]
@@ -3190,6 +3210,8 @@ def humidity():
     graphtest = [{'hour': '00', 'humidity': 8}, ]
 
     #Get the daily humidity data for the last 30 days
+    print(type(humidityDaily))
+    print("Daily Humidities: ", humidityDaily)
     humidityDay0 = humidityDaily[0]
     humidityDay1 = humidityDaily[1]
     humidityDay2 = humidityDaily[2]
@@ -3383,6 +3405,8 @@ def humidity():
 
 
     #Get the monthly humidity data for the last 12 months
+    print(type(humiditiesMonthly))
+    print("Monthly Humidities: ", humiditiesMonthly)
     humidityMonth1 = humiditiesMonthly[0]
     humidityMonth2 = humiditiesMonthly[1]
     humidityMonth3 = humiditiesMonthly[2]
