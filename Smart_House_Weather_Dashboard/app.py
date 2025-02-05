@@ -105,6 +105,8 @@ def weather():
     print(sensorData)
     temperatureFarenheit = sensorData['temp'] # Get the temperature in Farenheit
     temperatureCelsius = (temperatureFarenheit - 32) * 5.0 / 9.0 # Convert Farenheit to Celsius
+    print(type(temperatureCelsius))
+    print("Temperature in Celsius: ", temperatureCelsius)
     temperatureCelsius1 = round(temperatureCelsius, 1)  # round to 1 decimal place
     strTemperatureCelsius1 = str(temperatureCelsius1) + "°C" # Convert the temperature to a string
     strTemperatureFarenheit = str(temperatureFarenheit) + "°F" # Convert the temperature to a string
@@ -208,7 +210,8 @@ def weather():
     elif windDirection >= 292.5 and windDirection < 337.5:
         windDirectionDescription = "North West"   # Wind direction description as North West
         compass = "/static/images/compassNorthWest.svg" # Compass image for wind direction as North West
-
+    print(type(windDirectionDescription))
+    print("windDirectionDescription: ", windDirectionDescription)
 
     sensors = current_weather['sensors'] # Get the sensors data
     sensors = sensors[2] # Get the sensor data for the temperature sensor
@@ -2664,6 +2667,8 @@ def weather():
         pollenRiskLevelTree = "Error Retrieving Pollen Count"
         pollenRiskLevelGrass = "Error Retrieving Pollen Count"
         pollenRiskLevelWeed = "Error Retrieving Pollen Count"
+        #x = {'a':1, 'b':2}
+        #y = x['c']
 
     except KeyError:
         pollenRiskLevel = "Error Retrieving Pollen Count"
