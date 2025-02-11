@@ -394,7 +394,7 @@ def weather():
     precipitationProbability = round(precipitationProbability, 0) # round to 0 decimal places
     precipitationProbability = int(precipitationProbability) # Convert the precipitation probability to an integer
     strPrecipitationProbability = str(precipitationProbability) + "%" # Convert the precipitation probability to a string
-
+    print(openWeatherDataToday)
     visibility = openWeatherDataToday['visibility'] # Get the visibility for today
     visibilityKM = visibility / 1000 # Convert the visibility to kilometres
     visibilityKM = round(visibilityKM, 0) # round to 0 decimal places
