@@ -128,12 +128,13 @@ def weather():
     aqi = sensorData['aqi_val'] # Get air quality index value
     aqi_description = sensorData['aqi_desc'] # Get air quality index description
     aqi = int(aqi) # Convert the air quality index to an integer
+    print("AQI: ", aqi)
 
     # AQI Colour and Percentage for bar chart on weather dashboard
     if aqi == 0:
         aqi_percentage ="0%"
         aqi_colour = "#00FF00" # Green
-    elif aqi== 1:
+    elif aqi == 1:
         aqi_percentage = "10%"
         aqi_colour = "#7aff00" # Light Green
     elif aqi == 2:
@@ -160,7 +161,7 @@ def weather():
     elif aqi == 9:
         aqi_percentage = "90%"
         aqi_colour = "#ff3700" # Red
-    elif aqi == 10:
+    elif aqi >=  10:
         aqi_percentage = "100%"
         aqi_colour = "#ff0000" # Red
 
