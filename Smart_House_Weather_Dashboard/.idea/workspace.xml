@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="1db2f1c2-a298-4643-969f-c3b80d70a65a" name="Changes" comment="">
+    <list default="true" id="e05e0e5f-2254-49bd-9c24-57660b1616fc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Smart_House_Weather_Dashboard.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Smart_House_Weather_Dashboard.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,17 +15,14 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Flask Main" />
-        <option value="HTML File" />
-        <option value="JavaScript File" />
-        <option value="CSS File" />
       </list>
     </option>
   </component>
-  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+  <component name="FlaskConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform)); sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo, NoAppException&#10;for module in [&quot;main.py&quot;, &quot;wsgi.py&quot;, &quot;app.py&quot;]:&#10;    try: locals().update(ScriptInfo(app_import_path=module, create_app=None).load_app().make_shell_context()); print(&quot;\nFlask App: %s&quot; % app.import_name); break&#10;    except NoAppException: pass">
     <envs>
       <env key="FLASK_APP" value="app" />
     </envs>
-    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform)); sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo, NoAppException&#10;for module in [&quot;main.py&quot;, &quot;wsgi.py&quot;, &quot;app.py&quot;]:&#10;    try: locals().update(ScriptInfo(app_import_path=module, create_app=None).load_app().make_shell_context()); print(&quot;\nFlask App: %s&quot; % app.import_name); break&#10;    except NoAppException: pass" />
     <option name="myEnvs">
       <map>
         <entry key="FLASK_APP" value="app" />
@@ -38,38 +33,24 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 7
 }</component>
-  <component name="ProjectId" id="2nwyfTeqMO4LgZqyF61pAxZYbks" />
+  <component name="ProjectId" id="2tAydN60vdX4SJIKRskdDQ1TZOv" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Flask server.Smart_House_Weather_Dashboard.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in unitTestSmartHouseWeatherDashboard.py.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/rober/OneDrive/Documents/Advanced_Computing_Suffolk/Dissertation/Weather_Monitoring_Dashboard_Application/Smart_House_Weather_Dashboard/templates&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Flask server.Smart_House_Weather_Dashboard.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.intellij.pycharm.community.ide.impl.configuration.PythonContentEntriesConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\rober\OneDrive\Documents\Advanced_Computing_Suffolk\Dissertation\Weather_Monitoring_Dashboard_Application\Smart_House_Weather_Dashboard\templates" />
-    </key>
-  </component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Smart_House_Weather_Dashboard" type="Python.FlaskServer">
       <option name="flaskDebug" value="true" />
@@ -80,23 +61,7 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="Python 3.13 (pythonProject)" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="Python.FlaskServer">
-      <option name="flaskDebug" value="true" />
-      <module name="Smart_House_Weather_Dashboard" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="Python 3.13 (pythonProject)" />
+      <option name="SDK_NAME" value="Python 3.13 (Smart_House_Weather_Dashboard)" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -109,152 +74,30 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-PY-243.23654.177" />
-        <option value="bundled-python-sdk-91d3a02ef49d-43b77aa2d136-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.23654.177" />
+        <option value="bundled-js-predefined-d6986cc7102b-76f8388c3a79-JavaScript-PY-243.24978.54" />
+        <option value="bundled-python-sdk-91e3b7efe1d4-466328ff949b-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.24978.54" />
       </set>
     </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="1db2f1c2-a298-4643-969f-c3b80d70a65a" name="Changes" comment="" />
-      <created>1729898536198</created>
+      <changelist id="e05e0e5f-2254-49bd-9c24-57660b1616fc" name="Changes" comment="" />
+      <created>1739809260005</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1729898536198</updated>
-      <workItem from="1729898549725" duration="84000" />
-      <workItem from="1729898671077" duration="232000" />
-      <workItem from="1729898912499" duration="41000" />
-      <workItem from="1730057101885" duration="8896000" />
-      <workItem from="1730145327385" duration="11419000" />
-      <workItem from="1730222598775" duration="14273000" />
-      <workItem from="1730236907716" duration="22000" />
-      <workItem from="1730236941335" duration="47000" />
-      <workItem from="1730246615758" duration="5223000" />
-      <workItem from="1730253222060" duration="3705000" />
-      <workItem from="1730257642417" duration="3373000" />
-      <workItem from="1730314657781" duration="557000" />
-      <workItem from="1731096347387" duration="20000" />
-      <workItem from="1731096390851" duration="1790000" />
-      <workItem from="1731355050603" duration="51000" />
-      <workItem from="1731542467471" duration="20000" />
-      <workItem from="1731542496511" duration="2516000" />
-      <workItem from="1731546532583" duration="387000" />
-      <workItem from="1731547799840" duration="17000" />
-      <workItem from="1731679808948" duration="760000" />
-      <workItem from="1731692668301" duration="2768000" />
-      <workItem from="1731695451186" duration="3777000" />
-      <workItem from="1731700077786" duration="394000" />
-      <workItem from="1731700603160" duration="29000" />
-      <workItem from="1731700784863" duration="94000" />
-      <workItem from="1731701287239" duration="52000" />
-      <workItem from="1731701359208" duration="39000" />
-      <workItem from="1731793889803" duration="7303000" />
-      <workItem from="1731965255717" duration="5124000" />
-      <workItem from="1731970927654" duration="328000" />
-      <workItem from="1732059933694" duration="33000" />
-      <workItem from="1732059975343" duration="1289000" />
-      <workItem from="1732062160787" duration="361000" />
-      <workItem from="1732062567290" duration="83000" />
-      <workItem from="1732062659451" duration="43000" />
-      <workItem from="1732107063810" duration="1137000" />
-      <workItem from="1732112520576" duration="27000" />
-      <workItem from="1732113407814" duration="518000" />
-      <workItem from="1732125579740" duration="18505000" />
-      <workItem from="1732567367676" duration="21000" />
-      <workItem from="1732567494591" duration="790000" />
-      <workItem from="1732568695939" duration="73000" />
-      <workItem from="1732659535871" duration="19000" />
-      <workItem from="1732659561437" duration="1097000" />
-      <workItem from="1732660794742" duration="16176000" />
-      <workItem from="1732678593808" duration="225000" />
-      <workItem from="1732735312487" duration="19962000" />
-      <workItem from="1732760345371" duration="220000" />
-      <workItem from="1732829231358" duration="5591000" />
-      <workItem from="1732914746070" duration="21289000" />
-      <workItem from="1733008091001" duration="1334000" />
-      <workItem from="1733010190483" duration="1025000" />
-      <workItem from="1733015859170" duration="1289000" />
-      <workItem from="1733018038036" duration="461000" />
-      <workItem from="1733079322806" duration="406000" />
-      <workItem from="1733237721059" duration="1370000" />
-      <workItem from="1733268357534" duration="800000" />
-      <workItem from="1733269285866" duration="128000" />
-      <workItem from="1733269855018" duration="37000" />
-      <workItem from="1733270076376" duration="216000" />
-      <workItem from="1733275242790" duration="52000" />
-      <workItem from="1733275375268" duration="223000" />
-      <workItem from="1733356503954" duration="735000" />
-      <workItem from="1733357411781" duration="2288000" />
-      <workItem from="1733359811854" duration="272000" />
-      <workItem from="1733360183848" duration="349000" />
-      <workItem from="1733360663545" duration="64000" />
-      <workItem from="1733526500688" duration="8275000" />
-      <workItem from="1733536627779" duration="73000" />
-      <workItem from="1733601808006" duration="12034000" />
-      <workItem from="1733618242129" duration="36000" />
-      <workItem from="1733685096115" duration="668000" />
-      <workItem from="1733686194378" duration="258000" />
-      <workItem from="1733686718663" duration="145000" />
-      <workItem from="1733687378075" duration="311000" />
-      <workItem from="1733687852887" duration="603000" />
-      <workItem from="1733688748225" duration="210000" />
-      <workItem from="1733689466717" duration="5243000" />
-      <workItem from="1733717508973" duration="774000" />
-      <workItem from="1733875103726" duration="614000" />
-      <workItem from="1734098308016" duration="759000" />
-      <workItem from="1734290053850" duration="14000" />
-      <workItem from="1734290184836" duration="27000" />
-      <workItem from="1734290219761" duration="2760000" />
-      <workItem from="1734300027902" duration="1714000" />
-      <workItem from="1734365940597" duration="188000" />
-      <workItem from="1734366931821" duration="839000" />
-      <workItem from="1734390824700" duration="3075000" />
-      <workItem from="1734469666617" duration="1220000" />
-      <workItem from="1734704897558" duration="1335000" />
-      <workItem from="1736048639304" duration="1050000" />
-      <workItem from="1736078887408" duration="73000" />
-      <workItem from="1736603198528" duration="1505000" />
-      <workItem from="1736913868325" duration="184000" />
-      <workItem from="1736914061571" duration="896000" />
-      <workItem from="1736976378159" duration="624000" />
-      <workItem from="1736977714661" duration="1260000" />
-      <workItem from="1736980047702" duration="2081000" />
-      <workItem from="1736989766295" duration="1181000" />
-      <workItem from="1737148910566" duration="2561000" />
-      <workItem from="1737235124008" duration="376000" />
-      <workItem from="1737727963578" duration="847000" />
-      <workItem from="1737728829003" duration="21000" />
-      <workItem from="1737929649626" duration="256000" />
-      <workItem from="1737930099242" duration="312000" />
-      <workItem from="1738184995554" duration="6774000" />
-      <workItem from="1738263875522" duration="4379000" />
-      <workItem from="1738283904137" duration="7408000" />
-      <workItem from="1738617080412" duration="9521000" />
-      <workItem from="1738786020506" duration="5556000" />
-      <workItem from="1738847729434" duration="663000" />
-      <workItem from="1738943358972" duration="1284000" />
-      <workItem from="1739134153816" duration="1268000" />
-      <workItem from="1739274234370" duration="895000" />
-      <workItem from="1739357944676" duration="1797000" />
+      <updated>1739809260005</updated>
+      <workItem from="1739809261027" duration="117000" />
+      <workItem from="1739809428498" duration="154000" />
+      <workItem from="1739809603714" duration="40000" />
+      <workItem from="1739809788944" duration="68000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/unitTestSmartHouseWeatherDashboard.py</url>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Smart_House_Weather_Dashboard$Smart_House_Weather_Dashboard.coverage" NAME="Smart_House_Weather_Dashboard Coverage Results" MODIFIED="1739359632657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Smart_House_Weather_Dashboard$.coverage" NAME=" Coverage Results" MODIFIED="1738943404443" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Smart_House_Weather_Dashboard$Smart_House_Weather_Dashboard.coverage" NAME="Smart_House_Weather_Dashboard Coverage Results" MODIFIED="1739809608002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
