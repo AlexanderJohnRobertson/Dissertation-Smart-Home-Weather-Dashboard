@@ -105,6 +105,7 @@
       <workItem from="1740402338464" duration="2451000" />
       <workItem from="1740960526593" duration="410000" />
       <workItem from="1741025395802" duration="515000" />
+      <workItem from="1742389033409" duration="401000" />
     </task>
     <servers />
   </component>
@@ -112,7 +113,7 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Smart_House_Weather_Dashboard$Smart_House_Weather_Dashboard.coverage" NAME="Smart_House_Weather_Dashboard Coverage Results" MODIFIED="1741025644848" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Smart_House_Weather_Dashboard$Smart_House_Weather_Dashboard.coverage" NAME="Smart_House_Weather_Dashboard Coverage Results" MODIFIED="1742389370192" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/Smart_House_Weather_Dashboard$.coverage" NAME=" Coverage Results" MODIFIED="1740402342566" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

@@ -219,6 +219,9 @@ def weather():
     sensorData = sensors['data'] # Get the sensor data
     sensorData = sensorData[0] # Get the first sensor data
     UV_index= sensorData['uv_index'] # Get the UV index
+    print("UV Index: ", UV_index)
+    UV_index = round(UV_index, 0) # round to 0 decimal places
+    UV_index = int(UV_index)
     if UV_index <= 2: # UV index description based on the UV index value
         UV_index_description = " Low"
     elif UV_index >= 3 and UV_index <= 5:
@@ -228,7 +231,7 @@ def weather():
     elif UV_index >= 8 and UV_index <= 10:
         UV_index_description = " Very High"
 
-    UV_index = int(UV_index)
+
 
     # UV Index Colour and Percentage for bar chart on weather dashboard
     if UV_index == 0:
