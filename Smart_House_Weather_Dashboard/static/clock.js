@@ -1,3 +1,5 @@
+// This JavaScript code is responsible for generating a clock on the weather dashboard.
+// Original JavaScript based on W3 Schools canvas clock template and modified by S275931 to suit the application. https://www.w3schools.com/graphics/canvas_clock_start.asp
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 let radius = canvas.height / 2;

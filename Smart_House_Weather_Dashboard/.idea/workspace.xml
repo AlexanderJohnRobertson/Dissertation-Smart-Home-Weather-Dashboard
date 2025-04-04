@@ -6,6 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="e05e0e5f-2254-49bd-9c24-57660b1616fc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/calendar.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/calendar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/calendar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/clock.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/clock.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/humidity.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/humidity.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/temperature.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/temperature.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/weather.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/weather.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/weathermaps.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/weathermaps.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Wiki/Dissertation-Smart-Home-Weather-Dashboard.wiki" beforeDir="false" afterPath="$PROJECT_DIR$/../Wiki/Dissertation-Smart-Home-Weather-Dashboard.wiki" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,8 +89,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-PY-243.25659.43" />
-        <option value="bundled-python-sdk-181015f7ab06-4df51de95216-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.25659.43" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-PY-243.26053.29" />
+        <option value="bundled-python-sdk-b1dbf8ef85a6-4df51de95216-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.26053.29" />
       </set>
     </attachedChunks>
   </component>
@@ -107,6 +116,7 @@
       <workItem from="1742389033409" duration="401000" />
       <workItem from="1742390219461" duration="40000" />
       <workItem from="1742390277401" duration="70000" />
+      <workItem from="1743792311011" duration="4124000" />
     </task>
     <servers />
   </component>
@@ -114,7 +124,7 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Smart_House_Weather_Dashboard$Smart_House_Weather_Dashboard.coverage" NAME="Smart_House_Weather_Dashboard Coverage Results" MODIFIED="1742389370192" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Smart_House_Weather_Dashboard$Smart_House_Weather_Dashboard.coverage" NAME="Smart_House_Weather_Dashboard Coverage Results" MODIFIED="1743796399481" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/Smart_House_Weather_Dashboard$.coverage" NAME=" Coverage Results" MODIFIED="1740402342566" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

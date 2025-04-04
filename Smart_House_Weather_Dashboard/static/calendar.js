@@ -1,3 +1,5 @@
+// This code is responsible for generating a calendar on the weather dashboard.
+// Original JavaScript based on codepen.io responsive calendar template and modified by S275931 to suit the application. https://codepen.io/H-TMAN/pen/JjgyJbG
 let date = new Date();
 let year = date.getFullYear();
 let month = date.getMonth();
