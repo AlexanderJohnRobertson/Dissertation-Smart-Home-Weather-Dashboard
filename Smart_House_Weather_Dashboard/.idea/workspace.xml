@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e05e0e5f-2254-49bd-9c24-57660b1616fc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Smart House Weather Dashboard Documentation.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../Smart House Weather Dashboard Documentation.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Smart House Weather Dashboard Documentation.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../Smart House Weather Dashboard Documentation.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/calendar.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/calendar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/calendar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/clock.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/clock.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/humidity.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/humidity.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/temperature.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/temperature.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/weather.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/weather.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/weathermaps.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/weathermaps.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Wiki/Dissertation-Smart-Home-Weather-Dashboard.wiki" beforeDir="false" afterPath="$PROJECT_DIR$/../Wiki/Dissertation-Smart-Home-Weather-Dashboard.wiki" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Smart House Weather Dashboard Documentation.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Smart House Weather Dashboard Documentation.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Smart House Weather Dashboard Documentation.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Smart House Weather Dashboard Documentation.pdf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,6 +112,8 @@
       <workItem from="1742390219461" duration="40000" />
       <workItem from="1742390277401" duration="70000" />
       <workItem from="1743792311011" duration="4124000" />
+      <workItem from="1743803382380" duration="19000" />
+      <workItem from="1744241567206" duration="72000" />
     </task>
     <servers />
   </component>
